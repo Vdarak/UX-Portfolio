@@ -38,10 +38,13 @@ export default function Home() {
             <FadeIn delay={0.2}>
               <AnimatedText 
               text="Namaste 🙏 -> I'm Vedant Darak" 
-              className="text-3xl font-light tracking-tight md:text-4xl"
+              delay={300}
+              className="text-3xl font-light tracking-tight md:text-4xl inline"
+              animateBy="words"
+              direction="top"
               />
             </FadeIn>
-            <FadeIn delay={0.4}>
+            <FadeIn delay={2.25}>
               <h1 className="text-4xl font-medium tracking-tight md:text-6xl">
                 UX Practitioner crafting{" "}
                 <span className="group relative">
@@ -51,7 +54,7 @@ export default function Home() {
                 software experiences
               </h1>
             </FadeIn>
-            <FadeIn delay={0.6}>
+            <FadeIn delay={2.25}>
               <motion.p 
                 className="text-xl text-neutral-600 dark:text-neutral-300 relative overflow-hidden"
                 initial={{ opacity: 0 }}
@@ -72,7 +75,7 @@ export default function Home() {
 
           {/* Creative Coding Exhibit */}
           <div className="lg:col-span-4 flex justify-center lg:justify-end">
-            <FadeIn delay={1.0}>
+            <FadeIn delay={3.1}>
               <RefinedMagneticEffect intensity={0.08} range={100}>
                 <PixelGridExhibit 
                   width={400}
@@ -83,41 +86,48 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Enhanced CTA buttons */}
-        <FadeIn delay={0.4}>
-          <div className="flex flex-col items-center gap-4 sm:flex-row z-10 mb-24 md:mb-32">
-            <RefinedButton 
-              size="lg" 
-              intensity={0.2}
-              className="interactive group"
-              onClick={() => {
-                document.getElementById('projects')?.scrollIntoView({ 
-                  behavior: 'smooth',
-                  block: 'start'
-                })
-              }}
-            >
-              <span className="flex items-center">
-                View my work
-                <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 ease-out group-hover:translate-x-3" />
-              </span>
-            </RefinedButton>
-            <RefinedButton 
-              variant="outline" 
-              size="lg" 
-              intensity={0.2}
-              className="interactive"
-              onClick={() => {
-                document.getElementById('contact')?.scrollIntoView({ 
-                  behavior: 'smooth',
-                  block: 'start'
-                })
-              }}
-            >
-              <span>Get in touch</span>
-            </RefinedButton>
-          </div>
-        </FadeIn>
+        {/* Enhanced CTA buttons - Using direct motion animation instead of FadeIn */}
+        <motion.div
+          className="flex flex-col items-center gap-4 sm:flex-row z-10 mb-24 md:mb-32"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ 
+            duration: 0.8, 
+            delay: 3.7, // Ensures it appears after other hero elements
+            ease: [0.21, 0.47, 0.32, 0.98] // Matches your existing animation easing
+          }}
+        >
+          <RefinedButton 
+            size="lg" 
+            intensity={0.2}
+            className="interactive group"
+            onClick={() => {
+              document.getElementById('projects')?.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+              })
+            }}
+          >
+            <span className="flex items-center">
+              View my work
+              <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 ease-out group-hover:translate-x-3" />
+            </span>
+          </RefinedButton>
+          <RefinedButton 
+            variant="outline" 
+            size="lg" 
+            intensity={0.2}
+            className="interactive"
+            onClick={() => {
+              document.getElementById('contact')?.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+              })
+            }}
+          >
+            <span>Get in touch</span>
+          </RefinedButton>
+        </motion.div>
 
         {/* Floating navigation - replacing profile image */}
         <div className="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 hidden lg:block">
@@ -126,13 +136,14 @@ export default function Home() {
       </section>
 
       {/* Projects Hero Section - Simplified */}
-      <FadeIn delay={0.8}>
+      
         <section id="projects" className="w-full pt-24 pb-10 bg-secondary">
-          <div className="container px-4 mx-auto md:px-6 text-center">
-            <div className="flex flex-col items-center justify-center mb-8">
-              <span className="flex items-center gap-2 text-muted-foreground text-base font-medium mb-2">
-                <Briefcase className="w-6 h-6" />
-                Projects
+          <FadeIn delay={0.4}>
+            <div className="container px-4 mx-auto md:px-6 text-center">
+              <div className="flex flex-col items-center justify-center mb-8">
+                <span className="flex items-center gap-2 text-muted-foreground text-base font-medium mb-2">
+                  <Briefcase className="w-6 h-6" />
+                  Projects
               </span>
               <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-4 leading-[1.15] overflow-visible pb-1">
                 UX <FlowingText text="Projects" className="inline align-baseline leading-[1.15]" />
@@ -142,8 +153,9 @@ export default function Home() {
               </p>
             </div>
           </div>
+         </FadeIn>
         </section>
-      </FadeIn>
+      
       {/* Projects Grid */}
       <section id="projects-grid" className="pt-8 pb-16 bg-secondary">
         <div className="container px-4 mx-auto md:px-6">

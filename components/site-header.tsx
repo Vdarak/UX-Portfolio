@@ -165,10 +165,10 @@ export function SiteHeader() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setHasAnimatedIn(true)
-    }, 600) // Start animation shortly after hero section begins (0.6s delay for quicker response)
+    }, pathname === "/" ? 3200 : 600) // 3.2s delay for homepage, 600ms for other pages
 
     return () => clearTimeout(timer)
-  }, [])
+  }, [pathname]) // Add pathname as dependency to re-run when route changes
 
   return (
     <motion.header
