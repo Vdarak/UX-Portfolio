@@ -9,40 +9,17 @@ import { FadeIn, StaggerContainer, StaggerItem, Parallax, ScaleOnScroll } from "
 import { AnimatedText } from "@/components/animated-text"
 import { FlowingText } from "@/components/flowing-text"
 import { PixelGridExhibit } from "@/components/pixel-grid"
-import LoadingScreen from "@/components/loading-screen"
 import Footer from "@/components/footer"
 import { useMousePosition } from "@/hooks/use-mouse-position"
-import { useRef, useState } from "react"
+import { useRef } from "react"
 import { motion } from "framer-motion"
 
 export default function Home() {
   const heroSectionRef = useRef<HTMLElement>(null)
   const { x, y } = useMousePosition()
-  const [isLoading, setIsLoading] = useState(true)
-  const [loadingComplete, setLoadingComplete] = useState(false)
-
-  const handleLoadingComplete = () => {
-    setIsLoading(false)
-    // Small delay before starting main animations
-    setTimeout(() => {
-      setLoadingComplete(true)
-    }, 200)
-  }
 
   return (
-    <>
-      {/* Loading Screen */}
-      {isLoading && (
-        <LoadingScreen onLoadingComplete={handleLoadingComplete} />
-      )}
-
-      {/* Main Content */}
-      <motion.main 
-        className="min-h-screen bg-background pt-16"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: loadingComplete ? 1 : 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-      >
+    <main className="min-h-screen bg-background pt-16">
       
       {/* Hero Section */}
       <section 
@@ -58,13 +35,13 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center w-full max-w-7xl">
           {/* Text content */}
           <div className="lg:col-span-8 max-w-4xl space-y-4 text-center lg:text-left">
-            <FadeIn delay={0.2} shouldAnimate={loadingComplete}>
+            <FadeIn delay={0.2}>
               <AnimatedText 
               text="Namaste 🙏 -> I'm Vedant Darak" 
               className="text-3xl font-light tracking-tight md:text-4xl"
               />
             </FadeIn>
-            <FadeIn delay={0.4} shouldAnimate={loadingComplete}>
+            <FadeIn delay={0.4}>
               <h1 className="text-4xl font-medium tracking-tight md:text-6xl">
                 UX Practitioner crafting{" "}
                 <span className="group relative">
@@ -74,7 +51,7 @@ export default function Home() {
                 software experiences
               </h1>
             </FadeIn>
-            <FadeIn delay={0.6} shouldAnimate={loadingComplete}>
+            <FadeIn delay={0.6}>
               <motion.p 
                 className="text-xl text-neutral-600 dark:text-neutral-300 relative overflow-hidden"
                 initial={{ opacity: 0 }}
@@ -95,7 +72,7 @@ export default function Home() {
 
           {/* Creative Coding Exhibit */}
           <div className="lg:col-span-4 flex justify-center lg:justify-end">
-            <FadeIn delay={1.0} shouldAnimate={loadingComplete}>
+            <FadeIn delay={1.0}>
               <RefinedMagneticEffect intensity={0.08} range={100}>
                 <PixelGridExhibit 
                   width={400}
@@ -107,7 +84,7 @@ export default function Home() {
         </div>
 
         {/* Enhanced CTA buttons */}
-        <FadeIn delay={0.4} shouldAnimate={loadingComplete}>
+        <FadeIn delay={0.4}>
           <div className="flex flex-col items-center gap-4 sm:flex-row z-10 mb-24 md:mb-32">
             <RefinedButton 
               size="lg" 
@@ -149,66 +126,66 @@ export default function Home() {
       </section>
 
       {/* Projects Hero Section - Simplified */}
-    <FadeIn delay={0.8} shouldAnimate={loadingComplete}>
-      <section id="projects" className="w-full pt-24 pb-10 bg-secondary">
-        <div className="container px-4 mx-auto md:px-6 text-center">
-          <div className="flex flex-col items-center justify-center mb-8">
-            <span className="flex items-center gap-2 text-muted-foreground text-base font-medium mb-2">
+      <FadeIn delay={0.8}>
+        <section id="projects" className="w-full pt-24 pb-10 bg-secondary">
+          <div className="container px-4 mx-auto md:px-6 text-center">
+            <div className="flex flex-col items-center justify-center mb-8">
+              <span className="flex items-center gap-2 text-muted-foreground text-base font-medium mb-2">
                 <Briefcase className="w-6 h-6" />
-            Projects
-            </span>
-            <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-4 leading-[1.15] overflow-visible pb-1">
-              UX <FlowingText text="Projects" className="inline align-baseline leading-[1.15]" />
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              A collection of UX design projects that showcase my approach to solving complex problems through research-driven design and user-centered thinking.
-            </p>
+                Projects
+              </span>
+              <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-4 leading-[1.15] overflow-visible pb-1">
+                UX <FlowingText text="Projects" className="inline align-baseline leading-[1.15]" />
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+                A collection of UX design projects that showcase my approach to solving complex problems through research-driven design and user-centered thinking.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
-    </FadeIn>
+        </section>
+      </FadeIn>
       {/* Projects Grid */}
       <section id="projects-grid" className="pt-8 pb-16 bg-secondary">
         <div className="container px-4 mx-auto md:px-6">
           <div className="scale-[0.87] origin-center">
-            <StaggerContainer className="grid gap-20 md:grid-cols-2" staggerDelay={0.2} shouldAnimate={loadingComplete}>
-            <StaggerItem>
-              <RefinedProjectCard
-                title="HealthTrack Mobile App"
-                description="A health monitoring application designed to help users track their daily health metrics and medication."
-                image="/placeholder.svg?height=600&width=800"
-                tags={["UX Research", "UI Design", "Prototyping"]}
-                href="/projects/health-track"
-              />
-            </StaggerItem>
-            <StaggerItem>
-              <RefinedProjectCard
-                title="BackMarket IA Redesign"
-                description="A deep dive into restructuring the information architecture of a leading refurbished electronics marketplace to enhance usability and content clarity."
-                image="/placeholder.svg?height=600&width=800"
-                tags={["Information Architecture", "Content Strategy", "UX Research"]}
-                href="/projects/backmarket-ia-redesign"
-              />
-            </StaggerItem>
-            <StaggerItem>
-              <RefinedProjectCard
-                title="Finance Dashboard"
-                description="A comprehensive financial management dashboard for personal and small business users."
-                image="/placeholder.svg?height=600&width=800"
-                tags={["Data Visualization", "User Testing", "Interaction Design"]}
-                href="/projects/finance-dashboard"
-              />
-            </StaggerItem>
-            <StaggerItem>
-              <RefinedProjectCard
-                title="Understanding Creative Block"
-                description="Research study exploring how creative professionals experience and manage creative blocks, with design implications for supporting technology."
-                image="/placeholder.svg?height=600&width=800"
-                tags={["HCI Research", "Mixed Methods", "User Interviews", "Persona Development"]}
-                href="/projects/understanding-creative-block"
-              />
-            </StaggerItem>
-          </StaggerContainer>
+            <StaggerContainer className="grid gap-20 md:grid-cols-2" staggerDelay={0.2}>
+              <StaggerItem>
+                <RefinedProjectCard
+                  title="HealthTrack Mobile App"
+                  description="A health monitoring application designed to help users track their daily health metrics and medication."
+                  image="/placeholder.svg?height=600&width=800"
+                  tags={["UX Research", "UI Design", "Prototyping"]}
+                  href="/projects/health-track"
+                />
+              </StaggerItem>
+              <StaggerItem>
+                <RefinedProjectCard
+                  title="BackMarket IA Redesign"
+                  description="A deep dive into restructuring the information architecture of a leading refurbished electronics marketplace to enhance usability and content clarity."
+                  image="/placeholder.svg?height=600&width=800"
+                  tags={["Information Architecture", "Content Strategy", "UX Research"]}
+                  href="/projects/backmarket-ia-redesign"
+                />
+              </StaggerItem>
+              <StaggerItem>
+                <RefinedProjectCard
+                  title="Finance Dashboard"
+                  description="A comprehensive financial management dashboard for personal and small business users."
+                  image="/placeholder.svg?height=600&width=800"
+                  tags={["Data Visualization", "User Testing", "Interaction Design"]}
+                  href="/projects/finance-dashboard"
+                />
+              </StaggerItem>
+              <StaggerItem>
+                <RefinedProjectCard
+                  title="Understanding Creative Block"
+                  description="Research study exploring how creative professionals experience and manage creative blocks, with design implications for supporting technology."
+                  image="/placeholder.svg?height=600&width=800"
+                  tags={["HCI Research", "Mixed Methods", "User Interviews", "Persona Development"]}
+                  href="/projects/understanding-creative-block"
+                />
+              </StaggerItem>
+            </StaggerContainer>
           </div>
         </div>
       </section>
@@ -217,7 +194,7 @@ export default function Home() {
       <section id="about" className="py-24 bg-white dark:bg-black">
         <div className="container px-4 mx-auto md:px-6">
           <div className="grid gap-12 md:grid-cols-2 md:items-center">
-            <FadeIn direction="left" shouldAnimate={loadingComplete}>
+            <FadeIn direction="left">
               <Parallax offset={-30}>
                 <RefinedMagneticEffect intensity={0.08} range={150}>
                   <div className="relative overflow-hidden rounded-xl aspect-[2/3] scale-[0.72] origin-center">
@@ -232,14 +209,14 @@ export default function Home() {
                 </RefinedMagneticEffect>
               </Parallax>
             </FadeIn>
-            <FadeIn direction="right" shouldAnimate={loadingComplete}>
+            <FadeIn direction="right">
               <div className="space-y-6">
                 <h2 className="text-3xl font-medium tracking-tight md:text-4xl">About Me</h2>
                 <p className="text-xl text-neutral-600 dark:text-neutral-300">
                   I'm a UX designer with 5 years of experience creating user-centered digital products that solve real
                   problems.
                 </p>
-                <StaggerContainer className="space-y-4" staggerDelay={0.1} shouldAnimate={loadingComplete}>
+                <StaggerContainer className="space-y-4" staggerDelay={0.1}>
                   <StaggerItem>
                     <p className="text-neutral-600 dark:text-neutral-400">
                       My approach combines empathy-driven research with strategic design thinking to create experiences
@@ -261,7 +238,7 @@ export default function Home() {
                     </p>
                   </StaggerItem>
                 </StaggerContainer>
-                <FadeIn delay={0.4} shouldAnimate={loadingComplete}>
+                <FadeIn delay={0.4}>
                   <div className="flex gap-4">
                     <RefinedButton variant="outline" intensity={0.2}>
                       <a href="/resume.pdf" download className="flex items-center group">
@@ -280,7 +257,7 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="py-24">
         <div className="container px-4 mx-auto md:px-6">
-          <FadeIn shouldAnimate={loadingComplete}>
+          <FadeIn>
             <div className="max-w-3xl mx-auto space-y-6 text-center">
               <h2 className="text-3xl font-medium tracking-tight md:text-4xl">Get in Touch</h2>
               <p className="text-xl text-neutral-600 dark:text-neutral-300">
@@ -300,7 +277,6 @@ export default function Home() {
 
       {/* Footer Component */}
       <Footer />
-    </motion.main>
-    </>
+    </main>
   )
 }

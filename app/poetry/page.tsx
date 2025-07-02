@@ -3,7 +3,6 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Calendar, Tag, ArrowRight, BookOpen } from "lucide-react"
-
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { RefinedMagneticEffect } from "@/components/refined-magnetic-effect"
@@ -275,7 +274,9 @@ export default function PoetryPage() {
   const getRandomDelay = () => Math.random() * 8
 
   return (
-    <>
+    <><head>
+        <base href="/" />
+      </head>
       <main className="min-h-screen bg-background pt-16">
       {/* Hero Section */}
       <section className="py-16 bg-secondary">
@@ -298,7 +299,7 @@ export default function PoetryPage() {
       </section>
 
       {/* Filters and View Toggle */}
-      <section className="py-8 border-b">
+      <section className="py-8">
         <div className="container px-4 mx-auto md:px-6">
           <div className="flex justify-center">
             {/* View Mode Toggle */}

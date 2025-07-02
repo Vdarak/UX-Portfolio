@@ -179,7 +179,7 @@ export default function GamesPage() {
       </section>
 
       {/* Filters */}
-      <section className="py-8 border-b">
+      <section className="py-8">
         <div className="container px-4 mx-auto md:px-6">
           <div className="flex flex-col gap-6">
             {/* Category Filters */}

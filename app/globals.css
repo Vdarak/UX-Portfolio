@@ -20,7 +20,7 @@
     --accent-foreground: 0 0% 9%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 90%;
+    --border: 0 0% 96%;
     --input: 0 0% 90%;
     --ring: 0 0% 70%;
     --radius: 0.5rem;
@@ -43,7 +43,7 @@
     --accent-foreground: 0 0% 95%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 18%;
+    --border: 0 0% 30%;
     --input: 0 0% 18%;
     --ring: 0 0% 25%;
   }
@@ -462,4 +462,21 @@ html {
   padding-right: 0 !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
+}
+
+/* Keyframe animation for the subtle gradient flow */
+@keyframes animate-subtle-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-subtle-gradient {
+  animation: animate-subtle-gradient 5s ease-in-out infinite;
 }
