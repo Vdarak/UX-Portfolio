@@ -1,0 +1,306 @@
+"use client"
+
+import Image from "next/image"
+import { ArrowRight, Download, Mail, Briefcase } from "lucide-react"
+import RefinedProjectCard from "@/components/refined-project-card"
+import { RefinedButton } from "@/components/refined-button"
+import { RefinedMagneticEffect } from "@/components/refined-magnetic-effect"
+import { FadeIn, StaggerContainer, StaggerItem, Parallax, ScaleOnScroll } from "@/components/scroll-animations"
+import { AnimatedText } from "@/components/animated-text"
+import { FlowingText } from "@/components/flowing-text"
+import { PixelGridExhibit } from "@/components/pixel-grid"
+import LoadingScreen from "@/components/loading-screen"
+import Footer from "@/components/footer"
+import { useMousePosition } from "@/hooks/use-mouse-position"
+import { useRef, useState } from "react"
+import { motion } from "framer-motion"
+
+export default function Home() {
+  const heroSectionRef = useRef<HTMLElement>(null)
+  const { x, y } = useMousePosition()
+  const [isLoading, setIsLoading] = useState(true)
+  const [loadingComplete, setLoadingComplete] = useState(false)
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false)
+    // Small delay before starting main animations
+    setTimeout(() => {
+      setLoadingComplete(true)
+    }, 200)
+  }
+
+  return (
+    <>
+      {/* Loading Screen */}
+      {isLoading && (
+        <LoadingScreen onLoadingComplete={handleLoadingComplete} />
+      )}
+
+      {/* Main Content */}
+      <motion.main 
+        className="min-h-screen bg-background pt-16"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: loadingComplete ? 1 : 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
+      
+      {/* Hero Section */}
+      <section 
+        ref={heroSectionRef}
+        className="container relative flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] px-4 mx-auto space-y-8 md:space-y-12 md:px-6 overflow-hidden pb-16 md:pb-8"
+      >
+        {/* Subtle background gradient */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/3 opacity-60" />
+        </div>
+
+        {/* Main content grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center w-full max-w-7xl">
+          {/* Text content */}
+          <div className="lg:col-span-8 max-w-4xl space-y-4 text-center lg:text-left">
+            <FadeIn delay={0.2} shouldAnimate={loadingComplete}>
+              <AnimatedText 
+              text="Namaste 🙏 -> I'm Vedant Darak" 
+              className="text-3xl font-light tracking-tight md:text-4xl"
+              />
+            </FadeIn>
+            <FadeIn delay={0.4} shouldAnimate={loadingComplete}>
+              <h1 className="text-4xl font-medium tracking-tight md:text-6xl">
+                UX Practitioner crafting{" "}
+                <span className="group relative">
+                  <FlowingText text="thoughtful" className="inline" />
+                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-primary/0 via-primary to-primary/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"></span>
+                </span>{" "}
+                software experiences
+              </h1>
+            </FadeIn>
+            <FadeIn delay={0.6} shouldAnimate={loadingComplete}>
+              <motion.p 
+                className="text-xl text-neutral-600 dark:text-neutral-300 relative overflow-hidden"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.6, duration: 0.8 }}
+              >
+                <motion.span 
+                  className="inline-block"
+                  initial={{ y: 20 }}
+                  animate={{ y: 0 }}
+                  transition={{ delay: 0.8, duration: 0.6 }}
+                >
+                  Focused on creating intuitive, accessible, and delightful user experiences through research-driven design direction.
+                </motion.span>
+              </motion.p>
+            </FadeIn>
+          </div>
+
+          {/* Creative Coding Exhibit */}
+          <div className="lg:col-span-4 flex justify-center lg:justify-end">
+            <FadeIn delay={1.0} shouldAnimate={loadingComplete}>
+              <RefinedMagneticEffect intensity={0.08} range={100}>
+                <PixelGridExhibit 
+                  width={400}
+                  height={400}
+                />
+              </RefinedMagneticEffect>
+            </FadeIn>
+          </div>
+        </div>
+
+        {/* Enhanced CTA buttons */}
+        <FadeIn delay={0.4} shouldAnimate={loadingComplete}>
+          <div className="flex flex-col items-center gap-4 sm:flex-row z-10 mb-24 md:mb-32">
+            <RefinedButton 
+              size="lg" 
+              intensity={0.2}
+              className="interactive group"
+              onClick={() => {
+                document.getElementById('projects')?.scrollIntoView({ 
+                  behavior: 'smooth',
+                  block: 'start'
+                })
+              }}
+            >
+              <span className="flex items-center">
+                View my work
+                <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 ease-out group-hover:translate-x-3" />
+              </span>
+            </RefinedButton>
+            <RefinedButton 
+              variant="outline" 
+              size="lg" 
+              intensity={0.2}
+              className="interactive"
+              onClick={() => {
+                document.getElementById('contact')?.scrollIntoView({ 
+                  behavior: 'smooth',
+                  block: 'start'
+                })
+              }}
+            >
+              <span>Get in touch</span>
+            </RefinedButton>
+          </div>
+        </FadeIn>
+
+        {/* Floating navigation - replacing profile image */}
+        <div className="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 hidden lg:block">
+          {/* Intentionally left empty as requested */}
+        </div>
+      </section>
+
+      {/* Projects Hero Section - Simplified */}
+    <FadeIn delay={0.8} shouldAnimate={loadingComplete}>
+      <section id="projects" className="w-full pt-24 pb-10 bg-secondary">
+        <div className="container px-4 mx-auto md:px-6 text-center">
+          <div className="flex flex-col items-center justify-center mb-8">
+            <span className="flex items-center gap-2 text-muted-foreground text-base font-medium mb-2">
+                <Briefcase className="w-6 h-6" />
+            Projects
+            </span>
+            <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-4 leading-[1.15] overflow-visible pb-1">
+              UX <FlowingText text="Projects" className="inline align-baseline leading-[1.15]" />
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+              A collection of UX design projects that showcase my approach to solving complex problems through research-driven design and user-centered thinking.
+            </p>
+          </div>
+        </div>
+      </section>
+    </FadeIn>
+      {/* Projects Grid */}
+      <section id="projects-grid" className="pt-8 pb-16 bg-secondary">
+        <div className="container px-4 mx-auto md:px-6">
+          <div className="scale-[0.87] origin-center">
+            <StaggerContainer className="grid gap-20 md:grid-cols-2" staggerDelay={0.2} shouldAnimate={loadingComplete}>
+            <StaggerItem>
+              <RefinedProjectCard
+                title="HealthTrack Mobile App"
+                description="A health monitoring application designed to help users track their daily health metrics and medication."
+                image="/placeholder.svg?height=600&width=800"
+                tags={["UX Research", "UI Design", "Prototyping"]}
+                href="/projects/health-track"
+              />
+            </StaggerItem>
+            <StaggerItem>
+              <RefinedProjectCard
+                title="BackMarket IA Redesign"
+                description="A deep dive into restructuring the information architecture of a leading refurbished electronics marketplace to enhance usability and content clarity."
+                image="/placeholder.svg?height=600&width=800"
+                tags={["Information Architecture", "Content Strategy", "UX Research"]}
+                href="/projects/backmarket-ia-redesign"
+              />
+            </StaggerItem>
+            <StaggerItem>
+              <RefinedProjectCard
+                title="Finance Dashboard"
+                description="A comprehensive financial management dashboard for personal and small business users."
+                image="/placeholder.svg?height=600&width=800"
+                tags={["Data Visualization", "User Testing", "Interaction Design"]}
+                href="/projects/finance-dashboard"
+              />
+            </StaggerItem>
+            <StaggerItem>
+              <RefinedProjectCard
+                title="Understanding Creative Block"
+                description="Research study exploring how creative professionals experience and manage creative blocks, with design implications for supporting technology."
+                image="/placeholder.svg?height=600&width=800"
+                tags={["HCI Research", "Mixed Methods", "User Interviews", "Persona Development"]}
+                href="/projects/understanding-creative-block"
+              />
+            </StaggerItem>
+          </StaggerContainer>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-24 bg-white dark:bg-black">
+        <div className="container px-4 mx-auto md:px-6">
+          <div className="grid gap-12 md:grid-cols-2 md:items-center">
+            <FadeIn direction="left" shouldAnimate={loadingComplete}>
+              <Parallax offset={-30}>
+                <RefinedMagneticEffect intensity={0.08} range={150}>
+                  <div className="relative overflow-hidden rounded-xl aspect-[2/3] scale-[0.72] origin-center">
+                    <Image
+                      src="/images/vedant-portrait.png"
+                      alt="Portrait of Vedant Darak, UX Designer"
+                      fill
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
+                </RefinedMagneticEffect>
+              </Parallax>
+            </FadeIn>
+            <FadeIn direction="right" shouldAnimate={loadingComplete}>
+              <div className="space-y-6">
+                <h2 className="text-3xl font-medium tracking-tight md:text-4xl">About Me</h2>
+                <p className="text-xl text-neutral-600 dark:text-neutral-300">
+                  I'm a UX designer with 5 years of experience creating user-centered digital products that solve real
+                  problems.
+                </p>
+                <StaggerContainer className="space-y-4" staggerDelay={0.1} shouldAnimate={loadingComplete}>
+                  <StaggerItem>
+                    <p className="text-neutral-600 dark:text-neutral-400">
+                      My approach combines empathy-driven research with strategic design thinking to create experiences
+                      that are both functional and delightful. I believe in designing with intention, where every
+                      element serves a purpose.
+                    </p>
+                  </StaggerItem>
+                  <StaggerItem>
+                    <p className="text-neutral-600 dark:text-neutral-400">
+                      With a background in cognitive psychology and human-computer interaction, I bring a unique
+                      perspective to understanding user behavior and designing solutions that feel intuitive and
+                      natural.
+                    </p>
+                  </StaggerItem>
+                  <StaggerItem>
+                    <p className="text-neutral-600 dark:text-neutral-400">
+                      When I'm not designing, you can find me hiking, reading about design psychology, or experimenting
+                      with ceramics.
+                    </p>
+                  </StaggerItem>
+                </StaggerContainer>
+                <FadeIn delay={0.4} shouldAnimate={loadingComplete}>
+                  <div className="flex gap-4">
+                    <RefinedButton variant="outline" intensity={0.2}>
+                      <a href="/resume.pdf" download className="flex items-center group">
+                        <Download className="w-4 h-4 mr-2 transition-transform duration-300 ease-out group-hover:translate-x-1" />
+                        Download Resume
+                      </a>
+                    </RefinedButton>
+                  </div>
+                </FadeIn>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-24">
+        <div className="container px-4 mx-auto md:px-6">
+          <FadeIn shouldAnimate={loadingComplete}>
+            <div className="max-w-3xl mx-auto space-y-6 text-center">
+              <h2 className="text-3xl font-medium tracking-tight md:text-4xl">Get in Touch</h2>
+              <p className="text-xl text-neutral-600 dark:text-neutral-300">
+                Interested in working together? I'd love to hear about your project.
+              </p>
+              <div className="flex justify-center">
+                <RefinedButton size="lg" intensity={0.2}>
+                  <a href="mailto:hello@vedantdarak.design" className="flex items-center">
+                    <Mail className="w-4 h-4 mr-2" /> vdarak.infinity@gmail.com
+                  </a>
+                </RefinedButton>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Footer Component */}
+      <Footer />
+    </motion.main>
+    </>
+  )
+}

@@ -1,0 +1,465 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 180 25% 99%;  /* Minimal sage #FDFEFE - subtle green-tinted calm */
+    --foreground: 0 0% 10%;
+    --card: 180 25% 99%;  /* Match background for seamless cards */
+    --card-foreground: 0 0% 10%;
+    --popover: 180 25% 99%;  /* Match minimal sage background */
+    --popover-foreground: 0 0% 10%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 70%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 6%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 0 0% 95%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 0 0% 12%;
+    --accent-foreground: 0 0% 95%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 0 0% 25%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+}
+
+/* Smooth scrolling for better animation performance */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optimize animations for performance */
+.interactive {
+  will-change: transform;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Ensure proper z-index stacking */
+.interactive:hover {
+  z-index: 10;
+}
+
+/* Focus styles for accessibility */
+.interactive:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground));
+}
+
+/* Project card tags horizontal scrollbar styling */
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.scrollbar-thumb-muted::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--muted));
+  border-radius: 9999px;
+}
+
+.scrollbar-track-transparent::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--muted));
+  border-radius: 9999px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Line clamp utility for consistent text truncation */
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/* Ensure dropdown menus appear properly */
+[data-radix-popper-content-wrapper] {
+  z-index: 9998 !important;
+}
+
+/* Custom cursor styles - Enhanced for better detection */
+[data-project-image] {
+  cursor: none !important;
+  position: relative;
+}
+
+[data-project-image] * {
+  cursor: none !important;
+}
+
+/* Ensure cursor is hidden on project images and children */
+.cursor-none,
+.cursor-none * {
+  cursor: none !important;
+}
+
+/* Enhanced project image hover area */
+[data-project-image]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Ensure project images are properly marked for cursor detection */
+[data-project-image] {
+  isolation: isolate;
+}
+
+/* Enhanced dark mode text readability */
+.dark .text-neutral-600 {
+  color: hsl(0 0% 75%);
+}
+
+.dark .text-neutral-400 {
+  color: hsl(0 0% 60%);
+}
+
+/* Better contrast for links in dark mode */
+.dark a:hover {
+  color: hsl(0 0% 100%);
+}
+
+/* Ensure custom cursor appears above everything */
+.custom-cursor-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Debug styles for development (remove in production) */
+[data-project-image] {
+  outline: 1px solid transparent;
+}
+
+[data-project-image]:hover {
+  outline: 1px solid rgba(255, 0, 0, 0.1);
+}
+
+/* Enhanced Hero Section Animations */
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+    opacity: 0.7;
+  }
+  50% { 
+    transform: translateY(-20px) rotate(180deg); 
+    opacity: 0.3;
+  }
+}
+
+@keyframes scale {
+  0%, 100% { 
+    transform: scale(0); 
+    opacity: 0;
+  }
+  50% { 
+    transform: scale(1); 
+    opacity: 0.3;
+  }
+}
+
+/* Breathing effect for interactive elements */
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-breathe {
+  animation: breathe 4s ease-in-out infinite;
+}
+
+.animation-delay-1000 {
+  animation-delay: 1s;
+}
+
+/* Enhanced ripple effects */
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.animate-ripple {
+  animation: ripple 1.5s ease-out infinite;
+}
+
+/* Sophisticated Bouncing Particles Enhancement */
+@keyframes particle-glow {
+  0%, 100% { 
+    filter: brightness(1) saturate(1);
+    transform: scale(1);
+  }
+  50% { 
+    filter: brightness(1.2) saturate(1.1);
+    transform: scale(1.05);
+  }
+}
+
+@keyframes subtle-drift {
+  0%, 100% { 
+    transform: translateY(0px);
+    opacity: 0.6;
+  }
+  50% { 
+    transform: translateY(-2px);
+    opacity: 0.8;
+  }
+}
+
+.particle-enhanced {
+  animation: particle-glow 4s ease-in-out infinite, subtle-drift 6s ease-in-out infinite;
+}
+
+/* Background grid pulse synchronization */
+@keyframes grid-pulse-sync {
+  0%, 100% { 
+    opacity: 0.1;
+  }
+  50% { 
+    opacity: 0.3;
+  }
+}
+
+.grid-sync-pulse {
+  animation: grid-pulse-sync 8s ease-in-out infinite;
+}
+
+/* Enhanced project card pill overlay styling */
+.project-card-pill {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dark .project-card-pill {
+  background: rgba(0, 0, 0, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Enhanced flowing text visibility in pills */
+.project-card-pill .flowing-text {
+  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.1);
+}
+
+.dark .project-card-pill .flowing-text {
+  -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.1);
+}
+
+/* Design patterns grid animations */
+.design-pattern-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.design-pattern-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Wireframe pattern animations */
+@keyframes wireframe-build {
+  0% { width: 0; height: 0; opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { width: 100%; height: 100%; opacity: 1; }
+}
+
+.wireframe-element {
+  animation: wireframe-build 0.8s ease-out forwards;
+}
+
+/* Grid system animations */
+@keyframes grid-reveal {
+  0% { stroke-dasharray: 0, 100; opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { stroke-dasharray: 100, 0; opacity: 1; }
+}
+
+.grid-line {
+  animation: grid-reveal 1.2s ease-in-out forwards;
+}
+
+/* Flow pattern animations */
+@keyframes flow-path {
+  0% { stroke-dasharray: 0, 100; }
+  100% { stroke-dasharray: 100, 0; }
+}
+
+.flow-path {
+  animation: flow-path 2s ease-in-out infinite;
+}
+
+/* Node pulse animation */
+@keyframes node-pulse {
+  0%, 100% { 
+    transform: scale(1); 
+    opacity: 0.8; 
+  }
+  50% { 
+    transform: scale(1.2); 
+    opacity: 1; 
+  }
+}
+
+.flow-node {
+  animation: node-pulse 2s ease-in-out infinite;
+}
+
+.flow-node:nth-child(2) { animation-delay: 0.3s; }
+.flow-node:nth-child(3) { animation-delay: 0.6s; }
+
+/* Dot pattern rhythmic animations */
+@keyframes dot-rhythm {
+  0%, 100% { 
+    transform: scale(1); 
+    opacity: 0.4; 
+  }
+  50% { 
+    transform: scale(1.3); 
+    opacity: 0.8; 
+  }
+}
+
+.dot-primary {
+  animation: dot-rhythm 3s ease-in-out infinite;
+}
+
+.dot-secondary {
+  animation: dot-rhythm 3s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+/* Project Page Layout - Responsive content spacing */
+.project-content-wrapper .content-section {
+  /* Enhanced balanced spacing on both sides for better aesthetic harmony */
+  @media (min-width: 1024px) {
+    padding-left: 4.5rem;
+    padding-right: 7.5rem;
+  }
+  
+  @media (min-width: 1280px) {
+    padding-left: 5.5rem;
+    padding-right: 8.5rem;
+  }
+  
+  @media (min-width: 1536px) {
+    padding-left: 6.5rem;
+    padding-right: 9.5rem;
+  }
+}
+
+/* Refined container spacing within content sections for optimal readability */
+.project-content-wrapper .content-section .container {
+  @media (min-width: 1024px) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  @media (min-width: 1280px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  @media (min-width: 1536px) {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+/* Ensure hero sections are never affected */
+.project-content-wrapper .hero-section {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
