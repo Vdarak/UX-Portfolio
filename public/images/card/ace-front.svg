@@ -1,0 +1,17 @@
+<svg width="300" height="420" viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg">
+  <!-- Card Background -->
+  <rect width="300" height="420" rx="15" fill="white" />
+  
+  <!-- Top Left Label -->
+  <text x="20" y="40" font-family="Arial" font-size="24" font-weight="bold">A</text>
+  <text x="20" y="70" font-family="Arial" font-size="30">♠</text>
+  
+  <!-- Center Spade -->
+  <text x="150" y="220" font-family="Arial" font-size="140" font-weight="bold" text-anchor="middle">♠</text>
+  
+  <!-- Bottom Right Label (Upside Down) -->
+  <g transform="translate(280, 380) rotate(180)">
+    <text x="0" y="0" font-family="Arial" font-size="24" font-weight="bold">A</text>
+    <text x="0" y="30" font-family="Arial" font-size="30">♠</text>
+  </g>
+</svg>
