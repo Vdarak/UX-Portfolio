@@ -165,7 +165,7 @@ export default function Home() {
                 <RefinedProjectCard
                   title="HealthTrack Mobile App"
                   description="A health monitoring application designed to help users track their daily health metrics and medication."
-                  image="/placeholder.svg?height=600&width=800"
+                  image="/images/logo.png"
                   tags={["UX Research", "UI Design", "Prototyping"]}
                   href="/projects/health-track"
                 />
@@ -183,7 +183,7 @@ export default function Home() {
                 <RefinedProjectCard
                   title="Finance Dashboard"
                   description="A comprehensive financial management dashboard for personal and small business users."
-                  image="/placeholder.svg?height=600&width=800"
+                  image="/images/logo.png"
                   tags={["Data Visualization", "User Testing", "Interaction Design"]}
                   href="/projects/finance-dashboard"
                 />
