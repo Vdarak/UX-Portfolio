@@ -172,14 +172,6 @@ export default function HealthTrackCaseStudy() {
     <>
       <ProjectPageWrapper sections={navigationSections}>
       <main className="min-h-screen bg-background">
-        {/* Navigation */}
-        <div className="container px-4 mx-auto pt-24 pb-8">
-          <Link href="/#projects" className="inline-flex items-center text-sm hover:text-primary transition-colors group">
-            <ArrowLeft className="w-4 h-4 mr-2 transition-transform duration-300 ease-out group-hover:-translate-x-1" />
-            Back to all projects
-          </Link>
-        </div>
-
         {/* Hero Section */}
         <div id="hero">
           <ProjectHero {...storyData.hero} />
