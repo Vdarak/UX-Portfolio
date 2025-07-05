@@ -174,7 +174,7 @@ export default function Home() {
                 <RefinedProjectCard
                   title="BackMarket IA Redesign"
                   description="A deep dive into restructuring the information architecture of a leading refurbished electronics marketplace to enhance usability and content clarity."
-                  image="/placeholder.svg?height=600&width=800"
+                  image="/images/backmarket-dark.png"
                   tags={["Information Architecture", "Content Strategy", "UX Research"]}
                   href="/projects/backmarket-ia-redesign"
                 />
@@ -192,7 +192,7 @@ export default function Home() {
                 <RefinedProjectCard
                   title="Understanding Creative Block"
                   description="Research study exploring how creative professionals experience and manage creative blocks, with design implications for supporting technology."
-                  image="/placeholder.svg?height=600&width=800"
+                  image="/images/creativeblock-dark.png"
                   tags={["HCI Research", "Mixed Methods", "User Interviews", "Persona Development"]}
                   href="/projects/understanding-creative-block"
                 />

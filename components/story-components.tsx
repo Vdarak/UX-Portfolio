@@ -19,8 +19,10 @@ import {
   Heart,
   Smartphone,
   Shield,
-  Zap
+  Zap,
+  ArrowLeft
 } from "lucide-react"
+import Link from "next/link"
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/scroll-animations"
 import { RefinedMagneticEffect } from "@/components/refined-magnetic-effect"
 import { FlowingText } from "@/components/flowing-text"
@@ -39,7 +41,16 @@ interface ProjectHeroProps {
 
 export function ProjectHero({ title, subtitle, storyHook, heroImage, role, timeline, team }: ProjectHeroProps) {
   return (
-    <section className="hero-section relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/5 to-secondary/10">
+    <section className="hero-section relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/5 to-secondary/10 pt-16 md:pt-20">
+      {/* Back to all projects button - with responsive positioning */}
+      <Link 
+        href="/#projects" 
+        className="absolute top-24 md:top-24 left-4 md:left-8 z-30 flex items-center text-sm font-medium text-foreground/70 hover:text-foreground transition-colors group"
+      >
+        <ArrowLeft className="mr-2 h-4 w-4 transition-transform duration-300 ease-out group-hover:-translate-x-1" />
+        Back to all projects
+      </Link>
+      
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background/80 to-background/40 z-10" />
         <motion.div
@@ -56,7 +67,7 @@ export function ProjectHero({ title, subtitle, storyHook, heroImage, role, timel
         </motion.div>
       </div>
       
-      <div className="container relative z-20 px-4 mx-auto text-center">
+      <div className="container relative z-20 px-4 mx-auto text-center mt-20 md:mt-8">
         <FadeIn direction="up" delay={0.2}>
           <div className="max-w-5xl mx-auto space-y-8">
             {/* Story Hook - The compelling opening */}

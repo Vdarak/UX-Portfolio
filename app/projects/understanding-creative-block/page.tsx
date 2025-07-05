@@ -25,7 +25,7 @@ export default function CreativeBlockCaseStudy() {
       title: "Understanding Creative Block",
       subtitle: "Uncovering the hidden patterns behind creative struggles and designing pathways to breakthrough",
       storyHook: "What if creative block isn't a wall to break through, but a signal pointing toward what creators really need?",
-      heroImage: "/placeholder.svg?height=1000&width=2000",
+      heroImage: "/images/creativeblock-dark.png?height=1000&width=2000",
       role: "UX Researcher & Team Lead",
       timeline: "10 weeks (Winter Quarter 2023-2024)",
       team: ["Caroline Rumani", "Diego Reyes-Alicea", "Valerie Fahel-Schaffer", "Vedant Darak"]
@@ -139,14 +139,6 @@ export default function CreativeBlockCaseStudy() {
     <>
       <ProjectPageWrapper sections={navigationSections}>
         <main className="min-h-screen bg-background">
-        {/* Navigation */}
-        <div className="container px-4 mx-auto pt-24 pb-8">
-          <Link href="/#projects" className="inline-flex items-center text-sm hover:text-primary transition-colors group">
-            <ArrowLeft className="w-4 h-4 mr-2 transition-transform duration-300 ease-out group-hover:-translate-x-1" />
-            Back to all projects
-          </Link>
-        </div>
-
         {/* Hero Section */}
         <div id="hero">
           <ProjectHero {...storyData.hero} />

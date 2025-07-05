@@ -100,18 +100,20 @@ export default function RefinedProjectCard({
         <Link href={href} className="block">
           <Card className="overflow-hidden transition-all duration-500 group-hover:shadow-xl group-hover:shadow-black/5 dark:group-hover:shadow-white/5">
             {/* Enhanced project image container */}
-            <div className="relative overflow-hidden aspect-[4/3]" data-project-image="true" style={{ cursor: "none" }}>
+            <div className="relative overflow-hidden aspect-[4/3] bg-black flex items-center justify-center" data-project-image="true" style={{ cursor: "none" }}>
               <Image
                 src={image || "/placeholder.svg"}
                 alt={title}
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                className="object-contain transition-transform duration-700 group-hover:scale-105"
                 style={{ cursor: "none" }}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority={false}
               />
               
               {/* Dark overlay for better pill visibility */}
               <motion.div
-                className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/40"
+                className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/40 pointer-events-none"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.4 }}

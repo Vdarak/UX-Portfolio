@@ -274,9 +274,7 @@ export default function PoetryPage() {
   const getRandomDelay = () => Math.random() * 8
 
   return (
-    <><head>
-        <base href="/" />
-      </head>
+    <>
       <main className="min-h-screen bg-background pt-16">
       {/* Hero Section */}
       <section className="py-16 bg-secondary">

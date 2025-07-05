@@ -606,7 +606,7 @@ export default function BackmarketIARedesign() {
           title="BackMarket IA Redesign"
           subtitle="A deep dive into restructuring the information architecture of a leading refurbished electronics marketplace to enhance usability and content clarity."
           storyHook="How can we untangle a complex navigation system to help users find what they need, faster?"
-          heroImage="/placeholder.svg?height=600&width=1200"
+          heroImage="/images/backmarket-dark.png?height=600&width=1200"
           role="UX Researcher & IA Specialist"
           timeline="4 Weeks (Class Project)"
         />
