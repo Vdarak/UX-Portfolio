@@ -110,7 +110,7 @@ export default function FinanceDashboard() {
                 </p>
                 
                 <div className="flex flex-wrap justify-center gap-4 pt-8">
-                  <Link href="/projects/understanding-creative-block">
+                  <Link href="/projects/backmarket-ia-redesign">
                     <RefinedButton variant="default" size="lg" className="group">
                       <span className="flex items-center gap-2">
                         <ArrowLeft className="w-5 h-5 transition-transform duration-300 group-hover:-translate-x-1" />
@@ -118,7 +118,7 @@ export default function FinanceDashboard() {
                       </span>
                     </RefinedButton>
                     </Link>
-                  <Link href="/projects/backmarket-ia-redesign">
+                  <Link href="/projects/understanding-creative-block">
                     <RefinedButton variant="outline" size="lg" className="group">
                       <span className="flex items-center gap-2">
                         Next Project

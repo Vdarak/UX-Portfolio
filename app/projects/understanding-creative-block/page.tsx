@@ -867,7 +867,7 @@ export default function CreativeBlockCaseStudy() {
               </p>
               
               <div className="flex flex-wrap justify-center gap-4 pt-8">
-                <Link href="/projects/health-track">
+                <Link href="/projects/finance-dashboard">
                   <RefinedButton variant="default" size="lg" className="group">
                     <span className="flex items-center gap-2">
                       <ArrowLeft className="w-5 h-5 transition-transform duration-300 group-hover:-translate-x-1" />
@@ -875,7 +875,7 @@ export default function CreativeBlockCaseStudy() {
                     </span>
                   </RefinedButton>
                 </Link>
-                <Link href="/projects/finance-dashboard">
+                <Link href="/projects/reducing-alchol">
                   <RefinedButton variant="outline" size="lg" className="group">
                     <span className="flex items-center gap-2">
                       Next Project
