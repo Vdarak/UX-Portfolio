@@ -163,11 +163,11 @@ export default function Home() {
             <StaggerContainer className="grid gap-20 md:grid-cols-2" staggerDelay={0.2}>
               <StaggerItem>
                 <RefinedProjectCard
-                  title="HealthTrack Mobile App"
-                  description="A health monitoring application designed to help users track their daily health metrics and medication."
+                  title="Reducing Alcohol Consumption"
+                  description="Supporting healthier relationships with alcohol through research-driven design to make mindful social choices more visible and accessible."
                   image="/images/logo.png"
-                  tags={["UX Research", "UI Design", "Prototyping"]}
-                  href="/projects/health-track"
+                  tags={["UX Research", "Mixed Methods", "Behavioral Design"]}
+                  href="/projects/reducing-alcohol"
                 />
               </StaggerItem>
               <StaggerItem>
