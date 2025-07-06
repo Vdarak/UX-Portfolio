@@ -821,7 +821,7 @@ export default function BackmarketIARedesign() {
                     Discover more UX design projects that showcase my approach to solving complex problems through research-driven design.
                   </p>
                   <div className="flex flex-wrap justify-center gap-4 pt-8">
-                    <Link href="/projects/finance-dashboard">
+                    <Link href="/projects/understanding-creative-block">
                       <RefinedButton variant="default" size="lg" className="group">
                         <span className="flex items-center gap-2">
                           <ArrowLeft className="w-5 h-5 transition-transform duration-300 group-hover:-translate-x-1" />
@@ -829,7 +829,7 @@ export default function BackmarketIARedesign() {
                         </span>
                       </RefinedButton>
                     </Link>
-                    <Link href="/projects/reducing-alcohol">
+                    <Link href="/projects/finance-dashboard">
                       <RefinedButton variant="outline" size="lg" className="group">
                         <span className="flex items-center gap-2">
                           Next Project

@@ -875,7 +875,7 @@ export default function CreativeBlockCaseStudy() {
                     </span>
                   </RefinedButton>
                 </Link>
-                <Link href="/projects/reducing-alchol">
+                <Link href="/projects/reducing-alcohol">
                   <RefinedButton variant="outline" size="lg" className="group">
                     <span className="flex items-center gap-2">
                       Next Project

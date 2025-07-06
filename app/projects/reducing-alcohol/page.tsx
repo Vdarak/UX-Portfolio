@@ -1431,7 +1431,7 @@ export default function AlcoholConsumptionCaseStudy() {
                     </span>
                   </RefinedButton>
                 </Link>
-                <Link href="/projects/finance-dashboard">
+                <Link href="/projects/backmarket-ia-redesign">
                   <RefinedButton variant="outline" size="lg" className="group">
                     <span className="flex items-center gap-2">
                       Next Project
