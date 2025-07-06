@@ -829,7 +829,7 @@ export default function BackmarketIARedesign() {
                         </span>
                       </RefinedButton>
                     </Link>
-                    <Link href="/projects/health-track">
+                    <Link href="/projects/reducing-alcohol">
                       <RefinedButton variant="outline" size="lg" className="group">
                         <span className="flex items-center gap-2">
                           Next Project
