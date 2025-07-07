@@ -83,6 +83,8 @@ export function ProjectHero({ title, subtitle, storyHook, heroImage, role, timel
                   <>Understanding <FlowingText text="Creative" className="inline" /> Block</>
                 ) : title === "HealthTrack" ? (
                   <><FlowingText text="Health" className="inline-block" />Track</>
+                ) : title === "Reducing Alcohol Consumption" ? (
+                  <>Reducing <FlowingText text="Alcohol" className="inline" /> Consumption</>
                 ) : (
                   title
                 )}

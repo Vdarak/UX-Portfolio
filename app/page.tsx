@@ -197,6 +197,15 @@ export default function Home() {
                   href="/projects/understanding-creative-block"
                 />
               </StaggerItem>
+              <StaggerItem>
+                <RefinedProjectCard
+                  title="Ana: AI-Powered News Aggregator"
+                  description="An AI system that detects media bias and enhances media literacy for Gen Z users through explainable AI and educational tools."
+                  image="/images/logo.png"
+                  tags={["AI Ethics", "Media Literacy", "Gen Z Users", "UX Research"]}
+                  href="/projects/media-bias-ai"
+                />
+              </StaggerItem>
             </StaggerContainer>
           </div>
         </div>
