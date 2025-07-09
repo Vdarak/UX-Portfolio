@@ -511,7 +511,7 @@ export default function AlcoholConsumptionCaseStudy() {
             narrativeHook="From insights to intervention: a strategy to make alcohol-free socializing intuitive, visible, and empowering."
           >
             <div className="grid gap-12">
-              <div className="grid gap-6 md:grid-cols-2">
+              <div className="grid gap-6 md:grid-cols-2 px-4">
                 <InsightCard
                   type="solution"
                   title="Correct Misperceived Norms"
@@ -550,7 +550,7 @@ export default function AlcoholConsumptionCaseStudy() {
                   <h4 className="font-bold text-xl flex items-center gap-2">
                     <KeyRound className="w-5 h-5 text-primary" /> Key Features
                   </h4>
-                  <div className="flex gap-8 mt-4">
+                  <div className="flex flex-col md:flex-row flex-wrap gap-8 mt-4">
                     {[
                       { icon: Filter, title: "Personalized Filters", text: "Select by mood or interest (e.g., game nights, mocktail bars)." },
                       { icon: Shuffle, title: "Illusion of Choice", text: "Rotate event categories to foster autonomy and novelty." },
@@ -570,7 +570,7 @@ export default function AlcoholConsumptionCaseStudy() {
                 {/* Mockups positioned below Key Features */}
                 <div className="flex justify-center flex-wrap gap-16 mt-16">
                   {['/images/screen1-alcohol.png','/images/screen2-alcohol.png','/images/screen3-alcohol.png'].map((src, idx) => (
-                    <div key={idx} className="overflow-hidden rounded-3xl shadow-lg">
+                    <div key={idx} className="w-full max-w-[350px] overflow-hidden rounded-3xl shadow-lg">
                       <Image
                         src={src}
                         alt={`Mockup ${idx + 1}`}

@@ -218,7 +218,7 @@ export default function Home() {
 
       {/* About Section */}
       <section id="about" className="py-24 bg-white dark:bg-black">
-        <div className="container px-4 mx-auto md:px-6">
+        <div className="container px-5 mx-auto md:px-12">
           <div className="grid gap-12 md:grid-cols-2 md:items-center">
             <FadeIn direction="left">
               <Parallax offset={-30}>
@@ -236,7 +236,7 @@ export default function Home() {
               </Parallax>
             </FadeIn>
             <FadeIn direction="right">
-              <div className="space-y-6">
+              <div className="space-y-6 px-2">
                 <h2 className="text-3xl font-medium tracking-tight md:text-4xl">About Me</h2>
                 <p className="text-xl text-neutral-600 dark:text-neutral-300">
                   I'm a UX designer with 5 years of experience creating user-centered digital products that solve real
@@ -392,10 +392,10 @@ export default function Home() {
         </div>
         {/* Centered philosophical quote below image and skills */}
         <FadeIn delay={0.8}>
-          <blockquote className="mx-auto max-w-2xl text-3xl italic text-center relative mt-12">
-            <div className="absolute -left-6 -top-4 text-6xl text-primary/10 font-serif">"</div>
-            <div className="absolute -right-6 -bottom-4 text-6xl text-primary/10 font-serif rotate-180">"</div>
-            <p className="relative z-10">A philosopher who only does philosophy is a bad philosopher</p>
+          <blockquote className="mx-auto max-w-2xl text-2xl md:text-3xl italic text-center relative mt-12">
+            <div className="absolute -left-6 -top-4 text-4xl md:text-6xl text-primary/10 font-serif">"</div>
+            <div className="absolute -right-6 -bottom-4 text-4xl md:text-6xl text-primary/10 font-serif rotate-180">"</div>
+            <p className="relative z-10 px-6">A philosopher who only does philosophy is a bad philosopher</p>
           </blockquote>
         </FadeIn>
       </section>
