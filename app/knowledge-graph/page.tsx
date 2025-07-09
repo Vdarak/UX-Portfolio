@@ -73,10 +73,16 @@ const portfolioData = {
               children: [{ id: 'app-projects-finance-dashboard-page', label: 'page.tsx', type: 'file' as const }],
             },
             {
-              id: 'app-projects-health-track',
-              label: 'health-track',
+              id: 'app-projects-media-bias-ai',
+              label: 'media-bias-ai',
               type: 'folder' as const,
-              children: [{ id: 'app-projects-health-track-page', label: 'page.tsx', type: 'file' as const }],
+              children: [{ id: 'app-projects-media-bias-ai-page', label: 'page.tsx', type: 'file' as const }],
+            },
+            {
+              id: 'app-projects-reducing-alcohol',
+              label: 'reducing-alcohol',
+              type: 'folder' as const,
+              children: [{ id: 'app-projects-reducing-alcohol-page', label: 'page.tsx', type: 'file' as const }],
             },
             {
               id: 'app-projects-ucb',
@@ -89,6 +95,8 @@ const portfolioData = {
         { id: 'app-globals', label: 'globals.css', type: 'file' as const },
         { id: 'app-layout', label: 'layout.tsx', type: 'file' as const },
         { id: 'app-page', label: 'page.tsx', type: 'file' as const },
+        { id: 'app-package-json', label: 'package.json', type: 'file' as const },
+        { id: 'app-tsconfig-json', label: 'tsconfig.json', type: 'file' as const },
       ],
     },
     {
@@ -155,14 +163,12 @@ const portfolioData = {
         },
         { id: 'components-animated-text', label: 'animated-text.tsx', type: 'file' as const },
         { id: 'components-construction-dashboard', label: 'construction-dashboard.tsx', type: 'file' as const },
-        { id: 'components-count-up', label: 'count-up.tsx', type: 'file' as const },
         { id: 'components-custom-cursor', label: 'custom-cursor.tsx', type: 'file' as const },
         { id: 'components-debug-cursor-info', label: 'debug-cursor-info.tsx', type: 'file' as const },
         { id: 'components-finance-dashboard', label: 'finance-dashboard.tsx', type: 'file' as const },
         { id: 'components-floating-section-nav', label: 'floating-section-nav.tsx', type: 'file' as const },
         { id: 'components-flowing-text', label: 'flowing-text.tsx', type: 'file' as const },
         { id: 'components-footer', label: 'footer.tsx', type: 'file' as const },
-        { id: 'components-gradient-text', label: 'gradient-text.tsx', type: 'file' as const },
         { id: 'components-insight-card', label: 'insight-card.tsx', type: 'file' as const },
         { id: 'components-loading-screen', label: 'loading-screen.tsx', type: 'file' as const },
         { id: 'components-pixel-grid', label: 'pixel-grid.tsx', type: 'file' as const },
@@ -179,6 +185,14 @@ const portfolioData = {
       ],
     },
     {
+      id: 'config',
+      label: 'config',
+      type: 'folder' as const,
+      children: [
+        { id: 'config-site', label: 'site.ts', type: 'file' as const },
+      ],
+    },
+    {
       id: 'hooks',
       label: 'hooks',
       type: 'folder' as const,
@@ -189,27 +203,11 @@ const portfolioData = {
       ],
     },
     {
-      id: 'config',
-      label: 'config',
-      type: 'folder' as const,
-      children: [
-        { id: 'config-site', label: 'site.ts', type: 'file' as const },
-      ],
-    },
-    {
       id: 'lib',
       label: 'lib',
       type: 'folder' as const,
       children: [
         { id: 'lib-utils', label: 'utils.ts', type: 'file' as const },
-      ],
-    },
-    {
-      id: 'styles',
-      label: 'styles',
-      type: 'folder' as const,
-      children: [
-        { id: 'styles-globals', label: 'globals.css', type: 'file' as const },
       ],
     },
     {
@@ -222,13 +220,12 @@ const portfolioData = {
           label: 'images',
           type: 'folder' as const,
           children: [
+            { id: 'public-images-alcohol', label: 'alcohol.png', type: 'file' as const },
+            { id: 'public-images-ana', label: 'ana.png', type: 'file' as const },
+            { id: 'public-images-backmarket-dark', label: 'backmarket-dark.png', type: 'file' as const },
+            { id: 'public-images-creativeblock-dark', label: 'creativeblock-dark.png', type: 'file' as const },
+            { id: 'public-images-logo', label: 'logo.png', type: 'file' as const },
             { id: 'public-images-vedant', label: 'vedant-portrait.png', type: 'file' as const },
-            {
-              id: 'public-images-card',
-              label: 'card',
-              type: 'folder' as const,
-              children: []
-            },
           ],
         },
         { id: 'public-placeholder-logo-png', label: 'placeholder-logo.png', type: 'file' as const },
@@ -238,14 +235,23 @@ const portfolioData = {
         { id: 'public-placeholder-svg', label: 'placeholder.svg', type: 'file' as const },
       ],
     },
+    {
+      id: 'styles',
+      label: 'styles',
+      type: 'folder' as const,
+      children: [
+        { id: 'styles-globals', label: 'globals.css', type: 'file' as const },
+      ],
+    },
+    { id: 'CODEBASE_CONTEXT.md', label: 'CODEBASE_CONTEXT.md', type: 'file' as const },
+    { id: 'components.json', label: 'components.json', type: 'file' as const },
+    { id: 'next-env.d.ts', label: 'next-env.d.ts', type: 'file' as const },
+    { id: 'next.config.mjs', label: 'next.config.mjs', type: 'file' as const },
     { id: 'package.json', label: 'package.json', type: 'file' as const },
     { id: 'pnpm-lock.yaml', label: 'pnpm-lock.yaml', type: 'file' as const },
     { id: 'tailwind.config.ts', label: 'tailwind.config.ts', type: 'file' as const },
     { id: 'postcss.config.mjs', label: 'postcss.config.mjs', type: 'file' as const },
-    { id: 'next.config.mjs', label: 'next.config.mjs', type: 'file' as const },
     { id: 'tsconfig.json', label: 'tsconfig.json', type: 'file' as const },
-    { id: 'components.json', label: 'components.json', type: 'file' as const },
-    { id: 'CODEBASE_CONTEXT.md', label: 'CODEBASE_CONTEXT.md', type: 'file' as const },
   ],
 };
 
