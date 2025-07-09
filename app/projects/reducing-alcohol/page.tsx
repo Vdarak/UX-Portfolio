@@ -37,6 +37,7 @@ import { RefinedButton } from "@/components/refined-button"
 import { FlowingText } from "@/components/flowing-text"
 import { ProjectHero, StorySection, InsightCard, UserQuote } from "@/components/story-components"
 import { ProjectPageWrapper } from "@/components/project-page-wrapper"
+import Image from "next/image"
 import Footer from "@/components/footer"
 
 export default function AlcoholConsumptionCaseStudy() {
@@ -188,15 +189,6 @@ export default function AlcoholConsumptionCaseStudy() {
                   })}
                 </StaggerContainer>
               </div>
-
-              <div className="py-4">
-                <div className="bg-muted/30 rounded-xl p-6 border border-border flex items-center justify-center h-[300px]">
-                  <div className="text-muted-foreground flex flex-col items-center">
-                    <Loader2 className="h-8 w-8 animate-spin mb-2" />
-                    <p>[Problem Area Visualization]</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </StorySection>
 
@@ -259,15 +251,6 @@ export default function AlcoholConsumptionCaseStudy() {
                     )
                   })}
                 </StaggerContainer>
-              </div>
-
-              <div className="py-4">
-                <div className="bg-muted/30 rounded-xl p-6 border border-border flex items-center justify-center h-[300px]">
-                  <div className="text-muted-foreground flex flex-col items-center">
-                    <Loader2 className="h-8 w-8 animate-spin mb-2" />
-                    <p>[Literature Review Artifact]</p>
-                  </div>
-                </div>
               </div>
 
               <div>
@@ -412,12 +395,16 @@ export default function AlcoholConsumptionCaseStudy() {
                 </div>
               </Card>
 
+              {/* Affinity Diagram image placeholder */}
               <div className="py-4">
-                <div className="bg-muted/30 rounded-xl p-6 border border-border flex items-center justify-center h-[300px]">
-                  <div className="text-muted-foreground flex flex-col items-center">
-                    <Loader2 className="h-8 w-8 animate-spin mb-2" />
-                    <p>[Full Individual Appraisal Codebook]</p>
-                  </div>
+                <div className="relative w-full h-[300px] overflow-hidden rounded-xl">
+                  <Image
+                    src="/images/affinity-diagram.png" // TODO: verify path
+                    alt="Affinity Diagram"
+                    fill
+                    className="object-contain"
+                    priority
+                  />
                 </div>
               </div>
 
@@ -514,11 +501,15 @@ export default function AlcoholConsumptionCaseStudy() {
 
               <div className="border-t border-border pt-12">
                 <h3 className="text-2xl font-bold mb-8 text-center">The Journey to a New Third Place</h3>
-                <div className="bg-muted/30 rounded-xl p-6 border border-border flex items-center justify-center h-[450px]">
-                  <div className="text-muted-foreground flex flex-col items-center">
-                    <Loader2 className="h-8 w-8 animate-spin mb-2" />
-                    <p>[Journey Map Visualization]</p>
-                  </div>
+                {/* Journey Map image placeholder */}
+                <div className="relative rounded-xl border border-border h-[900px] overflow-hidden">
+                  <Image
+                    src="/images/journey-map.jpg" // TODO: add journey map path
+                    alt="Journey Map Visualization"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
               </div>
             </div>
@@ -565,52 +556,41 @@ export default function AlcoholConsumptionCaseStudy() {
                     A lightweight SMS service for curated, hyper-local, alcohol-free events.
                   </p>
                 </div>
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                  <div className="space-y-6">
-                    <h4 className="font-bold text-xl flex items-center gap-2">
-                      <KeyRound className="w-5 h-5 text-primary" />
-                      Key Features
-                    </h4>
+                {/* Key Features laid out horizontally */}
+                <div className="space-y-6">
+                  <h4 className="font-bold text-xl flex items-center gap-2">
+                    <KeyRound className="w-5 h-5 text-primary" /> Key Features
+                  </h4>
+                  <div className="flex gap-8 mt-4">
                     {[
-                      {
-                        icon: Filter,
-                        title: "Personalized Filters",
-                        text: "Select by mood or interest (e.g., game nights, mocktail bars).",
-                      },
-                      {
-                        icon: Shuffle,
-                        title: "Illusion of Choice",
-                        text: "Rotate event categories to foster autonomy and novelty.",
-                      },
-                      {
-                        icon: ThumbsUp,
-                        title: "Social Proof Highlights",
-                        text: "Embed peer testimonials and influencer spotlights within SMS.",
-                      },
-                      {
-                        icon: Bell,
-                        title: "Norm-Comparison Alerts",
-                        text: "Periodic facts to recalibrate perceptions (e.g., '70% of peers drink ≤5 units/week').",
-                      },
-                    ].map((item) => {
-                      const Icon = item.icon
-                      return (
-                        <div key={item.title} className="flex items-start gap-3">
-                          <Icon className="w-5 h-5 text-primary/80 mt-1 flex-shrink-0" />
-                          <div>
-                            <h5 className="font-semibold">{item.title}</h5>
-                            <p className="text-sm text-muted-foreground">{item.text}</p>
-                          </div>
+                      { icon: Filter, title: "Personalized Filters", text: "Select by mood or interest (e.g., game nights, mocktail bars)." },
+                      { icon: Shuffle, title: "Illusion of Choice", text: "Rotate event categories to foster autonomy and novelty." },
+                      { icon: ThumbsUp, title: "Social Proof Highlights", text: "Embed peer testimonials and influencer spotlights within SMS." },
+                      { icon: Bell, title: "Norm-Comparison Alerts", text: "Periodic facts to recalibrate perceptions (e.g., '70% of peers drink ≤5 units/week')." },
+                    ].map(item => (
+                      <div key={item.title} className="flex items-start gap-3">
+                        <item.icon className="w-5 h-5 text-primary/80 mt-1 flex-shrink-0" />
+                        <div>
+                          <h5 className="font-semibold">{item.title}</h5>
+                          <p className="text-sm text-muted-foreground">{item.text}</p>
                         </div>
-                      )
-                    })}
+                      </div>
+                    ))}
                   </div>
-                  <div className="bg-muted/30 rounded-xl p-6 border border-border flex items-center justify-center h-[400px]">
-                    <div className="text-muted-foreground flex flex-col items-center">
-                      <Loader2 className="h-8 w-8 animate-spin mb-2" />
-                      <p>[SMS Storyboard or Figma Prototype]</p>
+                </div>
+                {/* Mockups positioned below Key Features */}
+                <div className="flex justify-center flex-wrap gap-16 mt-16">
+                  {['/images/screen1-alcohol.png','/images/screen2-alcohol.png','/images/screen3-alcohol.png'].map((src, idx) => (
+                    <div key={idx} className="relative w-[350px] h-[800px] rounded-3xl overflow-hidden shadow-lg">
+                      <Image
+                        src={src} // TODO: update to actual mockup path
+                        alt={`Mockup ${idx + 1}`}
+                        fill
+                        className="object-contain"
+                        priority
+                      />
                     </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
