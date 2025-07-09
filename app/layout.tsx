@@ -6,7 +6,8 @@ import { SiteHeader } from "@/components/site-header"
 import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
-  title: "v0 App",
+  metadataBase: new URL("http://localhost:3000"), // Add this line
+  title: "Vedant's Portfolio",
   description: "Created with v0",
   generator: "v0.dev",
 }

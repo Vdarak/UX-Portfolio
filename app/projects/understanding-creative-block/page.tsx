@@ -17,7 +17,7 @@ export default function CreativeBlockCaseStudy() {
     { id: "journey", title: "Research Journey", subtitle: "Timeline & process" },
     { id: "insights", title: "Key Insights", subtitle: "What we discovered" },
     { id: "personas", title: "Personas", subtitle: "User archetypes" },
-    { id: "solution", title: "Solution Framework", subtitle: "Our approach" },
+    { id: "solution", title: "Solution", subtitle: "Our approach" },
     { id: "impact", title: "Impact", subtitle: "Results & learnings" }
   ]
   const storyData = {

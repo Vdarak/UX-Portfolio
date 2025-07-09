@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowLeft, ArrowRight, Brain, Users, Eye, Target, TrendingUp, CheckCircle, Lightbulb, BookOpen, Search, Shield, Smartphone, Zap, Palette } from "lucide-react"
+import { ArrowLeft, ArrowRight, Brain, Users, Eye, Target, TrendingUp, CheckCircle, Lightbulb, BookOpen, Search, Shield, Smartphone, Zap, Palette, AlertTriangle } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { RefinedMagneticEffect } from "@/components/refined-magnetic-effect"
 import { FadeIn, StaggerContainer, StaggerItem, Parallax } from "@/components/scroll-animations"
@@ -21,7 +21,7 @@ export default function MediaBiasAICaseStudy() {
 
   const storyData = {
     hero: {
-      title: "Ana: AI-Powered Media Bias Detection",
+      title: "Ana: AI News Aggregator",
       subtitle: "Empowering Gen Z with balanced news perspectives and enhanced media literacy",
       storyHook: "What if an AI could help you see beyond information bubbles and understand the full spectrum of news perspectives?",
       heroImage: "/images/logo.png", // You'll need to add this image to your public/images folder
@@ -209,15 +209,15 @@ export default function MediaBiasAICaseStudy() {
                     <h4 className="text-lg font-medium mb-3">Technical Innovation</h4>
                     <ul className="space-y-2 text-sm">
                       <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-secondary mr-2 mt-1 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-secondary-foreground/80 mr-2 mt-1 flex-shrink-0" />
                         <span>Developing and refining AI prompts for bias detection</span>
                       </li>
                       <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-secondary mr-2 mt-1 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-secondary-foreground/80 mr-2 mt-1 flex-shrink-0" />
                         <span>Comparing AI and user perceptions of bias</span>
                       </li>
                       <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-secondary mr-2 mt-1 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-secondary-foreground/80 mr-2 mt-1 flex-shrink-0" />
                         <span>Identifying cognitively disruptive media bias types</span>
                       </li>
                     </ul>
@@ -272,58 +272,69 @@ export default function MediaBiasAICaseStudy() {
               We analyzed existing media bias detection platforms to identify strengths, weaknesses, and opportunities for innovation:
             </p>
             
-            <div className="grid md:grid-cols-3 gap-6 my-8">
-              <Card className="bg-gradient-to-br from-background to-blue-500/5 border-blue-500/20">
-                <CardContent className="p-6">
-                  <h4 className="text-lg font-medium mb-2">Ground News</h4>
-                  <p className="text-sm text-muted-foreground mb-4">Strengths in showing multiple sources across the political spectrum</p>
-                  <p className="text-sm font-medium text-blue-500">Insight: Users value side-by-side comparisons</p>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-gradient-to-br from-background to-green-500/5 border-green-500/20">
-                <CardContent className="p-6">
-                  <h4 className="text-lg font-medium mb-2">AllSides</h4>
-                  <p className="text-sm text-muted-foreground mb-4">Clear bias labeling system with community input</p>
-                  <p className="text-sm font-medium text-green-500">Insight: Transparency in methodology builds trust</p>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-gradient-to-br from-background to-purple-500/5 border-purple-500/20">
-                <CardContent className="p-6">
-                  <h4 className="text-lg font-medium mb-2">TIMINO</h4>
-                  <p className="text-sm text-muted-foreground mb-4">Algorithmic analysis of linguistic patterns</p>
-                  <p className="text-sm font-medium text-purple-500">Insight: Technical depth needs clear explanation</p>
-                </CardContent>
-              </Card>
-            </div>
+            <Card className="bg-muted/20">
+              <CardContent className="p-4 md:p-6">
+                <div className="space-y-4">
+                  {[
+                    { name: "Ground News", description: "Strengths in showing multiple sources across the political spectrum.", insight: "Users value side-by-side comparisons.", color: "text-blue-500" },
+                    { name: "AllSides", description: "Clear bias labeling system with community input.", insight: "Transparency in methodology builds trust.", color: "text-green-500" },
+                    { name: "TIMINO", description: "Algorithmic analysis of linguistic patterns.", insight: "Technical depth needs clear explanation.", color: "text-purple-500" }
+                  ].map((item, index) => (
+                    <div key={item.name}>
+                      {index > 0 && <div className="border-t border-border/50 my-4"></div>}
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-2">
+                        <h4 className="font-bold text-md md:text-lg">{item.name}</h4>
+                        <p className="text-sm text-muted-foreground md:col-span-1">{item.description}</p>
+                        <p className={`text-sm font-medium ${item.color} md:text-right`}>
+                          {item.insight}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
             
-            <p>
+            <p className="mt-6">
               Our analysis revealed an opportunity for a system that combines algorithmic bias detection with educational content and user-controlled exploration—features not comprehensively integrated in any existing platform.
             </p>
           </div>
           
           <div className="my-12">
             <h3 className="text-2xl font-bold mb-6">User Research</h3>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h4 className="text-lg font-medium mb-4">Surveys (n=120)</h4>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li>News consumption habits and frequency</li>
-                  <li>Self-reported media literacy skills</li>
-                  <li>Trust in mainstream vs. alternative sources</li>
-                  <li>Attitudes toward AI-powered news tools</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-lg font-medium mb-4">Interviews (n=24)</h4>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li>In-depth exploration of news selection process</li>
-                  <li>Cognitive walkthroughs of bias identification</li>
-                  <li>Reactions to existing bias detection tools</li>
-                  <li>Educational needs and preferences</li>
-                </ul>
-              </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <Card className="bg-gradient-to-br from-background to-primary/5 border-primary/20">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <BookOpen className="w-6 h-6 text-primary" />
+                    </div>
+                    <h4 className="text-lg font-medium">Surveys (n=120)</h4>
+                  </div>
+                  <ul className="space-y-2 text-sm text-muted-foreground list-disc pl-5">
+                    <li>News consumption habits and frequency</li>
+                    <li>Self-reported media literacy skills</li>
+                    <li>Trust in mainstream vs. alternative sources</li>
+                    <li>Attitudes toward AI-powered news tools</li>
+                  </ul>
+                </CardContent>
+              </Card>
+              <Card className="bg-gradient-to-br from-background to-secondary/5 border-secondary/20">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
+                      <Users className="w-6 h-6 text-secondary-foreground/80" />
+                    </div>
+                    <h4 className="text-lg font-medium">Interviews (n=24)</h4>
+                  </div>
+                  <ul className="space-y-2 text-sm text-muted-foreground list-disc pl-5">
+                    <li>In-depth exploration of news selection process</li>
+                    <li>Cognitive walkthroughs of bias identification</li>
+                    <li>Reactions to existing bias detection tools</li>
+                    <li>Educational needs and preferences</li>
+                  </ul>
+                </CardContent>
+              </Card>
             </div>
             
             <div className="bg-muted/20 p-6 rounded-lg my-8">
@@ -549,36 +560,58 @@ export default function MediaBiasAICaseStudy() {
           <div className="my-12">
             <h3 className="text-2xl font-bold mb-6">Technical Challenges</h3>
             
-            <div className="grid md:grid-cols-2 gap-8 my-8">
-              <Card className="bg-gradient-to-br from-background to-orange-500/5 border-orange-500/20">
-                <CardContent className="p-6">
-                  <h4 className="text-lg font-medium mb-3 text-orange-500">AI Limitations</h4>
-                  <p className="text-muted-foreground mb-4">
-                    Even advanced AI struggles with subtle contextual bias and can miss culturally-specific forms of media manipulation.
-                  </p>
-                  <div className="border-t border-border pt-4">
-                    <h5 className="text-sm font-medium mb-2">Our Approach</h5>
-                    <p className="text-sm">
+            <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 my-8">
+              <div className="bg-gradient-to-br from-background to-orange-500/5 border border-orange-500/20 rounded-lg p-6 space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="bg-orange-500/10 p-2 rounded-full mt-1">
+                    <AlertTriangle className="w-5 h-5 text-orange-500" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-medium text-orange-500">AI Limitations</h4>
+                    <p className="text-muted-foreground text-sm">
+                      Even advanced AI struggles with subtle contextual bias and can miss culturally-specific forms of media manipulation.
+                    </p>
+                  </div>
+                </div>
+                <div className="border-t border-border/50"></div>
+                <div className="flex items-start gap-4 pt-2">
+                  <div className="bg-green-500/10 p-2 rounded-full mt-1">
+                    <Shield className="w-5 h-5 text-green-500" />
+                  </div>
+                  <div>
+                    <h5 className="font-medium">Our Approach</h5>
+                    <p className="text-sm text-muted-foreground">
                       Combining AI analysis with user-reporting systems and periodic expert review to catch edge cases and improve the system over time.
                     </p>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
               
-              <Card className="bg-gradient-to-br from-background to-red-500/5 border-red-500/20">
-                <CardContent className="p-6">
-                  <h4 className="text-lg font-medium mb-3 text-red-500">Scale & Performance</h4>
-                  <p className="text-muted-foreground mb-4">
-                    Deep analysis of news articles requires significant computational resources, creating latency challenges for real-time use.
-                  </p>
-                  <div className="border-t border-border pt-4">
-                    <h5 className="text-sm font-medium mb-2">Our Approach</h5>
-                    <p className="text-sm">
+              <div className="bg-gradient-to-br from-background to-red-500/5 border border-red-500/20 rounded-lg p-6 space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="bg-red-500/10 p-2 rounded-full mt-1">
+                    <Zap className="w-5 h-5 text-red-500" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-medium text-red-500">Scale & Performance</h4>
+                    <p className="text-muted-foreground text-sm">
+                      Deep analysis of news articles requires significant computational resources, creating latency challenges for real-time use.
+                    </p>
+                  </div>
+                </div>
+                <div className="border-t border-border/50"></div>
+                <div className="flex items-start gap-4 pt-2">
+                  <div className="bg-green-500/10 p-2 rounded-full mt-1">
+                    <Shield className="w-5 h-5 text-green-500" />
+                  </div>
+                  <div>
+                    <h5 className="font-medium">Our Approach</h5>
+                    <p className="text-sm text-muted-foreground">
                       Implementing a tiered analysis system with quick initial assessments followed by more in-depth analysis delivered progressively.
                     </p>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             </div>
           </div>
           
@@ -590,7 +623,7 @@ export default function MediaBiasAICaseStudy() {
               <div className="grid md:grid-cols-2 gap-x-12 gap-y-6">
                 <div>
                   <h5 className="font-medium mb-2 flex items-center">
-                    <CheckCircle className="w-4 h-4 text-secondary mr-2" />
+                    <CheckCircle className="w-4 h-4 text-secondary-foreground/80 mr-2" />
                     Avoiding Our Own Bias
                   </h5>
                   <p className="text-sm text-muted-foreground">
@@ -599,7 +632,7 @@ export default function MediaBiasAICaseStudy() {
                 </div>
                 <div>
                   <h5 className="font-medium mb-2 flex items-center">
-                    <CheckCircle className="w-4 h-4 text-secondary mr-2" />
+                    <CheckCircle className="w-4 h-4 text-secondary-foreground/80 mr-2" />
                     Transparency vs. Information Overload
                   </h5>
                   <p className="text-sm text-muted-foreground">
@@ -608,7 +641,7 @@ export default function MediaBiasAICaseStudy() {
                 </div>
                 <div>
                   <h5 className="font-medium mb-2 flex items-center">
-                    <CheckCircle className="w-4 h-4 text-secondary mr-2" />
+                    <CheckCircle className="w-4 h-4 text-secondary-foreground/80 mr-2" />
                     User Agency
                   </h5>
                   <p className="text-sm text-muted-foreground">
@@ -617,7 +650,7 @@ export default function MediaBiasAICaseStudy() {
                 </div>
                 <div>
                   <h5 className="font-medium mb-2 flex items-center">
-                    <CheckCircle className="w-4 h-4 text-secondary mr-2" />
+                    <CheckCircle className="w-4 h-4 text-secondary-foreground/80 mr-2" />
                     Access to Diverse Perspectives
                   </h5>
                   <p className="text-sm text-muted-foreground">
@@ -715,19 +748,19 @@ export default function MediaBiasAICaseStudy() {
                   <h4 className="font-medium">Long-term Potential</h4>
                   <ul className="space-y-2">
                     <li className="flex items-start">
-                      <CheckCircle className="w-4 h-4 text-secondary mr-2 mt-1 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-secondary-foreground/80 mr-2 mt-1 flex-shrink-0" />
                       <span>Enhanced media literacy among Gen Z users</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="w-4 h-4 text-secondary mr-2 mt-1 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-secondary-foreground/80 mr-2 mt-1 flex-shrink-0" />
                       <span>More balanced news consumption patterns</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="w-4 h-4 text-secondary mr-2 mt-1 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-secondary-foreground/80 mr-2 mt-1 flex-shrink-0" />
                       <span>Increased critical thinking about media sources</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="w-4 h-4 text-secondary mr-2 mt-1 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-secondary-foreground/80 mr-2 mt-1 flex-shrink-0" />
                       <span>Bridge-building across information bubbles</span>
                     </li>
                   </ul>
