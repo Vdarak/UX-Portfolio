@@ -274,10 +274,130 @@ export default function Home() {
                     </RefinedButton>
                   </div>
                 </FadeIn>
+                {/* Skills & Expertise */}
+                <FadeIn delay={0.6}>
+                  <div className="mt-10 space-y-8">
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-2xl font-medium">Skills &amp; Expertise</h3>
+                      <div className="flex items-center">
+                        <span className="text-xs text-muted-foreground">Low</span>
+                        <div className="w-24 h-1 mx-2 bg-gradient-to-r from-muted/30 to-primary rounded-full"></div>
+                        <span className="text-xs text-muted-foreground">High Confidence</span>
+                      </div>
+                    </div>
+                    
+                    {/* T-shaped visualization - Research strong, breadth across other areas */}
+                    <div>
+                      <div className="grid gap-8">
+                        <div className="space-y-4">
+                          <h4 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">Core Strengths</h4>
+                          {[
+                            { label: 'User Research', pct: '95%', description: 'My primary expertise' },
+                            { label: 'Agentic AI', pct: '98%', description: 'Advanced integration skills' },
+                          ].map(({ label, pct, description }) => (
+                            <div key={label} className="group">
+                              <div className="flex justify-between text-xs mb-2 items-baseline">
+                                <span className="font-medium">{label}</span>
+                                <span className="text-xs text-muted-foreground">{description}</span>
+                              </div>
+                              <div className="w-full bg-neutral-200 dark:bg-neutral-700 h-2 rounded-full overflow-hidden">
+                                <motion.div
+                                  initial={{ width: 0 }}
+                                  animate={{ width: pct }}
+                                  transition={{ duration: 1, ease: 'easeOut' }}
+                                  className="h-full rounded-full animate-subtle-gradient"
+                                  style={{
+                                    backgroundImage: 'linear-gradient(to right, #8b5cf6, #c084fc, #4079ff, #c084fc, #8b5cf6)',
+                                    backgroundSize: '200% 100%',
+                                    animationDuration: '8s',
+                                    WebkitMaskImage: 'linear-gradient(to right, black 0%, black 90%, transparent 100%)',
+                                    maskImage: 'linear-gradient(to right, black 0%, black 90%, transparent 100%)',
+                                  }}
+                                />
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                        
+                        <div className="space-y-4">
+                          <h4 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">Design & Testing</h4>
+                          <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+                            {[
+                              { label: 'Wireframing', pct: '80%' },
+                              { label: 'Prototyping', pct: '80%' },
+                              { label: 'Usability Testing', pct: '80%' },
+                              { label: 'Quantitative Analysis', pct: '80%' },
+                            ].map(({ label, pct }) => (
+                              <div key={label} className="group">
+                                <div className="flex justify-between text-xs mb-2">
+                                  <span className="font-medium">{label}</span>
+                                </div>
+                                <div className="w-full bg-neutral-200 dark:bg-neutral-700 h-1.5 rounded-full overflow-hidden">
+                                  <motion.div
+                                    initial={{ width: 0 }}
+                                    animate={{ width: pct }}
+                                    transition={{ duration: 0.8, ease: 'easeOut' }}
+                                    className="h-full rounded-full animate-subtle-gradient"
+                                    style={{
+                                      backgroundImage: 'linear-gradient(to right, #8b5cf6, #c084fc, #4079ff, #c084fc, #8b5cf6)',
+                                      backgroundSize: '200% 100%',
+                                      animationDuration: '8s',
+                                      WebkitMaskImage: 'linear-gradient(to right, black 0%, black 90%, transparent 100%)',
+                                      maskImage: 'linear-gradient(to right, black 0%, black 90%, transparent 100%)',
+                                    }}
+                                  />
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        <div className="space-y-4">
+                          <h4 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">Supporting Skills</h4>
+                          <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+                            {[
+                              { label: 'Agile UX', pct: '60%' },
+                              { label: 'Front-End Development', pct: '60%' },
+                            ].map(({ label, pct }) => (
+                              <div key={label} className="group">
+                                <div className="flex justify-between text-xs mb-2">
+                                  <span className="font-medium">{label}</span>
+                                </div>
+                                <div className="w-full bg-neutral-200 dark:bg-neutral-700 h-1.5 rounded-full overflow-hidden">
+                                  <motion.div
+                                    initial={{ width: 0 }}
+                                    animate={{ width: pct }}
+                                    transition={{ duration: 0.6, ease: 'easeOut' }}
+                                    className="h-full rounded-full animate-subtle-gradient"
+                                    style={{
+                                      backgroundImage: 'linear-gradient(to right, #8b5cf6, #c084fc, #4079ff, #c084fc, #8b5cf6)',
+                                      backgroundSize: '200% 100%',
+                                      animationDuration: '8s',
+                                      WebkitMaskImage: 'linear-gradient(to right, black 0%, black 90%, transparent 100%)',
+                                      maskImage: 'linear-gradient(to right, black 0%, black 90%, transparent 100%)',
+                                    }}
+                                  />
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </FadeIn>
               </div>
             </FadeIn>
           </div>
         </div>
+        {/* Centered philosophical quote below image and skills */}
+        <FadeIn delay={0.8}>
+          <blockquote className="mx-auto max-w-2xl text-3xl italic text-center relative mt-12">
+            <div className="absolute -left-6 -top-4 text-6xl text-primary/10 font-serif">"</div>
+            <div className="absolute -right-6 -bottom-4 text-6xl text-primary/10 font-serif rotate-180">"</div>
+            <p className="relative z-10">A philosopher who only does philosophy is a bad philosopher</p>
+          </blockquote>
+        </FadeIn>
       </section>
 
       {/* Contact Section */}
