@@ -173,118 +173,23 @@ and now lives in the shadow of what could have been.`,
       "This poem took 2 years to complete and represents the pain I felt and processed after my breakup before coming to America. It's a raw exploration of heartbreak, the persistence of emotional wounds, and the long journey toward healing.",
   },
   {
-    id: "user-stories",
-    title: "User Stories",
-    excerpt: "Behind each click lives a human tale, of hopes and dreams that never fail...",
-    content: `Behind each click lives a human tale,
-of hopes and dreams that never fail.
-Each user journey tells a story,
-of struggle, triumph, pain, and glory.
-
-The mother searching for her child's school,
-the elder learning a digital tool,
-the student cramming for a test,
-the worker seeking well-earned rest.
-
-We listen to their whispered needs,
-and plant solutions like small seeds.
-For in each interface we design,
-lives a story, yours and mine.
-
-Their frustrations become our guide,
-their joy the place where we reside.
-In every persona that we create,
-beats a heart we celebrate.`,
-    theme: "UX Research",
+    id: "path-of-oblivion",
+    title: "Path of Oblivion",
+    excerpt: "One of my first written poems, while I was reflecting on one of the moments of joy of serenity in nature.",
+    content: `Under the moonlit meadows
+We go into the starry night
+Just to get away from our troubles
+On the nature's bench
+For the silence, the peace, 
+Without listening, we heard too much
+Hiding in the moonlight,
+Treading on different paths,
+Leading only to oblivion,
+Up in smoke we are.`,
+    theme: "Serenity",
     publishedDate: "2024-02-20",
-    readTime: "3 min",
-    inspiration:
-      "Written after conducting user interviews for a healthcare app, reminded of the human stories behind every design decision.",
-  },
-  {
-    id: "morning-ritual",
-    title: "Morning Ritual",
-    excerpt: "Coffee steam rises like morning prayers, carrying dreams up spiral stairs...",
-    content: `Coffee steam rises like morning prayers,
-carrying dreams up spiral stairs.
-The first light touches my design board,
-where yesterday's ideas are stored.
-
-In this quiet hour before the world wakes,
-I sketch the future that my heart makes.
-Each line a possibility, each curve a hope,
-helping humanity learn to cope.
-
-The pencil moves across the page,
-writing tomorrow's digital age.
-While coffee cools and shadows shift,
-I give the world my morning gift.
-
-These sacred moments, still and true,
-when inspiration breaks right through.
-Before the meetings and the calls,
-creativity builds and falls.`,
-    theme: "Reflection",
-    publishedDate: "2024-03-10",
-    readTime: "3 min",
-    inspiration: "My daily morning routine of sketching with coffee has become a meditation on the creative process.",
-  },
-  {
-    id: "accessibility",
-    title: "For Everyone",
-    excerpt: "Design is not for the chosen few, but for every soul, both me and you...",
-    content: `Design is not for the chosen few,
-but for every soul, both me and you.
-Each button placed with careful thought,
-ensuring no one is left out.
-
-Colors that speak to every eye,
-text that helps the spirit fly.
-Inclusive design, a sacred art,
-that opens every human heart.
-
-The blind who navigate by sound,
-the deaf for whom silence is profound,
-the hands that shake but still can touch,
-the minds that think and feel so much.
-
-We build for all, not just the norm,
-creating shelter from the storm.
-For when we design with love and care,
-we show the world that we all share.`,
-    theme: "Accessibility",
-    publishedDate: "2024-03-25",
-    readTime: "3 min",
-    inspiration:
-      "Dedicated to the accessibility advocates who taught me that inclusive design is not optional—it's essential.",
-  },
-  {
-    id: "iteration",
-    title: "Iteration",
-    excerpt: "Version one is just the start, each revision a work of art...",
-    content: `Version one is just the start,
-each revision a work of art.
-We test and learn, we fail and grow,
-through cycles that help us know.
-
-The user's voice guides every change,
-their feedback helps us rearrange.
-For perfection is not a destination,
-but a journey of iteration.
-
-Each prototype a stepping stone,
-each wireframe a seed we've sown.
-Through testing, learning, and refining,
-we keep the user light shining.
-
-Embrace the mess, the broken parts,
-for failure is where wisdom starts.
-In every bug and every flaw,
-lies a lesson without law.`,
-    theme: "Process",
-    publishedDate: "2024-04-12",
-    readTime: "3 min",
-    inspiration: "Reflecting on the iterative design process and how embracing failure leads to better solutions.",
+    readTime: "2 min",
+    inspiration: "One of my first written poems, while I was reflecting on one of the moments of joy of serenity in nature.",
   },
 ]
 
@@ -295,16 +200,11 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  // You would typically fetch this data from an API or CMS
-  // For now, we're hardcoding the poem slugs that exist in your portfolio
   return [
     { slug: 'the-weight-of-distance' },
     { slug: 'a-thousand-needles' },
-    { slug: 'user-stories' },
-    { slug: 'morning-ritual' },
-    { slug: 'accessibility' },
-    { slug: 'iteration' }
-  ];
+    { slug: 'path-of-oblivion' },
+  ]
 }
 
 export default function PoemPage({ params }: PageProps) {

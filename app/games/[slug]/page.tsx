@@ -38,7 +38,7 @@ const games: Game[] = [
       "This Blackjack game brings the authentic casino experience to the web with a focus on educational gameplay and realistic mechanics. The game features a sophisticated Hi-Lo card counting system, integrated basic strategy recommendations, and authentic casino rules. Designed for both casual players and serious students of the game, it includes comprehensive statistics tracking and detailed game analysis to help players improve their skills.",
     category: "Card Games",
     technologies: ["React", "TypeScript", "Framer Motion", "Context API", "Local Storage", "Canvas API"],
-    developmentDate: "2024-03-15",
+    developmentDate: "2025-05-15",
     playTime: "5-30 min",
     difficulty: "Medium",
     image: "/placeholder.svg?height=400&width=600",
@@ -47,8 +47,8 @@ const games: Game[] = [
       "/placeholder.svg?height=400&width=600",
       "/placeholder.svg?height=400&width=600",
     ],
-    demoUrl: "https://blackjack-demo.vercel.app", // External demo for now
-    githubUrl: "https://github.com/username/blackjack-game",
+    demoUrl: "https://v0-blackjack-game-alpha.vercel.app/", // External demo for now
+    githubUrl: "https://github.com/Vdarak/Blackjack-Game",
     status: "Live",
     playerCount: "1 Player",
     features: [
@@ -64,7 +64,7 @@ const games: Game[] = [
       "Audio feedback and visual effects for enhanced immersion"
     ],
     challenges: [
-      "Implementing mathematically accurate card counting algorithms",
+      "Problems in implementing mathematically accurate card counting algorithms",
       "Creating smooth 60fps card animations without performance degradation",
       "Designing an intuitive interface that doesn't overwhelm casual players",
       "Balancing educational content with engaging gameplay mechanics",

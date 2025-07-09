@@ -198,71 +198,21 @@ The air tastes of regret,
 and the shadows carry the echoes of your voice.`,
   },
   {
-    id: "user-stories",
-    title: "User Stories",
-    excerpt: "Behind each click lives a human tale, of hopes and dreams that never fail...",
-    content: `Behind each click lives a human tale,
-of hopes and dreams that never fail.
-Each user journey tells a story,
-of struggle, triumph, pain, and glory.
-
-We listen to their whispered needs,
-and plant solutions like small seeds.
-For in each interface we design,
-lives a story, yours and mine.`,
-    theme: "UX Research",
+    id: "path-of-oblivion",
+    title: "Path of Oblivion",
+    excerpt: "One of my first written poems, while I was reflecting on one of the moments of joy of serenity in nature.",
+    content: `Under the moonlit meadows
+We go into the starry night
+Just to get away from our troubles
+On the nature's bench
+For the silence, the peace, 
+Without listening, we heard too much
+Hiding in the moonlight,
+Treading on different paths,
+Leading only to oblivion,
+Up in smoke we are.`,
+    theme: "Serenity",
     publishedDate: "2024-02-20",
-    readTime: "2 min",
-  },
-  {
-    id: "morning-ritual",
-    title: "Morning Ritual",
-    excerpt: "Coffee steam rises like morning prayers, carrying dreams up spiral stairs...",
-    content: `Coffee steam rises like morning prayers,
-carrying dreams up spiral stairs.
-The first light touches my design board,
-where yesterday's ideas are stored.
-
-In this quiet hour before the world wakes,
-I sketch the future that my heart makes.
-Each line a possibility, each curve a hope,
-helping humanity learn to cope.`,
-    theme: "Reflection",
-    publishedDate: "2024-03-10",
-    readTime: "2 min",
-  },
-  {
-    id: "accessibility",
-    title: "For Everyone",
-    excerpt: "Design is not for the chosen few, but for every soul, both me and you...",
-    content: `Design is not for the chosen few,
-but for every soul, both me and you.
-Each button placed with careful thought,
-ensuring no one is left out.
-
-Colors that speak to every eye,
-text that helps the spirit fly.
-Inclusive design, a sacred art,
-that opens every human heart.`,
-    theme: "Accessibility",
-    publishedDate: "2024-03-25",
-    readTime: "2 min",
-  },
-  {
-    id: "iteration",
-    title: "Iteration",
-    excerpt: "Version one is just the start, each revision a work of art...",
-    content: `Version one is just the start,
-each revision a work of art.
-We test and learn, we fail and grow,
-through cycles that help us know.
-
-The user's voice guides every change,
-their feedback helps us rearrange.
-For perfection is not a destination,
-but a journey of iteration.`,
-    theme: "Process",
-    publishedDate: "2024-04-12",
     readTime: "2 min",
   },
 ]

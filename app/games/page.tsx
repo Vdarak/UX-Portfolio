@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { /*useState*/ } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Calendar, Tag, ArrowRight, Gamepad2, Play } from "lucide-react"
@@ -41,7 +41,7 @@ const games: Game[] = [
     playTime: "5-30 min",
     difficulty: "Medium",
     image: "/placeholder.svg?height=400&width=600",
-    demoUrl: "https://blackjack-demo.vercel.app",
+    demoUrl: "https://v0-blackjack-game-alpha.vercel.app/",
     status: "Live",
   },
   {
@@ -119,15 +119,9 @@ const games: Game[] = [
   },
 ]
 
-const categories = ["All", "Card Games", "Puzzle Games", "Word Games", "Arcade Games", "Strategy Games"]
-
 export default function GamesPage() {
-  const [selectedCategory, setSelectedCategory] = useState("All")
-
-  const filteredGames = games.filter((game) => {
-    const categoryMatch = selectedCategory === "All" || game.category === selectedCategory
-    return categoryMatch
-  })
+  // Random animation delay for game category tags
+  const getRandomDelay = () => Math.random() * 8
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -178,38 +172,11 @@ export default function GamesPage() {
         </div>
       </section>
 
-      {/* Filters */}
-      <section className="py-8">
-        <div className="container px-4 mx-auto md:px-6">
-          <div className="flex flex-col gap-6">
-            {/* Category Filters */}
-            <FadeIn>
-              <div className="flex flex-wrap gap-2">
-                {categories.map((category) => (
-                  <RefinedMagneticEffect key={category} intensity={0.15} range={60}>
-                    <button
-                      onClick={() => setSelectedCategory(category)}
-                      className={`interactive px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                        selectedCategory === category
-                          ? "bg-primary text-primary-foreground"
-                          : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-                      }`}
-                    >
-                      {category}
-                    </button>
-                  </RefinedMagneticEffect>
-                ))}
-              </div>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
-
       {/* Games Grid */}
-      <section className="py-16">
+      <section className="py-12">
         <div className="container px-4 mx-auto md:px-6">
           <StaggerContainer className="grid gap-8 md:grid-cols-2 lg:grid-cols-3" staggerDelay={0.1}>
-            {filteredGames.map((game) => (
+            {games.map((game) => (
               <StaggerItem key={game.id}>
                 <RefinedMagneticEffect intensity={0.1} range={100}>
                   <Card className="h-full transition-all duration-500 hover:shadow-lg hover:shadow-black/5 dark:hover:shadow-white/5 overflow-hidden">
@@ -260,7 +227,7 @@ export default function GamesPage() {
                       <div className="flex items-center gap-2 mb-3">
                         <Badge variant="secondary" className="text-xs">
                           <Tag className="w-3 h-3 mr-1" />
-                          {game.category}
+                          <FlowingText text={game.category} delay={getRandomDelay()} />
                         </Badge>
                         <Badge className={`text-xs ${getDifficultyColor(game.difficulty)}`}>{game.difficulty}</Badge>
                       </div>
@@ -321,7 +288,7 @@ export default function GamesPage() {
             ))}
           </StaggerContainer>
 
-          {filteredGames.length === 0 && (
+          {games.length === 0 && (
             <FadeIn>
               <div className="text-center py-16">
                 <Gamepad2 className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
