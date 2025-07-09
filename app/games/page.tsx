@@ -40,18 +40,18 @@ const games: Game[] = [
     developmentDate: "2024-03-15",
     playTime: "5-30 min",
     difficulty: "Medium",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/images/blackjack.png",
     demoUrl: "https://v0-blackjack-game-alpha.vercel.app/",
     status: "Live",
   },
   {
-    id: "memory-match",
-    title: "Memory Match",
+    id: "wordle-replica",
+    title: "Wordle Replica",
     description:
-      "A brain-training memory game where players flip cards to find matching pairs. Features multiple difficulty levels and score tracking.",
-    shortDescription: "Brain-training memory game with multiple difficulty levels",
-    category: "Puzzle Games",
-    technologies: ["React", "Framer Motion", "Local Storage"],
+      "A word guessing game inspired by Wordle, where players have six attempts to guess a five-letter word.",
+    shortDescription: "Wordle-inspired word guessing game",
+    category: "Word Games",
+    technologies: ["React", "TypeScript", "Tailwind CSS"],
     developmentDate: "2024-02-20",
     playTime: "3-10 min",
     difficulty: "Medium",
@@ -71,7 +71,7 @@ const games: Game[] = [
     playTime: "10-20 min",
     difficulty: "Hard",
     image: "/placeholder.svg?height=400&width=600",
-    status: "In Development",
+    status: "Coming Soon",
   },
   {
     id: "snake-game",
@@ -86,7 +86,7 @@ const games: Game[] = [
     difficulty: "Medium",
     image: "/placeholder.svg?height=400&width=600",
     demoUrl: "https://snake-classic-demo.vercel.app",
-    status: "Live",
+    status: "Coming Soon",
   },
   {
     id: "tic-tac-toe",
@@ -101,7 +101,7 @@ const games: Game[] = [
     difficulty: "Easy",
     image: "/placeholder.svg?height=400&width=600",
     demoUrl: "https://tictactoe-ai-demo.vercel.app",
-    status: "Live",
+    status: "Coming Soon",
   },
   {
     id: "puzzle-slider",
@@ -268,18 +268,29 @@ export default function GamesPage() {
 
                       {/* Action Button */}
                       <div className="mt-auto">
-                        <Link href={`/games/${game.id}`} className="block">
-                          <RefinedButton 
-                            size="sm" 
+                        {game.status !== "Coming Soon" ? (
+                          <Link href={`/games/${game.id}`} className="block">
+                            <RefinedButton 
+                              size="sm" 
+                              intensity={0.15}
+                              className="w-full text-xs group"
+                            >
+                              <span className="flex items-center justify-center">
+                                View Details
+                                <ArrowRight className="w-3 h-3 ml-2 transition-transform duration-300 ease-out group-hover:translate-x-1" />
+                              </span>
+                            </RefinedButton>
+                          </Link>
+                        ) : (
+                          <RefinedButton
+                            size="sm"
                             intensity={0.15}
-                            className="w-full text-xs group"
+                            className="w-full text-xs opacity-50 cursor-not-allowed"
+                            disabled
                           >
-                            <span className="flex items-center justify-center">
-                              View Details
-                              <ArrowRight className="w-3 h-3 ml-2 transition-transform duration-300 ease-out group-hover:translate-x-1" />
-                            </span>
+                            Coming Soon
                           </RefinedButton>
-                        </Link>
+                        )}
                       </div>
                     </CardContent>
                   </Card>

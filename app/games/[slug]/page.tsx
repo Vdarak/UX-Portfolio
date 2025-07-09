@@ -126,19 +126,20 @@ const games: Game[] = [
 ]
 
 interface PageProps {
-  params: {
-    slug: string
-  }
+  params: Promise<{ slug: string }>
 }
 
-export default function GamePage({ params }: PageProps) {
-  const game = games.find((g) => g.id === params.slug)
+export default async function GamePage({ params }: PageProps) {
+  // Await params for dynamic slug
+  const { slug } = await params
+
+  const game = games.find((g) => g.id === slug)
 
   if (!game) {
     notFound()
   }
 
-  const currentIndex = games.findIndex((g) => g.id === params.slug)
+  const currentIndex = games.findIndex((g) => g.id === slug)
   const previousGame = currentIndex > 0 ? games[currentIndex - 1] : null
   const nextGame = currentIndex < games.length - 1 ? games[currentIndex + 1] : null
 

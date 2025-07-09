@@ -239,7 +239,7 @@ export default function PoetryPage() {
                 Words Between <FlowingText text="Pixels" className="inline" />
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                A collection of poems exploring the intersection of design, technology, and human experience.
+                A collection of poems exploring depth of the human experience.
               </p>
             </div>
           </FadeIn>

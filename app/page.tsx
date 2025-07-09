@@ -185,7 +185,7 @@ export default function Home() {
                 <RefinedProjectCard
                   title="Finance Dashboard"
                   description="A comprehensive financial management dashboard for personal and small business users."
-                  image="/images/alcohol.png"
+                  image="/images/gamma.png"
                   hoverImage="/images/logo.png" // Added hover image
                   tags={["Data Visualization", "User Testing", "Interaction Design"]}
                   href="/projects/finance-dashboard"
