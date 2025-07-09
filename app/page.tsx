@@ -46,7 +46,7 @@ export default function Home() {
             </FadeIn>
             <FadeIn delay={2.25}>
               <h1 className="text-4xl font-medium tracking-tight md:text-6xl">
-                UX Practitioner crafting{" "}
+                UX Practitioner composing{" "}
                 <span className="group relative">
                   <FlowingText text="thoughtful" className="inline" />
                   <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-primary/0 via-primary to-primary/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"></span>
