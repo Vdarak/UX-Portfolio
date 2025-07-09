@@ -166,6 +166,7 @@ export default function Home() {
                   title="Reducing Alcohol Consumption"
                   description="Supporting healthier relationships with alcohol through research-driven design to make mindful social choices more visible and accessible."
                   image="/images/alcohol.png"
+                  hoverImage="/images/logo.png" // Added hover image
                   tags={["UX Research", "Mixed Methods", "Behavioral Design"]}
                   href="/projects/reducing-alcohol"
                 />
@@ -175,6 +176,7 @@ export default function Home() {
                   title="BackMarket IA Redesign"
                   description="A deep dive into restructuring the information architecture of a leading refurbished electronics marketplace to enhance usability and content clarity."
                   image="/images/backmarket-dark.png"
+                  hoverImage="/images/logo.png" // Added hover image
                   tags={["Information Architecture", "Content Strategy", "UX Research"]}
                   href="/projects/backmarket-ia-redesign"
                 />
@@ -183,7 +185,8 @@ export default function Home() {
                 <RefinedProjectCard
                   title="Finance Dashboard"
                   description="A comprehensive financial management dashboard for personal and small business users."
-                  image="/images/logo.png"
+                  image="/images/alcohol.png"
+                  hoverImage="/images/logo.png" // Added hover image
                   tags={["Data Visualization", "User Testing", "Interaction Design"]}
                   href="/projects/finance-dashboard"
                 />
@@ -193,6 +196,7 @@ export default function Home() {
                   title="Understanding Creative Block"
                   description="Research study exploring how creative professionals experience and manage creative blocks, with design implications for supporting technology."
                   image="/images/creativeblock-dark.png"
+                  hoverImage="/images/logo.png" // Added hover image
                   tags={["HCI Research", "Mixed Methods", "User Interviews", "Persona Development"]}
                   href="/projects/understanding-creative-block"
                 />
@@ -202,6 +206,7 @@ export default function Home() {
                   title="Ana: AI-Powered News Aggregator"
                   description="An AI system that detects media bias and enhances media literacy for Gen Z users through explainable AI and educational tools."
                   image="/images/ana.png"
+                  hoverImage="/images/logo.png" // Added hover image
                   tags={["AI Ethics", "Media Literacy", "Gen Z Users", "UX Research"]}
                   href="/projects/media-bias-ai"
                 />

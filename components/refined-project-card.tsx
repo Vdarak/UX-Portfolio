@@ -16,6 +16,7 @@ interface RefinedProjectCardProps {
   title: string
   description: string
   image: string
+  hoverImage?: string // The new image to display on hover
   tags: string[]
   href: string
   className?: string
@@ -81,6 +82,7 @@ export default function RefinedProjectCard({
   title,
   description,
   image,
+  hoverImage, // Destructure the new prop
   tags,
   href,
   className,
@@ -101,15 +103,43 @@ export default function RefinedProjectCard({
           <Card className="overflow-hidden transition-all duration-500 group-hover:shadow-xl group-hover:shadow-black/5 dark:group-hover:shadow-white/5">
             {/* Enhanced project image container */}
             <div className="relative overflow-hidden aspect-[4/3] bg-black flex items-center justify-center" data-project-image="true" style={{ cursor: "none" }}>
-              <Image
-                src={image || "/placeholder.svg"}
-                alt={title}
-                fill
-                className="object-contain transition-transform duration-700 group-hover:scale-105"
-                style={{ cursor: "none" }}
-                sizes="(max-width: 768px) 100vw, 50vw"
-                priority={false}
-              />
+              {/* Base Image */}
+              <motion.div 
+                className="absolute inset-0"
+                animate={{ opacity: 1 }}
+                whileHover={{ opacity: hoverImage ? 0 : 1 }}
+                transition={{ duration: 0.7, ease: [0.43, 0.13, 0.23, 0.96] }}
+              >
+                <Image
+                  src={image || "/placeholder.svg"}
+                  alt={title}
+                  fill
+                  className="object-contain transition-transform duration-700 group-hover:scale-105"
+                  style={{ cursor: "none" }}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority={false}
+                />
+              </motion.div>
+
+              {/* Hover Image (conditionally rendered) */}
+              {hoverImage && (
+                <motion.div 
+                  className="absolute inset-0"
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 1 }}
+                  transition={{ duration: 0.7, ease: [0.43, 0.13, 0.23, 0.96] }}
+                >
+                  <Image
+                    src={hoverImage}
+                    alt={`${title} - hover state`}
+                    fill
+                    className="object-contain transition-transform duration-700 group-hover:scale-105"
+                    style={{ cursor: "none" }}
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    priority={false}
+                  />
+                </motion.div>
+              )}
               
               {/* Dark overlay for better pill visibility */}
               <motion.div
@@ -126,7 +156,7 @@ export default function RefinedProjectCard({
                 variants={tagsContainerVariants}
               >
                 <div className="flex flex-wrap gap-2">
-                  {tags.map((tag, index) => (
+                  {tags.map((tag) => (
                     <motion.div
                       key={tag}
                       variants={tagItemVariants}
