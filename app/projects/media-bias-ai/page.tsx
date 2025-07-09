@@ -24,7 +24,7 @@ export default function MediaBiasAICaseStudy() {
       title: "Ana: AI News Aggregator",
       subtitle: "Empowering Gen Z with balanced news perspectives and enhanced media literacy",
       storyHook: "What if an AI could help you see beyond information bubbles and understand the full spectrum of news perspectives?",
-      heroImage: "/images/logo.png", // You'll need to add this image to your public/images folder
+      heroImage: "/images/ana.png", // You'll need to add this image to your public/images folder
       role: "UX Researcher & Designer",
       timeline: "12 weeks (Spring 2025)",
       team: ["The Fantastic Four Team"]
@@ -843,7 +843,7 @@ export default function MediaBiasAICaseStudy() {
               </p>
               
               <div className="flex flex-wrap justify-center gap-4 pt-8">
-                <Link href="/projects/finance-dashboard">
+                <Link href="/projects/understanding-creative-block">
                   <RefinedButton variant="default" size="lg" className="group">
                     <span className="flex items-center gap-2">
                       <ArrowLeft className="w-5 h-5 transition-transform duration-300 group-hover:-translate-x-1" />

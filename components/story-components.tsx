@@ -81,10 +81,12 @@ export function ProjectHero({ title, subtitle, storyHook, heroImage, role, timel
               <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
                 {title === "Understanding Creative Block" ? (
                   <>Understanding <FlowingText text="Creative" className="inline" /> Block</>
-                ) : title === "HealthTrack" ? (
-                  <><FlowingText text="Health" className="inline-block" />Track</>
+                ) : title === "BackMarket IA Redesign" ? (
+                  <>BackMarket <FlowingText text="IA" className="inline-block" /> Redesign</>
                 ) : title === "Reducing Alcohol Consumption" ? (
                   <>Reducing <FlowingText text="Alcohol" className="inline" /> Consumption</>
+                ) : title === "Ana: AI News Aggregator" ? (
+                  <>Ana: AI <FlowingText text="News" className="inline" /> Aggregator</>
                 ) : (
                   title
                 )}

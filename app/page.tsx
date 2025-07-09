@@ -137,10 +137,10 @@ export default function Home() {
 
       {/* Projects Hero Section - Simplified */}
       
-        <section id="projects" className="w-full pt-24 pb-10 bg-secondary">
+        <section id="projects" className="w-full pt-16 bg-secondary">
           <FadeIn delay={0.4}>
             <div className="container px-4 mx-auto md:px-6 text-center">
-              <div className="flex flex-col items-center justify-center mb-8">
+              <div className="flex flex-col items-center justify-center">
                 <span className="flex items-center gap-2 text-muted-foreground text-base font-medium mb-2">
                   <Briefcase className="w-6 h-6" />
                   Projects
@@ -157,7 +157,7 @@ export default function Home() {
         </section>
       
       {/* Projects Grid */}
-      <section id="projects-grid" className="pt-8 pb-16 bg-secondary">
+      <section id="projects-grid" className="pb-16 bg-secondary">
         <div className="container px-4 mx-auto md:px-6">
           <div className="scale-[0.87] origin-center">
             <StaggerContainer className="grid gap-20 md:grid-cols-2" staggerDelay={0.2}>
@@ -165,7 +165,7 @@ export default function Home() {
                 <RefinedProjectCard
                   title="Reducing Alcohol Consumption"
                   description="Supporting healthier relationships with alcohol through research-driven design to make mindful social choices more visible and accessible."
-                  image="/images/logo.png"
+                  image="/images/alcohol.png"
                   tags={["UX Research", "Mixed Methods", "Behavioral Design"]}
                   href="/projects/reducing-alcohol"
                 />
@@ -201,7 +201,7 @@ export default function Home() {
                 <RefinedProjectCard
                   title="Ana: AI-Powered News Aggregator"
                   description="An AI system that detects media bias and enhances media literacy for Gen Z users through explainable AI and educational tools."
-                  image="/images/logo.png"
+                  image="/images/ana.png"
                   tags={["AI Ethics", "Media Literacy", "Gen Z Users", "UX Research"]}
                   href="/projects/media-bias-ai"
                 />

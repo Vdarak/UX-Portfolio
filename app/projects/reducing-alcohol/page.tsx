@@ -55,7 +55,7 @@ export default function AlcoholConsumptionCaseStudy() {
       subtitle: "Creating mindful spaces for healthier social drinking experiences",
       storyHook:
         "What if making mindful choices about alcohol consumption could be as visible and accessible as the options that lead us to overconsume?",
-      heroImage: "/placeholder.svg?height=1000&width=2000",
+      heroImage: "/images/alcohol.png",
       role: "UX Researcher & Designer",
       timeline: "12 weeks (Spring 2025)",
       team: ["Vedant Darak"],
@@ -698,7 +698,7 @@ export default function AlcoholConsumptionCaseStudy() {
                   </p>
 
                   <div className="flex flex-wrap justify-center gap-4 pt-8">
-                    <Link href="/projects/understanding-creative-block">
+                    <Link href="/projects/media-bias-ai">
                       <RefinedButton variant="default" size="lg" className="group">
                         <span className="flex items-center gap-2">
                           <ArrowLeft className="w-5 h-5 transition-transform duration-300 group-hover:-translate-x-1" />
