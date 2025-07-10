@@ -75,7 +75,7 @@ export default function Home() {
 
           {/* Creative Coding Exhibit */}
           <div className="lg:col-span-4 flex justify-center lg:justify-end">
-            <FadeIn delay={3.1}>
+            <FadeIn delay={2.5}>
               <RefinedMagneticEffect intensity={0.08} range={100}>
                 <PixelGridExhibit 
                   width={400}
@@ -93,7 +93,7 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ 
             duration: 0.8, 
-            delay: 3.7, // Ensures it appears after other hero elements
+            delay: 3, // Ensures it appears after other hero elements
             ease: [0.21, 0.47, 0.32, 0.98] // Matches your existing animation easing
           }}
         >
@@ -162,54 +162,64 @@ export default function Home() {
           <div className="scale-[0.87] origin-center">
             <StaggerContainer className="grid gap-20 md:grid-cols-2" staggerDelay={0.2}>
               <StaggerItem>
-                <RefinedProjectCard
-                  title="Reducing Alcohol Consumption"
-                  description="Supporting healthier relationships with alcohol through research-driven design to make mindful social choices more visible and accessible."
-                  image="/images/alcohol.png"
-                  hoverImage="/images/logo.png" // Added hover image
-                  tags={["UX Research", "Mixed Methods", "Behavioral Design"]}
-                  href="/projects/reducing-alcohol"
-                />
+                <FadeIn delay={0.3}>
+                  <RefinedProjectCard
+                      title="Reducing Alcohol Consumption"
+                      description="Supporting healthier relationships with alcohol through research-driven design to make mindful social choices more visible and accessible."
+                      image="/images/alcohol.png"
+                      hoverImage="/images/logo.png" // Added hover image
+                      tags={["UX Research", "Mixed Methods", "Behavioral Design"]}
+                      href="/projects/reducing-alcohol"
+                    />
+                </FadeIn>
               </StaggerItem>
               <StaggerItem>
-                <RefinedProjectCard
-                  title="BackMarket IA Redesign"
-                  description="A deep dive into restructuring the information architecture of a leading refurbished electronics marketplace to enhance usability and content clarity."
-                  image="/images/backmarket-dark.png"
-                  hoverImage="/images/logo.png" // Added hover image
-                  tags={["Information Architecture", "Content Strategy", "UX Research"]}
-                  href="/projects/backmarket-ia-redesign"
-                />
+                <FadeIn delay={0.3}>
+                  <RefinedProjectCard
+                    title="BackMarket IA Redesign"
+                    description="A deep dive into restructuring the information architecture of a leading refurbished electronics marketplace to enhance usability and content clarity."
+                    image="/images/backmarket-dark.png"
+                    hoverImage="/images/logo.png" // Added hover image
+                    tags={["Information Architecture", "Content Strategy", "UX Research"]}
+                    href="/projects/backmarket-ia-redesign"
+                  />
+                </FadeIn>
               </StaggerItem>
               <StaggerItem>
-                <RefinedProjectCard
-                  title="Finance Dashboard"
-                  description="A comprehensive financial management dashboard for personal and small business users."
-                  image="/images/gamma.png"
-                  hoverImage="/images/logo.png" // Added hover image
-                  tags={["Data Visualization", "User Testing", "Interaction Design"]}
-                  href="/projects/finance-dashboard"
-                />
+                <FadeIn delay={0.3}>
+                  <RefinedProjectCard
+                    title="Finance Dashboard"
+                    description="A comprehensive financial management dashboard for personal and small business users."
+                    image="/images/gamma.png"
+                    hoverImage="/images/logo.png" // Added hover image
+                    tags={["Data Visualization", "User Testing", "Interaction Design"]}
+                    href="/projects/finance-dashboard"
+                  />
+                </FadeIn>
               </StaggerItem>
               <StaggerItem>
-                <RefinedProjectCard
-                  title="Understanding Creative Block"
-                  description="Research study exploring how creative professionals experience and manage creative blocks, with design implications for supporting technology."
-                  image="/images/creativeblock-dark.png"
-                  hoverImage="/images/logo.png" // Added hover image
-                  tags={["HCI Research", "Mixed Methods", "User Interviews", "Persona Development"]}
-                  href="/projects/understanding-creative-block"
-                />
+                <FadeIn delay={0.3}>
+                  <RefinedProjectCard
+                    title="Understanding Creative Block"
+                    description="Research study exploring how creative professionals experience and manage creative blocks, with design implications for supporting technology."
+                    image="/images/creativeblock-dark.png"
+                    hoverImage="/images/logo.png" // Added hover image
+                    tags={["HCI Research", "Mixed Methods", "User Interviews", "Persona Development"]}
+                    href="/projects/understanding-creative-block"
+                  />
+                </FadeIn>
               </StaggerItem>
               <StaggerItem>
-                <RefinedProjectCard
-                  title="Ana: AI-Powered News Aggregator"
-                  description="An AI system that detects media bias and enhances media literacy for Gen Z users through explainable AI and educational tools."
-                  image="/images/ana.png"
-                  hoverImage="/images/logo.png" // Added hover image
+                <FadeIn delay={0.3}>
+                  <RefinedProjectCard
+                    title="Ana: AI-Powered News Aggregator"
+                    description="An AI system that detects media bias and enhances media literacy for Gen Z users through explainable AI and educational tools."
+                    image="/images/ana.png"
+                    hoverImage="/images/logo.png" // Added hover image
                   tags={["AI Ethics", "Media Literacy", "Gen Z Users", "UX Research"]}
                   href="/projects/media-bias-ai"
                 />
+                </FadeIn>
               </StaggerItem>
             </StaggerContainer>
           </div>
@@ -220,7 +230,7 @@ export default function Home() {
       <section id="about" className="py-24 bg-white dark:bg-black">
         <div className="container px-5 mx-auto md:px-12">
           <div className="grid gap-12 md:grid-cols-2 md:items-center">
-            <FadeIn direction="left">
+            <FadeIn delay={0.5} direction="left">
               <Parallax offset={-30}>
                 <RefinedMagneticEffect intensity={0.08} range={150}>
                   <div className="relative overflow-hidden rounded-xl aspect-[2/3] scale-[0.72] origin-center">
@@ -235,7 +245,7 @@ export default function Home() {
                 </RefinedMagneticEffect>
               </Parallax>
             </FadeIn>
-            <FadeIn direction="right">
+            <FadeIn delay={0.5} direction="right">
               <div className="space-y-6 px-2">
                 <h2 className="text-3xl font-medium tracking-tight md:text-4xl">About Me</h2>
                 <p className="text-xl text-neutral-600 dark:text-neutral-300">
@@ -391,7 +401,7 @@ export default function Home() {
           </div>
         </div>
         {/* Centered philosophical quote below image and skills */}
-        <FadeIn delay={0.8}>
+        <FadeIn delay={0.5}>
           <blockquote className="mx-auto max-w-2xl text-2xl md:text-3xl italic text-center relative mt-12">
             <div className="absolute -left-6 -top-4 text-4xl md:text-6xl text-primary/10 font-serif">"</div>
             <div className="absolute -right-6 -bottom-4 text-4xl md:text-6xl text-primary/10 font-serif rotate-180">"</div>
@@ -403,7 +413,7 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="py-24">
         <div className="container px-4 mx-auto md:px-6">
-          <FadeIn>
+          <FadeIn delay={0.3}>
             <div className="max-w-3xl mx-auto space-y-6 text-center">
               <h2 className="text-3xl font-medium tracking-tight md:text-4xl">Get in Touch</h2>
               <p className="text-xl text-neutral-600 dark:text-neutral-300">

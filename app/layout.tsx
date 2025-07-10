@@ -8,8 +8,8 @@ import { ThemeProvider } from "@/components/theme-provider"
 export const metadata: Metadata = {
   metadataBase: new URL("http://localhost:3000"), // Add this line
   title: "Vedant's Portfolio",
-  description: "Created with v0",
-  generator: "v0.dev",
+  description: "Check out my portfolio showcasing my work in UX design, creative coding, and more.",
+  generator: "v0",
 }
 
 export default function RootLayout({

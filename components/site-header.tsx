@@ -165,7 +165,7 @@ export function SiteHeader() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setHasAnimatedIn(true)
-    }, pathname === "/" ? 3200 : 600) // 3.2s delay for homepage, 600ms for other pages
+    }, pathname === "/" ? 2500 : 600) // 2.5s delay for homepage, 600ms for other pages
 
     return () => clearTimeout(timer)
   }, [pathname]) // Add pathname as dependency to re-run when route changes
@@ -182,7 +182,7 @@ export function SiteHeader() {
         opacity: isVisible && hasAnimatedIn ? 1 : 0,
       }}
       transition={{
-        duration: 0.8,
+        duration: 0.5,
         delay: hasAnimatedIn ? 0 : 0, // No additional delay after initial animation
         ease: [0.21, 0.47, 0.32, 0.98], // Match the hero section easing
       }}
