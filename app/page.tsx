@@ -119,10 +119,8 @@ export default function Home() {
             intensity={0.2}
             className="interactive"
             onClick={() => {
-              document.getElementById('contact')?.scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start'
-              })
+              // Open default mail client to send email
+              window.location.href = 'mailto:hello@vedantdarak.design'
             }}
           >
             <span>Get in touch</span>

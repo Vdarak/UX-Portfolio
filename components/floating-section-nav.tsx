@@ -72,27 +72,29 @@ export function FloatingSectionNav({ sections, className = "" }: FloatingSection
         
         // Track active section based on scroll position
         if (isVisible) {
-          let currentActiveSection = sections[0]?.id || ""
-          
-          // Find which section is currently most visible
-          sections.forEach((section) => {
-            const element = document.getElementById(section.id)
-            if (element) {
-              const rect = element.getBoundingClientRect()
-              const elementTop = rect.top + scrollY
-              const elementBottom = elementTop + rect.height
-              
-              // Check if we're within this section (with some offset for better UX)
-              if (scrollY + 200 >= elementTop && scrollY + 200 < elementBottom) {
+          // default to the current active so we don't reset when scrolling past all sections
+          let currentActiveSection = activeSection || sections[0]?.id || ""
+
+           // Find which section is currently most visible
+           sections.forEach((section) => {
+             const element = document.getElementById(section.id)
+             if (element) {
+               const rect = element.getBoundingClientRect()
+               const elementTop = rect.top + scrollY
+               const elementBottom = elementTop + rect.height
+               
+               // Check if we're within this section (with some offset for better UX)
+               if (scrollY + 200 >= elementTop && scrollY + 200 < elementBottom) {
                 currentActiveSection = section.id
-              }
-            }
-          })
-          
+               }
+             }
+           })
+           
+          // Only update if changed
           if (currentActiveSection !== activeSection) {
             setActiveSection(currentActiveSection)
           }
-        }
+         }
       }
     }
 
