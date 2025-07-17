@@ -68,10 +68,10 @@ export default function Home() {
         {/* Enhanced CTA buttons - Using direct motion animation instead of FadeIn */}
         <motion.div
           className="flex flex-col items-center gap-4 sm:flex-row z-10 mb-24 md:mb-32"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ 
-            duration: 0.8, 
+            duration: 0.8, // Adjusted for smoother entrance
             delay: 0.4, // Ensures it appears after other hero elements
             ease: [0.21, 0.47, 0.32, 0.98] // Matches your existing animation easing
           }}
