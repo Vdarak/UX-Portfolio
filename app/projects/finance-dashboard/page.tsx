@@ -1,11 +1,15 @@
 import Link from "next/link"
-import { ArrowLeft, ArrowRight, Construction, Calendar, Clock, Hammer } from "lucide-react"
+import { ArrowLeft, ArrowRight, Construction, Calendar, Clock, Hammer, CreditCard, TrendingUp } from "lucide-react"
 import { FadeIn } from "@/components/scroll-animations"
 import { RefinedButton } from "@/components/refined-button"
 import { FlowingText } from "@/components/flowing-text"
 import Footer from "@/components/footer"
 import { FinanceDashboard as FinanceDashboardUI } from "@/components/finance-dashboard"
 import { ConstructionDashboard } from "@/components/construction-dashboard"
+import { AmpilloDashboard } from "@/components/ampillo-dashboard"
+import { PricingPage } from "@/components/pricing-page"
+import { MetricHubHero } from "@/components/metrichub-hero"
+import { MetriconDashboard } from "@/components/metricon-dashboard"
 
 export default function FinanceDashboard() {
   return (
@@ -31,6 +35,66 @@ export default function FinanceDashboard() {
               {/* Finance Dashboard UI Component */}
               <div className="mt-12 mb-12">
                 <FinanceDashboardUI className="max-w-4xl mx-auto shadow-xl" />
+              </div>
+              
+              {/* Section Divider */}
+              <div className="flex items-center gap-4 my-16">
+                <div className="h-px bg-muted-foreground/20 flex-grow"></div>
+                <div className="flex items-center gap-2 text-muted-foreground">
+                  <Construction className="w-5 h-5" />
+                  <span className="text-xl font-medium">Ampillo Dashboard</span>
+                </div>
+                <div className="h-px bg-muted-foreground/20 flex-grow"></div>
+              </div>
+              
+              {/* Ampillo Dashboard UI Component */}
+              <div className="mt-8 mb-16">
+                <AmpilloDashboard className="max-w-6xl mx-auto shadow-xl" />
+              </div>
+              
+              {/* Section Divider */}
+              <div className="flex items-center gap-4 my-16">
+                <div className="h-px bg-muted-foreground/20 flex-grow"></div>
+                <div className="flex items-center gap-2 text-muted-foreground">
+                  <CreditCard className="w-5 h-5" />
+                  <span className="text-xl font-medium">Pricing Page Design</span>
+                </div>
+                <div className="h-px bg-muted-foreground/20 flex-grow"></div>
+              </div>
+              
+              {/* Pricing Page Component */}
+              <div className="mt-8 mb-16">
+                <PricingPage className="max-w-7xl mx-auto shadow-xl rounded-lg overflow-hidden" />
+              </div>
+              
+              {/* Section Divider */}
+              <div className="flex items-center gap-4 my-16">
+                <div className="h-px bg-muted-foreground/20 flex-grow"></div>
+                <div className="flex items-center gap-2 text-muted-foreground">
+                  <TrendingUp className="w-5 h-5" />
+                  <span className="text-xl font-medium">MetricHub Hero Section</span>
+                </div>
+                <div className="h-px bg-muted-foreground/20 flex-grow"></div>
+              </div>
+              
+              {/* MetricHub Hero Component */}
+              <div className="mt-8 mb-16">
+                <MetricHubHero className="max-w-7xl mx-auto shadow-xl rounded-lg overflow-hidden" />
+              </div>
+              
+              {/* Section Divider */}
+              <div className="flex items-center gap-4 my-16">
+                <div className="h-px bg-muted-foreground/20 flex-grow"></div>
+                <div className="flex items-center gap-2 text-muted-foreground">
+                  <TrendingUp className="w-5 h-5" />
+                  <span className="text-xl font-medium">Metricon Analytics Dashboard</span>
+                </div>
+                <div className="h-px bg-muted-foreground/20 flex-grow"></div>
+              </div>
+              
+              {/* Metricon Dashboard Component */}
+              <div className="mt-8 mb-16">
+                <MetriconDashboard className="max-w-7xl mx-auto shadow-xl rounded-lg overflow-hidden" />
               </div>
               
               {/* Section Divider */}

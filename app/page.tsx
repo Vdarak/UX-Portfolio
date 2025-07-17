@@ -5,7 +5,7 @@ import { ArrowRight, Download, Mail, Briefcase } from "lucide-react"
 import RefinedProjectCard from "@/components/refined-project-card"
 import { RefinedButton } from "@/components/refined-button"
 import { RefinedMagneticEffect } from "@/components/refined-magnetic-effect"
-import { FadeIn, StaggerContainer, StaggerItem, Parallax, ScaleOnScroll } from "@/components/scroll-animations"
+import { FadeIn, StaggerContainer, StaggerItem, Parallax } from "@/components/scroll-animations"
 import { AnimatedText } from "@/components/animated-text"
 import { FlowingText } from "@/components/flowing-text"
 import { PixelGridExhibit } from "@/components/pixel-grid"
@@ -275,8 +275,12 @@ export default function Home() {
                 <FadeIn delay={0.4}>
                   <div className="flex gap-4">
                     <RefinedButton variant="outline" intensity={0.2}>
-                      <a href="/resume.pdf" download className="flex items-center group">
-                        <Download className="w-4 h-4 mr-2 transition-transform duration-300 ease-out group-hover:translate-x-1" />
+                      <a 
+                        href="/images/Vedant-Resume.pdf" 
+                        download="Vedant-Darak-Resume.pdf"
+                        className="flex items-center group"
+                      >
+                        <Download className="w-4 h-4 mr-2 transition-transform duration-300 ease-out group-hover:scale-110" />
                         Download Resume
                       </a>
                     </RefinedButton>
