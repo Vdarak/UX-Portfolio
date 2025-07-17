@@ -10,6 +10,8 @@ import { AmpilloDashboard } from "@/components/ampillo-dashboard"
 import { PricingPage } from "@/components/pricing-page"
 import { MetricHubHero } from "@/components/metrichub-hero"
 import { MetriconDashboard } from "@/components/metricon-dashboard"
+import { PanzeDashboard } from "@/components/panze-dashboard"
+import { FullscreenWrapper } from "@/components/fullscreen-wrapper"
 
 export default function FinanceDashboard() {
   return (
@@ -34,7 +36,9 @@ export default function FinanceDashboard() {
               
               {/* Finance Dashboard UI Component */}
               <div className="mt-12 mb-12">
-                <FinanceDashboardUI className="max-w-4xl mx-auto shadow-xl" />
+                <FullscreenWrapper>
+                  <FinanceDashboardUI className="max-w-4xl mx-auto shadow-xl" />
+                </FullscreenWrapper>
               </div>
               
               {/* Section Divider */}
@@ -49,7 +53,9 @@ export default function FinanceDashboard() {
               
               {/* Ampillo Dashboard UI Component */}
               <div className="mt-8 mb-16">
-                <AmpilloDashboard className="max-w-6xl mx-auto shadow-xl" />
+                <FullscreenWrapper>
+                  <AmpilloDashboard className="max-w-6xl mx-auto shadow-xl" />
+                </FullscreenWrapper>
               </div>
               
               {/* Section Divider */}
@@ -64,7 +70,9 @@ export default function FinanceDashboard() {
               
               {/* Pricing Page Component */}
               <div className="mt-8 mb-16">
-                <PricingPage className="max-w-7xl mx-auto shadow-xl rounded-lg overflow-hidden" />
+                <FullscreenWrapper>
+                  <PricingPage className="max-w-7xl mx-auto shadow-xl rounded-lg overflow-hidden" />
+                </FullscreenWrapper>
               </div>
               
               {/* Section Divider */}
@@ -79,7 +87,9 @@ export default function FinanceDashboard() {
               
               {/* MetricHub Hero Component */}
               <div className="mt-8 mb-16">
-                <MetricHubHero className="max-w-7xl mx-auto shadow-xl rounded-lg overflow-hidden" />
+                <FullscreenWrapper>
+                  <MetricHubHero className="max-w-7xl mx-auto shadow-xl rounded-lg overflow-hidden" />
+                </FullscreenWrapper>
               </div>
               
               {/* Section Divider */}
@@ -94,7 +104,26 @@ export default function FinanceDashboard() {
               
               {/* Metricon Dashboard Component */}
               <div className="mt-8 mb-16">
-                <MetriconDashboard className="max-w-7xl mx-auto shadow-xl rounded-lg overflow-hidden" />
+                <FullscreenWrapper>
+                  <MetriconDashboard className="max-w-7xl mx-auto shadow-xl rounded-lg overflow-hidden" />
+                </FullscreenWrapper>
+              </div>
+              
+              {/* Section Divider */}
+              <div className="flex items-center gap-4 my-16">
+                <div className="h-px bg-muted-foreground/20 flex-grow"></div>
+                <div className="flex items-center gap-2 text-muted-foreground">
+                  <CreditCard className="w-5 h-5" />
+                  <span className="text-xl font-medium">Panze Admin Dashboard</span>
+                </div>
+                <div className="h-px bg-muted-foreground/20 flex-grow"></div>
+              </div>
+              
+              {/* Panze Dashboard Component */}
+              <div className="mt-8 mb-16">
+                <FullscreenWrapper>
+                  <PanzeDashboard className="max-w-7xl mx-auto shadow-xl rounded-lg overflow-hidden" />
+                </FullscreenWrapper>
               </div>
               
               {/* Section Divider */}
@@ -109,7 +138,9 @@ export default function FinanceDashboard() {
               
               {/* Construction Dashboard UI Component */}
               <div className="mt-8 mb-16">
-                <ConstructionDashboard className="max-w-4xl mx-auto shadow-xl" />
+                <FullscreenWrapper>
+                  <ConstructionDashboard className="max-w-4xl mx-auto shadow-xl" />
+                </FullscreenWrapper>
               </div>
 
               <div className="bg-muted/30 rounded-xl p-8 space-y-4">
