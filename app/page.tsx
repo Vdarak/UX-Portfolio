@@ -35,16 +35,14 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center w-full max-w-7xl">
           {/* Text content */}
           <div className="lg:col-span-8 max-w-4xl space-y-4 text-center lg:text-left">
-            <FadeIn delay={0.2}>
               <AnimatedText 
               text="Namaste 🙏 -> I'm Vedant Darak" 
-              delay={300}
+              delay={50}
               className="text-3xl font-light tracking-tight md:text-4xl inline"
               animateBy="words"
               direction="top"
               />
-            </FadeIn>
-            <FadeIn delay={2.25}>
+            <FadeIn direction="right" delay={0.4}>
               <h1 className="text-4xl font-medium tracking-tight md:text-6xl">
                 UX Practitioner composing{" "}
                 <span className="group relative">
@@ -54,18 +52,18 @@ export default function Home() {
                 software experiences
               </h1>
             </FadeIn>
-            <FadeIn delay={2.25}>
+            <FadeIn direction="bottom" delay={0.4}>
               <motion.p 
                 className="text-xl text-neutral-600 dark:text-neutral-300 relative overflow-hidden"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.6, duration: 0.8 }}
+                transition={{ delay: 0.2, duration: 0.8 }}
               >
                 <motion.span 
                   className="inline-block"
                   initial={{ y: 20 }}
                   animate={{ y: 0 }}
-                  transition={{ delay: 0.8, duration: 0.6 }}
+                  transition={{ delay: 0.2, duration: 0.6 }}
                 >
                   Focused on creating intuitive, accessible, and delightful user experiences through research-driven design direction.
                 </motion.span>
@@ -75,7 +73,7 @@ export default function Home() {
 
           {/* Creative Coding Exhibit */}
           <div className="lg:col-span-4 flex justify-center lg:justify-end">
-            <FadeIn delay={2.5}>
+            <FadeIn direction="left" delay={0.4}>
               <RefinedMagneticEffect intensity={0.08} range={100}>
                 <PixelGridExhibit 
                   width={400}
@@ -93,7 +91,7 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ 
             duration: 0.8, 
-            delay: 3, // Ensures it appears after other hero elements
+            delay: 0.4, // Ensures it appears after other hero elements
             ease: [0.21, 0.47, 0.32, 0.98] // Matches your existing animation easing
           }}
         >
