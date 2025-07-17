@@ -35,40 +35,21 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center w-full max-w-7xl">
           {/* Text content */}
           <div className="lg:col-span-8 max-w-4xl space-y-4 text-center lg:text-left">
-              <AnimatedText 
-              text="Namaste 🙏 -> I'm Vedant Darak" 
-              delay={50}
-              className="text-3xl font-light tracking-tight md:text-4xl inline"
-              animateBy="words"
-              direction="top"
-              />
-            <FadeIn direction="right" delay={0.4}>
-              <h1 className="text-4xl font-medium tracking-tight md:text-6xl">
-                UX Practitioner composing{" "}
-                <span className="group relative">
-                  <FlowingText text="thoughtful" className="inline" />
-                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-primary/0 via-primary to-primary/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"></span>
-                </span>{" "}
-                software experiences
-              </h1>
-            </FadeIn>
-            <FadeIn direction="bottom" delay={0.4}>
-              <motion.p 
-                className="text-xl text-neutral-600 dark:text-neutral-300 relative overflow-hidden"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2, duration: 0.8 }}
-              >
-                <motion.span 
-                  className="inline-block"
-                  initial={{ y: 20 }}
-                  animate={{ y: 0 }}
-                  transition={{ delay: 0.2, duration: 0.6 }}
-                >
+              <FadeIn direction="right" delay={0.4}>
+                <h1 className="text-3xl font-light tracking-tight md:text-4xl inline">
+                  Namaste 🙏 {'->'} I'm Vedant Darak
+                </h1>
+              </FadeIn>
+              <FadeIn direction="right" delay={0.4}>
+                <h2 className="text-4xl font-medium tracking-tight md:text-6xl">
+                  UX Practitioner composing <FlowingText text="thoughtful" className="inline" /> software experiences
+                </h2>
+              </FadeIn>
+              <FadeIn direction="right" delay={0.4}>
+                <p className="text-xl text-neutral-600 dark:text-neutral-300 relative overflow-hidden">
                   Focused on creating intuitive, accessible, and delightful user experiences through research-driven design direction.
-                </motion.span>
-              </motion.p>
-            </FadeIn>
+                </p>
+              </FadeIn>
           </div>
 
           {/* Creative Coding Exhibit */}
@@ -104,13 +85,14 @@ export default function Home() {
                 behavior: 'smooth',
                 block: 'start'
               })
-            }}
+            }}  
           >
             <span className="flex items-center">
               View my work
               <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 ease-out group-hover:translate-x-3" />
             </span>
           </RefinedButton>
+
           <RefinedButton 
             variant="outline" 
             size="lg" 
