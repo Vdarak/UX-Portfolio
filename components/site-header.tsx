@@ -165,7 +165,7 @@ export function SiteHeader() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setHasAnimatedIn(true)
-    }, pathname === "/" ? 2500 : 600) // 2.5s delay for homepage, 600ms for other pages
+    }, pathname === "/" ? 300 : 300) // 2.5s delay for homepage, 600ms for other pages
 
     return () => clearTimeout(timer)
   }, [pathname]) // Add pathname as dependency to re-run when route changes
