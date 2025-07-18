@@ -12,7 +12,7 @@
 
 "use client"
 
-import React, { useEffect, useRef, useMemo, ReactNode, RefObject } from "react";
+import React, { useEffect, useRef, useMemo, ReactNode, RefObject, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
@@ -47,8 +47,23 @@ interface FadeInProps {
 export function FadeIn({ children, delay = 0, direction = "up", className, shouldAnimate = true }: FadeInProps) {
   // ref to attach to DOM for viewport detection
   const ref = useRef(null);
+  
+  // Use responsive margin - smaller on mobile devices
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+  
   // detect first time element is in viewport (trigger slightly later)
-  const isInView = useInView(ref, { once: true, margin: "-200px" });
+  const isInView = useInView(ref, { once: true, margin: isMobile ? "-50px" : "-200px" });
 
   // mapping directions to initial x/y offsets
   const directionOffset = {
