@@ -1,15 +1,13 @@
 "use client"
-
-import Image from "next/image"
-import { ArrowRight, Download, Mail, Briefcase } from "lucide-react"
-import RefinedProjectCard from "@/components/refined-project-card"
-import { RefinedButton } from "@/components/refined-button"
-import { RefinedMagneticEffect } from "@/components/refined-magnetic-effect"
-import { FadeIn, StaggerContainer, StaggerItem, Parallax } from "@/components/scroll-animations"
-import { AnimatedText } from "@/components/animated-text"
 import { FlowingText } from "@/components/flowing-text"
 import { PixelGridExhibit } from "@/components/pixel-grid"
 import Footer from "@/components/footer"
+import { RefinedButton } from "@/components/refined-button"
+import { RefinedMagneticEffect } from "@/components/refined-magnetic-effect"
+import { Download, ArrowRight, Briefcase, Mail } from "lucide-react"
+import { FadeIn, StaggerContainer, StaggerItem, Parallax } from "@/components/scroll-animations"
+import RefinedProjectCard from "@/components/refined-project-card"
+import Image from "next/image"
 import { useMousePosition } from "@/hooks/use-mouse-position"
 import { useRef } from "react"
 import { motion } from "framer-motion"
@@ -253,8 +251,8 @@ export default function Home() {
                   </StaggerItem>
                 </StaggerContainer>
                 <FadeIn delay={0.4}>
-                  <div className="flex gap-4">
-                    <RefinedButton variant="outline" intensity={0.2}>
+                  <div className="flex gap-3">
+                    <RefinedButton intensity={0.2} size="md" asChild>
                       <a 
                         href="/images/Vedant-Resume.pdf" 
                         download="Vedant-Darak-Resume.pdf"
@@ -262,6 +260,14 @@ export default function Home() {
                       >
                         <Download className="w-4 h-4 mr-2 transition-transform duration-300 ease-out group-hover:scale-110" />
                         Download Resume
+                      </a>
+                    </RefinedButton>
+                    <RefinedButton variant="outline" intensity={0.2} size="md" asChild>
+                      <a
+                        href="/poetry"
+                        className="flex items-center group"
+                      >
+                        View Poetry
                       </a>
                     </RefinedButton>
                   </div>

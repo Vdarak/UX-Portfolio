@@ -29,8 +29,8 @@ export function SiteHeader() {
       if (href === "/poetry") {
         return pathname.startsWith("/poetry")
       }
-      if (href === "/games") {
-        return pathname.startsWith("/games")
+      if (href === "/playground") {
+        return pathname.startsWith("/playground")
       }
       return false
     }
@@ -167,7 +167,7 @@ export function SiteHeader() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setHasAnimatedIn(true)
-    }, pathname === "/" ? 300 : 300) // 2.5s delay for homepage, 600ms for other pages
+    }, pathname === "/" ? 300 : 300) // 300ms delay for homepage, 300ms for other pages
 
     return () => clearTimeout(timer)
   }, [pathname]) // Add pathname as dependency to re-run when route changes
@@ -184,9 +184,9 @@ export function SiteHeader() {
         opacity: isVisible && hasAnimatedIn ? 1 : 0,
       }}
       transition={{
-        duration: 0.5,
-        delay: hasAnimatedIn ? 0 : 0, // No additional delay after initial animation
-        ease: [0.21, 0.47, 0.32, 0.98], // Match the hero section easing
+        duration: 0.22,
+        ease: [0.4, 0.0, 0.2, 1], // Fast, modern cubic-bezier
+        delay: hasAnimatedIn ? 0 : 0,
       }}
     >
       <div className="container flex items-center justify-between h-16 px-4 md:px-6">
@@ -226,8 +226,7 @@ export function SiteHeader() {
               { href: "/#projects", label: "Projects" },
               { href: "/#about", label: "About" },
               { href: "/#contact", label: "Contact" },
-              { href: "/games", label: "Games" },
-              { href: "/poetry", label: "Poetry" },
+              { href: "/playground", label: "Playground" },
             ].map((item, index) => (
               <motion.div
                 key={item.href}
@@ -340,8 +339,7 @@ export function SiteHeader() {
             { href: "/#projects", label: "Projects" },
             { href: "/#about", label: "About" },
             { href: "/#contact", label: "Contact" },
-            { href: "/games", label: "Games" },
-            { href: "/poetry", label: "Poetry" },
+            { href: "/playground", label: "Playground" },
           ].map((item) => (
             <motion.div
               key={item.href}
