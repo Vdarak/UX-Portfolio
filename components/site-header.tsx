@@ -9,6 +9,8 @@ import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
+
+import { VedantLogo } from "@/components/vedant-logo"
 import { RefinedMagneticEffect } from "@/components/refined-magnetic-effect"
 
 export function SiteHeader() {
@@ -199,7 +201,8 @@ export function SiteHeader() {
               className="interactive font-medium transition-colors hover:text-foreground/80 px-2 py-1 rounded-md"
               onClick={() => setIsMenuOpen(false)}
             >
-              Vedant Darak
+              <span className="sr-only">Vedant Darak Logo</span>
+              <VedantLogo className="w-16 h-10 text-black dark:text-white transition-colors" />
             </Link>
           </RefinedMagneticEffect>
         </motion.div>
