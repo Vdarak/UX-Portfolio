@@ -113,7 +113,7 @@ export default function Home() {
 
       {/* Projects Hero Section - Simplified */}
       
-        <section id="projects" className="w-full pt-16 bg-secondary">
+        <section id="projects" className="w-full pt-16 lg:-mb-48 md:-mb-40 sm:mb-0 bg-secondary">
           <FadeIn delay={0.4}>
             <div className="container px-4 mx-auto md:px-6 text-center">
               <div className="flex flex-col items-center justify-center">
@@ -122,7 +122,7 @@ export default function Home() {
                   Projects
               </span>
               <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-4 leading-[1.15] overflow-visible pb-1">
-                UX <FlowingText text="Projects" className="inline align-baseline leading-[1.15]" />
+                Selected <FlowingText text="Projects" className="inline align-baseline leading-[1.15]" />
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
                 A collection of UX design projects that showcase my approach to solving complex problems through research-driven design and user-centered thinking.
@@ -136,7 +136,7 @@ export default function Home() {
       <section id="projects-grid" className="pb-16 bg-secondary">
         <div className="container px-4 mx-auto md:px-6">
           <div className="scale-[0.87] origin-center">
-            <StaggerContainer className="grid gap-20 md:grid-cols-2" staggerDelay={0.2}>
+            <StaggerContainer className="grid gap-20 lg:grid-cols-1" staggerDelay={0.2}>
               <StaggerItem>
                 <FadeIn delay={0.3}>
                   <RefinedProjectCard
