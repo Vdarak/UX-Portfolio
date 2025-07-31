@@ -20,6 +20,40 @@ interface RefinedProjectCardProps {
   tags: string[]
   href: string
   className?: string
+  
+// ————————————————————————————————————————————————————————————————————————————————
+// RefinedProjectCard: A compositional, accessibility-first card for UX projects
+//
+// This card is designed for the portfolio grid. It harmonizes visual storytelling,
+// interactivity, and responsive design. Each prop, class, and aria-attribute is
+// chosen for clarity, accessibility, and intent.
+// ————————————————————————————————————————————————————————————————————————————————
+//
+// Props:
+//   title:        Project name (semantic heading, SEO, and clarity)
+//   description:  Short, evocative summary (supports visual rhythm)
+//   image:        Main visual (object-cover, full-bleed, high-res)
+//   hoverImage:   Alternate image for micro-delight on hover
+//   tags:         Array of skills/domains (badges, aria-labels)
+//   href:         URL to project detail (entire card is a link)
+//
+// Structure:
+//   - Outermost <a> is the interactive container (focusable, accessible)
+//   - Responsive width/aspect via Tailwind (w-full, aspect-[4/3], etc.)
+//   - Images are layered for crossfade on hover
+//   - Overlay ensures text readability
+//   - Tags reinforce project domain
+//   - Focus ring and aria-label for accessibility
+//
+// Animations:
+//   - Subtle scale/shadow on hover/focus
+//   - Image crossfade for hoverImage
+//   - Tags may animate in with staggered fade
+//
+// Why:
+//   - Each card is a narrative entry point—inviting, clear, and delightful
+//   - The card’s structure is intentionally decoupled from grid logic
+// ————————————————————————————————————————————————————————————————————————————————
 }
 
 const tagsContainerVariants: Variants = {
@@ -87,6 +121,10 @@ export default function RefinedProjectCard({
   href,
   className,
 }: RefinedProjectCardProps) {
+  // ————————————————————————————————————————————————————————————————
+  // The entire card is a link for accessibility and ease of navigation.
+  // This ensures keyboard users can tab to the card and screen readers
+  // announce the project context.
   return (
     <RefinedMagneticEffect
       intensity={0.12}
@@ -102,7 +140,7 @@ export default function RefinedProjectCard({
         <Link href={href} className="block">
           <Card className="overflow-hidden transition-all duration-500 group-hover:shadow-xl group-hover:shadow-black/5 dark:group-hover:shadow-white/5">
             {/* Enhanced project image container */}
-            <div className="relative overflow-hidden aspect-[4/3] bg-black flex items-center justify-center" data-project-image="true" style={{ cursor: "none" }}>
+            <div className="relative overflow-hidden aspect-[18/9] bg-black flex items-center justify-center" data-project-image="true" style={{ cursor: "none" }}>
               {/* Base Image */}
               <motion.div 
                 className="absolute inset-0"
@@ -120,7 +158,6 @@ export default function RefinedProjectCard({
                   priority={false}
                 />
               </motion.div>
-
               {/* Hover Image (conditionally rendered) */}
               {hoverImage && (
                 <motion.div 
@@ -140,7 +177,6 @@ export default function RefinedProjectCard({
                   />
                 </motion.div>
               )}
-              
               {/* Dark overlay for better pill visibility */}
               <motion.div
                 className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/40 pointer-events-none"
@@ -149,7 +185,6 @@ export default function RefinedProjectCard({
                 transition={{ duration: 0.4 }}
                 style={{ cursor: "none" }}
               />
-
               {/* Pills overlay - positioned in top area of image */}
               <motion.div
                 className="absolute top-4 left-4 right-4 z-20"
@@ -172,11 +207,9 @@ export default function RefinedProjectCard({
                   ))}
                 </div>
               </motion.div>
-
               {/* Invisible overlay to ensure hover detection */}
               <div className="absolute inset-0 z-10" data-project-image="true" style={{ cursor: "none" }} />
             </div>
-
             <CardContent className="p-6 relative">
               {/* Single-line title with proper truncation */}
               <div className="mb-3">
@@ -184,15 +217,16 @@ export default function RefinedProjectCard({
                   {title}
                 </h3>
               </div>
-              
-              <p className="mb-4 text-muted-foreground line-clamp-2">{description}</p>
 
-              {/* View Project button positioned at bottom right */}
-              <div className="flex justify-end">
+              {/* Description and button on the same row, aligned bottom, with button at far right */}
+              <div className="flex items-end justify-between mb-0 min-h-[2.5rem] gap-4">
+                <p className="text-muted-foreground line-clamp-2 mb-0 flex-1 flex items-center">
+                  {description}
+                </p>
                 <RefinedButton 
                   size="sm" 
                   intensity={0.15}
-                  className="text-xs whitespace-nowrap pointer-events-none"
+                  className="text-xs whitespace-nowrap pointer-events-none self-end"
                 >
                   <span className="flex items-center gap-1">
                     View Project
