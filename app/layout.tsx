@@ -10,6 +10,18 @@ export const metadata: Metadata = {
   title: "Vedant's Portfolio",
   description: "Check out my portfolio showcasing my work in UX design, creative coding, and more.",
   generator: "v0",
+  icons: {
+    icon: [
+      {
+        url: "/favicon-light.svg",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/favicon-dark.svg", 
+        media: "(prefers-color-scheme: dark)",
+      },
+    ],
+  },
 }
 
 export default function RootLayout({
