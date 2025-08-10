@@ -320,7 +320,7 @@ export function InsightCard({ type, title, story, icon, metrics, className = "" 
   const typeStyles = {
     discovery: "border-l-4 border-blue-500 bg-blue-50/50 dark:bg-blue-950/20",
     challenge: "border-l-4 border-orange-500 bg-orange-50/50 dark:bg-orange-950/20", 
-    solution: "border-l-4 border-green-500 bg-green-50/50 dark:bg-green-950/20",
+    solution: "border-l-4 border-green-500 bg-green-50/50 dark:bg-green-950/50",
     outcome: "border-l-4 border-purple-500 bg-purple-50/50 dark:bg-purple-950/20"
   }
 
