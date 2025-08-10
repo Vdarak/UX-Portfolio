@@ -22,9 +22,9 @@ export default function MediaBiasAICaseStudy() {
   const storyData = {
     hero: {
       title: "Ana: AI News Aggregator",
-      subtitle: "Empowering Gen Z with balanced news perspectives and enhanced media literacy",
-      storyHook: "What if an AI could help you see beyond information bubbles and understand the full spectrum of news perspectives?",
-      heroImage: "/images/ana.png", // You'll need to add this image to your public/images folder
+      subtitle: "Empowering users with balanced news perspectives and highlighting media bias",
+      storyHook: "What if a trustworthy AI could help you see beyond media bias and understand the full spectrum of news perspectives?",
+      heroImage: "/images/ana.png?height=1500&width=2000", // You'll need to add this image to your public/images folder
       role: "UX Researcher & Designer",
       timeline: "12 weeks (Spring 2025)",
       team: ["The Fantastic Four Team"]

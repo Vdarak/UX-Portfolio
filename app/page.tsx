@@ -87,7 +87,7 @@ export default function Home() {
           >
             <span className="flex items-center">
               View my work
-              <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 ease-out group-hover:translate-x-3" />
+              <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 ease-out group-hover:translate-x-2" />
             </span>
           </RefinedButton>
 
@@ -113,7 +113,7 @@ export default function Home() {
 
       {/* Projects Hero Section - Simplified */}
       
-        <section id="projects" className="w-full pt-16 lg:-mb-48 md:-mb-40 sm:mb-0 bg-secondary">
+        <section id="projects" className="w-full pt-16 lg:-mb-16 md:-mb-16 sm:mb-0 bg-secondary">
           <FadeIn delay={0.4}>
             <div className="container px-4 mx-auto md:px-6 text-center">
               <div className="flex flex-col items-center justify-center">
@@ -125,7 +125,7 @@ export default function Home() {
                 Selected <FlowingText text="Projects" className="inline align-baseline leading-[1.15]" />
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-                A collection of UX design projects that showcase my approach to solving complex problems through research-driven design and user-centered thinking.
+                A collection of UX projects that showcase my approach to solving complex problems through research-driven design and user-centered thinking.
               </p>
             </div>
           </div>
@@ -133,7 +133,7 @@ export default function Home() {
         </section>
       
       {/* Projects Grid */}
-      <section id="projects-grid" className="pb-16 bg-secondary">
+      <section id="projects-grid" className="bg-secondary">
         <div className="container px-4 mx-auto md:px-6">
           <div className="scale-[0.87] origin-center">
             <StaggerContainer className="grid gap-20 lg:grid-cols-1" staggerDelay={0.2}>
@@ -203,7 +203,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 bg-white dark:bg-black">
+      <section id="about" className="py-16 bg-white dark:bg-black">
         <div className="container px-5 mx-auto md:px-12">
           <div className="grid gap-12 md:grid-cols-2 md:items-center">
             <FadeIn delay={0.5} direction="left">
@@ -225,7 +225,7 @@ export default function Home() {
               <div className="space-y-6 px-2">
                 <h2 className="text-3xl font-medium tracking-tight md:text-4xl">About Me</h2>
                 <p className="text-xl text-neutral-600 dark:text-neutral-300">
-                  I'm a UX designer with 5 years of experience creating user-centered digital products that solve real
+                  I'm a UX designer with 1 year of experience creating user-centered digital products that solve real
                   problems.
                 </p>
                 <StaggerContainer className="space-y-4" staggerDelay={0.1}>
@@ -276,7 +276,7 @@ export default function Home() {
                 <FadeIn delay={0.6}>
                   <div className="mt-10 space-y-8">
                     <div className="flex items-center justify-between">
-                      <h3 className="text-2xl font-medium">Skills &amp; Expertise</h3>
+                      <h3 className="text-2xl font-medium">Skills &amp; Confidence Levels</h3>
                       <div className="flex items-center">
                         <span className="text-xs text-muted-foreground">Low</span>
                         <div className="w-24 h-1 mx-2 bg-gradient-to-r from-muted/30 to-primary rounded-full"></div>

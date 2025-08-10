@@ -12,23 +12,21 @@ import Footer from "@/components/footer"
 export default function CreativeBlockCaseStudy() {
   // Define navigation sections
   const navigationSections = [
-    { id: "problem", title: "The Problem", subtitle: "Research problem" },
+    { id: "problem", title: "Introduction", subtitle: "Problem Introduction" },
     { id: "methodology", title: "Methodology", subtitle: "Research approach" },
-    { id: "journey", title: "Research Journey", subtitle: "Timeline & process" },
     { id: "insights", title: "Key Insights", subtitle: "What we discovered" },
-    { id: "personas", title: "Personas", subtitle: "User archetypes" },
     { id: "solution", title: "Solution", subtitle: "Our approach" },
     { id: "impact", title: "Impact", subtitle: "Results & learnings" }
   ]
   const storyData = {
     hero: {
       title: "Understanding Creative Block",
-      subtitle: "Uncovering the hidden patterns behind creative struggles and designing pathways to breakthrough",
-      storyHook: "What if creative block isn't a wall to break through, but a signal pointing toward what creators really need?",
+      subtitle: "Uncovering the hidden patterns behind creative block and generating actionable design requirements",
+      storyHook: "What are the user needs in a technology-based solution to address creative block?",
       heroImage: "/images/creativeblock-dark.png?height=1000&width=2000",
       role: "UX Researcher & Team Lead",
-      timeline: "10 weeks (Winter Quarter 2023-2024)",
-      team: ["Caroline Rumani", "Diego Reyes-Alicea", "Valerie Fahel-Schaffer", "Vedant Darak"]
+      timeline: "10 weeks (January 2024 - March 2024)",
+      team: ["2 UX Designers", "2 UX Researchers"]
     },
     
     timeline: [
@@ -144,63 +142,82 @@ export default function CreativeBlockCaseStudy() {
           <ProjectHero {...storyData.hero} />
         </div>
 
-      {/* Chapter 01: The Research Problem */}
+      {/* Chapter 01: Introduction */}
       <StorySection
         id="problem"
         chapter="Chapter 01"
-        storyTitle="The Research Problem"
+        storyTitle="Introduction"
         narrativeHook="Creative block is everywhere, yet nowhere in technology. How do we study something so personal and invisible?"
       >
         <div className="grid gap-8">
-          <p className="text-lg leading-relaxed">
-            In creative fields, the pressure to consistently produce innovative work is immense. Yet when creativity stalls, 
-            professionals are left with generic productivity apps or expensive therapy sessions. Our team at DePaul University 
-            recognized this gap and set out to understand the true nature of creative block.
-          </p>
-          
-          <div className="bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-950/20 dark:to-red-950/20 rounded-xl p-8 border border-orange-200 dark:border-orange-800">
-            <h3 className="text-2xl font-bold mb-4 flex items-center gap-3">
-              <Target className="w-6 h-6 text-orange-600" />
-              Research Goals
-            </h3>
-            <div className="grid gap-4 md:grid-cols-2">
-              <div className="flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold">Investigate Experiences</h4>
-                  <p className="text-sm text-muted-foreground">How do creative individuals experience and manage creative blocks?</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold">Identify Technology Needs</h4>
-                  <p className="text-sm text-muted-foreground">What user needs exist for a technology-based solution?</p>
-                </div>
-              </div>
+          {/* Problem Definition */}
+          <div className="space-y-6">
+            <h3 className="text-2xl font-bold">The Problem</h3>
+            <p className="text-lg leading-relaxed">
+              Creative block, as defined by the Interaction Design Foundation, is a period of limited creativity and productivity. 
+              Creative specialists and hobbyists need additional skills to navigate various thoughts and ideas throughout their 
+              creative block. Even some of the most famous artists encounter lulls of inspiration.
+            </p>
+            
+            <div className="bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-950/20 dark:to-blue-950/20 rounded-xl p-8 border border-purple-200 dark:border-purple-800">
+              <blockquote className="text-lg italic text-center">
+                "In recovering from our creative blocks, it is necessary to go gently and slowly... These are baby steps. 
+                Progress, not perfection, is what we should be asking of ourselves"
+              </blockquote>
+              <cite className="block text-center mt-4 text-sm text-muted-foreground">— Julia Cameron, 2001</cite>
             </div>
+            
+            <p className="text-lg leading-relaxed">
+              Although a failure to produce content may be seen as a block to success, it can be necessary in creative projects. 
+              Most designers and artists naturally experience highs and lows throughout their careers and life. However, little 
+              research exists on effective solutions to overcoming creative blocks. In a world inundated with content, creatives 
+              may benefit from reliable technology tools to support their creativity and ingenuity.
+            </p>
           </div>
 
-          <StaggerContainer className="grid gap-6 md:grid-cols-2 mt-8 items-stretch">
-            <StaggerItem className="h-full flex">
-              <InsightCard
-                type="discovery"
-                title="The Gap in Technology"
-                story="Despite creative block being a universal challenge, no dedicated technology solutions existed specifically for this problem—only generic productivity apps or expensive professional help."
-                icon={<Search className="w-8 h-8 text-blue-500" />}
-                metrics={{ value: "0", label: "Dedicated Solutions" }}
-              />
-            </StaggerItem>
-            <StaggerItem className="h-full flex">
-              <InsightCard
-                type="challenge"
-                title="High-Pressure Environment"
-                story="Creative professionals face constant pressure to innovate and produce, making creative blocks not just frustrating but professionally threatening."
-                icon={<TrendingUp className="w-8 h-8 text-orange-500" />}
-                metrics={{ value: "High", label: "Professional Impact" }}
-              />
-            </StaggerItem>
-          </StaggerContainer>
+          {/* Existing Solutions */}
+          <div className="space-y-6">
+            <h3 className="text-2xl font-bold">Existing Solutions</h3>
+            <p className="text-lg leading-relaxed">
+              In the current market, few technological tools exist to help artists and designers curb creative block. 
+              Furthermore, existing tools are not exclusively designed for creative blocks.
+            </p>
+            
+            <StaggerContainer className="grid gap-6 md:grid-cols-2 mt-8 items-stretch">
+                <StaggerItem className="h-full flex">
+                <InsightCard
+                  type="competitor"
+                  title="Pinterest"
+                  story="Indirectly addresses creative blocks, it provides a space for artists, designers, and hobbyists to organize images found on their websites into mood boards. While this may help with creative blocks, this solution lacks focus. Furthermore, Pinterest is now pivoting away from image gathering towards selling items."
+                  icon={<Palette className="w-8 h-8 text-pink-500" />}
+                />
+              </StaggerItem>
+              <StaggerItem className="h-full flex">
+                <InsightCard
+                  type="competitor"
+                  title="Headspace"
+                  story="A paid service that helps users overcome various mental health scenarios. They offer stress relief services and provide articles about creative blocks. However, they do not offer concrete solutions or efforts focused on creative blocks."
+                  icon={<Brain className="w-8 h-8 text-green-500" />}
+                />
+              </StaggerItem>
+            </StaggerContainer>
+          </div>
+
+          {/* Our Approach */}
+          <div className="space-y-6">
+            <h3 className="text-2xl font-bold">Our Approach</h3>
+            <p className="text-lg leading-relaxed">
+              Our study investigates the current pathways of artists and designers during their creative block to understand 
+              their motivations and mental models. We aim to explore user needs in a technology-based solution that helps 
+              artists, designers, and hobbyists address creative blocks.
+            </p>
+      
+            <p className="text-lg leading-relaxed">
+              Our team began with a scenario-based observation of creative block and then conducted interviews for further 
+              investigation of user needs. In this report, we discuss our methods, findings, and design implications for 
+              a technology-based solution.
+            </p>
+          </div>
         </div>
       </StorySection>
 
@@ -208,107 +225,290 @@ export default function CreativeBlockCaseStudy() {
       <StorySection
         id="methodology"
         chapter="Chapter 02"
-        storyTitle="Mixed Methods Approach"
+        storyTitle="Research Methods"
         narrativeHook="To understand something as personal as creative block, we needed to both observe and listen—watching real behavior and hearing authentic stories."
         className="bg-muted/30"
       >
-        <div className="grid gap-8">
-          <p className="text-lg leading-relaxed">
-            Our research combined observational studies to see how people naturally handle creative challenges with 
-            in-depth interviews to understand the emotional and cognitive aspects of creative block. This dual approach 
-            revealed both visible behaviors and hidden struggles.
-          </p>
+        <div className="grid gap-8 lg:gap-12 overflow-hidden">
+          {/* Observations Section */}
+          <div className="space-y-6 lg:space-y-8 overflow-hidden">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-4 lg:mb-6 overflow-hidden">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 dark:bg-blue-900/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <Eye className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
+              </div>
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold break-words hyphens-auto overflow-wrap-anywhere">Scenario-Based Observations</h3>
+            </div>
 
-          <div className="grid gap-6 md:grid-cols-2 items-stretch">
-            <Card className="p-6">
-              <div className="flex items-center gap-3 mb-4">
-                <Eye className="w-6 h-6 text-blue-600" />
-                <h3 className="text-xl font-bold">Observational Studies</h3>
-              </div>
-              <div className="space-y-4">
-                <div className="bg-blue-50 dark:bg-blue-950/20 rounded-lg p-4">
-                  <h4 className="font-semibold mb-2">Participants</h4>
-                  <p className="text-sm">8 individuals, ages 22-57, diverse creative backgrounds</p>
+            <div className="grid gap-4 sm:gap-6 md:grid-cols-2 items-stretch overflow-hidden">
+              <Card className="p-4 sm:p-6 overflow-hidden">
+                <div className="space-y-3 sm:space-y-4 overflow-hidden">
+                  <h4 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 break-words">Participants</h4>
+                  <div className="bg-blue-50 dark:bg-blue-950/20 rounded-lg p-3 sm:p-4 overflow-hidden">
+                    <p className="text-sm leading-relaxed break-words overflow-wrap-anywhere">
+                      Our team recruited 8 participants between the ages of 22 to 57. We used the CDM participant pool, 
+                      friends, and family to recruit individuals with previous experiences with creative block.
+                    </p>
+                  </div>
                 </div>
-                <div className="bg-blue-50 dark:bg-blue-950/20 rounded-lg p-4">
-                  <h4 className="font-semibold mb-2">Method</h4>
-                  <p className="text-sm">Scenario-based tasks conducted remotely over Zoom, observing natural creative block management strategies</p>
-                </div>
-              </div>
-            </Card>
+              </Card>
 
-            <Card className="p-6">
-              <div className="flex items-center gap-3 mb-4">
-                <Users className="w-6 h-6 text-green-600" />
-                <h3 className="text-xl font-bold">In-Depth Interviews</h3>
-              </div>
-              <div className="space-y-4">
-                <div className="bg-green-50 dark:bg-green-950/20 rounded-lg p-4">
-                  <h4 className="font-semibold mb-2">Participants</h4>
-                  <p className="text-sm">8 individuals, ages 24-32, primarily digital creatives</p>
+              <Card className="p-4 sm:p-6 overflow-hidden">
+                <div className="space-y-3 sm:space-y-4 overflow-hidden">
+                  <h4 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 break-words">Data Collection Method</h4>
+                  <div className="bg-blue-50 dark:bg-blue-950/20 rounded-lg p-3 sm:p-4 overflow-hidden">
+                    <p className="text-sm leading-relaxed break-words overflow-wrap-anywhere">
+                      We conducted our scenario-based observations remotely via Zoom calls, using the screen sharing 
+                      feature to view each participant's screen during the scenario.
+                    </p>
+                  </div>
                 </div>
-                <div className="bg-green-50 dark:bg-green-950/20 rounded-lg p-4">
-                  <h4 className="font-semibold mb-2">Focus</h4>
-                  <p className="text-sm">Personal experiences, techniques, tools, and desired technology features for addressing creative blocks</p>
+              </Card>
+            </div>
+
+            <div className="bg-background rounded-xl p-4 sm:p-6 lg:p-8 border overflow-hidden">
+              <h4 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 break-words">What We Actually Did</h4>
+              <div className="space-y-3 sm:space-y-4 text-sm leading-relaxed overflow-hidden">
+                <p className="break-words overflow-wrap-anywhere">
+                  After we received verbal consent, we asked participants to share their individual experiences with being creative. 
+                  Then, our team presented a general project scenario with a period of creative block. We tasked participants with 
+                  showing us their process to overcome this creative block via the Zoom screen-sharing feature.
+                </p>
+                <p className="break-words overflow-wrap-anywhere">
+                  Toward the second half of the session, our team asked participants follow-up questions about their experience 
+                  with the scenario and in-depth questions about their feelings, previous experiences, and other strategies with 
+                  creative block. We concluded the session with demographic questions. The observation study lasted approximately 30 minutes.
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-3 sm:space-y-4 overflow-hidden">
+              <h4 className="text-lg sm:text-xl font-bold break-words">Data Analysis Method</h4>
+              <p className="text-sm leading-relaxed mb-4 sm:mb-6 break-words overflow-wrap-anywhere">
+                Our team organized our findings through affinity diagramming and created a sequential task analysis 
+                for visualizing themes and relationships amongst identified variables.
+              </p>
+              
+              {/* Affinity Diagram Placeholder */}
+              <div className="w-full bg-gray-100 dark:bg-gray-800 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 flex items-center justify-center text-gray-500 dark:text-gray-400 overflow-hidden" style={{ aspectRatio: '16/9', minHeight: '250px' }}>
+                <div className="text-center space-y-2 p-4 max-w-full overflow-hidden">
+                  <BookOpen className="w-8 h-8 sm:w-12 sm:h-12 mx-auto opacity-50" />
+                  <p className="text-base sm:text-lg font-medium break-words">Affinity Diagram - Observations</p>
+                  <p className="text-xs sm:text-sm break-words">Pattern identification from observational data</p>
                 </div>
               </div>
-            </Card>
+
+              {/* Sequential Task Analysis Placeholder */}
+              <div className="w-full bg-gray-100 dark:bg-gray-800 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 flex items-center justify-center text-gray-500 dark:text-gray-400 overflow-hidden" style={{ aspectRatio: '16/9', minHeight: '250px' }}>
+                <div className="text-center space-y-2 p-4 max-w-full overflow-hidden">
+                  <Target className="w-8 h-8 sm:w-12 sm:h-12 mx-auto opacity-50" />
+                  <p className="text-base sm:text-lg font-medium break-words">Sequential Task Analysis</p>
+                  <p className="text-xs sm:text-sm break-words">Process mapping and behavioral patterns</p>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="bg-background rounded-xl p-8 border">
-            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
-              <Brain className="w-6 h-6 text-purple-600" />
-              Analysis Methods
-            </h3>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-              <div className="text-center space-y-2">
-                <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/20 rounded-lg flex items-center justify-center mx-auto">
-                  <BookOpen className="w-6 h-6 text-purple-600" />
-                </div>
-                <h4 className="font-semibold">Affinity Diagrams</h4>
-                <p className="text-sm text-muted-foreground">Pattern identification</p>
+          {/* Interviews Section */}
+          <div className="space-y-6 lg:space-y-8 border-t pt-8 lg:pt-12 overflow-hidden">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-4 lg:mb-6 overflow-hidden">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-100 dark:bg-green-900/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <Users className="w-5 h-5 sm:w-6 sm:h-6 text-green-600" />
               </div>
-              <div className="text-center space-y-2">
-                <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/20 rounded-lg flex items-center justify-center mx-auto">
-                  <Target className="w-6 h-6 text-purple-600" />
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold break-words hyphens-auto overflow-wrap-anywhere">In-Depth Interviews</h3>
+            </div>
+
+            <div className="grid gap-4 sm:gap-6 md:grid-cols-2 items-stretch overflow-hidden">
+              <Card className="p-4 sm:p-6 overflow-hidden">
+                <div className="space-y-3 sm:space-y-4 overflow-hidden">
+                  <h4 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 break-words">Participants</h4>
+                  <div className="bg-green-50 dark:bg-green-950/20 rounded-lg p-3 sm:p-4 overflow-hidden">
+                    <p className="text-sm leading-relaxed break-words overflow-wrap-anywhere">
+                      Our team recruited 8 participants between the ages of 24 to 32. We used the CDM participant pool 
+                      and friends to recruit individuals with previous creative block experiences.
+                    </p>
+                  </div>
                 </div>
-                <h4 className="font-semibold">Sequential Task Analysis</h4>
-                <p className="text-sm text-muted-foreground">Process mapping</p>
+              </Card>
+
+              <Card className="p-4 sm:p-6 overflow-hidden">
+                <div className="space-y-3 sm:space-y-4 overflow-hidden">
+                  <h4 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 break-words">Data Collection Method</h4>
+                  <div className="bg-green-50 dark:bg-green-950/20 rounded-lg p-3 sm:p-4 overflow-hidden">
+                    <p className="text-sm leading-relaxed break-words overflow-wrap-anywhere">
+                      We conducted our interview remotely via Zoom calls. During the recruitment process, we screened 
+                      participants who experienced creative block.
+                    </p>
+                  </div>
+                </div>
+              </Card>
+            </div>
+
+            <div className="bg-background rounded-xl p-4 sm:p-6 lg:p-8 border">
+              <h4 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">What We Actually Did</h4>
+              <div className="space-y-3 sm:space-y-4 text-sm leading-relaxed">
+                <p>
+                  First, we received verbal consent. Our team asked participants questions about their creative experience 
+                  with a recent project, activities for work and hobbies, and sources of inspiration. We then asked participants 
+                  about their preparation before a creative task, the digital or physical tools used, methods of relaxation, 
+                  and their personal creative block experience.
+                </p>
+                <p>
+                  We concluded the interviews by asking participants to describe potential features of a technology-based 
+                  solution for overcoming creative block. Our team collected demographic information at the end of the session, 
+                  which included the following: gender identity, age, occupation, highest level of education and field of study, 
+                  and years of creative experience. Each interview lasted approximately 45 minutes.
+                </p>
               </div>
-              <div className="text-center space-y-2">
-                <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/20 rounded-lg flex items-center justify-center mx-auto">
-                  <UserCheck className="w-6 h-6 text-purple-600" />
+            </div>
+
+            <div className="space-y-4 sm:space-y-6">
+              <h4 className="text-lg sm:text-xl font-bold">Data Analysis Method</h4>
+              <p className="text-sm leading-relaxed mb-4 sm:mb-6">
+                Each team member applied descriptive codes to their individual interview scripts using Atlas.ti. Together, 
+                our team met to combine the findings into an affinity diagram. We created a codebook to apply unified codes 
+                for our interview data. Our team created a persona spectrum, personas, scenarios, experience map, and priority 
+                matrix from these findings.
+              </p>
+              
+              {/* Interview Affinity Diagram */}
+              <div className="w-full bg-gray-100 dark:bg-gray-800 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 flex items-center justify-center text-gray-500 dark:text-gray-400" style={{ aspectRatio: '16/9', minHeight: '250px' }}>
+                <div className="text-center space-y-2 p-4">
+                  <BookOpen className="w-8 h-8 sm:w-12 sm:h-12 mx-auto opacity-50" />
+                  <p className="text-base sm:text-lg font-medium">Affinity Diagram - Interviews</p>
+                  <p className="text-xs sm:text-sm">Thematic analysis and pattern identification</p>
                 </div>
-                <h4 className="font-semibold">Persona Development</h4>
-                <p className="text-sm text-muted-foreground">User archetypes</p>
               </div>
-              <div className="text-center space-y-2">
-                <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/20 rounded-lg flex items-center justify-center mx-auto">
-                  <TrendingUp className="w-6 h-6 text-purple-600" />
+
+              {/* Persona Spectrum */}
+              <div className="w-full bg-gray-100 dark:bg-gray-800 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 flex items-center justify-center text-gray-500 dark:text-gray-400" style={{ aspectRatio: '21/9', minHeight: '200px' }}>
+                <div className="text-center space-y-2 p-4">
+                  <UserCheck className="w-8 h-8 sm:w-12 sm:h-12 mx-auto opacity-50" />
+                  <p className="text-base sm:text-lg font-medium">Persona Spectrum</p>
+                  <p className="text-xs sm:text-sm">Range of user behaviors and needs</p>
                 </div>
-                <h4 className="font-semibold">Priority Matrix</h4>
-                <p className="text-sm text-muted-foreground">Feature prioritization</p>
+              </div>
+
+              {/* Personas Section */}
+              <div className="space-y-4 sm:space-y-6">
+                <h4 className="text-lg sm:text-xl font-bold">User Personas</h4>
+                <p className="text-sm leading-relaxed mb-4 sm:mb-6">
+                  While every creative professional's experience is unique, our analysis revealed two primary patterns 
+                  in how people approach creative work and manage blocks. These personas guided our design recommendations.
+                </p>
+
+                <div className="grid gap-6 lg:gap-8 lg:grid-cols-2 items-stretch">
+                  {/* Sara Persona */}
+                  <Card className="p-6 sm:p-8 h-full">
+                    <div className="space-y-4 sm:space-y-6">
+                      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+                        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg sm:text-xl flex-shrink-0">
+                          S
+                        </div>
+                        <div>
+                          <h5 className="text-xl sm:text-2xl font-bold">Sara</h5>
+                          <p className="text-muted-foreground">UX Designer, 28</p>
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-3 sm:space-y-4">
+                        <div>
+                          <h6 className="font-semibold mb-2">Primary Challenge</h6>
+                          <p className="text-sm text-muted-foreground">
+                            Struggles with imposter syndrome during ideation phases, often feeling unsure about where to start 
+                            or whether her ideas are valuable.
+                          </p>
+                        </div>
+                        
+                        <div>
+                          <h6 className="font-semibold mb-2">What She Needs</h6>
+                          <p className="text-sm text-muted-foreground">
+                            Guidance on starting points, validation that her creative process is normal, and confidence-building 
+                            tools that help her trust her instincts.
+                          </p>
+                        </div>
+                        
+                        <UserQuote
+                          quote="I know I'm capable, but when I'm staring at a blank screen, I feel like I don't know anything about design."
+                          author="Sara"
+                          role="Research Participant"
+                          avatar="/placeholder.svg?height=100&width=100"
+                        />
+                      </div>
+                    </div>
+                  </Card>
+
+                  {/* Taylor Persona */}
+                  <Card className="p-6 sm:p-8 h-full">
+                    <div className="space-y-4 sm:space-y-6">
+                      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+                        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center text-white font-bold text-lg sm:text-xl flex-shrink-0">
+                          T
+                        </div>
+                        <div>
+                          <h5 className="text-xl sm:text-2xl font-bold">Taylor</h5>
+                          <p className="text-muted-foreground">UX Designer, 31</p>
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-3 sm:space-y-4">
+                        <div>
+                          <h6 className="font-semibold mb-2">Primary Challenge</h6>
+                          <p className="text-sm text-muted-foreground">
+                            Experiences fatigue from professional demands and feels overwhelmed by complex creative projects 
+                            that seem too big to tackle.
+                          </p>
+                        </div>
+                        
+                        <div>
+                          <h6 className="font-semibold mb-2">What They Need</h6>
+                          <p className="text-sm text-muted-foreground">
+                            Structured breakdowns of creative tasks into manageable pieces, energy management tools, 
+                            and ways to maintain momentum without burnout.
+                          </p>
+                        </div>
+                        
+                        <UserQuote
+                          quote="The project feels so big that I don't even know where to begin. I need someone to help me break it down into pieces I can actually handle."
+                          author="Taylor"
+                          role="Research Participant"
+                          avatar="/placeholder.svg?height=100&width=100"
+                        />
+                      </div>
+                    </div>
+                  </Card>
+                </div>
+              </div>
+
+              {/* Scenarios */}
+              <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
+                <div className="w-full bg-gray-100 dark:bg-gray-800 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 flex items-center justify-center text-gray-500 dark:text-gray-400" style={{ aspectRatio: '4/3', minHeight: '200px' }}>
+                  <div className="text-center space-y-2 p-4">
+                    <PenTool className="w-8 h-8 sm:w-10 sm:h-10 mx-auto opacity-50" />
+                    <p className="text-base sm:text-lg font-medium">Sara's Scenario</p>
+                    <p className="text-xs sm:text-sm">Ideation phase struggles</p>
+                  </div>
+                </div>
+                <div className="w-full bg-gray-100 dark:bg-gray-800 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 flex items-center justify-center text-gray-500 dark:text-gray-400" style={{ aspectRatio: '4/3', minHeight: '200px' }}>
+                  <div className="text-center space-y-2 p-4">
+                    <Target className="w-8 h-8 sm:w-10 sm:h-10 mx-auto opacity-50" />
+                    <p className="text-base sm:text-lg font-medium">Taylor's Scenario</p>
+                    <p className="text-xs sm:text-sm">Project overwhelm management</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Experience Map */}
+              <div className="w-full bg-gray-100 dark:bg-gray-800 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 flex items-center justify-center text-gray-500 dark:text-gray-400" style={{ aspectRatio: '21/9', minHeight: '250px' }}>
+                <div className="text-center space-y-2 p-4">
+                  <TrendingUp className="w-8 h-8 sm:w-12 sm:h-12 mx-auto opacity-50" />
+                  <p className="text-base sm:text-lg font-medium">Experience Map</p>
+                  <p className="text-xs sm:text-sm">Creative block journey and touchpoints</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </StorySection>
-
-      {/* The Journey Timeline */}
-      <section id="journey" className="content-section py-24">
-        <div className="container mx-auto px-4">
-          <FadeIn>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">Research Journey</h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                From problem definition to design implications, here's how we uncovered the patterns 
-                behind creative block and translated insights into actionable solutions.
-              </p>
-            </div>
-          </FadeIn>
-          <ProjectTimeline events={storyData.timeline} />
-        </div>
-      </section>
 
       {/* Chapter 03: Key Insights */}
       <StorySection
@@ -325,16 +525,16 @@ export default function CreativeBlockCaseStudy() {
             current strategies work or fail.
           </p>
 
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6" staggerDelay={0.1}>
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6" staggerDelay={0.1}>
             {/* Insight 1: Preparation */}
             <StaggerItem>
               <RefinedMagneticEffect intensity={0.08} range={80}>
-                <Card className="h-[420px] border-t-4 border-t-blue-500 transition-all duration-300 hover:shadow-lg group">
-                  <CardContent className="p-4 flex flex-col h-full">
+                <Card className="xl:h-[70vh] lg:h-[60vh] md:h-full border-t-4 border-t-blue-500 transition-all duration-300 hover:shadow-lg group">
+                  <CardContent className="p-3 sm:p-4 flex flex-col h-full">
                     {/* Icon and Number */}
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
-                        <Coffee className="w-5 h-5 text-blue-600" />
+                    <div className="flex items-center justify-between mb-2 sm:mb-3">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+                        <Coffee className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" />
                       </div>
                       <div className="text-xs font-mono text-blue-600 bg-blue-50 dark:bg-blue-950/20 px-2 py-1 rounded">
                         01
@@ -342,20 +542,20 @@ export default function CreativeBlockCaseStudy() {
                     </div>
                     
                     {/* Title */}
-                    <h3 className="text-lg font-bold mb-3 leading-tight">
+                    <h3 className="text-base sm:text-lg font-bold mb-2 sm:mb-3 leading-tight">
                       Preparation
                     </h3>
                     
                     {/* Description */}
-                    <div className="flex-grow mb-3">
-                      <p className="text-sm text-muted-foreground leading-relaxed">
+                    <div className="flex-grow mb-2 sm:mb-3">
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                         Participants actively prepared their environment and created routines to mitigate creative blocks. 
                         Physical space decluttering and organizing essential tools were critical initial steps.
                       </p>
                     </div>
                     
                     {/* Design Implication */}
-                    <div className="bg-blue-50 dark:bg-blue-950/20 rounded-lg p-3 mt-auto">
+                    <div className="bg-blue-50 dark:bg-blue-950/20 rounded-lg p-2 sm:p-3 mt-auto">
                       <p className="text-xs font-medium text-blue-700 dark:text-blue-300 mb-1">Design Implication:</p>
                       <p className="text-xs text-blue-600 dark:text-blue-400 leading-relaxed">
                         Technology should prompt users to create personalized pre-task routines and environment setup guides.
@@ -369,12 +569,12 @@ export default function CreativeBlockCaseStudy() {
             {/* Insight 2: Digital vs Physical */}
             <StaggerItem>
               <RefinedMagneticEffect intensity={0.08} range={80}>
-                <Card className="h-[420px] border-t-4 border-t-green-500 transition-all duration-300 hover:shadow-lg group">
-                  <CardContent className="p-4 flex flex-col h-full">
+                <Card className="xl:h-[70vh] lg:h-[60vh] md:h-full border-t-4 border-t-green-500 transition-all duration-300 hover:shadow-lg group">
+                  <CardContent className="p-3 sm:p-4 flex flex-col h-full">
                     {/* Icon and Number */}
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="w-10 h-10 bg-green-100 dark:bg-green-900/20 rounded-lg flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
-                        <PenTool className="w-5 h-5 text-green-600" />
+                    <div className="flex items-center justify-between mb-2 sm:mb-3">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 bg-green-100 dark:bg-green-900/20 rounded-lg flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+                        <PenTool className="w-4 h-4 sm:w-5 sm:h-5 text-green-600" />
                       </div>
                       <div className="text-xs font-mono text-green-600 bg-green-50 dark:bg-green-950/20 px-2 py-1 rounded">
                         02
@@ -382,20 +582,20 @@ export default function CreativeBlockCaseStudy() {
                     </div>
                     
                     {/* Title */}
-                    <h3 className="text-lg font-bold mb-3 leading-tight">
+                    <h3 className="text-base sm:text-lg font-bold mb-2 sm:mb-3 leading-tight">
                       Digital vs Physical
                     </h3>
                     
                     {/* Description */}
-                    <div className="flex-grow mb-3">
-                      <p className="text-sm text-muted-foreground leading-relaxed">
+                    <div className="flex-grow mb-2 sm:mb-3">
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                         Digital creators emphasized reliability and convenience of digital platforms, while physical artists 
                         preferred tangible, organic experiences. Tool effectiveness varied by personal preferences and project type.
                       </p>
                     </div>
                     
                     {/* Design Implication */}
-                    <div className="bg-green-50 dark:bg-green-950/20 rounded-lg p-3 mt-auto">
+                    <div className="bg-green-50 dark:bg-green-950/20 rounded-lg p-2 sm:p-3 mt-auto">
                       <p className="text-xs font-medium text-green-700 dark:text-green-300 mb-1">Design Implication:</p>
                       <p className="text-xs text-green-600 dark:text-green-400 leading-relaxed">
                         Solutions must accommodate both digital and physical creative preferences with flexible interaction models.
@@ -409,12 +609,12 @@ export default function CreativeBlockCaseStudy() {
             {/* Insight 3: Relaxation */}
             <StaggerItem>
               <RefinedMagneticEffect intensity={0.08} range={80}>
-                <Card className="h-[420px] border-t-4 border-t-purple-500 transition-all duration-300 hover:shadow-lg group">
-                  <CardContent className="p-4 flex flex-col h-full">
+                <Card className="xl:h-[70vh] lg:h-[60vh] md:h-full border-t-4 border-t-purple-500 transition-all duration-300 hover:shadow-lg group">
+                  <CardContent className="p-3 sm:p-4 flex flex-col h-full">
                     {/* Icon and Number */}
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900/20 rounded-lg flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
-                        <Brain className="w-5 h-5 text-purple-600" />
+                    <div className="flex items-center justify-between mb-2 sm:mb-3">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 bg-purple-100 dark:bg-purple-900/20 rounded-lg flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+                        <Brain className="w-4 h-4 sm:w-5 sm:h-5 text-purple-600" />
                       </div>
                       <div className="text-xs font-mono text-purple-600 bg-purple-50 dark:bg-purple-950/20 px-2 py-1 rounded">
                         03
@@ -422,20 +622,20 @@ export default function CreativeBlockCaseStudy() {
                     </div>
                     
                     {/* Title */}
-                    <h3 className="text-lg font-bold mb-3 leading-tight">
+                    <h3 className="text-base sm:text-lg font-bold mb-2 sm:mb-3 leading-tight">
                       Relaxation
                     </h3>
                     
                     {/* Description */}
-                    <div className="flex-grow mb-3">
-                      <p className="text-sm text-muted-foreground leading-relaxed">
+                    <div className="flex-grow mb-2 sm:mb-3">
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                         Breaks and relaxation techniques (meditation, walking, nature) were crucial for mental resets. 
                         However, participants struggled with guilt and shame during blocks.
                       </p>
                     </div>
                     
                     {/* Design Implication */}
-                    <div className="bg-purple-50 dark:bg-purple-950/20 rounded-lg p-3 mt-auto">
+                    <div className="bg-purple-50 dark:bg-purple-950/20 rounded-lg p-2 sm:p-3 mt-auto">
                       <p className="text-xs font-medium text-purple-700 dark:text-purple-300 mb-1">Design Implication:</p>
                       <p className="text-xs text-purple-600 dark:text-purple-400 leading-relaxed">
                         Integrate mental health checks and normalize breaks with supportive, non-judgmental prompts.
@@ -449,12 +649,12 @@ export default function CreativeBlockCaseStudy() {
             {/* Insight 4: Creative Block Management */}
             <StaggerItem>
               <RefinedMagneticEffect intensity={0.08} range={80}>
-                <Card className="h-[420px] border-t-4 border-t-orange-500 transition-all duration-300 hover:shadow-lg group">
-                  <CardContent className="p-4 flex flex-col h-full">
+                <Card className="xl:h-[70vh] lg:h-[60vh] md:h-full border-t-4 border-t-orange-500 transition-all duration-300 hover:shadow-lg group">
+                  <CardContent className="p-3 sm:p-4 flex flex-col h-full">
                     {/* Icon and Number */}
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="w-10 h-10 bg-orange-100 dark:bg-orange-900/20 rounded-lg flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
-                        <Target className="w-5 h-5 text-orange-600" />
+                    <div className="flex items-center justify-between mb-2 sm:mb-3">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 bg-orange-100 dark:bg-orange-900/20 rounded-lg flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+                        <Target className="w-4 h-4 sm:w-5 sm:h-5 text-orange-600" />
                       </div>
                       <div className="text-xs font-mono text-orange-600 bg-orange-50 dark:bg-orange-950/20 px-2 py-1 rounded">
                         04
@@ -462,20 +662,20 @@ export default function CreativeBlockCaseStudy() {
                     </div>
                     
                     {/* Title */}
-                    <h3 className="text-lg font-bold mb-3 leading-tight">
+                    <h3 className="text-base sm:text-lg font-bold mb-2 sm:mb-3 leading-tight">
                       Creative Block
                     </h3>
                     
                     {/* Description */}
-                    <div className="flex-grow mb-3">
-                      <p className="text-sm text-muted-foreground leading-relaxed">
+                    <div className="flex-grow mb-2 sm:mb-3">
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                         Participants desired solutions that offer new perspectives, alleviate personal biases, and encourage 
                         alternative thinking patterns. Confidence often dropped significantly during blocks.
                       </p>
                     </div>
                     
                     {/* Design Implication */}
-                    <div className="bg-orange-50 dark:bg-orange-950/20 rounded-lg p-3 mt-auto">
+                    <div className="bg-orange-50 dark:bg-orange-950/20 rounded-lg p-2 sm:p-3 mt-auto">
                       <p className="text-xs font-medium text-orange-700 dark:text-orange-300 mb-1">Design Implication:</p>
                       <p className="text-xs text-orange-600 dark:text-orange-400 leading-relaxed">
                         Provide tools for gaining novel perspectives and breaking out of mental patterns while building confidence.
@@ -489,12 +689,12 @@ export default function CreativeBlockCaseStudy() {
             {/* Insight 5: Inspiration */}
             <StaggerItem>
               <RefinedMagneticEffect intensity={0.08} range={80}>
-                <Card className="h-[420px] border-t-4 border-t-pink-500 transition-all duration-300 hover:shadow-lg group">
-                  <CardContent className="p-4 flex flex-col h-full">
+                <Card className="xl:h-[70vh] lg:h-[60vh] md:h-full border-t-4 border-t-pink-500 transition-all duration-300 hover:shadow-lg group">
+                  <CardContent className="p-3 sm:p-4 flex flex-col h-full">
                     {/* Icon and Number */}
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="w-10 h-10 bg-pink-100 dark:bg-pink-900/20 rounded-lg flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
-                        <Lightbulb className="w-5 h-5 text-pink-600" />
+                    <div className="flex items-center justify-between mb-2 sm:mb-3">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 bg-pink-100 dark:bg-pink-900/20 rounded-lg flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+                        <Lightbulb className="w-4 h-4 sm:w-5 sm:h-5 text-pink-600" />
                       </div>
                       <div className="text-xs font-mono text-pink-600 bg-pink-50 dark:bg-pink-950/20 px-2 py-1 rounded">
                         05
@@ -502,20 +702,20 @@ export default function CreativeBlockCaseStudy() {
                     </div>
                     
                     {/* Title */}
-                    <h3 className="text-lg font-bold mb-3 leading-tight">
+                    <h3 className="text-base sm:text-lg font-bold mb-2 sm:mb-3 leading-tight">
                       Inspiration
                     </h3>
                     
                     {/* Description */}
-                    <div className="flex-grow mb-3">
-                      <p className="text-sm text-muted-foreground leading-relaxed">
+                    <div className="flex-grow mb-2 sm:mb-3">
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                         Inspiration sources ranged widely—friends, digital tools, nature, AI, spirituality. 
                         The key was that inspiration needed to be personally meaningful and trusted.
                       </p>
                     </div>
                     
                     {/* Design Implication */}
-                    <div className="bg-pink-50 dark:bg-pink-950/20 rounded-lg p-3 mt-auto">
+                    <div className="bg-pink-50 dark:bg-pink-950/20 rounded-lg p-2 sm:p-3 mt-auto">
                       <p className="text-xs font-medium text-pink-700 dark:text-pink-300 mb-1">Design Implication:</p>
                       <p className="text-xs text-pink-600 dark:text-pink-400 leading-relaxed">
                         Offer highly personalized, meaningful inspiration sources that users can trust and relate to.
@@ -529,107 +729,10 @@ export default function CreativeBlockCaseStudy() {
         </div>
       </StorySection>
 
-      {/* Chapter 04: Personas */}
-      <StorySection
-        id="personas"
-        chapter="Chapter 04"
-        storyTitle="Meet the Creators"
-        narrativeHook="From our research emerged two distinct personas representing different approaches to creativity and different needs during blocks."
-      >
-        <div className="grid gap-8">
-          <p className="text-lg leading-relaxed">
-            While every creative professional's experience is unique, our analysis revealed two primary patterns 
-            in how people approach creative work and manage blocks. These personas guided our design recommendations.
-          </p>
-
-          <div className="grid gap-8 md:grid-cols-2 items-stretch">
-            {/* Sara Persona */}
-            <Card className="p-8 h-full">
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                    S
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold">Sara</h3>
-                    <p className="text-muted-foreground">UX Designer, 28</p>
-                  </div>
-                </div>
-                
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold mb-2">Primary Challenge</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Struggles with imposter syndrome during ideation phases, often feeling unsure about where to start 
-                      or whether her ideas are valuable.
-                    </p>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-semibold mb-2">What She Needs</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Guidance on starting points, validation that her creative process is normal, and confidence-building 
-                      tools that help her trust her instincts.
-                    </p>
-                  </div>
-                  
-                  <UserQuote
-                    quote="I know I'm capable, but when I'm staring at a blank screen, I feel like I don't know anything about design."
-                    author="Sara"
-                    role="Research Participant"
-                    avatar="/placeholder.svg?height=100&width=100"
-                  />
-                </div>
-              </div>
-            </Card>
-
-            {/* Taylor Persona */}
-            <Card className="p-8 h-full">
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                    T
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold">Taylor</h3>
-                    <p className="text-muted-foreground">UX Designer, 31</p>
-                  </div>
-                </div>
-                
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold mb-2">Primary Challenge</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Experiences fatigue from professional demands and feels overwhelmed by complex creative projects 
-                      that seem too big to tackle.
-                    </p>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-semibold mb-2">What They Need</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Structured breakdowns of creative tasks into manageable pieces, energy management tools, 
-                      and ways to maintain momentum without burnout.
-                    </p>
-                  </div>
-                  
-                  <UserQuote
-                    quote="The project feels so big that I don't even know where to begin. I need someone to help me break it down into pieces I can actually handle."
-                    author="Taylor"
-                    role="Research Participant"
-                    avatar="/placeholder.svg?height=100&width=100"
-                  />
-                </div>
-              </div>
-            </Card>
-          </div>
-        </div>
-      </StorySection>
-
       {/* Chapter 05: Solution Framework */}
       <StorySection
         id="solution"
-        chapter="Chapter 05"
+        chapter="Chapter 04"
         storyTitle="Design Implications & Priority Features"
         narrativeHook="Our research pointed toward a technology solution that doesn't fight creative block—it works with it."
         className="bg-muted/30"
@@ -641,29 +744,29 @@ export default function CreativeBlockCaseStudy() {
             creative work. Here's what that looks like.
           </p>
 
-          <div className="bg-background rounded-xl p-8 border">
-            <h3 className="text-2xl font-bold mb-8 text-center">Priority Features Matrix</h3>
+          <div className="bg-background rounded-xl p-4 sm:p-6 lg:p-8 border">
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-center">Priority Features Matrix</h3>
             
             {/* Matrix Grid - 2x2 Layout */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-6 sm:mb-8">
               {/* High Impact, High Feasibility */}
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 <div className="text-center">
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 dark:bg-green-900/20 rounded-full">
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                    <span className="font-semibold text-green-700 dark:text-green-300">High Impact, High Feasibility</span>
+                  <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-green-100 dark:bg-green-900/20 rounded-full">
+                    <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-green-500 rounded-full"></div>
+                    <span className="font-semibold text-green-700 dark:text-green-300 text-sm sm:text-base">High Impact, High Feasibility</span>
                   </div>
                 </div>
                 
-                <Card className="p-6 border-2 border-green-200 dark:border-green-800 bg-green-50/50 dark:bg-green-950/10">
-                  <div className="space-y-4">
+                <Card className="p-4 sm:p-6 border-2 border-green-200 dark:border-green-800 bg-green-50/50 dark:bg-green-950/10">
+                  <div className="space-y-3 sm:space-y-4">
                     <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Coffee className="w-4 h-4 text-white" />
+                      <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Coffee className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                       </div>
                       <div>
-                        <h4 className="font-bold text-lg mb-2">Structured Routines & Self-Care</h4>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
+                        <h4 className="font-bold text-base sm:text-lg mb-1 sm:mb-2">Structured Routines & Self-Care</h4>
+                        <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                           Personalized pre-work routines and mental health check-ins that create the right conditions for creativity to flourish.
                         </p>
                       </div>
@@ -673,23 +776,23 @@ export default function CreativeBlockCaseStudy() {
               </div>
 
               {/* High Impact, Medium Feasibility */}
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 <div className="text-center">
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-100 dark:bg-orange-900/20 rounded-full">
-                    <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
-                    <span className="font-semibold text-orange-700 dark:text-orange-300">High Impact, Medium Feasibility</span>
+                  <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-orange-100 dark:bg-orange-900/20 rounded-full">
+                    <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-orange-500 rounded-full"></div>
+                    <span className="font-semibold text-orange-700 dark:text-orange-300 text-sm sm:text-base">High Impact, Medium Feasibility</span>
                   </div>
                 </div>
                 
-                <Card className="p-6 border-2 border-orange-200 dark:border-orange-800 bg-orange-50/50 dark:bg-orange-950/10">
-                  <div className="space-y-4">
+                <Card className="p-4 sm:p-6 border-2 border-orange-200 dark:border-orange-800 bg-orange-50/50 dark:bg-orange-950/10">
+                  <div className="space-y-3 sm:space-y-4">
                     <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Lightbulb className="w-4 h-4 text-white" />
+                      <div className="w-6 h-6 sm:w-8 sm:h-8 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Lightbulb className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                       </div>
                       <div>
-                        <h4 className="font-bold text-lg mb-2">Inspiration During Ideation</h4>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
+                        <h4 className="font-bold text-base sm:text-lg mb-1 sm:mb-2">Inspiration During Ideation</h4>
+                        <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                           Contextual creative prompts and perspective-shifting tools that help break through mental blocks and generate fresh ideas.
                         </p>
                       </div>
@@ -700,34 +803,34 @@ export default function CreativeBlockCaseStudy() {
             </div>
 
             {/* Lower Priority Section */}
-            <div className="border-t pt-8">
-              <div className="text-center mb-6">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full">
-                  <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
-                  <span className="font-semibold text-gray-600 dark:text-gray-400">Medium Impact, Low Feasibility</span>
+            <div className="border-t pt-6 sm:pt-8">
+              <div className="text-center mb-4 sm:mb-6">
+                <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-gray-100 dark:bg-gray-800 rounded-full">
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-gray-400 rounded-full"></div>
+                  <span className="font-semibold text-gray-600 dark:text-gray-400 text-sm sm:text-base">Medium Impact, Low Feasibility</span>
                 </div>
               </div>
               
-              <div className="grid gap-4 md:grid-cols-2">
-                <Card className="p-4 border border-gray-200 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/20">
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-gray-400 rounded-md flex items-center justify-center flex-shrink-0">
-                      <Target className="w-3 h-3 text-white" />
+              <div className="grid gap-3 sm:gap-4 md:grid-cols-2">
+                <Card className="p-3 sm:p-4 border border-gray-200 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/20">
+                  <div className="flex items-start gap-2 sm:gap-3">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gray-400 rounded-md flex items-center justify-center flex-shrink-0">
+                      <Target className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white" />
                     </div>
                     <div>
-                      <h5 className="font-semibold mb-1">Hierarchical Project Analysis</h5>
+                      <h5 className="font-semibold mb-1 text-sm sm:text-base">Hierarchical Project Analysis</h5>
                       <p className="text-xs text-muted-foreground">AI-powered task breakdown and project structuring</p>
                     </div>
                   </div>
                 </Card>
                 
-                <Card className="p-4 border border-gray-200 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/20">
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-gray-400 rounded-md flex items-center justify-center flex-shrink-0">
-                      <Brain className="w-3 h-3 text-white" />
+                <Card className="p-3 sm:p-4 border border-gray-200 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/20">
+                  <div className="flex items-start gap-2 sm:gap-3">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gray-400 rounded-md flex items-center justify-center flex-shrink-0">
+                      <Brain className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white" />
                     </div>
                     <div>
-                      <h5 className="font-semibold mb-1">Personalized Inspiration</h5>
+                      <h5 className="font-semibold mb-1 text-sm sm:text-base">Personalized Inspiration</h5>
                       <p className="text-xs text-muted-foreground">Machine learning-based content curation</p>
                     </div>
                   </div>
@@ -736,7 +839,7 @@ export default function CreativeBlockCaseStudy() {
             </div>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-stretch">
+          <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 items-stretch">
             <InsightCard
               type="solution"
               title="Routine Development"
@@ -761,7 +864,7 @@ export default function CreativeBlockCaseStudy() {
 
       {/* Chapter 06: Future Research */}
       <StorySection
-        chapter="Chapter 06"
+        chapter="Chapter 05"
         storyTitle="Next Steps & Impact"
         narrativeHook="This research opened doors to deeper questions about creativity, technology, and human-centered design."
         className="bg-gradient-to-br from-primary/5 to-secondary/5"
