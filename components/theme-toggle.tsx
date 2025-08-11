@@ -25,10 +25,11 @@ export function ThemeToggle() {
         checked={theme === "dark"}
         onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
         aria-label="Toggle dark mode"
-        className="data-[state=checked]:bg-primary data-[state=unchecked]:bg-muted transition-all duration-200 ease-out"
+        className="data-[state=checked]:bg-primary transition-all duration-200 ease-out"
         style={
           {
             "--switch-thumb-transform": theme === "dark" ? "translateX(100%)" : "translateX(0%)",
+            backgroundColor: theme === "dark" ? undefined : "hsl(0 0% 80%)", // Custom light gray for light mode
           } as React.CSSProperties
         }
       />

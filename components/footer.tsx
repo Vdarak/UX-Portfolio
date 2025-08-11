@@ -47,13 +47,12 @@ export default function Footer() {
           <div className="text-right">
             <p className="text-sm text-muted-foreground">
               Designed in{" "}
-              <FlowingText text="v0" className="inline font-bold" />{" "}&{" "}<FlowingText text="Figma" className="inline font-bold" />,{" "}
+              <FlowingText text="Figma" className="inline font-bold" />,{" "}
               built in{" "}
-              <FlowingText text="VSCode" className="inline font-bold" /> with a little help from{" "}
-              <FlowingText text="AI Agents" className="inline font-bold" />
+              <FlowingText text="VSCode" className="inline font-bold" />
             </p>
             <p className="text-sm text-muted-foreground mt-1">
-              Last Updated July 2025
+              Last Updated Aug 2025
             </p>
           </div>
         </div>

@@ -21,7 +21,7 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 96%;
-    --input: 0 0% 90%;
+    --input: 0 0% 85%;  /* Changed from 90% to 85% for a darker gray */
     --ring: 0 0% 70%;
     --radius: 0.5rem;
   }

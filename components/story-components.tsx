@@ -134,21 +134,24 @@ export function StorySection({ chapter, storyTitle, narrativeHook, children, cla
     <section id={id} className={`content-section py-24 relative ${className}`}>
       <div className="container mx-auto px-4">
         <FadeIn direction="up">
-          <div className="max-w-4xl mx-auto mb-16">
+          {/* Chapter header - full width, left aligned */}
+          <div className="mb-16">
             <div className="flex items-center gap-4 mb-6">
               <span className="text-sm font-mono text-primary font-bold tracking-widest">
                 {chapter}
               </span>
               <div className="h-px bg-border flex-1" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">{storyTitle}</h2>
-            <p className="text-xl md:text-2xl text-muted-foreground italic leading-relaxed font-light">
-              {narrativeHook}
-            </p>
+            <div className="max-w-4xl">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">{storyTitle}</h2>
+              <p className="text-xl md:text-2xl text-muted-foreground italic leading-relaxed font-light">
+                {narrativeHook}
+              </p>
+            </div>
           </div>
         </FadeIn>
         
-        <div className="max-w-4xl mx-auto prose prose-lg prose-neutral dark:prose-invert max-w-none">
+        <div className="max-w-4xl prose prose-lg prose-neutral dark:prose-invert max-w-none">
           {children}
         </div>
       </div>
