@@ -113,7 +113,7 @@ export default function Home() {
 
       {/* Projects Hero Section - Simplified */}
       
-        <section id="projects" className="w-full pt-16 lg:-mb-16 md:-mb-16 sm:mb-0 bg-secondary">
+        <section id="projects" className="w-full pt-16 lg:-mb-32 md:-mb-32 sm:mb-0 bg-secondary">
           <FadeIn delay={0.4}>
             <div className="container px-4 mx-auto md:px-6 text-center">
               <div className="flex flex-col items-center justify-center">
@@ -134,7 +134,7 @@ export default function Home() {
       
       {/* Projects Grid */}
       <section id="projects-grid" className="bg-secondary">
-        <div className="container px-4 mx-auto md:px-6">
+        <div className="container px-4 mx-auto md:px-6 -mb-16">
           <div className="scale-[0.87] origin-center">
             <StaggerContainer className="grid gap-20 lg:grid-cols-1" staggerDelay={0.2}>
               <StaggerItem>
