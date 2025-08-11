@@ -192,8 +192,8 @@ html {
   color: hsl(0 0% 60%);
 }
 
-/* Better contrast for links in dark mode */
-.dark a:hover {
+/* Better contrast for links in dark mode - exclude button elements */
+.dark a:hover:not(button a):not(.interactive a) {
   color: hsl(0 0% 100%);
 }
 
