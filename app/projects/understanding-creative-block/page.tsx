@@ -8,7 +8,7 @@ import { FlowingText } from "@/components/flowing-text"
 import { ProjectHero, StorySection, ProjectTimeline, InsightCard, UserQuote } from "@/components/story-components"
 import { ProjectPageWrapper } from "@/components/project-page-wrapper"
 import Footer from "@/components/footer"
-import { ObservationAffinityDiagram, InterviewAffinityDiagram, PersonaSpectrum, DetailedPersonas, PersonaScenarios } from "./components"
+import { ObservationAffinityDiagram, InterviewAffinityDiagram, PersonaSpectrum, DetailedPersonas, PersonaScenarios, SequentialTaskAnalysis, FeaturePriorityMatrix } from "./components"
 
 export default function CreativeBlockCaseStudy() {
   // Define navigation sections
@@ -293,27 +293,7 @@ export default function CreativeBlockCaseStudy() {
               <ObservationAffinityDiagram />
 
               {/* Sequential Task Analysis */}
-              <div className="w-full rounded-xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700">
-                <div className="p-4 space-y-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center">
-                      <Target className="w-5 h-5 text-blue-600" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold">Sequential Task Analysis</h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">Process mapping and behavioral patterns</p>
-                    </div>
-                  </div>
-                  <div className="w-full bg-gray-50 dark:bg-gray-800 rounded-lg p-2">
-                    <img 
-                      src="/images/Sequential-task-analysis.png" 
-                      alt="Sequential Task Analysis flowchart showing the process mapping and behavioral patterns of creative block experiences"
-                      className="w-full h-auto rounded-md shadow-sm"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-              </div>
+              <SequentialTaskAnalysis />
             </div>
           </div>
 
@@ -662,103 +642,7 @@ export default function CreativeBlockCaseStudy() {
             our research suggests designing tools that support creators through the natural ebb and flow of 
             creative work. Here's what that looks like.
           </p>
-
-          <div className="bg-background rounded-xl p-4 sm:p-6 lg:p-8 border">
-            <h3 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-center">Priority Features Matrix</h3>
-            
-            {/* Matrix Grid - 2x2 Layout */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-6 sm:mb-8">
-              {/* High Impact, High Feasibility */}
-              <div className="space-y-4 sm:space-y-6">
-                <div className="text-center">
-                  <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-green-100 dark:bg-green-900/20 rounded-full">
-                    <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-green-500 rounded-full"></div>
-                    <span className="font-semibold text-green-700 dark:text-green-300 text-sm sm:text-base">High Impact, High Feasibility</span>
-                  </div>
-                </div>
-                
-                <Card className="p-4 sm:p-6 border-2 border-green-200 dark:border-green-800 bg-green-50/50 dark:bg-green-950/10">
-                  <div className="space-y-3 sm:space-y-4">
-                    <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Coffee className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-base sm:text-lg mb-1 sm:mb-2">Structured Routines & Self-Care</h4>
-                        <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                          Personalized pre-work routines and mental health check-ins that create the right conditions for creativity to flourish.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </Card>
-              </div>
-
-              {/* High Impact, Medium Feasibility */}
-              <div className="space-y-4 sm:space-y-6">
-                <div className="text-center">
-                  <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-orange-100 dark:bg-orange-900/20 rounded-full">
-                    <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-orange-500 rounded-full"></div>
-                    <span className="font-semibold text-orange-700 dark:text-orange-300 text-sm sm:text-base">High Impact, Medium Feasibility</span>
-                  </div>
-                </div>
-                
-                <Card className="p-4 sm:p-6 border-2 border-orange-200 dark:border-orange-800 bg-orange-50/50 dark:bg-orange-950/10">
-                  <div className="space-y-3 sm:space-y-4">
-                    <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 sm:w-8 sm:h-8 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Lightbulb className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-base sm:text-lg mb-1 sm:mb-2">Inspiration During Ideation</h4>
-                        <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                          Contextual creative prompts and perspective-shifting tools that help break through mental blocks and generate fresh ideas.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </Card>
-              </div>
-            </div>
-
-            {/* Lower Priority Section */}
-            <div className="border-t pt-6 sm:pt-8">
-              <div className="text-center mb-4 sm:mb-6">
-                <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-gray-100 dark:bg-gray-800 rounded-full">
-                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-gray-400 rounded-full"></div>
-                  <span className="font-semibold text-gray-600 dark:text-gray-400 text-sm sm:text-base">Medium Impact, Low Feasibility</span>
-                </div>
-              </div>
-              
-              <div className="grid gap-3 sm:gap-4 md:grid-cols-2">
-                <Card className="p-3 sm:p-4 border border-gray-200 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/20">
-                  <div className="flex items-start gap-2 sm:gap-3">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gray-400 rounded-md flex items-center justify-center flex-shrink-0">
-                      <Target className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white" />
-                    </div>
-                    <div>
-                      <h5 className="font-semibold mb-1 text-sm sm:text-base">Hierarchical Project Analysis</h5>
-                      <p className="text-xs text-muted-foreground">AI-powered task breakdown and project structuring</p>
-                    </div>
-                  </div>
-                </Card>
-                
-                <Card className="p-3 sm:p-4 border border-gray-200 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/20">
-                  <div className="flex items-start gap-2 sm:gap-3">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gray-400 rounded-md flex items-center justify-center flex-shrink-0">
-                      <Brain className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white" />
-                    </div>
-                    <div>
-                      <h5 className="font-semibold mb-1 text-sm sm:text-base">Personalized Inspiration</h5>
-                      <p className="text-xs text-muted-foreground">Machine learning-based content curation</p>
-                    </div>
-                  </div>
-                </Card>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 items-stretch">
+                    <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 items-stretch">
             <InsightCard
               type="solution"
               title="Routine Development"
@@ -778,6 +662,7 @@ export default function CreativeBlockCaseStudy() {
               icon={<Lightbulb className="w-8 h-8 text-green-500" />}
             />
           </div>
+          <FeaturePriorityMatrix />
         </div>
       </StorySection>
 

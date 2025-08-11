@@ -1,7 +1,102 @@
 "use client"
 
-import { Card } from "@/components/ui/card"
-import { UserCheck } from "lucide-react"
+import { useState } from "react"
+import { Card } from "../../../components/ui/card"
+import { Dialog, DialogContent, DialogTrigger } from "../../../components/ui/dialog"
+import { RefinedButton } from "../../../components/refined-button"
+import { UserCheck, ZoomIn, Target } from "lucide-react"
+
+// ===== SEQUENTIAL TASK ANALYSIS =====
+
+export function SequentialTaskAnalysis() {
+  const [isHovered, setIsHovered] = useState(false)
+
+  return (
+    <div className="w-full rounded-xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700">
+      <div className="p-4 space-y-3">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center">
+            <Target className="w-5 h-5 text-blue-600" />
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold">Sequential Task Analysis</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">Process mapping and behavioral patterns</p>
+          </div>
+        </div>
+        
+        {/* Progressive Disclosure Image Container */}
+        <div 
+          className="relative w-full bg-gray-50 dark:bg-gray-800 rounded-lg p-2 group cursor-pointer"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          {/* Shortened Image Preview */}
+          <div className="w-full overflow-hidden rounded-md shadow-sm relative">
+            <img 
+              src="/images/Sequential-task-analysis.png" 
+              alt="Sequential Task Analysis flowchart preview - hover to view full image"
+              className="w-full h-64 object-cover object-top rounded-md"
+              loading="lazy"
+            />
+            {/* Gradient Overlay to indicate more content */}
+            <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-900/80 to-transparent rounded-b-md" />
+          </div>
+          
+          {/* Hover Button */}
+          <div className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${
+            isHovered ? 'opacity-100' : 'opacity-0'
+          }`}>
+            <div className="bg-black/60 backdrop-blur-sm rounded-lg p-6 text-white text-center">
+              <Dialog>
+                <DialogTrigger asChild>
+                  <RefinedButton 
+                    variant="outline" 
+                    className="bg-white/90 text-gray-900 hover:bg-white border-white/30 backdrop-blur-sm"
+                  >
+                    View Sequential Task Analysis
+                  </RefinedButton>
+                </DialogTrigger>
+                <DialogContent className="max-w-[95vw] max-h-[95vh] p-0 overflow-hidden">
+                  <div className="relative w-full h-full bg-white dark:bg-gray-900">
+                    {/* Full Image with Zoom and Scroll */}
+                    <div className="w-full h-[90vh] overflow-auto p-4 flex items-center justify-center">
+                      <img 
+                        src="/images/Sequential-task-analysis.png" 
+                        alt="Sequential Task Analysis - Complete flowchart showing detailed process mapping and behavioral patterns of creative block experiences"
+                        className="max-w-full max-h-full object-contain cursor-pointer transition-transform duration-300 hover:cursor-zoom-in"
+                        style={{ transform: 'scale(1)' }}
+                        onClick={(e) => {
+                          const img = e.target as HTMLImageElement
+                          const currentScale = img.style.transform.match(/scale\(([\d.]+)\)/)?.[1] || '1'
+                          const scale = parseFloat(currentScale)
+                          
+                          if (scale >= 3) {
+                            img.style.transform = 'scale(1)'
+                            img.style.cursor = 'zoom-in'
+                          } else {
+                            img.style.transform = `scale(${scale + 1})`
+                            img.style.cursor = scale >= 2 ? 'zoom-out' : 'zoom-in'
+                          }
+                        }}
+                      />
+                    </div>
+                    
+                    {/* Instructions */}
+                    <div className="absolute bottom-4 left-4 right-4 bg-black/80 text-white text-sm rounded-lg p-3 backdrop-blur-sm">
+                      <p className="text-center">
+                        Click image to zoom in/out • Scroll to navigate when zoomed • Press ESC to close
+                      </p>
+                    </div>
+                  </div>
+                </DialogContent>
+              </Dialog>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 // ===== OBSERVATION AFFINITY DIAGRAM =====
 
@@ -1057,6 +1152,130 @@ export function PersonaScenarios() {
 }
 
 // ===== DETAILED PERSONAS =====
+
+// ===== FEATURE PRIORITY MATRIX =====
+interface FeatureRow {
+  no: number
+  feature: string
+  category: string
+  priority: 'High' | 'Medium' | 'Low'
+  impact: 'High' | 'Medium' | 'Low'
+  feasibility: 'High' | 'Medium' | 'Low'
+}
+
+const featureData: FeatureRow[] = [
+  { no: 1, feature: 'Provide Inspiration for Ideation and Execution Phase', category: 'Block', priority: 'High', impact: 'High', feasibility: 'Medium' },
+  { no: 2, feature: 'Personalization', category: 'Inspiration', priority: 'High', impact: 'High', feasibility: 'Low' },
+  { no: 3, feature: 'Create a Routine', category: 'Preparation/Relaxation', priority: 'Low', impact: 'Medium', feasibility: 'High' },
+  { no: 4, feature: 'Remove Thinking Constraints', category: 'Block/Process', priority: 'High', impact: 'Medium', feasibility: 'Low' },
+  { no: 5, feature: 'Timer', category: 'Process/Relaxation', priority: 'Medium', impact: 'Medium', feasibility: 'Medium' },
+  { no: 6, feature: 'Provide Hierarchical Analysis of Project', category: 'Process', priority: 'Medium', impact: 'Low', feasibility: 'Low' },
+  { no: 7, feature: 'Self Care Checklist', category: 'Block/Process', priority: 'Medium', impact: 'Medium', feasibility: 'Medium' },
+  { no: 8, feature: 'Peer Advice', category: 'Block/Process', priority: 'Medium', impact: 'Medium', feasibility: 'Low' },
+  { no: 9, feature: 'Creative Activity Recommendation System', category: 'Process', priority: 'Medium', impact: 'High', feasibility: 'High' },
+  { no: 10, feature: 'Cross Platform Seamless Experience', category: 'Preparation/Process', priority: 'Low', impact: 'Medium', feasibility: 'High' }
+]
+
+function levelClasses(level: 'High' | 'Medium' | 'Low') {
+  switch (level) {
+    case 'High':
+      return 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300 border-green-300 dark:border-green-700'
+    case 'Medium':
+      return 'bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300 border-amber-300 dark:border-amber-700'
+    case 'Low':
+    default:
+      return 'bg-gray-100 text-gray-700 dark:bg-gray-800/40 dark:text-gray-300 border-gray-300 dark:border-gray-700'
+  }
+}
+
+export function FeaturePriorityMatrix() {
+  return (
+    <div className="bg-background rounded-xl p-4 sm:p-6 lg:p-8 border">
+      <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-6">
+        <div className="space-y-3 max-w-2xl">
+          <h3 className="text-xl sm:text-2xl font-bold">Priority Features Matrix</h3>
+          <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+            We evaluated proposed features across three dimensions. Color intensity communicates priority at a glance—green for clear wins, amber for contextual consideration, and neutral for exploratory or supporting elements.
+          </p>
+          <div className="flex flex-wrap gap-3 text-xs">
+            <div className="flex items-center gap-2"><span className="w-3 h-3 rounded-sm bg-green-500"></span> High</div>
+            <div className="flex items-center gap-2"><span className="w-3 h-3 rounded-sm bg-amber-500"></span> Medium</div>
+            <div className="flex items-center gap-2"><span className="w-3 h-3 rounded-sm bg-gray-400"></span> Low</div>
+          </div>
+        </div>
+        <div className="text-xs sm:text-sm grid grid-cols-3 gap-2 lg:text-right">
+          <div>
+            <p className="font-semibold mb-1">Priority</p>
+            <p className="text-muted-foreground">User value & urgency</p>
+          </div>
+            <div>
+            <p className="font-semibold mb-1">Impact</p>
+            <p className="text-muted-foreground">Effect on creative flow</p>
+          </div>
+          <div>
+            <p className="font-semibold mb-1">Feasibility</p>
+            <p className="text-muted-foreground">Effort & complexity</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="overflow-x-auto rounded-lg border">
+        <table className="w-full border-collapse text-sm">
+          <thead className="bg-muted/50 text-xs uppercase tracking-wide">
+            <tr className="text-left">
+              <th className="py-3 px-3 font-semibold w-10">No.</th>
+              <th className="py-3 px-3 font-semibold min-w-[220px]">Features</th>
+              <th className="py-3 px-3 font-semibold min-w-[160px]">Feature Category</th>
+              <th className="py-3 px-3 font-semibold w-28">Priority</th>
+              <th className="py-3 px-3 font-semibold w-28">Impact</th>
+              <th className="py-3 px-3 font-semibold w-32">Feasibility</th>
+            </tr>
+          </thead>
+          <tbody>
+            {featureData.map(row => (
+              <tr key={row.no} className="border-t border-border/60 hover:bg-muted/40 transition-colors">
+                <td className="py-2.5 px-3 font-mono text-xs text-muted-foreground align-top">{row.no}</td>
+                <td className="py-2.5 px-3 align-top">
+                  <p className="font-medium leading-snug">{row.feature}</p>
+                </td>
+                <td className="py-2.5 px-3 align-top">
+                  <span className="inline-block rounded-md bg-secondary/40 dark:bg-secondary/10 px-2 py-1 text-[11px] tracking-wide font-medium uppercase text-secondary-foreground/80">
+                    {row.category}
+                  </span>
+                </td>
+                <td className="py-2.5 px-3 align-top">
+                  <span className={`inline-flex items-center justify-center px-2 py-1 rounded-md border text-[11px] font-semibold uppercase tracking-wide ${levelClasses(row.priority)}`}>{row.priority}</span>
+                </td>
+                <td className="py-2.5 px-3 align-top">
+                  <span className={`inline-flex items-center justify-center px-2 py-1 rounded-md border text-[11px] font-semibold uppercase tracking-wide ${levelClasses(row.impact)}`}>{row.impact}</span>
+                </td>
+                <td className="py-2.5 px-3 align-top">
+                  <span className={`inline-flex items-center justify-center px-2 py-1 rounded-md border text-[11px] font-semibold uppercase tracking-wide ${levelClasses(row.feasibility)}`}>{row.feasibility}</span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      {/* Summary Insights */}
+      <div className="mt-8 grid gap-4 md:grid-cols-3 text-sm">
+        <div className="p-4 rounded-lg bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800">
+          <p className="font-semibold mb-1">Immediate Wins</p>
+          <p className="text-muted-foreground leading-relaxed">Inspiration support and personalization rank high in impact; routine building offers a stabilizing foundation.</p>
+        </div>
+        <div className="p-4 rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800">
+          <p className="font-semibold mb-1">Strategic Investments</p>
+          <p className="text-muted-foreground leading-relaxed">Creative recommendation system scores high on impact but needs validation for sustained engagement.</p>
+        </div>
+        <div className="p-4 rounded-lg bg-gray-50 dark:bg-gray-800/40 border border-gray-200 dark:border-gray-700">
+          <p className="font-semibold mb-1">Longer-Term Enhancements</p>
+          <p className="text-muted-foreground leading-relaxed">Cross-platform continuity and hierarchical analysis add depth once core value is established.</p>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 interface TagProps {
   text: string
