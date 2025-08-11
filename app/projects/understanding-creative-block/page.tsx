@@ -8,6 +8,7 @@ import { FlowingText } from "@/components/flowing-text"
 import { ProjectHero, StorySection, ProjectTimeline, InsightCard, UserQuote } from "@/components/story-components"
 import { ProjectPageWrapper } from "@/components/project-page-wrapper"
 import Footer from "@/components/footer"
+import { ObservationAffinityDiagram, InterviewAffinityDiagram, PersonaSpectrum, DetailedPersonas, PersonaScenarios } from "./components"
 
 export default function CreativeBlockCaseStudy() {
   // Define navigation sections
@@ -289,20 +290,28 @@ export default function CreativeBlockCaseStudy() {
               </p>
               
               {/* Affinity Diagram Placeholder */}
-              <div className="w-full bg-gray-100 dark:bg-gray-800 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 flex items-center justify-center text-gray-500 dark:text-gray-400 overflow-hidden" style={{ aspectRatio: '16/9', minHeight: '250px' }}>
-                <div className="text-center space-y-2 p-4 max-w-full overflow-hidden">
-                  <BookOpen className="w-8 h-8 sm:w-12 sm:h-12 mx-auto opacity-50" />
-                  <p className="text-base sm:text-lg font-medium break-words">Affinity Diagram - Observations</p>
-                  <p className="text-xs sm:text-sm break-words">Pattern identification from observational data</p>
-                </div>
-              </div>
+              <ObservationAffinityDiagram />
 
-              {/* Sequential Task Analysis Placeholder */}
-              <div className="w-full bg-gray-100 dark:bg-gray-800 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 flex items-center justify-center text-gray-500 dark:text-gray-400 overflow-hidden" style={{ aspectRatio: '16/9', minHeight: '250px' }}>
-                <div className="text-center space-y-2 p-4 max-w-full overflow-hidden">
-                  <Target className="w-8 h-8 sm:w-12 sm:h-12 mx-auto opacity-50" />
-                  <p className="text-base sm:text-lg font-medium break-words">Sequential Task Analysis</p>
-                  <p className="text-xs sm:text-sm break-words">Process mapping and behavioral patterns</p>
+              {/* Sequential Task Analysis */}
+              <div className="w-full rounded-xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700">
+                <div className="p-4 space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center">
+                      <Target className="w-5 h-5 text-blue-600" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold">Sequential Task Analysis</h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">Process mapping and behavioral patterns</p>
+                    </div>
+                  </div>
+                  <div className="w-full bg-gray-50 dark:bg-gray-800 rounded-lg p-2">
+                    <img 
+                      src="/images/Sequential-task-analysis.png" 
+                      alt="Sequential Task Analysis flowchart showing the process mapping and behavioral patterns of creative block experiences"
+                      className="w-full h-auto rounded-md shadow-sm"
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -371,138 +380,48 @@ export default function CreativeBlockCaseStudy() {
               </p>
               
               {/* Interview Affinity Diagram */}
-              <div className="w-full bg-gray-100 dark:bg-gray-800 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 flex items-center justify-center text-gray-500 dark:text-gray-400" style={{ aspectRatio: '16/9', minHeight: '250px' }}>
-                <div className="text-center space-y-2 p-4">
-                  <BookOpen className="w-8 h-8 sm:w-12 sm:h-12 mx-auto opacity-50" />
-                  <p className="text-base sm:text-lg font-medium">Affinity Diagram - Interviews</p>
-                  <p className="text-xs sm:text-sm">Thematic analysis and pattern identification</p>
-                </div>
-              </div>
+              <InterviewAffinityDiagram />
 
               {/* Persona Spectrum */}
-              <div className="w-full bg-gray-100 dark:bg-gray-800 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 flex items-center justify-center text-gray-500 dark:text-gray-400" style={{ aspectRatio: '21/9', minHeight: '200px' }}>
-                <div className="text-center space-y-2 p-4">
-                  <UserCheck className="w-8 h-8 sm:w-12 sm:h-12 mx-auto opacity-50" />
-                  <p className="text-base sm:text-lg font-medium">Persona Spectrum</p>
-                  <p className="text-xs sm:text-sm">Range of user behaviors and needs</p>
-                </div>
-              </div>
+              <PersonaSpectrum />
 
               {/* Personas Section */}
-              <div className="space-y-4 sm:space-y-6">
-                <h4 className="text-lg sm:text-xl font-bold">User Personas</h4>
-                <p className="text-sm leading-relaxed mb-4 sm:mb-6">
-                  While every creative professional's experience is unique, our analysis revealed two primary patterns 
-                  in how people approach creative work and manage blocks. These personas guided our design recommendations.
-                </p>
+              <DetailedPersonas />
 
-                <div className="grid gap-6 lg:gap-8 lg:grid-cols-2 items-stretch">
-                  {/* Sara Persona */}
-                  <Card className="p-6 sm:p-8 h-full">
-                    <div className="space-y-4 sm:space-y-6">
-                      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg sm:text-xl flex-shrink-0">
-                          S
-                        </div>
-                        <div>
-                          <h5 className="text-xl sm:text-2xl font-bold">Sara</h5>
-                          <p className="text-muted-foreground">UX Designer, 28</p>
-                        </div>
-                      </div>
-                      
-                      <div className="space-y-3 sm:space-y-4">
-                        <div>
-                          <h6 className="font-semibold mb-2">Primary Challenge</h6>
-                          <p className="text-sm text-muted-foreground">
-                            Struggles with imposter syndrome during ideation phases, often feeling unsure about where to start 
-                            or whether her ideas are valuable.
-                          </p>
-                        </div>
-                        
-                        <div>
-                          <h6 className="font-semibold mb-2">What She Needs</h6>
-                          <p className="text-sm text-muted-foreground">
-                            Guidance on starting points, validation that her creative process is normal, and confidence-building 
-                            tools that help her trust her instincts.
-                          </p>
-                        </div>
-                        
-                        <UserQuote
-                          quote="I know I'm capable, but when I'm staring at a blank screen, I feel like I don't know anything about design."
-                          author="Sara"
-                          role="Research Participant"
-                          avatar="/placeholder.svg?height=100&width=100"
-                        />
-                      </div>
-                    </div>
-                  </Card>
+              {/* User Scenarios */}
+              <PersonaScenarios />
 
-                  {/* Taylor Persona */}
-                  <Card className="p-6 sm:p-8 h-full">
-                    <div className="space-y-4 sm:space-y-6">
-                      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center text-white font-bold text-lg sm:text-xl flex-shrink-0">
-                          T
-                        </div>
-                        <div>
-                          <h5 className="text-xl sm:text-2xl font-bold">Taylor</h5>
-                          <p className="text-muted-foreground">UX Designer, 31</p>
-                        </div>
-                      </div>
-                      
-                      <div className="space-y-3 sm:space-y-4">
-                        <div>
-                          <h6 className="font-semibold mb-2">Primary Challenge</h6>
-                          <p className="text-sm text-muted-foreground">
-                            Experiences fatigue from professional demands and feels overwhelmed by complex creative projects 
-                            that seem too big to tackle.
-                          </p>
-                        </div>
-                        
-                        <div>
-                          <h6 className="font-semibold mb-2">What They Need</h6>
-                          <p className="text-sm text-muted-foreground">
-                            Structured breakdowns of creative tasks into manageable pieces, energy management tools, 
-                            and ways to maintain momentum without burnout.
-                          </p>
-                        </div>
-                        
-                        <UserQuote
-                          quote="The project feels so big that I don't even know where to begin. I need someone to help me break it down into pieces I can actually handle."
-                          author="Taylor"
-                          role="Research Participant"
-                          avatar="/placeholder.svg?height=100&width=100"
-                        />
-                      </div>
-                    </div>
-                  </Card>
+              {/* Experience Maps */}
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-xl font-bold text-left mb-6">Experience Maps</h3>
+                  <p className="text-left text-muted-foreground mb-8">
+                    Detailed journey maps showing how Sara and Taylor experience creative blocks and interact with potential solutions.
+                  </p>
                 </div>
-              </div>
-
-              {/* Scenarios */}
-              <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
-                <div className="w-full bg-gray-100 dark:bg-gray-800 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 flex items-center justify-center text-gray-500 dark:text-gray-400" style={{ aspectRatio: '4/3', minHeight: '200px' }}>
-                  <div className="text-center space-y-2 p-4">
-                    <PenTool className="w-8 h-8 sm:w-10 sm:h-10 mx-auto opacity-50" />
-                    <p className="text-base sm:text-lg font-medium">Sara's Scenario</p>
-                    <p className="text-xs sm:text-sm">Ideation phase struggles</p>
+                
+                {/* Sara's Experience Map */}
+                <div className="space-y-4">
+                  <h4 className="text-lg font-semibold text-left">Sara's Creative Block Journey</h4>
+                  <div className="w-full overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
+                    <img 
+                      src="/images/ExperienceMapSara.png" 
+                      alt="Sara's Experience Map - Creative block journey showing touchpoints, emotions, and opportunities"
+                      className="w-full h-auto object-contain bg-white"
+                    />
                   </div>
                 </div>
-                <div className="w-full bg-gray-100 dark:bg-gray-800 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 flex items-center justify-center text-gray-500 dark:text-gray-400" style={{ aspectRatio: '4/3', minHeight: '200px' }}>
-                  <div className="text-center space-y-2 p-4">
-                    <Target className="w-8 h-8 sm:w-10 sm:h-10 mx-auto opacity-50" />
-                    <p className="text-base sm:text-lg font-medium">Taylor's Scenario</p>
-                    <p className="text-xs sm:text-sm">Project overwhelm management</p>
-                  </div>
-                </div>
-              </div>
 
-              {/* Experience Map */}
-              <div className="w-full bg-gray-100 dark:bg-gray-800 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 flex items-center justify-center text-gray-500 dark:text-gray-400" style={{ aspectRatio: '21/9', minHeight: '250px' }}>
-                <div className="text-center space-y-2 p-4">
-                  <TrendingUp className="w-8 h-8 sm:w-12 sm:h-12 mx-auto opacity-50" />
-                  <p className="text-base sm:text-lg font-medium">Experience Map</p>
-                  <p className="text-xs sm:text-sm">Creative block journey and touchpoints</p>
+                {/* Taylor's Experience Map */}
+                <div className="space-y-4">
+                  <h4 className="text-lg font-semibold text-left">Taylor's Creative Block Journey</h4>
+                  <div className="w-full overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
+                    <img 
+                      src="/images/ExperienceMapTaylor.png" 
+                      alt="Taylor's Experience Map - Creative block journey showing touchpoints, emotions, and opportunities"
+                      className="w-full h-auto object-contain bg-white"
+                    />
+                  </div>
                 </div>
               </div>
             </div>

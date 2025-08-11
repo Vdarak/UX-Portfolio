@@ -176,7 +176,7 @@ export function SiteHeader() {
     <motion.header
       className={cn(
         "fixed top-0 z-50 w-full transition-all duration-300",
-        isScrolled ? "bg-background/80 backdrop-blur-md" : "bg-transparent",
+        isScrolled ? "bg-background/80 backdrop-blur-xl" : "bg-background/80 backdrop-blur-xl",
       )}
       initial={{ y: -100, opacity: 0 }}
       animate={{

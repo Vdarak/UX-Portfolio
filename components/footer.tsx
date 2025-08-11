@@ -48,7 +48,7 @@ export default function Footer() {
             <p className="text-sm text-muted-foreground">
               Designed in{" "}
               <FlowingText text="Figma" className="inline font-bold" />,{" "}
-              built in{" "}
+              developed in{" "}
               <FlowingText text="VSCode" className="inline font-bold" />
             </p>
             <p className="text-sm text-muted-foreground mt-1">
