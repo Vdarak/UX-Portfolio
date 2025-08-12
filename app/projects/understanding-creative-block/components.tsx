@@ -1054,7 +1054,7 @@ export function PersonaScenarios() {
       image: "/placeholder-user.jpg",
       quote: "It's the worst feeling when a creative block is near a deadline.",
       demographics: ["24 years old", "UX Designer/HCI Graduate Student", "Chicago, IL", "Female (she/her)", "15 years of creative experience"],
-      problem: "Experiences creative blocks during ideation, especially under deadline pressure. Struggles with imposter syndrome and confidence in her ideas.",
+      problem: "Experiences creative blocks during ideation and under deadline pressure. Struggles with imposter syndrome and confidence in her ideas.",
       solution: "Uses a creative assistant app to overcome blocks through structured guidance and inspiration discovery.",
       steps: [
         {

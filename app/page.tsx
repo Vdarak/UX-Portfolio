@@ -40,12 +40,12 @@ export default function Home() {
               </FadeIn>
               <FadeIn direction="right" delay={0.4}>
                 <h2 className="text-4xl font-medium tracking-tight md:text-6xl">
-                  UX Practitioner composing <FlowingText text="thoughtful" className="inline" /> software experiences
+                <FlowingText text="Thoughtful" className="inline" /> UX, designed in cycles
                 </h2>
               </FadeIn>
               <FadeIn direction="right" delay={0.4}>
                 <p className="text-xl text-neutral-600 dark:text-neutral-300 relative overflow-hidden">
-                  Focused on creating intuitive, accessible, and delightful user experiences through research-driven design direction.
+                  My cyclical design process — create with intention, preserve with devotion, transform with courage — ensures your product stays innovative without accruing chaos.
                 </p>
               </FadeIn>
           </div>
