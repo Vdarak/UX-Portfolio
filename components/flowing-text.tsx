@@ -27,7 +27,7 @@ interface FlowingTextProps {
  * <FlowingText text="thoughtful" className="inline" />
  * ```
  * 
- * Example usage with children (modern API):
+ * Example legacy usage with children (modern API):
  * ```tsx
  * <FlowingText
  *   colors={["#8b5cf6", "#c084fc", "#4079ff", "#c084fc", "#8b5cf6"]}
@@ -43,8 +43,8 @@ export const FlowingText: React.FC<FlowingTextProps> = ({
   children,
   className = '',
   delay = 0,
-  colors = ["#8b5cf6", "#c084fc", "#4079ff", "#c084fc", "#8b5cf6"], // Purple gradient with a touch of blue
-  animationSpeed = 8, // Slower, more subtle animation
+  colors = ["#8b5cf6", "#7c3aed", "#ec4899", "#f97316", "#eeb422ff", "#f97316", "#ec4899", "#7c3aed", "#8b5cf6"], // Aurora sunrise gradient inspired by IMG_6133.jpg
+  animationSpeed = 18, // Slower, more subtle animation
   showBorder = false
 }) => {
   // Support both text prop and children prop
