@@ -1219,16 +1219,50 @@ export function FeaturePriorityMatrix() {
         </div>
       </div>
 
-      <div className="overflow-x-auto rounded-lg border">
-        <table className="w-full border-collapse text-sm">
-          <thead className="bg-muted/50 text-xs uppercase tracking-wide">
+      {/* Mobile list (cards) */}
+      <div className="md:hidden grid gap-3">
+        {featureData.map((row) => (
+          <div key={row.no} className="rounded-lg border bg-card p-3">
+            <div className="flex items-start justify-between gap-3">
+              <div className="min-w-0">
+                <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                  <span className="font-mono">#{row.no}</span>
+                  <span className="inline-block rounded px-1.5 py-0.5 bg-secondary/40 dark:bg-secondary/10 uppercase tracking-wide text-[10px]">
+                    {row.category}
+                  </span>
+                </div>
+                <p className="mt-1 font-medium text-sm leading-snug break-words">{row.feature}</p>
+              </div>
+            </div>
+            <div className="mt-3 grid grid-cols-3 gap-2 text-center">
+              <div className="space-y-1">
+                <p className="text-[11px] text-muted-foreground">Priority</p>
+                <span className={`inline-flex items-center justify-center px-2 py-1 rounded-md border text-[11px] font-semibold uppercase tracking-wide ${levelClasses(row.priority)}`}>{row.priority}</span>
+              </div>
+              <div className="space-y-1">
+                <p className="text-[11px] text-muted-foreground">Impact</p>
+                <span className={`inline-flex items-center justify-center px-2 py-1 rounded-md border text-[11px] font-semibold uppercase tracking-wide ${levelClasses(row.impact)}`}>{row.impact}</span>
+              </div>
+              <div className="space-y-1">
+                <p className="text-[11px] text-muted-foreground">Feasibility</p>
+                <span className={`inline-flex items-center justify-center px-2 py-1 rounded-md border text-[11px] font-semibold uppercase tracking-wide ${levelClasses(row.feasibility)}`}>{row.feasibility}</span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Desktop/tablet table */}
+      <div className="hidden md:block overflow-x-auto rounded-lg border">
+        <table className="min-w-[760px] w-full border-collapse text-sm">
+          <thead className="bg-muted/50 text-xs uppercase tracking-wide sticky top-0">
             <tr className="text-left">
               <th className="py-3 px-3 font-semibold w-10">No.</th>
-              <th className="py-3 px-3 font-semibold min-w-[220px]">Features</th>
-              <th className="py-3 px-3 font-semibold min-w-[160px]">Feature Category</th>
-              <th className="py-3 px-3 font-semibold w-28">Priority</th>
-              <th className="py-3 px-3 font-semibold w-28">Impact</th>
-              <th className="py-3 px-3 font-semibold w-32">Feasibility</th>
+              <th className="py-3 px-3 font-semibold min-w-[200px]">Features</th>
+              <th className="py-3 px-3 font-semibold min-w-[140px]">Feature Category</th>
+              <th className="py-3 px-3 font-semibold w-24">Priority</th>
+              <th className="py-3 px-3 font-semibold w-24">Impact</th>
+              <th className="py-3 px-3 font-semibold w-28">Feasibility</th>
             </tr>
           </thead>
           <tbody>
