@@ -30,7 +30,7 @@ export default function Home() {
         </div>
 
         {/* Main content grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center w-full max-w-7xl">
+        <div className="grid grid-cols-1 lg:grid-cols-12 justify-between items-center w-full">
           {/* Text content */}
           <div className="lg:col-span-8 max-w-4xl space-y-4 text-center lg:text-left">
               <FadeIn direction="right" delay={0.4}>
@@ -55,8 +55,8 @@ export default function Home() {
             <FadeIn direction="left" delay={0.4}>
               <RefinedMagneticEffect intensity={0.08} range={100}>
                 <PixelGridExhibit 
-                  width={400}
-                  height={400}
+                  width={375}
+                  height={375}
                 />
               </RefinedMagneticEffect>
             </FadeIn>
