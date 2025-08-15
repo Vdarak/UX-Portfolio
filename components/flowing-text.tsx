@@ -43,7 +43,7 @@ export const FlowingText: React.FC<FlowingTextProps> = ({
   children,
   className = '',
   delay = 0,
-  colors = ["#8b5cf6", "#7c3aed", "#ec4899", "#f97316", "#eeb422ff", "#f97316", "#ec4899", "#7c3aed", "#8b5cf6"], // Aurora sunrise gradient inspired by IMG_6133.jpg
+  colors = ["#8b5cf6", "#7c3aed", "#ec4899", "#f97316", "#d09d1cff", "#f97316", "#ec4899", "#7c3aed", "#8b5cf6"], // Aurora sunrise gradient inspired by IMG_6133.jpg
   animationSpeed = 18, // Slower, more subtle animation
   showBorder = false
 }) => {

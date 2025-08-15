@@ -44,17 +44,31 @@ export function PixelGridExhibit({
         
         // Dynamic letter animation system
         let frameCount = 0
-        const fastSpeed = 6 // frames for random letters (slightly slower for readability)
-        const slowSpeed = 60 // frames for meaningful words (longer pause to appreciate)
-        const symbolSpeed = 75 // even longer for symbols (they're special!)
+        const fastSpeed = 90 // frames for random letters (much slower for readability)
+        const slowSpeed = 180 // frames for meaningful words (longer pause to appreciate)
+        const symbolSpeed = 240 // even longer for symbols (they're special!)
+        
+        // Transition animation system
+        const transitionFrames = 8 // Total frames for slide + ripple transition (back to 8 frames)
+        const transitionSpeed = 6 // Frames to wait between each transition step (slows down animation)
+        let transitionStepCounter = 0 // Counter for transition speed control
+        let isTransitioning = false
+        let transitionFrame = 0
+        let transitionDirection = 'none' // 'top', 'bottom', 'left', 'right', 'ripple-out', 'ripple-in'
+        let previousDisplay = 'HI'
+        let nextDisplay = 'UX'
+        let transitionPhase = 'slide' // 'slide' or 'ripple'
+        
+        // Direction patterns for slide transitions
+        const slideDirections = ['top', 'bottom', 'left', 'right']
         
         // 8x8 pixel patterns for letters and symbols (from JSON)
         const letterPatterns: { [key: string]: number[][] } = {
           // Uppercase letters only (8x8)
           'A': [
             [0, 0, 1, 1, 1, 1, 0, 0],
-            [0, 1, 1, 0, 0, 1, 1, 0],
-            [1, 1, 0, 0, 0, 0, 1, 1],
+            [0, 1, 0, 0, 0, 0, 1, 0],
+            [1, 0, 0, 0, 0, 0, 0, 1],
             [1, 0, 0, 0, 0, 0, 0, 1],
             [1, 1, 1, 1, 1, 1, 1, 1],
             [1, 0, 0, 0, 0, 0, 0, 1],
@@ -394,9 +408,9 @@ export function PixelGridExhibit({
           ],
           '?': [ // Question mark
             [0, 1, 1, 1, 1, 1, 1, 0],
-            [1, 0, 0, 0, 0, 0, 0, 1],
-            [0, 0, 0, 0, 0, 1, 1, 0],
-            [0, 0, 0, 1, 1, 0, 0, 0],
+            [1, 1, 1, 1, 1, 1, 1, 1],
+            [1, 1, 0, 0, 0, 1, 1, 1],
+            [0, 0, 0, 1, 1, 1, 1, 0],
             [0, 0, 0, 1, 1, 0, 0, 0],
             [0, 0, 0, 1, 1, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0, 0],
@@ -416,10 +430,10 @@ export function PixelGridExhibit({
             [0, 0, 0, 1, 0, 0, 0, 0],
             [0, 0, 1, 1, 0, 0, 0, 0],
             [0, 1, 1, 1, 1, 1, 0, 0],
-            [0, 0, 0, 1, 1, 0, 0, 0],
+            [0, 0, 0, 1, 1, 1, 0, 0],
             [0, 0, 0, 0, 1, 1, 0, 0],
-            [0, 0, 0, 0, 0, 1, 1, 0],
-            [0, 0, 0, 0, 0, 0, 1, 0],
+            [0, 0, 0, 0, 0, 1, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0, 0]
           ],
           '💡': [ // Light bulb (for ideas/inspiration)
@@ -443,25 +457,18 @@ export function PixelGridExhibit({
           '♥',    // Love for design
           'IA',   // Information Architecture
           '🔍',   // Research
-          'RS',   // Research
           '!',    // Eureka moments
-          'IT',   // Information Technology
-          '💡',   // Light bulb/Ideas
-          '⚡',   // Lightning/Inspiration
           '★',    // Excellence
           'XO',   // Hugs and kisses (cute)
           'CX',   // Customer Experience
           '☺',    // Happy users
-          'PX',   // Product Experience
           '◯',    // User persona
           'UX',   // Return to UX
-          '!',    // Excitement about design
           '▲',    // Growth/improvement
           '□',    // Wireframes
           '⟳',    // Iteration
           '⚡',   // Another lightning moment
           '?',    // Always questioning
-          'VD',   // Visual Design
           'HI'    // Circle back to greeting
         ]
         
@@ -475,125 +482,250 @@ export function PixelGridExhibit({
         let isShowingMeaningfulWord = true
         let sequenceIndex = 0 // Track position in meaningful sequence
         
+        // Start transition to next display
+        const startTransition = () => {
+          if (isTransitioning) return // Already transitioning
+          
+          previousDisplay = currentDisplay
+          
+          // Always get next item from curated sequence (no random letters/symbols)
+          sequenceIndex = (sequenceIndex + 1) % meaningfulSequence.length
+          nextDisplay = meaningfulSequence[sequenceIndex]
+          
+          // Check if this is a meaningful word or symbol from our curated list
+          isShowingMeaningfulWord = true // Always meaningful since we only use the sequence
+          
+          // Determine transition type based on content change
+          const prevIsSymbol = allSymbols.includes(previousDisplay)
+          const nextIsSymbol = allSymbols.includes(nextDisplay)
+          
+          if (prevIsSymbol !== nextIsSymbol) {
+            // Letter to symbol or symbol to letter - use ripple effect
+            transitionDirection = 'ripple-out'
+            transitionPhase = 'ripple'
+          } else {
+            // Letter to letter or symbol to symbol - use randomized slide effect
+            transitionDirection = slideDirections[Math.floor(Math.random() * slideDirections.length)]
+            transitionPhase = 'slide'
+          }
+          
+          isTransitioning = true
+          transitionFrame = 0
+          transitionStepCounter = 0
+        }
+        
         // Generate next display content
         const getNextDisplay = () => {
-          // 70% chance to show next item in curated sequence, 30% random
-          const shouldShowSequence = Math.random() < 0.7
-          
-          if (shouldShowSequence) {
-            sequenceIndex = (sequenceIndex + 1) % meaningfulSequence.length
-            const nextItem = meaningfulSequence[sequenceIndex]
-            return { text: nextItem, isMeaningful: true }
-          } else {
-            // Show random letter or symbol
-            const shouldShowSymbol = Math.random() < 0.3
-            if (shouldShowSymbol) {
-              const randomSymbol = allSymbols[Math.floor(Math.random() * allSymbols.length)]
-              return { text: randomSymbol, isMeaningful: false }
-            } else {
-              const randomLetter = allLetters[Math.floor(Math.random() * allLetters.length)]
-              return { text: randomLetter, isMeaningful: false }
-            }
-          }
+          // This function is now handled by startTransition
+          return { text: currentDisplay, isMeaningful: isShowingMeaningfulWord }
         }
         
         // Update animation state
         const updateLetterAnimation = () => {
+          if (isTransitioning) {
+            transitionStepCounter++
+            
+            // Only advance transition frame every transitionSpeed frames
+            if (transitionStepCounter >= transitionSpeed) {
+              transitionFrame++
+              transitionStepCounter = 0
+            }
+            
+            if (transitionPhase === 'slide') {
+              // Complete slide transition in 8 frames (but slowed by transitionSpeed)
+              if (transitionFrame >= transitionFrames) {
+                // Switch to ripple phase for symbol transitions, or complete for letter transitions
+                const prevIsSymbol = allSymbols.includes(previousDisplay)
+                const nextIsSymbol = allSymbols.includes(nextDisplay)
+                
+                if (prevIsSymbol !== nextIsSymbol) {
+                  // Switch to ripple-in phase
+                  transitionPhase = 'ripple'
+                  transitionDirection = 'ripple-in'
+                  transitionFrame = 0
+                  transitionStepCounter = 0
+                  currentDisplay = nextDisplay
+                } else {
+                  // Complete slide transition
+                  isTransitioning = false
+                  currentDisplay = nextDisplay
+                  framesSinceChange = 0
+                }
+              }
+            } else if (transitionPhase === 'ripple') {
+              if (transitionDirection === 'ripple-out' && transitionFrame >= transitionFrames) {
+                // Switch to ripple-in
+                transitionDirection = 'ripple-in'
+                transitionFrame = 0
+                transitionStepCounter = 0
+                currentDisplay = nextDisplay
+              } else if (transitionDirection === 'ripple-in' && transitionFrame >= transitionFrames) {
+                // Complete ripple transition
+                isTransitioning = false
+                framesSinceChange = 0
+              }
+            }
+            
+            return
+          }
+          
           framesSinceChange++
           
           // Determine required frames based on content type
-          let requiredFrames = fastSpeed
-          if (isShowingMeaningfulWord) {
-            // Check if current display is a symbol for extra long pause
-            const isSymbol = allSymbols.includes(currentDisplay)
-            requiredFrames = isSymbol ? symbolSpeed : slowSpeed
+          let requiredFrames = slowSpeed // Always use slow speed since everything is meaningful
+          
+          // Check if current display is a symbol for extra long pause
+          const isSymbol = allSymbols.includes(currentDisplay)
+          if (isSymbol) {
+            requiredFrames = symbolSpeed
           }
           
           if (framesSinceChange >= requiredFrames) {
-            const next = getNextDisplay()
-            currentDisplay = next.text
-            isShowingMeaningfulWord = next.isMeaningful
-            framesSinceChange = 0
+            startTransition()
           }
         }
         
-        // Convert current letters to pixel coordinates
+        // Calculate slide offset for smooth transitions
+        const getSlideOffset = (direction: string, progress: number) => {
+          const offset = Math.round(progress * (direction === 'left' || direction === 'right' ? cols : rows))
+          
+          switch (direction) {
+            case 'top':
+              return { x: 0, y: -offset }
+            case 'bottom':
+              return { x: 0, y: offset }
+            case 'left':
+              return { x: -offset, y: 0 }
+            case 'right':
+              return { x: offset, y: 0 }
+            default:
+              return { x: 0, y: 0 }
+          }
+        }
+        
+        // Calculate ripple visibility for center-out or perimeter-in animation
+        const getRippleVisibility = (x: number, y: number, progress: number, direction: 'ripple-out' | 'ripple-in') => {
+          const centerX = Math.floor(cols / 2)
+          const centerY = Math.floor(rows / 2)
+          
+          // Calculate distance from center (Manhattan distance for 8-bit feel)
+          const distanceFromCenter = Math.abs(x - centerX) + Math.abs(y - centerY)
+          const maxDistance = Math.max(centerX, centerY, cols - centerX, rows - centerY)
+          
+          if (direction === 'ripple-out') {
+            // Disappear from perimeter to center
+            const threshold = maxDistance * (1 - progress)
+            return distanceFromCenter <= threshold
+          } else {
+            // Appear from center to perimeter
+            const threshold = maxDistance * progress
+            return distanceFromCenter <= threshold
+          }
+        }
+        
+        // Convert current letters to pixel coordinates with transition effects
         const getLetterPixels = (): number[][] => {
           const pixels: number[][] = []
-          const letters = currentDisplay.split('')
           
-          // Determine if we're dealing with symbols or letters
-          const isSymbol = allSymbols.includes(currentDisplay)
-          
-          if (isSymbol) {
-            // Handle single 8x8 symbol
-            const pattern = letterPatterns[currentDisplay]
-            if (!pattern) return pixels
+          // Helper function to get pixels for a specific display text
+          const getPixelsForDisplay = (displayText: string, offsetX = 0, offsetY = 0): number[][] => {
+            const resultPixels: number[][] = []
+            const letters = displayText.split('')
+            const isSymbol = allSymbols.includes(displayText)
             
-            const symbolWidth = 8
-            const symbolHeight = 8
-            
-            // Center the symbol in the grid
-            const startX = Math.floor((cols - symbolWidth) / 2)
-            const startY = Math.floor((rows - symbolHeight) / 2)
-            
-            for (let y = 0; y < pattern.length; y++) {
-              for (let x = 0; x < pattern[y].length; x++) {
-                if (pattern[y][x] === 1) {
-                  const finalX = startX + x
-                  const finalY = startY + y
-                  
-                  // Only add if within grid bounds
-                  if (finalX >= 0 && finalX < cols && finalY >= 0 && finalY < rows) {
-                    // Symbols get enhanced intensity variation for more dramatic effect
-                    const baseIntensity = 0.95
-                    const variation = Math.sin(frameCount * 0.12 + x + y) * 0.15
-                    const intensity = Math.max(0.75, Math.min(1, baseIntensity + variation))
-                    
-                    pixels.push([finalX, finalY, intensity])
-                  }
-                }
-              }
-            }
-          } else {
-            // Handle 8x8 letters
-            const letterWidth = 8
-            const letterHeight = 8
-            const spacing = 1
-            const totalWidth = letters.length * letterWidth + (letters.length - 1) * spacing
-            
-            // Center the text in the grid
-            const startX = Math.floor((cols - totalWidth) / 2)
-            const startY = Math.floor((rows - letterHeight) / 2)
-            
-            letters.forEach((letter, letterIndex) => {
-              const pattern = letterPatterns[letter]
-              if (!pattern) return
+            if (isSymbol) {
+              // Handle single 8x8 symbol
+              const pattern = letterPatterns[displayText]
+              if (!pattern) return resultPixels
               
-              const letterX = startX + letterIndex * (letterWidth + spacing)
+              const symbolWidth = 8
+              const symbolHeight = 8
+              const startX = Math.floor((cols - symbolWidth) / 2) + offsetX
+              const startY = Math.floor((rows - symbolHeight) / 2) + offsetY
               
               for (let y = 0; y < pattern.length; y++) {
                 for (let x = 0; x < pattern[y].length; x++) {
                   if (pattern[y][x] === 1) {
-                    const finalX = letterX + x
+                    const finalX = startX + x
                     const finalY = startY + y
                     
-                    // Only add if within grid bounds
                     if (finalX >= 0 && finalX < cols && finalY >= 0 && finalY < rows) {
-                      // Letters get subtle intensity variation
-                      const baseIntensity = isShowingMeaningfulWord ? 0.95 : 0.85
-                      const variation = Math.sin(frameCount * 0.08 + x + y) * 0.1
-                      const intensity = Math.max(0.7, Math.min(1, baseIntensity + variation))
-                      
-                      pixels.push([finalX, finalY, intensity])
+                      const baseIntensity = 0.95
+                      const variation = Math.sin(frameCount * 0.12 + x + y) * 0.15
+                      const intensity = Math.max(0.75, Math.min(1, baseIntensity + variation))
+                      resultPixels.push([finalX, finalY, intensity])
                     }
                   }
                 }
               }
-            })
+            } else {
+              // Handle 8x8 letters
+              const letterWidth = 8
+              const letterHeight = 8
+              const spacing = 1
+              const totalWidth = letters.length * letterWidth + (letters.length - 1) * spacing
+              const startX = Math.floor((cols - totalWidth) / 2) + offsetX
+              const startY = Math.floor((rows - letterHeight) / 2) + offsetY
+              
+              letters.forEach((letter, letterIndex) => {
+                const pattern = letterPatterns[letter]
+                if (!pattern) return
+                
+                const letterX = startX + letterIndex * (letterWidth + spacing)
+                
+                for (let y = 0; y < pattern.length; y++) {
+                  for (let x = 0; x < pattern[y].length; x++) {
+                    if (pattern[y][x] === 1) {
+                      const finalX = letterX + x
+                      const finalY = startY + y
+                      
+                      if (finalX >= 0 && finalX < cols && finalY >= 0 && finalY < rows) {
+                        const baseIntensity = 0.95 // Always high intensity since everything is meaningful
+                        const variation = Math.sin(frameCount * 0.08 + x + y) * 0.1
+                        const intensity = Math.max(0.7, Math.min(1, baseIntensity + variation))
+                        resultPixels.push([finalX, finalY, intensity])
+                      }
+                    }
+                  }
+                }
+              })
+            }
+            
+            return resultPixels
           }
           
-          return pixels
+          if (!isTransitioning) {
+            return getPixelsForDisplay(currentDisplay)
+          }
+          
+          // Handle transition animations
+          const progress = transitionFrame / transitionFrames // Use full frames for smoother, slower animation
+          const easeProgress = progress * progress * (3.0 - 2.0 * progress) // Smooth step function
+          
+          if (transitionPhase === 'slide') {
+            // Slide transition
+            if (slideDirections.includes(transitionDirection)) {
+              const slideOffset = getSlideOffset(transitionDirection, easeProgress)
+              
+              // Show previous display sliding out
+              const prevPixels = getPixelsForDisplay(previousDisplay, -slideOffset.x, -slideOffset.y)
+              // Show next display sliding in from opposite direction
+              const nextOffset = getSlideOffset(transitionDirection, easeProgress - 1)
+              const nextPixels = getPixelsForDisplay(nextDisplay, -nextOffset.x, -nextOffset.y)
+              
+              return [...prevPixels, ...nextPixels]
+            }
+          } else if (transitionPhase === 'ripple') {
+            // Ripple transition
+            const displayToShow = transitionDirection === 'ripple-out' ? previousDisplay : currentDisplay
+            const allPixelsForDisplay = getPixelsForDisplay(displayToShow)
+            
+            return allPixelsForDisplay.filter(([x, y]) => 
+              getRippleVisibility(x, y, easeProgress, transitionDirection as 'ripple-out' | 'ripple-in')
+            )
+          }
+          
+          return getPixelsForDisplay(currentDisplay)
         }
 
         // Color scheme detection (improved heuristic)
