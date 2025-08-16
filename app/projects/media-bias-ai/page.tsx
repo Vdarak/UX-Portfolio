@@ -1100,7 +1100,7 @@ export default function MediaBiasAICaseStudy() {
                   <div className="space-y-4">
                     <div className="relative overflow-hidden" style={{ borderRadius: '48px' }}>
                       <img 
-                        src="/images/ANA/Home Page.png" 
+                        src="/images/ANA/home-page.png" 
                         alt="Home Page"
                         className="w-full h-full object-contain"
                         style={{ borderRadius: '48px' }}
@@ -1115,7 +1115,7 @@ export default function MediaBiasAICaseStudy() {
                   <div className="space-y-4">
                     <div className="relative overflow-hidden" style={{ borderRadius: '48px' }}>
                       <img 
-                        src="/images/ANA/Bias Analysis Report Page.png" 
+                        src="/images/ANA/bias-analysis-report-page.png" 
                         alt="Bias Analysis Report"
                         className="w-full h-full object-contain"
                         style={{ borderRadius: '48px' }}
