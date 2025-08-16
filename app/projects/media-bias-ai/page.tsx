@@ -164,7 +164,7 @@ export default function MediaBiasAICaseStudy() {
                       className="w-full h-full object-cover shadow-lg"
                       style={{ borderRadius: '48px' }}
                     >
-                      <source src="/videos/MainFlow.mov" type="video/mp4" />
+                      <source src="/videos/MainFlow.mp4" type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
                   </div>
@@ -242,7 +242,7 @@ export default function MediaBiasAICaseStudy() {
                       className="w-full h-full object-cover shadow-lg"
                       style={{ borderRadius: '48px' }}
                     >
-                      <source src="/videos/NFYPage.mov" type="video/mp4" />
+                      <source src="/videos/NFYPage.mp4" type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
                   </div>
