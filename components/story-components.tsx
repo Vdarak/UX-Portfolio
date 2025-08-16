@@ -144,10 +144,11 @@ export function StorySection({ chapter, storyTitle, narrativeHook, children, cla
             </div>
             <div className="max-w-4xl">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">{storyTitle}</h2>
-              <p className="text-xl md:text-2xl text-muted-foreground italic leading-relaxed font-light">
-                {narrativeHook}
-              </p>
             </div>
+            {/* Narrative hook spans full width */}
+            <p className="text-xl md:text-2xl text-muted-foreground italic leading-relaxed font-light max-w-none">
+              {narrativeHook}
+            </p>
           </div>
         </FadeIn>
         
