@@ -140,37 +140,13 @@ export default function Home() {
               <StaggerItem>
                 <FadeIn delay={0.3}>
                   <RefinedProjectCard
-                      title="Reducing Alcohol Consumption"
-                      description="Supporting healthier relationships with alcohol through research-driven design to make mindful social choices more visible and accessible."
-                      image="/images/alcohol.png"
-                      hoverImage="/images/logo.png" // Added hover image
-                      tags={["UX Research", "Mixed Methods", "Behavioral Design"]}
-                      href="/projects/reducing-alcohol"
-                    />
-                </FadeIn>
-              </StaggerItem>
-              <StaggerItem>
-                <FadeIn delay={0.3}>
-                  <RefinedProjectCard
-                    title="BackMarket IA Redesign"
-                    description="A deep dive into restructuring the information architecture of a leading refurbished electronics marketplace to enhance usability and content clarity."
-                    image="/images/backmarket-dark.png"
-                    hoverImage="/images/logo.png" // Added hover image
-                    tags={["Information Architecture", "Content Strategy", "UX Research"]}
-                    href="/projects/backmarket-ia-redesign"
-                  />
-                </FadeIn>
-              </StaggerItem>
-              <StaggerItem>
-                <FadeIn delay={0.3}>
-                  <RefinedProjectCard
-                    title="Finance Dashboard"
-                    description="A comprehensive financial management dashboard for personal and small business users."
-                    image="/images/gamma.png"
-                    hoverImage="/images/logo.png" // Added hover image
-                    tags={["Data Visualization", "User Testing", "Interaction Design"]}
-                    href="/projects/finance-dashboard"
-                  />
+                    title="Ana: AI-Powered News Aggregator"
+                    description="An AI system that detects media bias and enhances media literacy for Gen Z users through explainable AI and educational tools."
+                    image="/images/ana.png"
+                    hoverImage="/images/ANA/ana-hero.png" // Added hover image
+                  tags={["AI Ethics", "Media Literacy", "Gen Z Users", "UX Research"]}
+                  href="/projects/media-bias-ai"
+                />
                 </FadeIn>
               </StaggerItem>
               <StaggerItem>
@@ -188,13 +164,37 @@ export default function Home() {
               <StaggerItem>
                 <FadeIn delay={0.3}>
                   <RefinedProjectCard
-                    title="Ana: AI-Powered News Aggregator"
-                    description="An AI system that detects media bias and enhances media literacy for Gen Z users through explainable AI and educational tools."
-                    image="/images/ana.png"
+                    title="BackMarket IA Redesign"
+                    description="A deep dive into restructuring the information architecture of a leading refurbished electronics marketplace to enhance usability and content clarity."
+                    image="/images/backmarket-dark.png"
                     hoverImage="/images/logo.png" // Added hover image
-                  tags={["AI Ethics", "Media Literacy", "Gen Z Users", "UX Research"]}
-                  href="/projects/media-bias-ai"
-                />
+                    tags={["Information Architecture", "Content Strategy", "UX Research"]}
+                    href="/projects/backmarket-ia-redesign"
+                  />
+                </FadeIn>
+              </StaggerItem>
+              <StaggerItem>
+                <FadeIn delay={0.3}>
+                  <RefinedProjectCard
+                      title="Reducing Alcohol Consumption"
+                      description="Supporting healthier relationships with alcohol through research-driven design to make mindful social choices more visible and accessible."
+                      image="/images/alcohol.png"
+                      hoverImage="/images/logo.png" // Added hover image
+                      tags={["UX Research", "Mixed Methods", "Behavioral Design"]}
+                      href="/projects/reducing-alcohol"
+                    />
+                </FadeIn>
+              </StaggerItem>
+              <StaggerItem>
+                <FadeIn delay={0.3}>
+                  <RefinedProjectCard
+                    title="Finance Dashboard"
+                    description="A comprehensive financial management dashboard for personal and small business users."
+                    image="/images/gamma.png"
+                    hoverImage="/images/logo.png" // Added hover image
+                    tags={["Data Visualization", "User Testing", "Interaction Design"]}
+                    href="/projects/finance-dashboard"
+                  />
                 </FadeIn>
               </StaggerItem>
             </StaggerContainer>
@@ -272,7 +272,7 @@ export default function Home() {
                     </RefinedButton>
                   </div>
                 </FadeIn>
-                {/* Skills & Expertise */}
+                {/* Skills & Expertise 
                 <FadeIn delay={0.6}>
                   <div className="mt-10 space-y-8">
                     <div className="flex items-center justify-between">
@@ -285,7 +285,7 @@ export default function Home() {
                     </div>
                     
                     {/* T-shaped visualization - Research strong, breadth across other areas */}
-                    <div>
+                    {/* <div>
                       <div className="grid gap-8">
                         <div className="space-y-4">
                           <h4 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">Core Strengths</h4>
@@ -384,6 +384,7 @@ export default function Home() {
                     </div>
                   </div>
                 </FadeIn>
+                */}
               </div>
             </FadeIn>
           </div>
