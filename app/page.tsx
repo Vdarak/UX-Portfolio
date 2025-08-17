@@ -225,28 +225,29 @@ export default function Home() {
               <div className="space-y-6 px-2">
                 <h2 className="text-3xl font-medium tracking-tight md:text-4xl">About Me</h2>
                 <p className="text-xl text-neutral-600 dark:text-neutral-300">
-                  I'm a UX designer with 1 year of experience creating user-centered digital products that solve real
-                  problems.
+                  I'm a UX designer and researcher with expertise in Human-Computer Interaction, specializing in 
+                  AI-driven design solutions and data-informed user experiences.
                 </p>
                 <StaggerContainer className="space-y-4" staggerDelay={0.1}>
                   <StaggerItem>
                     <p className="text-neutral-600 dark:text-neutral-400">
-                      My approach combines empathy-driven research with strategic design thinking to create experiences
-                      that are both functional and delightful. I believe in designing with intention, where every
-                      element serves a purpose.
+                      <strong>Research & Analysis:</strong> I excel in user research methodologies including A/B testing, 
+                      usability testing, journey mapping, and persona development. My work spans quantitative analysis 
+                      using R and Qualtrics, and qualitative insights through user interviews and affinity mapping.
                     </p>
                   </StaggerItem>
                   <StaggerItem>
                     <p className="text-neutral-600 dark:text-neutral-400">
-                      With a background in cognitive psychology and human-computer interaction, I bring a unique
-                      perspective to understanding user behavior and designing solutions that feel intuitive and
-                      natural.
+                      <strong>AI & Technology Integration:</strong> I bridge design and technology through Agentic AI 
+                      implementations, front-end development with React and Next.js, and creating interactive prototypes 
+                      that solve complex problems like media bias detection and job search optimization.
                     </p>
                   </StaggerItem>
                   <StaggerItem>
                     <p className="text-neutral-600 dark:text-neutral-400">
-                      When I'm not designing, you can find me hiking, reading about design psychology, or experimenting
-                      with ceramics.
+                      <strong>Design Systems & Strategy:</strong> From wireframing in Figma to implementing design systems, 
+                      I create cohesive experiences that improve task completion rates by up to 35% and user satisfaction 
+                      by 40% through strategic information architecture and rapid prototyping.
                     </p>
                   </StaggerItem>
                 </StaggerContainer>
