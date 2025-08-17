@@ -1626,25 +1626,6 @@ export default function MediaBiasAICaseStudy() {
                   </RefinedButton>
                 </Link>
               </div>
-              
-              <div className="flex justify-center gap-8 pt-8 text-sm text-muted-foreground">
-                <div className="text-center">
-                  <div className="font-mono text-lg font-bold">04</div>
-                  <div>Projects</div>
-                </div>
-                <div className="text-center">
-                  <div className="font-mono text-lg font-bold">50+</div>
-                  <div>User Interviews</div>
-                </div>
-                <div className="text-center">
-                  <div className="font-mono text-lg font-bold">12</div>
-                  <div>Prototypes</div>
-                </div>
-                <div className="text-center">
-                  <div className="font-mono text-lg font-bold">05</div>
-                  <div>Years Experience</div>
-                </div>
-              </div>
             </div>
           </FadeIn>
         </div>
