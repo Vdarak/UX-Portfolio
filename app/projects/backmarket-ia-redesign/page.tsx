@@ -628,7 +628,7 @@ export default function BackmarketIARedesign() {
               </p>
             </div>
             <img
-              src="/placeholder.svg?height=400&width=600"
+              src="/images/backmarket/context.png"
               alt="Screenshot of the original BackMarket navigation structure"
               className="rounded-lg shadow-md"
             />
@@ -980,7 +980,7 @@ export default function BackmarketIARedesign() {
                             <p className="text-xs text-muted-foreground mt-1">Label Generation</p>
                           </div>
                         </div>
-                        
+
                         <div className="space-y-4">
                           <div className="relative overflow-hidden" style={{ borderRadius: '48px' }}>
                             <img 
