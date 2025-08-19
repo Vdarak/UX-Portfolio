@@ -265,6 +265,15 @@ export default function Home() {
                     </RefinedButton>
                   </div>
                 </FadeIn>
+                <FadeIn delay={0.6}>
+                  <div className="mt-8 pt-6 border-t border-neutral-200 dark:border-neutral-700">
+                    <p className="text-neutral-600 dark:text-neutral-400">
+                      <strong>Beyond Design:</strong> When I'm not crafting user experiences, you'll find me playing badminton, 
+                      exploring nature's adventures, writing poetry, or analyzing the stock market. These hobbies keep me grounded 
+                      and often inspire fresh perspectives in my design work.
+                    </p>
+                  </div>
+                </FadeIn>
                 {/* Skills & Expertise 
                 <FadeIn delay={0.6}>
                   <div className="mt-10 space-y-8">
