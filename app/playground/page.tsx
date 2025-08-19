@@ -159,13 +159,13 @@ export default function GamesPage() {
             <div className="max-w-3xl mx-auto space-y-6 text-center">
               <div className="flex items-center justify-center gap-2 mb-4">
                 <Gamepad2 className="w-6 h-6 text-muted-foreground" />
-                <span className="text-sm text-muted-foreground uppercase tracking-wider">Games</span>
+                <span className="text-sm text-muted-foreground uppercase tracking-wider">Playground</span>
               </div>
               <h1 className="text-4xl font-medium tracking-tight md:text-5xl">
-                Interactive <FlowingText text="Web Games" className="inline" />
+                Personal <FlowingText text="Playground" className="inline" />
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                A collection of mini web games showcasing interactive development skills and creative problem-solving.
+                A collection of personal projects, games, and creative experiments showcasing interactive app development using AI tools.
               </p>
             </div>
           </FadeIn>

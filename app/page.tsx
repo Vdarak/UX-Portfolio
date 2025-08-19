@@ -34,18 +34,18 @@ export default function Home() {
           {/* Text content */}
           <div className="lg:col-span-8 max-w-4xl space-y-4 text-center lg:text-left">
               <FadeIn direction="right" delay={0.4}>
-                <h1 className="title-primary text-3xl font-light tracking-tight md:text-4xl inline">
+                <h1 className="title-primary text-3xl tracking-tight md:text-4xl inline">
                   Namaste 🙏 {'->'} I'm Vedant Darak
                 </h1>
               </FadeIn>
               <FadeIn direction="right" delay={0.4}>
-                <h2 className="heading-lg text-4xl font-medium tracking-tight md:text-6xl">
-                <FlowingText text="Thoughtful" className="inline" /> UX, designed in cycles
+                <h2 className="heading-lg text-4xl tracking-tight md:text-6xl">
+                <FlowingText text="Thoughtful" className="inline" /> UX, cyclical process
                 </h2>
               </FadeIn>
               <FadeIn direction="right" delay={0.4}>
                 <p className="text-display text-xl text-neutral-600 dark:text-neutral-300 relative overflow-hidden">
-                  My cyclical design process — create with intention, preserve with devotion, transform with courage — ensures your product stays innovative without accruing chaos.
+                  Create with intention, preserve with devotion, transform with courage —> ensures your product stays innovative without accruing chaos.
                 </p>
               </FadeIn>
           </div>
