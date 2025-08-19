@@ -22,12 +22,8 @@ export default function Home() {
       {/* Hero Section */}
       <section 
         ref={heroSectionRef}
-        className="container relative flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] px-4 mx-auto space-y-8 md:space-y-12 md:px-6 overflow-hidden pb-16 md:pb-8"
+        className="container relative flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] px-4 mx-auto space-y-8 md:space-y-12 md:px-6 overflow-hidden pb-8 md:pb-8"
       >
-        {/* Subtle background gradient */}
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/3 opacity-60" />
-        </div>
 
         {/* Main content grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 justify-between items-center w-full">
@@ -63,17 +59,10 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Enhanced CTA buttons - Using direct motion animation instead of FadeIn */}
-        <motion.div
-          className="flex flex-col items-center gap-4 sm:flex-row z-10 mb-24 md:mb-32"
-          initial={{ opacity: 0, y: 60 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ 
-            duration: 0.8, // Adjusted for smoother entrance
-            delay: 0.4, // Ensures it appears after other hero elements
-            ease: [0.21, 0.47, 0.32, 0.98] // Matches your existing animation easing
-          }}
-        >
+        {/* Enhanced CTA buttons - Using FadeIn component */}
+        <FadeIn delay={0.4} direction="up">
+          <div className="flex flex-col items-center gap-4 sm:flex-row z-10 mb-16 md:mb-32">
+        
           <RefinedButton 
             size="lg" 
             intensity={0.2}
@@ -103,7 +92,8 @@ export default function Home() {
           >
             <span>Get in touch</span>
           </RefinedButton>
-        </motion.div>
+          </div>
+        </FadeIn>
 
         {/* Floating navigation - replacing profile image */}
         <div className="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 hidden lg:block">
