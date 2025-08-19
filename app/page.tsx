@@ -98,7 +98,7 @@ export default function Home() {
             className="interactive"
             onClick={() => {
               // Open default mail client to send email
-              window.location.href = 'mailto:hello@vedantdarak.design'
+              window.location.href = 'mailto:vdarak.infinity@gmail.com'
             }}
           >
             <span>Get in touch</span>
