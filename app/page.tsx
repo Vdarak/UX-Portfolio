@@ -125,7 +125,7 @@ export default function Home() {
                 Selected <FlowingText text="Projects" className="inline align-baseline leading-[1.15]" />
               </h1>
               <p className="text-display text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-                A collection of UX projects that showcase my approach to solving complex problems through research-driven design and user-centered thinking.
+                A collection of UX projects that showcase my approach to solving problems through research-driven design and user-centered thinking.
               </p>
             </div>
           </div>
