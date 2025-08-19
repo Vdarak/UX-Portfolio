@@ -214,7 +214,7 @@ export function AmpilloDashboard({ className }: AmpilloDashboardProps) {
           {/* Dashboard Content */}
           <div className="flex-1 p-6 bg-slate-900">
             <div className="mb-6">
-              <h1 className="text-2xl font-bold text-white mb-2">Dashboard</h1>
+              <h1 className="heading-md text-2xl font-bold text-white mb-2">Dashboard</h1>
             </div>
             
             {/* Top Stats */}

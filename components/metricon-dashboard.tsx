@@ -194,7 +194,7 @@ export function MetriconDashboard({ className }: MetriconDashboardProps) {
 
             {/* Dashboard Title */}
             <div className="flex items-center justify-between mb-8">
-              <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
+              <h1 className="heading-md text-2xl font-bold text-gray-900">Dashboard</h1>
               <div className="flex items-center gap-4">
                 <button className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
                   <Filter className="w-4 h-4" />
@@ -216,7 +216,7 @@ export function MetriconDashboard({ className }: MetriconDashboardProps) {
                   <div className="text-sm text-gray-500">Earnings 💰</div>
                   <div className="text-xs text-gray-400">vs last month</div>
                 </div>
-                <div className="text-3xl font-bold text-gray-900 mb-2">$22,500</div>
+                <div className="metric-number text-3xl font-bold text-gray-900 mb-2">$22,500</div>
                 <div className="text-sm text-gray-500 mb-4">Total sales</div>
                 <div className="flex items-center gap-2 mb-4">
                   <span className="text-green-500 text-sm font-medium">↗ 19%</span>

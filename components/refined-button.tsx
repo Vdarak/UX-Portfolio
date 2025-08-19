@@ -39,7 +39,7 @@ export function RefinedButton({
     <RefinedMagneticEffect intensity={intensity} range={100}>
       <motion.button
         className={cn(
-          "interactive relative inline-flex items-center justify-center rounded-full font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 group",
+          "interactive btn-text relative inline-flex items-center justify-center rounded-full font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 group",
           sizeClasses[size],
           variantClasses[variant],
           className,

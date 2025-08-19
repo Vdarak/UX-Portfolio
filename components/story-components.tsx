@@ -78,7 +78,7 @@ export function ProjectHero({ title, subtitle, storyHook, heroImage, role, timel
             </blockquote>
             
             <div className="space-y-4">
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+              <h1 className="heading-xl text-5xl md:text-7xl font-bold tracking-tight">
                 {title === "Understanding Creative Block" ? (
                   <>Understanding <FlowingText text="Creative" className="inline" /> Block</>
                 ) : title === "BackMarket IA Redesign" ? (
@@ -91,7 +91,7 @@ export function ProjectHero({ title, subtitle, storyHook, heroImage, role, timel
                   title
                 )}
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-display text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
                 {subtitle}
               </p>
             </div>
@@ -100,16 +100,16 @@ export function ProjectHero({ title, subtitle, storyHook, heroImage, role, timel
             <div className="flex flex-wrap justify-center gap-6 pt-8">
               <div className="text-center">
                 <div className="text-sm font-mono text-muted-foreground uppercase tracking-wider">Role</div>
-                <div className="text-lg font-medium">{role}</div>
+                <div className="subtitle text-lg font-medium">{role}</div>
               </div>
               <div className="text-center">
                 <div className="text-sm font-mono text-muted-foreground uppercase tracking-wider">Timeline</div>
-                <div className="text-lg font-medium">{timeline}</div>
+                <div className="subtitle text-lg font-medium">{timeline}</div>
               </div>
               {team && (
                 <div className="text-center">
                   <div className="text-sm font-mono text-muted-foreground uppercase tracking-wider">Team</div>
-                  <div className="text-lg font-medium">{team.join(", ")}</div>
+                  <div className="subtitle text-lg font-medium">{team.join(", ")}</div>
                 </div>
               )}
             </div>
@@ -143,10 +143,10 @@ export function StorySection({ chapter, storyTitle, narrativeHook, children, cla
               <div className="h-px bg-border flex-1" />
             </div>
             <div className="max-w-4xl">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">{storyTitle}</h2>
+              <h2 className="heading-lg text-4xl md:text-5xl font-bold mb-6 leading-tight">{storyTitle}</h2>
             </div>
             {/* Narrative hook spans full width */}
-            <p className="text-xl md:text-2xl text-muted-foreground italic leading-relaxed font-light max-w-none">
+            <p className="text-display text-xl md:text-2xl text-muted-foreground italic leading-relaxed font-light max-w-none">
               {narrativeHook}
             </p>
           </div>
@@ -207,7 +207,7 @@ export function ProjectTimeline({ events }: { events: TimelineEvent[] }) {
                   <p className="text-sm font-mono text-muted-foreground uppercase tracking-wider">
                     {event.phase}
                   </p>
-                  <h3 className="text-2xl font-bold">{event.title}</h3>
+                  <h3 className="heading-md text-2xl font-bold">{event.title}</h3>
                 </div>
               </div>
               
@@ -340,12 +340,12 @@ export function InsightCard({ type, title, story, icon, metrics, className = "" 
             </div>
           )}
           
-          <h3 className="font-bold text-lg mb-3 text-foreground flex-shrink-0">{title}</h3>
+          <h3 className="title-primary font-bold text-lg mb-3 text-foreground flex-shrink-0">{title}</h3>
           <p className="leading-relaxed text-muted-foreground mb-4 flex-grow">{story}</p>
           
           {metrics && (
             <div className="pt-4 border-t border-border/50 flex-shrink-0">
-              <div className="text-2xl font-bold text-primary">{metrics.value}</div>
+              <div className="title-primary text-2xl font-bold text-primary">{metrics.value}</div>
               <div className="text-sm text-muted-foreground">{metrics.label}</div>
             </div>
           )}

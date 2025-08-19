@@ -198,7 +198,7 @@ export function SiteHeader() {
           <RefinedMagneticEffect intensity={0.2} range={80}>
             <Link
               href="/"
-              className="interactive font-medium transition-colors hover:text-foreground/80 px-2 py-1 rounded-md"
+              className="interactive title-primary font-medium transition-colors hover:text-foreground/80 px-2 py-1 rounded-md"
               onClick={() => setIsMenuOpen(false)}
             >
               <span className="sr-only">Vedant Darak Logo</span>
@@ -245,7 +245,7 @@ export function SiteHeader() {
                 <RefinedMagneticEffect intensity={0.15} range={70}>
                   <Link
                     href={item.href}
-                    className={`interactive text-sm hover:text-foreground/80 transition-all duration-300 px-3 py-2 rounded-md ${
+                    className={`interactive subtitle text-sm hover:text-foreground/80 transition-all duration-300 px-3 py-2 rounded-md ${
                       isActiveLink(item.href) 
                         ? "font-bold text-foreground" 
                         : "text-muted-foreground hover:text-foreground"
@@ -352,7 +352,7 @@ export function SiteHeader() {
               <RefinedMagneticEffect intensity={0.15} range={70}>
                 <Link
                   href={item.href}
-                  className={`interactive text-lg font-medium transition-all duration-300 px-3 py-2 rounded-md w-fit block ${
+                  className={`interactive subtitle text-lg font-medium transition-all duration-300 px-3 py-2 rounded-md w-fit block ${
                     isActiveLink(item.href) 
                       ? "font-bold text-foreground" 
                       : "text-muted-foreground hover:text-foreground"

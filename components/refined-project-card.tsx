@@ -239,7 +239,7 @@ export default function RefinedProjectCard({
             <CardContent className="p-6 relative">
               {/* Single-line title with proper truncation */}
               <div className="mb-3">
-                <h3 className="text-xl font-medium group-hover:text-foreground/90 transition-colors duration-300 whitespace-nowrap overflow-hidden text-ellipsis">
+                <h3 className="title-primary text-xl font-medium group-hover:text-foreground/90 transition-colors duration-300 whitespace-nowrap overflow-hidden text-ellipsis">
                   {title}
                 </h3>
               </div>
