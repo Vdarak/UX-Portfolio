@@ -5,6 +5,7 @@ import "./globals.css"
 import CustomCursor from "@/components/custom-cursor"
 import { SiteHeader } from "@/components/site-header"
 import { ThemeProvider } from "@/components/theme-provider"
+import { Analytics } from '@vercel/analytics/react'
 
 // Configure Proxima Nova alternative fonts
 const proximaNova = DM_Sans({
@@ -54,6 +55,7 @@ export default function RootLayout({
             <main className="flex-1">{children}</main>
           </div>
           <CustomCursor />
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
