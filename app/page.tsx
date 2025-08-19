@@ -34,17 +34,17 @@ export default function Home() {
           {/* Text content */}
           <div className="lg:col-span-8 max-w-4xl space-y-4 text-center lg:text-left">
               <FadeIn direction="right" delay={0.4}>
-                <h1 className="text-3xl font-light tracking-tight md:text-4xl inline">
+                <h1 className="title-primary text-3xl font-light tracking-tight md:text-4xl inline">
                   Namaste 🙏 {'->'} I'm Vedant Darak
                 </h1>
               </FadeIn>
               <FadeIn direction="right" delay={0.4}>
-                <h2 className="text-4xl font-medium tracking-tight md:text-6xl">
+                <h2 className="heading-lg text-4xl font-medium tracking-tight md:text-6xl">
                 <FlowingText text="Thoughtful" className="inline" /> UX, designed in cycles
                 </h2>
               </FadeIn>
               <FadeIn direction="right" delay={0.4}>
-                <p className="text-xl text-neutral-600 dark:text-neutral-300 relative overflow-hidden">
+                <p className="text-display text-xl text-neutral-600 dark:text-neutral-300 relative overflow-hidden">
                   My cyclical design process — create with intention, preserve with devotion, transform with courage — ensures your product stays innovative without accruing chaos.
                 </p>
               </FadeIn>
@@ -121,10 +121,10 @@ export default function Home() {
                   <Briefcase className="w-6 h-6" />
                   Projects
               </span>
-              <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-4 leading-[1.15] overflow-visible pb-1">
+              <h1 className="heading-lg text-3xl md:text-5xl font-bold tracking-tight mb-4 leading-[1.15] overflow-visible pb-1">
                 Selected <FlowingText text="Projects" className="inline align-baseline leading-[1.15]" />
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-display text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
                 A collection of UX projects that showcase my approach to solving complex problems through research-driven design and user-centered thinking.
               </p>
             </div>
@@ -144,7 +144,7 @@ export default function Home() {
                     description="An AI system that detects media bias and enhances media literacy for Gen Z users through explainable AI and educational tools."
                     image="/images/ana.png"
                     hoverImage="/images/ANA/ana-hero.png" // Added hover image
-                  tags={["AI Ethics", "Media Literacy", "Gen Z Users", "UX Research"]}
+                  tags={["AI Ethics", "Media Bias Detection", "UX Research", "UX Design", "Testing"]}
                   href="/projects/media-bias-ai"
                 />
                 </FadeIn>
@@ -156,7 +156,7 @@ export default function Home() {
                     description="Research study exploring how creative professionals experience and manage creative blocks, with design implications for supporting technology."
                     image="/images/creativeblock-dark.png"
                     hoverImage="/images/creative-block.png" // Added hover image
-                    tags={["HCI Research", "Mixed Methods", "User Interviews", "Persona Development"]}
+                    tags={["HCI Research", "Mixed Methods", "User Interviews", "Persona Development", "Design Implications"]}
                     href="/projects/understanding-creative-block"
                   />
                 </FadeIn>
@@ -168,7 +168,7 @@ export default function Home() {
                     description="A deep dive into restructuring the information architecture of a leading refurbished electronics marketplace to enhance usability and content clarity."
                     image="/images/backmarket-dark.png"
                     hoverImage="/images/backmarket/backmarket-hero.png" // Added hover image
-                    tags={["Information Architecture", "Content Strategy", "UX Research"]}
+                    tags={["Information Architecture", "Content Strategy", "UX Research", "Usability Testing", "Sitemap"]}
                     href="/projects/backmarket-ia-redesign"
                   />
                 </FadeIn>
@@ -180,7 +180,7 @@ export default function Home() {
                       description="Supporting healthier relationships with alcohol through research-driven design to make mindful social choices more visible and accessible."
                       image="/images/alcohol.png"
                       hoverImage="/images/logo.png" // Added hover image
-                      tags={["UX Research", "Mixed Methods", "Behavioral Design"]}
+                      tags={["UX Research", "Mixed Methods", "Behavioral UX"]}
                       href="/projects/reducing-alcohol"
                     />
                 </FadeIn>
