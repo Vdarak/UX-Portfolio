@@ -568,20 +568,85 @@ export default function AlcoholConsumptionCaseStudy() {
                   </div>
                 </div>
                 {/* Mockups positioned below Key Features */}
-                <div className="flex justify-center flex-wrap gap-16 mt-16">
-                  {['/images/screen1-alcohol.png','/images/screen2-alcohol.png','/images/screen3-alcohol.png'].map((src, idx) => (
-                    <div key={idx} className="w-full max-w-[350px] overflow-hidden rounded-3xl shadow-lg">
-                      <Image
-                        src={src}
-                        alt={`Mockup ${idx + 1}`}
-                        width={350}
-                        height={800}
-                        className="object-contain w-full h-auto"
-                        sizes="(max-width: 640px) 80vw, (max-width: 1280px) 30vw, 350px"
-                        priority
-                      />
+                <div className="space-y-8 mt-16">
+                  <h4 className="text-xl font-semibold text-center mb-8">App Mockups</h4>
+                  
+                  {/* First Row - Core Features */}
+                  <div className="bg-muted/20 p-6 rounded-xl border border-muted/30">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                      <div className="space-y-4">
+                        <div className="relative overflow-hidden" style={{ borderRadius: '48px' }}>
+                          <Image 
+                            src="/images/Sober-1.png" 
+                            alt="Onboarding & Preferences"
+                            width={350}
+                            height={800}
+                            className="w-full h-full object-contain"
+                            style={{ borderRadius: '48px' }}
+                            priority
+                          />
+                        </div>
+                        <div className="text-center">
+                          <p className="text-sm font-medium">Onboarding & Preferences</p>
+                          <p className="text-xs text-muted-foreground mt-1">Personal Setup</p>
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-4">
+                        <div className="relative overflow-hidden" style={{ borderRadius: '48px' }}>
+                          <Image 
+                            src="/images/Sober-2.png" 
+                            alt="Event Discovery"
+                            width={350}
+                            height={800}
+                            className="w-full h-full object-contain"
+                            style={{ borderRadius: '48px' }}
+                            priority
+                          />
+                        </div>
+                        <div className="text-center">
+                          <p className="text-sm font-medium">Event Discovery</p>
+                          <p className="text-xs text-muted-foreground mt-1">Curated Activities</p>
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-4">
+                        <div className="relative overflow-hidden" style={{ borderRadius: '48px' }}>
+                          <Image 
+                            src="/images/Sober-3.png" 
+                            alt="Social Proof & Norms"
+                            width={350}
+                            height={800}
+                            className="w-full h-full object-contain"
+                            style={{ borderRadius: '48px' }}
+                            priority
+                          />
+                        </div>
+                        <div className="text-center">
+                          <p className="text-sm font-medium">Social Proof & Norms</p>
+                          <p className="text-xs text-muted-foreground mt-1">Peer Insights</p>
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-4">
+                        <div className="relative overflow-hidden" style={{ borderRadius: '48px' }}>
+                          <Image 
+                            src="/images/Sober-4.png" 
+                            alt="Goal Tracking & Progress"
+                            width={350}
+                            height={800}
+                            className="w-full h-full object-contain"
+                            style={{ borderRadius: '48px' }}
+                            priority
+                          />
+                        </div>
+                        <div className="text-center">
+                          <p className="text-sm font-medium">Goal Tracking & Progress</p>
+                          <p className="text-xs text-muted-foreground mt-1">Personal Journey</p>
+                        </div>
+                      </div>
                     </div>
-                  ))}
+                  </div>
                 </div>
               </div>
             </div>

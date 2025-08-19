@@ -155,7 +155,7 @@ export default function Home() {
                     title="Understanding Creative Block"
                     description="Research study exploring how creative professionals experience and manage creative blocks, with design implications for supporting technology."
                     image="/images/creativeblock-dark.png"
-                    hoverImage="/images/logo.png" // Added hover image
+                    hoverImage="/images/creative-block.png" // Added hover image
                     tags={["HCI Research", "Mixed Methods", "User Interviews", "Persona Development"]}
                     href="/projects/understanding-creative-block"
                   />
@@ -185,6 +185,7 @@ export default function Home() {
                     />
                 </FadeIn>
               </StaggerItem>
+              {/* Finance Dashboard - Commented out for later 
               <StaggerItem>
                 <FadeIn delay={0.3}>
                   <RefinedProjectCard
@@ -197,6 +198,7 @@ export default function Home() {
                   />
                 </FadeIn>
               </StaggerItem>
+              */}
             </StaggerContainer>
           </div>
         </div>

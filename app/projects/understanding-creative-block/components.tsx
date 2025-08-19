@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { Card } from "../../../components/ui/card"
 import { Dialog, DialogContent, DialogTrigger } from "../../../components/ui/dialog"
 import { RefinedButton } from "../../../components/refined-button"
@@ -999,8 +1000,14 @@ const PersonaScenario = ({ name, image, quote, demographics, problem, solution, 
   <Card className="p-6 space-y-6">
     {/* Header */}
     <div className="flex gap-4">
-      <div className="w-16 h-16 rounded-lg bg-gray-200 dark:bg-gray-700 flex-shrink-0 overflow-hidden">
-        <img src={image} alt={name} className="w-full h-full object-cover" />
+      <div className="w-16 h-16 rounded-lg bg-gray-200 dark:bg-gray-700 flex-shrink-0 overflow-hidden relative">
+        <Image
+          src={image}
+          alt={`Portrait of ${name}`}
+          fill
+          className="object-cover object-center"
+          style={{ objectFit: 'cover' }}
+        />
       </div>
       <div className="space-y-2">
         <h3 className="text-xl font-bold">{name}</h3>
@@ -1051,7 +1058,7 @@ export function PersonaScenarios() {
   const scenarios = [
     {
       name: "Sara",
-      image: "/placeholder-user.jpg",
+      image: "/images/sara.png",
       quote: "It's the worst feeling when a creative block is near a deadline.",
       demographics: ["24 years old", "UX Designer/HCI Graduate Student", "Chicago, IL", "Female (she/her)", "15 years of creative experience"],
       problem: "Experiences creative blocks during ideation and under deadline pressure. Struggles with imposter syndrome and confidence in her ideas.",
@@ -1092,7 +1099,7 @@ export function PersonaScenarios() {
     },
     {
       name: "Taylor",
-      image: "/placeholder-user.jpg",
+      image: "/images/taylor.png",
       quote: "Creative block is a natural yet degrading part of my process.",
       demographics: ["28 years old", "UX Designer (transitioned from writing)", "Chicago, IL", "Male (he/him)", "28 years of creative experience"],
       problem: "Experiences frequent creative blocks that disrupt workflow. Seeks structured creative routines and activities to maintain momentum.",
@@ -1376,10 +1383,14 @@ const PersonaCard = ({
         {/* Left Column - Basic Info */}
         <div className="lg:col-span-4 space-y-6">
           {/* Profile Image */}
-          <div className="w-48 h-48 mx-auto lg:mx-0 bg-gray-200 dark:bg-gray-700 rounded-xl overflow-hidden">
-            <div className="w-full h-full flex items-center justify-center text-gray-500 dark:text-gray-400">
-              <UserCheck className="w-16 h-16" />
-            </div>
+          <div className="w-48 h-48 mx-auto lg:mx-0 bg-gray-200 dark:bg-gray-700 rounded-xl overflow-hidden relative">
+            <Image
+              src={image}
+              alt={`Portrait of ${name}`}
+              fill
+              className="object-cover object-center"
+              style={{ objectFit: 'cover' }}
+            />
           </div>
           
           {/* Name and Quote */}
@@ -1489,7 +1500,7 @@ export function DetailedPersonas() {
   const personas: PersonaCardProps[] = [
     {
       name: "Taylor",
-      image: "/placeholder-user.jpg",
+      image: "/images/taylor.png",
       quote: "Creative block is a natural yet degrading part of my process.",
       age: 28,
       role: "UX Designer (transitioned from writing career)",
@@ -1531,7 +1542,7 @@ export function DetailedPersonas() {
     },
     {
       name: "Sara",
-      image: "/placeholder-user.jpg",
+      image: "/images/sara.png",
       quote: "It's the worst feeling when a creative block is near a deadline.",
       age: 24,
       role: "UX Designer/HCI Graduate Student",
