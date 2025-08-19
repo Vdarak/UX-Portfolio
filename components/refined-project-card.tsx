@@ -4,6 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 import { motion, Variants } from "framer-motion"
+import { useState } from "react"
 
 import { cn } from "@/lib/utils"
 import { Badge } from "@/components/ui/badge"
@@ -121,6 +122,10 @@ export default function RefinedProjectCard({
   href,
   className,
 }: RefinedProjectCardProps) {
+  // State management for dual hover behavior
+  const [isImageHovered, setIsImageHovered] = useState(false)
+  const [isCardHovered, setIsCardHovered] = useState(false)
+  
   // ————————————————————————————————————————————————————————————————
   // The entire card is a link for accessibility and ease of navigation.
   // This ensures keyboard users can tab to the card and screen readers
@@ -138,21 +143,40 @@ export default function RefinedProjectCard({
         className="relative"
       >
         <Link href={href} className="block">
-          <Card className="overflow-hidden transition-all duration-500 group-hover:shadow-xl group-hover:shadow-black/5 dark:group-hover:shadow-white/5">
+          <Card 
+            className="overflow-hidden transition-all duration-500 group-hover:shadow-xl group-hover:shadow-black/5 dark:group-hover:shadow-white/5"
+            onMouseEnter={() => setIsCardHovered(true)}
+            onMouseLeave={() => setIsCardHovered(false)}
+          >
             {/* Enhanced project image container */}
-            <div className="relative overflow-hidden aspect-[18/9] bg-black flex items-center justify-center" data-project-image="true" style={{ cursor: "none" }}>
+            <div 
+              className="relative overflow-hidden aspect-[18/9] bg-black flex items-center justify-center" 
+              data-project-image="true" 
+              style={{ cursor: "none" }}
+              onMouseEnter={() => setIsImageHovered(true)}
+              onMouseLeave={() => setIsImageHovered(false)}
+            >
               {/* Base Image */}
               <motion.div 
                 className="absolute inset-0"
-                animate={{ opacity: 1 }}
-                whileHover={{ opacity: hoverImage ? 0 : 1 }}
+                animate={{ 
+                  opacity: isImageHovered ? 0 : 1 // Disappears completely on image hover
+                }}
                 transition={{ duration: 0.7, ease: [0.43, 0.13, 0.23, 0.96] }}
               >
                 <Image
                   src={image || "/placeholder.svg"}
                   alt={title}
                   fill
-                  className="object-contain transition-transform duration-700 group-hover:scale-105"
+                  className={`
+                    object-contain transition-transform duration-700
+                    ${isImageHovered 
+                      ? 'scale-110' // Scale when image is hovered
+                      : isCardHovered 
+                        ? 'scale-105' // Slight scale when card body is hovered
+                        : 'scale-100'
+                    }
+                  `}
                   style={{ cursor: "none" }}
                   sizes="(max-width: 768px) 100vw, 50vw"
                   priority={false}
@@ -162,15 +186,16 @@ export default function RefinedProjectCard({
               {hoverImage && (
                 <motion.div 
                   className="absolute inset-0"
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
+                  animate={{ 
+                    opacity: isImageHovered ? 1 : 0 // Only appears on image hover
+                  }}
                   transition={{ duration: 0.7, ease: [0.43, 0.13, 0.23, 0.96] }}
                 >
                   <Image
                     src={hoverImage}
                     alt={`${title} - hover state`}
                     fill
-                    className="object-contain transition-transform duration-700 group-hover:scale-105"
+                    className="object-contain transition-transform duration-700"
                     style={{ cursor: "none" }}
                     sizes="(max-width: 768px) 100vw, 50vw"
                     priority={false}
@@ -180,8 +205,9 @@ export default function RefinedProjectCard({
               {/* Dark overlay for better pill visibility */}
               <motion.div
                 className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/40 pointer-events-none"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                animate={{ 
+                  opacity: (isImageHovered || isCardHovered) ? 0.7 : 0.4 
+                }}
                 transition={{ duration: 0.4 }}
                 style={{ cursor: "none" }}
               />
