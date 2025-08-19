@@ -610,66 +610,14 @@ export default function BackmarketIARedesign() {
           role="UX Researcher & IA Specialist"
           timeline="4 Weeks (Class Project)"
         />
-
-        <StorySection
-          id="tldr"
-          chapter="00"
-          storyTitle="TL;DR Summary"
-          narrativeHook="A rapid transformation of BackMarket’s navigation—cutting confusion, boosting user success, and setting a new standard for clarity."
-        >
-          <div className="space-y-6">
-            <InsightCard
-              type="outcome"
-              title="BackMarket, a marketplace for refurbished devices, suffered from poor navigation due to inconsistent categorization."
-              story="Our goal was to streamline and clarify the site's navigation structure, resulting in a hybrid organizational approach (topical, alphabetical, chronological), validated through iterative user testing. This significantly improved user task completion rates."
-              icon={<CheckCircle />}
-            />
-            <div className="grid md:grid-cols-2 gap-8">
-              <InsightCard
-                type="challenge"
-                title="Multiple redundant navigation systems"
-                story="BackMarket’s navigation was complex, with three separate navigation systems leading to user confusion. Our redesign aimed at consolidating and clarifying this structure."
-                icon={<BarChart />}
-              />
-              <InsightCard
-                type="challenge"
-                title="Limited testing sample initially due to tight deadlines"
-                story="Early rounds of user testing were constrained, requiring rapid iteration and creative research approaches."
-                icon={<Users />}
-              />
-            </div>
-          </div>
-        </StorySection>
-
-        <StorySection
-          id="personas"
-          chapter="01A"
-          storyTitle="Personas & Real-World Constraints"
-          narrativeHook="Designing for real people, not just ideal users."
-        >
-          <div className="grid md:grid-cols-2 gap-8">
-            <InsightCard
-              type="discovery"
-              title="Prathima (25): Teacher, trading in smartphone"
-              story="Needs a simple, trustworthy way to trade in her old phone for cash."
-              icon={<Smartphone />}
-            />
-            <InsightCard
-              type="discovery"
-              title="Martinez (27): Student, purchasing laptop"
-              story="Wants to compare options and find the best deal on a reliable laptop."
-              icon={<Laptop />}
-            />
-          </div>
-        </StorySection>
-
+        
         <StorySection
           id="overview"
           chapter="01"
           storyTitle="The Challenge: A Tangled Web"
           narrativeHook="BackMarket's mission to promote tech reuse was being hindered by a confusing user experience. The goal was clear: redesign the site's navigation to be intuitive and clear."
         >
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="grid md:grid-cols-1 gap-8 items-center">
             <div>
               <h3 className="font-bold text-2xl mb-4">Context & Goals</h3>
               <p className="mb-4">
@@ -765,14 +713,307 @@ export default function BackmarketIARedesign() {
                     </div>
                   </div>
               </div>
-              <div>
-                  <h3 className="font-bold text-2xl mb-4">Wireframes</h3>
-                  <p className="mb-4">Eight low-fidelity wireframes were created to model two key user tasks: trading in a smartphone and buying a refurbished laptop. These wireframes served as the basis for our final design recommendations.</p>
-                  <img
-                      src="/placeholder.svg?height=500&width=1000"
-                      alt="Low-fidelity wireframes for trade-in and purchase tasks"
-                      className="rounded-lg shadow-md"
-                  />
+              <div className="my-12">
+                  <h3 className="text-2xl font-bold mb-6">Mid-Fi Wireframes</h3>
+                  <p className="mb-6">
+                    We developed comprehensive mid-fidelity wireframes to model two key user journeys: purchasing a refurbished device and trading in a device for payment. These wireframes served as the foundation for our redesigned information architecture and user experience improvements.
+                  </p>
+                  
+                  {/* Refurbished Device Purchase Flow */}
+                  <div className="space-y-8 my-8">
+                    <div className="mb-8">
+                      <h4 className="text-xl font-semibold mb-4">Refurbished Device Purchase Flow</h4>
+                      <p className="text-muted-foreground mb-6">
+                        Complete journey from browsing to order completion for purchasing a refurbished device.
+                      </p>
+                    </div>
+                    
+                    {/* First Row - Home to Cart */}
+                    <div className="bg-muted/20 p-6 rounded-xl border border-muted/30">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div className="space-y-4">
+                          <div className="relative overflow-hidden" style={{ borderRadius: '48px' }}>
+                            <img 
+                              src="/images/backmarket/home-1.png" 
+                              alt="Home Page"
+                              className="w-full h-full object-contain"
+                              style={{ borderRadius: '48px' }}
+                            />
+                          </div>
+                          <div className="text-center">
+                            <p className="text-sm font-medium">Home Page</p>
+                            <p className="text-xs text-muted-foreground mt-1">Product Discovery</p>
+                          </div>
+                        </div>
+                        
+                        <div className="space-y-4">
+                          <div className="relative overflow-hidden" style={{ borderRadius: '48px' }}>
+                            <img 
+                              src="/images/backmarket/refurbished-2.png" 
+                              alt="Refurbished Category"
+                              className="w-full h-full object-contain"
+                              style={{ borderRadius: '48px' }}
+                            />
+                          </div>
+                          <div className="text-center">
+                            <p className="text-sm font-medium">Refurbished Category</p>
+                            <p className="text-xs text-muted-foreground mt-1">Product Browsing</p>
+                          </div>
+                        </div>
+                        
+                        <div className="space-y-4">
+                          <div className="relative overflow-hidden" style={{ borderRadius: '48px' }}>
+                            <img 
+                              src="/images/backmarket/product-3.png" 
+                              alt="Product Details"
+                              className="w-full h-full object-contain"
+                              style={{ borderRadius: '48px' }}
+                            />
+                          </div>
+                          <div className="text-center">
+                            <p className="text-sm font-medium">Product Details</p>
+                            <p className="text-xs text-muted-foreground mt-1">Product Information</p>
+                          </div>
+                        </div>
+                        
+                        <div className="space-y-4">
+                          <div className="relative overflow-hidden" style={{ borderRadius: '48px' }}>
+                            <img 
+                              src="/images/backmarket/cart-4.png" 
+                              alt="Shopping Cart"
+                              className="w-full h-full object-contain"
+                              style={{ borderRadius: '48px' }}
+                            />
+                          </div>
+                          <div className="text-center">
+                            <p className="text-sm font-medium">Shopping Cart</p>
+                            <p className="text-xs text-muted-foreground mt-1">Order Review</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Second Row - Checkout Process */}
+                    <div className="bg-muted/20 p-6 rounded-xl border border-muted/30">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div className="space-y-4">
+                          <div className="relative overflow-hidden" style={{ borderRadius: '48px' }}>
+                            <img 
+                              src="/images/backmarket/address-5.png" 
+                              alt="Address Information"
+                              className="w-full h-full object-contain"
+                              style={{ borderRadius: '48px' }}
+                            />
+                          </div>
+                          <div className="text-center">
+                            <p className="text-sm font-medium">Address Information</p>
+                            <p className="text-xs text-muted-foreground mt-1">Shipping Details</p>
+                          </div>
+                        </div>
+                        
+                        <div className="space-y-4">
+                          <div className="relative overflow-hidden" style={{ borderRadius: '48px' }}>
+                            <img 
+                              src="/images/backmarket/payment-6.png" 
+                              alt="Payment Method"
+                              className="w-full h-full object-contain"
+                              style={{ borderRadius: '48px' }}
+                            />
+                          </div>
+                          <div className="text-center">
+                            <p className="text-sm font-medium">Payment Method</p>
+                            <p className="text-xs text-muted-foreground mt-1">Payment Processing</p>
+                          </div>
+                        </div>
+                        
+                        <div className="space-y-4">
+                          <div className="relative overflow-hidden" style={{ borderRadius: '48px' }}>
+                            <img 
+                              src="/images/backmarket/shipping-07.png" 
+                              alt="Shipping Options"
+                              className="w-full h-full object-contain"
+                              style={{ borderRadius: '48px' }}
+                            />
+                          </div>
+                          <div className="text-center">
+                            <p className="text-sm font-medium">Shipping Options</p>
+                            <p className="text-xs text-muted-foreground mt-1">Delivery Preferences</p>
+                          </div>
+                        </div>
+                        
+                        <div className="space-y-4">
+                          <div className="relative overflow-hidden" style={{ borderRadius: '48px' }}>
+                            <img 
+                              src="/images/backmarket/order-final.png" 
+                              alt="Order Confirmation"
+                              className="w-full h-full object-contain"
+                              style={{ borderRadius: '48px' }}
+                            />
+                          </div>
+                          <div className="text-center">
+                            <p className="text-sm font-medium">Order Confirmation</p>
+                            <p className="text-xs text-muted-foreground mt-1">Purchase Complete</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Trade-in Flow */}
+                  <div className="space-y-8 my-8">
+                    <div className="mb-8">
+                      <h4 className="text-xl font-semibold mb-4">Trade-in Flow</h4>
+                      <p className="text-muted-foreground mb-6">
+                        Complete journey for users trading in their devices to receive payment.
+                      </p>
+                    </div>
+                    
+                    {/* First Row - Trade-in Process Start */}
+                    <div className="bg-muted/20 p-6 rounded-xl border border-muted/30">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div className="space-y-4">
+                          <div className="relative overflow-hidden" style={{ borderRadius: '48px' }}>
+                            <img 
+                              src="/images/backmarket/home-1.png" 
+                              alt="Home Page"
+                              className="w-full h-full object-contain"
+                              style={{ borderRadius: '48px' }}
+                            />
+                          </div>
+                          <div className="text-center">
+                            <p className="text-sm font-medium">Home Page</p>
+                            <p className="text-xs text-muted-foreground mt-1">Trade-in Entry Point</p>
+                          </div>
+                        </div>
+                        
+                        <div className="space-y-4">
+                          <div className="relative overflow-hidden" style={{ borderRadius: '48px' }}>
+                            <img 
+                              src="/images/backmarket/tradein-02.png" 
+                              alt="Trade-in Start"
+                              className="w-full h-full object-contain"
+                              style={{ borderRadius: '48px' }}
+                            />
+                          </div>
+                          <div className="text-center">
+                            <p className="text-sm font-medium">Trade-in Start</p>
+                            <p className="text-xs text-muted-foreground mt-1">Device Selection</p>
+                          </div>
+                        </div>
+                        
+                        <div className="space-y-4">
+                          <div className="relative overflow-hidden" style={{ borderRadius: '48px' }}>
+                            <img 
+                              src="/images/backmarket/tradein-03.png" 
+                              alt="Device Assessment"
+                              className="w-full h-full object-contain"
+                              style={{ borderRadius: '48px' }}
+                            />
+                          </div>
+                          <div className="text-center">
+                            <p className="text-sm font-medium">Device Assessment</p>
+                            <p className="text-xs text-muted-foreground mt-1">Condition Evaluation</p>
+                          </div>
+                        </div>
+                        
+                        <div className="space-y-4">
+                          <div className="relative overflow-hidden" style={{ borderRadius: '48px' }}>
+                            <img 
+                              src="/images/backmarket/offer-04.png" 
+                              alt="Trade-in Offer"
+                              className="w-full h-full object-contain"
+                              style={{ borderRadius: '48px' }}
+                            />
+                          </div>
+                          <div className="text-center">
+                            <p className="text-sm font-medium">Trade-in Offer</p>
+                            <p className="text-xs text-muted-foreground mt-1">Value Proposition</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Second Row - Trade-in Completion */}
+                    <div className="bg-muted/20 p-6 rounded-xl border border-muted/30">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                        <div className="space-y-4">
+                          <div className="relative overflow-hidden" style={{ borderRadius: '48px' }}>
+                            <img 
+                              src="/images/backmarket/info-05.png" 
+                              alt="User Information"
+                              className="w-full h-full object-contain"
+                              style={{ borderRadius: '48px' }}
+                            />
+                          </div>
+                          <div className="text-center">
+                            <p className="text-sm font-medium">User Information</p>
+                            <p className="text-xs text-muted-foreground mt-1">Contact Details</p>
+                          </div>
+                        </div>
+                        
+                        <div className="space-y-4">
+                          <div className="relative overflow-hidden" style={{ borderRadius: '48px' }}>
+                            <img 
+                              src="/images/backmarket/tc-06.png" 
+                              alt="Terms & Conditions"
+                              className="w-full h-full object-contain"
+                              style={{ borderRadius: '48px' }}
+                            />
+                          </div>
+                          <div className="text-center">
+                            <p className="text-sm font-medium">Terms & Conditions</p>
+                            <p className="text-xs text-muted-foreground mt-1">Agreement</p>
+                          </div>
+                        </div>
+                        
+                        <div className="space-y-4">
+                          <div className="relative overflow-hidden" style={{ borderRadius: '48px' }}>
+                            <img 
+                              src="/images/backmarket/label-08.png" 
+                              alt="Shipping Label"
+                              className="w-full h-full object-contain"
+                              style={{ borderRadius: '48px' }}
+                            />
+                          </div>
+                          <div className="text-center">
+                            <p className="text-sm font-medium">Shipping Label</p>
+                            <p className="text-xs text-muted-foreground mt-1">Label Generation</p>
+                          </div>
+                        </div>
+                        
+                        <div className="space-y-4">
+                          <div className="relative overflow-hidden" style={{ borderRadius: '48px' }}>
+                            <img 
+                              src="/images/backmarket/shipping-07.png" 
+                              alt="Shipping Arrangement"
+                              className="w-full h-full object-contain"
+                              style={{ borderRadius: '48px' }}
+                            />
+                          </div>
+                          <div className="text-center">
+                            <p className="text-sm font-medium">Shipping Arrangement</p>
+                            <p className="text-xs text-muted-foreground mt-1">Pickup Details</p>
+                          </div>
+                        </div>
+
+                        
+                        <div className="space-y-4">
+                          <div className="relative overflow-hidden" style={{ borderRadius: '48px' }}>
+                            <img 
+                              src="/images/backmarket/order-final.png" 
+                              alt="Trade-in Complete"
+                              className="w-full h-full object-contain"
+                              style={{ borderRadius: '48px' }}
+                            />
+                          </div>
+                          <div className="text-center">
+                            <p className="text-sm font-medium">Trade-in Complete</p>
+                            <p className="text-xs text-muted-foreground mt-1">Process Finished</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
               </div>
             </div>
         </StorySection>

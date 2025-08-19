@@ -167,7 +167,7 @@ export default function Home() {
                     title="BackMarket IA Redesign"
                     description="A deep dive into restructuring the information architecture of a leading refurbished electronics marketplace to enhance usability and content clarity."
                     image="/images/backmarket-dark.png"
-                    hoverImage="/images/logo.png" // Added hover image
+                    hoverImage="/images/backmarket/backmarket-hero.png" // Added hover image
                     tags={["Information Architecture", "Content Strategy", "UX Research"]}
                     href="/projects/backmarket-ia-redesign"
                   />
