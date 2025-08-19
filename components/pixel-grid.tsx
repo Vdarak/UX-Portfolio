@@ -551,7 +551,7 @@ export function PixelGridExhibit({
         // Curated sequence of UX-relevant terms and cute symbols
         const meaningfulSequence = [
 
-          'HI',   // Greeting
+          'H!',   // Greeting
           'UX',   // User Experience
           '?',    // Questions (research mindset)
           'UI',   // User Interface
@@ -567,7 +567,7 @@ export function PixelGridExhibit({
           '▲',    // Growth/improvement
           '□',    // Wireframes
           '⟳',    // Iteration
-          'HI'    // Circle back to greeting
+          'H!'    // Circle back to greeting
         ]
         
         // All letters for occasional random display (uppercase only)
@@ -575,7 +575,7 @@ export function PixelGridExhibit({
         const allSymbols = ['♥', '🔍', '★', '◯', '□', '⟳', '☺', '▲', '?', '!', '⚡', '💡', 'lotus']
 
         // Animation state
-        let currentDisplay = 'HI' // Start with HI
+        let currentDisplay = 'H!' // Start with H!
         let framesSinceChange = 0
         let isShowingMeaningfulWord = true
         let sequenceIndex = 0 // Track position in meaningful sequence
