@@ -63,7 +63,7 @@ export function FadeIn({ children, delay = 0, direction = "up", className, shoul
   }, []);
   
   // detect first time element is in viewport (trigger slightly later)
-  const isInView = useInView(ref, { once: true, margin: isMobile ? "-50px" : "-200px" });
+  const isInView = useInView(ref, { once: true, margin: isMobile ? "-50px" : "-100px" });
 
   // mapping directions to initial x/y offsets
   const directionOffset = {
