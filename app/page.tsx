@@ -22,7 +22,7 @@ export default function Home() {
       {/* Hero Section */}
       <section 
         ref={heroSectionRef}
-        className="container relative flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] px-4 mx-auto space-y-8 md:space-y-12 md:px-6 overflow-hidden pb-8 md:pb-8"
+        className="container relative flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] mt-16 px-4 mx-auto space-y-8 md:space-y-12 md:px-6 overflow-hidden pb-8 md:pb-8"
       >
 
         {/* Main content grid */}
@@ -169,7 +169,7 @@ export default function Home() {
                       title="Reducing Alcohol Consumption"
                       description="Supporting healthier relationships with alcohol through research-driven design to make mindful social choices more visible and accessible."
                       image="/images/alcohol.png"
-                      hoverImage="/images/logo.png" // Added hover image
+                      hoverImage="/images/alcohol-hero.png" // Added hover image
                       tags={["UX Research", "Mixed Methods", "Behavioral UX"]}
                       href="/projects/reducing-alcohol"
                     />
