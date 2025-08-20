@@ -225,7 +225,6 @@ export function SiteHeader() {
             {[
               { href: "/#projects", label: "Projects" },
               { href: "/#about", label: "About" },
-              { href: "/#contact", label: "Contact" },
               { href: "/playground", label: "Playground" },
             ].map((item, index) => (
               <motion.div
@@ -338,7 +337,6 @@ export function SiteHeader() {
           {[
             { href: "/#projects", label: "Projects" },
             { href: "/#about", label: "About" },
-            { href: "/#contact", label: "Contact" },
             { href: "/playground", label: "Playground" },
           ].map((item) => (
             <motion.div
