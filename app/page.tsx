@@ -4,6 +4,7 @@ import { PixelGridExhibit } from "@/components/pixel-grid"
 import Footer from "@/components/footer"
 import { RefinedButton } from "@/components/refined-button"
 import { RefinedMagneticEffect } from "@/components/refined-magnetic-effect"
+import { TiltEffect } from "@/components/tilt-effect"
 import { Download, ArrowRight, Briefcase, Mail } from "lucide-react"
 import { FadeIn, StaggerContainer, StaggerItem, Parallax } from "@/components/scroll-animations"
 import RefinedProjectCard from "@/components/refined-project-card"
@@ -199,15 +200,17 @@ export default function Home() {
         <div className="container px-5 mx-auto md:px-12">
           <div className="grid gap-12 md:grid-cols-2 md:items-center">
             <FadeIn delay={0.5} direction="left">
-                  <div className="relative overflow-hidden rounded-xl aspect-[2/3] scale-[0.72] origin-center">
-                    <Image
-                      src="/images/vedant-portrait.jpg"
-                      alt="Portrait of Vedant Darak, UX Designer"
-                      fill
-                      className="object-cover"
-                      priority
-                    />
-                  </div>
+              <TiltEffect maxAngle={15} intensity={0.8} className="interactive">
+                <div className="relative overflow-hidden rounded-xl aspect-[2/3] scale-[0.72] origin-center">
+                  <Image
+                    src="/images/vedant-portrait.jpg"
+                    alt="Portrait of Vedant Darak"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+              </TiltEffect>
             </FadeIn>
             <FadeIn delay={0.5} direction="right">
               <div className="space-y-6 px-2">
