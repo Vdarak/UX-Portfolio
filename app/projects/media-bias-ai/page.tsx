@@ -14,8 +14,8 @@ import { useVideoViewport } from "@/hooks/use-video-viewport"
 
 export default function MediaBiasAICaseStudy() {
   // Video viewport hooks for each video
-  const { videoRef: mainFlowVideoRef } = useVideoViewport({ threshold: 0.3, playOnce: true })
-  const { videoRef: nfyPageVideoRef } = useVideoViewport({ threshold: 0.3, playOnce: true })
+  const { videoRef: mainFlowVideoRef } = useVideoViewport({ threshold: 0.3 })
+  const { videoRef: nfyPageVideoRef } = useVideoViewport({ threshold: 0.3 })
 
   // Define navigation sections
   const navigationSections = [

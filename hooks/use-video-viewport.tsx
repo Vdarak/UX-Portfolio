@@ -23,16 +23,16 @@ export const useVideoViewport = (options: UseVideoViewportOptions = {}) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsInView(true)
-            if (!hasPlayed || !playOnce) {
-              video.play().catch((error) => {
-                console.log('Video play failed:', error)
-              })
-              if (playOnce) {
-                setHasPlayed(true)
-              }
+            // Always play when in viewport (smooth on/off behavior)
+            video.play().catch((error) => {
+              console.log('Video play failed:', error)
+            })
+            if (playOnce && !hasPlayed) {
+              setHasPlayed(true)
             }
           } else {
             setIsInView(false)
+            // Always pause when out of viewport
             video.pause()
           }
         })
