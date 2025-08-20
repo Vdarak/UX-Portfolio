@@ -22,7 +22,7 @@ export default function MediaBiasAICaseStudy() {
     hero: {
       title: "Ana: AI News Aggregator",
       subtitle: "Empowering users with balanced news perspectives and highlighting media bias",
-      storyHook: "What if a trustworthy AI could help you see beyond media bias and understand the full spectrum of news perspectives?",
+      storyHook: "What if a trustworthy AI could help you see media bias and understand the full spectrum of news perspectives?",
       heroImage: "/images/ana.png?height=1500&width=2000", // You'll need to add this image to your public/images folder
       role: "UX Researcher & Designer",
       timeline: "12 weeks (Spring 2025)",
@@ -172,7 +172,7 @@ export default function MediaBiasAICaseStudy() {
                 
                 <div className="order-1 lg:order-2 space-y-6">
                   <div>
-                    <h3 className="text-2xl font-semibold mb-3">Ana Main Page Flow</h3>
+                    <h3 className="text-2xl font-semibold mb-3">Article Bias Analysis</h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">
                       Comprehensive bias analysis workflow for any article or link
                     </p>
@@ -250,7 +250,7 @@ export default function MediaBiasAICaseStudy() {
                 
                 <div className="order-1 lg:order-2 space-y-6">
                   <div>
-                    <h3 className="text-2xl font-semibold mb-3">News For You Flow</h3>
+                    <h3 className="text-2xl font-semibold mb-3">News For You Page</h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">
                       Personalized news discovery with bias transparency
                     </p>

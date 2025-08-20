@@ -29,7 +29,7 @@ export default function Home() {
         {/* Main content grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 justify-between items-center w-full">
           {/* Text content */}
-          <div className="lg:col-span-8 max-w-4xl space-y-4 text-center lg:text-left">
+          <div className="lg:col-span-8 max-w-4xl space-y-4 text-left lg:text-left">
               <FadeIn direction="right" delay={0.4}>
                 <h1 className="title-primary text-3xl tracking-tight md:text-4xl inline">
                   Namaste 🙏 {'->'} I'm Vedant Darak
@@ -37,7 +37,7 @@ export default function Home() {
               </FadeIn>
               <FadeIn direction="right" delay={0.4}>
                 <h2 className="heading-lg text-4xl tracking-tight md:text-6xl">
-                <FlowingText text="Thoughtful" className="inline" /> UX, cyclical process
+                <FlowingText text="Thoughtful" className="inline" /> UX Designer
                 </h2>
               </FadeIn>
               <FadeIn direction="right" delay={0.4}>
@@ -203,7 +203,7 @@ export default function Home() {
               <TiltEffect maxAngle={15} intensity={0.8} className="interactive">
                 <div className="relative overflow-hidden rounded-xl aspect-[2/3] scale-[0.72] origin-center">
                   <Image
-                    src="/images/vedant-portrait.jpg"
+                    src="/images/vedant-portrait.JPG"
                     alt="Portrait of Vedant Darak"
                     fill
                     className="object-cover"
