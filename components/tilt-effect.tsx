@@ -24,16 +24,12 @@ export function TiltEffect({
     if (!elementRef.current) return
 
     const rect = elementRef.current.getBoundingClientRect()
-    const mouseX = e.clientX - rect.left
-    const mouseY = e.clientY - rect.top
+    const offsetX = e.clientX - rect.left - rect.width / 2
+    const offsetY = e.clientY - rect.top - rect.height / 2
     
-    // Calculate relative position (-0.5 to 0.5)
-    const relX = (mouseX / rect.width) - 0.5
-    const relY = (mouseY / rect.height) - 0.5
-    
-    // Convert to rotation angles with intensity multiplier (inverted for natural feel)
-    const rotateY = maxAngle * (2 * relX) * intensity
-    const rotateX = maxAngle * (2 * relY) * intensity
+    // Calculate rotation with correct mapping (like TiltedCard)
+    const rotateX = (offsetY / (rect.height / 2)) * -maxAngle * intensity
+    const rotateY = (offsetX / (rect.width / 2)) * maxAngle * intensity
     
     // Apply transform
     elementRef.current.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`
