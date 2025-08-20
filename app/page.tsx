@@ -203,7 +203,7 @@ export default function Home() {
                 <RefinedMagneticEffect intensity={0.08} range={150}>
                   <div className="relative overflow-hidden rounded-xl aspect-[2/3] scale-[0.72] origin-center">
                     <Image
-                      src="/images/vedant-portrait.png"
+                      src="/images/vedant-portrait.jpg"
                       alt="Portrait of Vedant Darak, UX Designer"
                       fill
                       className="object-cover"
