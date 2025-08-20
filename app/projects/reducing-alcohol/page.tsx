@@ -734,18 +734,18 @@ export default function AlcoholConsumptionCaseStudy() {
                   </p>
 
                   <div className="flex flex-wrap justify-center gap-4 pt-8">
-                    <Link href="/projects/media-bias-ai">
+                    <Link href="/projects/backmarket-ia-redesign">
                       <RefinedButton variant="default" size="lg" className="group">
                         <span className="flex items-center gap-2">
                           <ArrowLeft className="w-5 h-5 transition-transform duration-300 group-hover:-translate-x-1" />
-                          Previous Project
+                         Backmarket IA Redesign
                         </span>
                       </RefinedButton>
                     </Link>
-                    <Link href="/projects/backmarket-ia-redesign">
+                    <Link href="/projects/media-bias-ai">
                       <RefinedButton variant="outline" size="lg" className="group">
                         <span className="flex items-center gap-2">
-                          Next Project
+                          Ana: AI News Aggregator
                           <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                         </span>
                       </RefinedButton>

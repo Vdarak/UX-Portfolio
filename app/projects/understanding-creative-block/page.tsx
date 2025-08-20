@@ -16,8 +16,7 @@ export default function CreativeBlockCaseStudy() {
     { id: "problem", title: "Introduction", subtitle: "Problem Introduction" },
     { id: "methodology", title: "Methodology", subtitle: "Research approach" },
     { id: "insights", title: "Key Insights", subtitle: "What we discovered" },
-    { id: "solution", title: "Solution", subtitle: "Our approach" },
-    { id: "impact", title: "Impact", subtitle: "Results & learnings" }
+    { id: "solution", title: "Solution", subtitle: "Our approach" }
   ]
   const storyData = {
     hero: {
@@ -774,18 +773,18 @@ export default function CreativeBlockCaseStudy() {
               </p>
               
               <div className="flex flex-wrap justify-center gap-4 pt-8">
-                <Link href="/projects/finance-dashboard">
+                <Link href="/projects/media-bias-ai">
                   <RefinedButton variant="default" size="lg" className="group">
                     <span className="flex items-center gap-2">
                       <ArrowLeft className="w-5 h-5 transition-transform duration-300 group-hover:-translate-x-1" />
-                      Previous Project
+                      Ana: AI News Aggregator
                     </span>
                   </RefinedButton>
                 </Link>
-                <Link href="/projects/reducing-alcohol">
+                <Link href="/projects/backmarket-ia-redesign">
                   <RefinedButton variant="outline" size="lg" className="group">
                     <span className="flex items-center gap-2">
-                      Next Project
+                      BackMarket IA Redesign
                       <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                     </span>
                   </RefinedButton>
