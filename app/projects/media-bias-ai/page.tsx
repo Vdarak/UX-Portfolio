@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 import { ArrowLeft, ArrowRight, Brain, Users, Eye, Target, TrendingUp, CheckCircle, Lightbulb, BookOpen, Search, Shield, Smartphone, Zap, Palette, AlertTriangle } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
@@ -8,8 +10,13 @@ import { FlowingText } from "@/components/flowing-text"
 import { ProjectHero, StorySection, ProjectTimeline, InsightCard, UserQuote } from "@/components/story-components"
 import { ProjectPageWrapper } from "@/components/project-page-wrapper"
 import Footer from "@/components/footer"
+import { useVideoViewport } from "@/hooks/use-video-viewport"
 
 export default function MediaBiasAICaseStudy() {
+  // Video viewport hooks for each video
+  const { videoRef: mainFlowVideoRef } = useVideoViewport({ threshold: 0.3, playOnce: true })
+  const { videoRef: nfyPageVideoRef } = useVideoViewport({ threshold: 0.3, playOnce: true })
+
   // Define navigation sections
   const navigationSections = [
     { id: "overview", title: "Overview", subtitle: "Project introduction" },
@@ -157,7 +164,7 @@ export default function MediaBiasAICaseStudy() {
                 <div className="order-2 lg:order-1 flex justify-center lg:justify-start">
                   <div className="w-[280px] h-[606px] overflow-hidden bg-black flex items-center justify-center" style={{ borderRadius: '48px' }}>
                     <video 
-                      autoPlay 
+                      ref={mainFlowVideoRef}
                       loop 
                       muted 
                       playsInline
@@ -235,7 +242,7 @@ export default function MediaBiasAICaseStudy() {
                 <div className="order-2 lg:order-1 flex justify-center lg:justify-start">
                   <div className="w-[280px] h-[606px] overflow-hidden bg-black flex items-center justify-center" style={{ borderRadius: '48px' }}>
                     <video 
-                      autoPlay 
+                      ref={nfyPageVideoRef}
                       loop 
                       muted 
                       playsInline
