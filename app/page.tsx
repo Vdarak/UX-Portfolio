@@ -199,8 +199,6 @@ export default function Home() {
         <div className="container px-5 mx-auto md:px-12">
           <div className="grid gap-12 md:grid-cols-2 md:items-center">
             <FadeIn delay={0.5} direction="left">
-              <Parallax offset={-30}>
-                <RefinedMagneticEffect intensity={0.08} range={150}>
                   <div className="relative overflow-hidden rounded-xl aspect-[2/3] scale-[0.72] origin-center">
                     <Image
                       src="/images/vedant-portrait.jpg"
@@ -210,8 +208,6 @@ export default function Home() {
                       priority
                     />
                   </div>
-                </RefinedMagneticEffect>
-              </Parallax>
             </FadeIn>
             <FadeIn delay={0.5} direction="right">
               <div className="space-y-6 px-2">
