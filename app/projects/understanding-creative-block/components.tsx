@@ -52,7 +52,7 @@ export function SequentialTaskAnalysis() {
                 <DialogTrigger asChild>
                   <RefinedButton 
                     variant="outline" 
-                    className="bg-white/90 text-gray-900 hover:bg-white border-white/30 backdrop-blur-sm"
+                    className="bg-white/90 dark:bg-gray-800/90 text-gray-900 dark:text-gray-100 hover:bg-white dark:hover:bg-gray-800 border-white/30 dark:border-gray-600/50 backdrop-blur-sm"
                   >
                     View Sequential Task Analysis
                   </RefinedButton>
@@ -1197,7 +1197,7 @@ function levelClasses(level: 'High' | 'Medium' | 'Low') {
 
 export function FeaturePriorityMatrix() {
   return (
-    <div className="bg-background rounded-xl p-4 sm:p-6 lg:p-8 border">
+    <div className="bg-background rounded-xl p-4 sm:p-6 lg:p-8 border border-gray-200 dark:border-gray-700">
       <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-6">
         <div className="space-y-3 max-w-2xl">
           <h3 className="text-xl sm:text-2xl font-bold">Priority Features Matrix</h3>
@@ -1229,7 +1229,7 @@ export function FeaturePriorityMatrix() {
       {/* Mobile list (cards) */}
       <div className="md:hidden grid gap-3">
         {featureData.map((row) => (
-          <div key={row.no} className="rounded-lg border bg-card p-3">
+          <div key={row.no} className="rounded-lg border border-gray-200 dark:border-gray-700 bg-card p-3">
             <div className="flex items-start justify-between gap-3">
               <div className="min-w-0">
                 <div className="flex items-center gap-2 text-xs text-muted-foreground">
@@ -1260,7 +1260,7 @@ export function FeaturePriorityMatrix() {
       </div>
 
       {/* Desktop/tablet table */}
-      <div className="hidden md:block overflow-x-auto rounded-lg border">
+      <div className="hidden md:block overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-700">
         <table className="min-w-[760px] w-full border-collapse text-sm">
           <thead className="bg-muted/50 text-xs uppercase tracking-wide sticky top-0">
             <tr className="text-left">
@@ -1274,7 +1274,7 @@ export function FeaturePriorityMatrix() {
           </thead>
           <tbody>
             {featureData.map(row => (
-              <tr key={row.no} className="border-t border-border/60 hover:bg-muted/40 transition-colors">
+              <tr key={row.no} className="border-t border-gray-200 dark:border-gray-700 hover:bg-muted/40 transition-colors">
                 <td className="py-2.5 px-3 font-mono text-xs text-muted-foreground align-top">{row.no}</td>
                 <td className="py-2.5 px-3 align-top">
                   <p className="font-medium leading-snug">{row.feature}</p>

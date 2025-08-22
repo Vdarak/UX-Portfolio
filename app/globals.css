@@ -56,7 +56,22 @@
   body {
     @apply bg-background text-foreground font-proxima;
   }
+}
+
+@layer components {
+  /* Fix border color inheritance issues */
+  .border {
+    border-color: hsl(var(--border)) !important;
+  }
   
+  /* Fix table border inheritance in dark mode */
+  table .border-t,
+  table tr {
+    border-color: hsl(var(--border)) !important;
+  }
+}
+
+@layer base {
   /* Proxima Nova Typography System */
   h1, h2, h3, h4, h5, h6 {
     @apply font-proxima font-semibold tracking-tight;
@@ -103,7 +118,7 @@
   
   .heading-md {
     font-family: var(--font-proxima-nova), system-ui, sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: clamp(1.5rem, 3vw, 2rem);
     line-height: 1.3;
     letter-spacing: -0.01em;
@@ -111,7 +126,7 @@
   
   .heading-sm {
     font-family: var(--font-proxima-nova), system-ui, sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: clamp(1.25rem, 2.5vw, 1.5rem);
     line-height: 1.4;
     letter-spacing: -0.005em;
