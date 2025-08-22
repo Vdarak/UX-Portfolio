@@ -5,7 +5,7 @@ import Image from "next/image"
 import { Card } from "../../../components/ui/card"
 import { Dialog, DialogContent, DialogTrigger } from "../../../components/ui/dialog"
 import { RefinedButton } from "../../../components/refined-button"
-import { UserCheck, ZoomIn, Target } from "lucide-react"
+import { UserCheck, ZoomIn, Target, ChevronDown, ChevronUp } from "lucide-react"
 
 // ===== SEQUENTIAL TASK ANALYSIS =====
 
@@ -355,6 +355,8 @@ const InterviewSection = ({ title, categories, bgColor = "bg-blue-100 dark:bg-bl
 )
 
 export function InterviewAffinityDiagram() {
+  const [isExpanded, setIsExpanded] = useState(false)
+
   // Top Section: Using Tools, Planning/Taking a Break, Think about Creative Block, Creative Activities
   const topSections = [
     {
@@ -674,8 +676,9 @@ export function InterviewAffinityDiagram() {
       </div>
       
       <Card className="p-6 bg-gradient-to-br from-blue-50 via-purple-50 to-green-50 dark:from-blue-950/20 dark:via-purple-950/20 dark:to-green-950/20 border-blue-200 dark:border-blue-800">
+        {/* Always visible preview section */}
         <div className="space-y-6">
-          {/* Top Row - 4 sections */}
+          {/* Top Row - 4 sections - always visible */}
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-4">
             {topSections.map((section, index) => (
               <InterviewSection
@@ -688,47 +691,80 @@ export function InterviewAffinityDiagram() {
             ))}
           </div>
 
-          {/* Middle Row - 5 sections */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
-            {middleSections.map((section, index) => (
-              <InterviewSection
-                key={index}
-                title={section.title}
-                categories={section.categories}
-                bgColor="bg-gray-50 dark:bg-gray-900/20"
-                columns={1}
-              />
-            ))}
-          </div>
+          {/* Collapsible content */}
+          <div 
+            className={`overflow-hidden transition-all duration-700 ease-out transform ${
+              isExpanded 
+                ? 'max-h-[2000px] opacity-100 translate-y-0' 
+                : 'max-h-0 opacity-0 -translate-y-4'
+            }`}
+          >
+            <div className={`space-y-6 pt-2 transition-all duration-500 ease-out delay-100 ${
+              isExpanded ? 'translate-y-0 opacity-100' : '-translate-y-2 opacity-0'
+            }`}>
+              {/* Middle Row - 5 sections */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+                {middleSections.map((section, index) => (
+                  <InterviewSection
+                    key={index}
+                    title={section.title}
+                    categories={section.categories}
+                    bgColor="bg-gray-50 dark:bg-gray-900/20"
+                    columns={1}
+                  />
+                ))}
+              </div>
 
-          {/* Special Section - Full width */}
-          <div className="w-full">
-            <InterviewSection
-              title={specialSection.title}
-              categories={specialSection.categories}
-              bgColor="bg-indigo-50 dark:bg-indigo-900/20"
-              columns={1}
-            />
-          </div>
+              {/* Special Section - Full width */}
+              <div className="w-full">
+                <InterviewSection
+                  title={specialSection.title}
+                  categories={specialSection.categories}
+                  bgColor="bg-indigo-50 dark:bg-indigo-900/20"
+                  columns={1}
+                />
+              </div>
 
-          {/* Bottom Row - 5 sections */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
-            {bottomSections.map((section, index) => (
-              <InterviewSection
-                key={index}
-                title={section.title}
-                categories={section.categories}
-                bgColor="bg-neutral-50 dark:bg-neutral-900/20"
-                columns={1}
-              />
-            ))}
+              {/* Bottom Row - 5 sections */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+                {bottomSections.map((section, index) => (
+                  <InterviewSection
+                    key={index}
+                    title={section.title}
+                    categories={section.categories}
+                    bgColor="bg-neutral-50 dark:bg-neutral-900/20"
+                    columns={1}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
         
-        <div className="mt-6 pt-4 border-t border-blue-200 dark:border-blue-700">
+        {/* Toggle Button */}
+        <div className="mt-6 pt-4 border-t border-blue-200 dark:border-blue-700 flex flex-col items-center gap-4">
           <p className="text-xs text-center text-muted-foreground">
             Thematic analysis revealing patterns in creative processes, tools, and blocking factors from interview data
           </p>
+          
+          <RefinedButton 
+            variant="outline" 
+            size="sm"
+            intensity={0.15}
+            className={`group transition-all duration-300 ease-out ${
+              isExpanded ? 'hover:scale-105' : 'hover:scale-105'
+            }`}
+            onClick={() => setIsExpanded(!isExpanded)}
+          >
+            <span className="flex items-center gap-2">
+              {isExpanded ? 'View Less' : 'View Complete Diagram'}
+              {isExpanded ? (
+                <ChevronUp className="w-4 h-4 transition-all duration-300 ease-out group-hover:-translate-y-0.5" />
+              ) : (
+                <ChevronDown className="w-4 h-4 transition-all duration-300 ease-out group-hover:translate-y-0.5" />
+              )}
+            </span>
+          </RefinedButton>
         </div>
       </Card>
     </div>
