@@ -395,7 +395,7 @@ export default function Home() {
           <blockquote className="mx-auto max-w-2xl text-2xl md:text-3xl italic text-center relative mt-12">
             <div className="absolute -left-6 -top-4 text-4xl md:text-6xl text-primary/10 font-serif">"</div>
             <div className="absolute -right-6 -bottom-4 text-4xl md:text-6xl text-primary/10 font-serif rotate-180">"</div>
-            <p className="relative z-10 px-6">A philosopher who only does philosophy is a bad philosopher</p>
+            <p className="relative z-10 px-6">Consistency over Perfection</p>
           </blockquote>
         </FadeIn>
       </section>
