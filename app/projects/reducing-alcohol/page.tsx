@@ -79,11 +79,7 @@ export default function AlcoholConsumptionCaseStudy() {
           >
             <div className="grid gap-12">
               <p className="text-lg leading-relaxed">
-                Excessive alcohol consumption—driven by social norms, marketing cues, and stress coping—often leads to
-                negative health, social, and financial outcomes for young adults. While occasional drinking can
-                facilitate bonding, overconsumption creates regret, hangovers, and a sense of lost autonomy. Our project
-                focuses on supporting individuals who want to moderate or eliminate alcohol use by making mindful,
-                healthier social choices more visible and accessible.
+                Excessive alcohol consumption—driven by social norms, marketing cues, and stress coping—often leads to negative health, social, and financial outcomes for young adults. While occasional drinking can facilitate bonding, overconsumption creates regret, hangovers, and lost autonomy. Our project focuses on supporting individuals who want to moderate or eliminate alcohol use by making mindful, healthier social choices more visible and accessible.
               </p>
 
               <Card className="p-8 border-t-4 border-t-blue-500 transition-all duration-300 hover:shadow-lg">
@@ -99,15 +95,13 @@ export default function AlcoholConsumptionCaseStudy() {
                   <div className="space-y-2">
                     <h4 className="font-semibold text-lg">Demographics</h4>
                     <p className="text-muted-foreground">
-                      Ages 21-35, socially active, and open to new experiences but often default to alcohol-centric
-                      events.
+                      Ages 21-35, socially active, and open to new experiences but often default to alcohol-centric events.
                     </p>
                   </div>
                   <div className="space-y-2">
                     <h4 className="font-semibold text-lg">Drinking Profile</h4>
                     <p className="text-muted-foreground">
-                      Includes those who occasionally drink but wish to reduce intake, and those exploring sobriety for
-                      health, personal, or lifestyle reasons.
+                      Includes those who occasionally drink but wish to reduce intake, and those exploring sobriety for health, personal, or lifestyle reasons.
                     </p>
                   </div>
                 </CardContent>
@@ -201,9 +195,7 @@ export default function AlcoholConsumptionCaseStudy() {
           >
             <div className="grid gap-12">
               <p className="text-lg leading-relaxed">
-                To ground our design in existing evidence, we conducted a focused secondary literature review. Our aim
-                was to uncover how marketing, social norms, psychological drivers, and biological factors influence
-                alcohol consumption, and to use these insights to shape our primary research.
+                To ground our design in existing evidence, we conducted a focused secondary literature review. Our aim was to uncover how marketing, social norms, psychological drivers, and biological factors influence alcohol consumption, and to use these insights to shape our primary research.
               </p>
 
               <div>
@@ -213,7 +205,7 @@ export default function AlcoholConsumptionCaseStudy() {
                     {
                       icon: Users,
                       title: "Peer Influence",
-                      text: "Peer norms exert a stronger sway over individual drinking decisions than family influences, driven by shared environments and misperceptions of others' consumption levels.",
+                      text: "Peer norms exert stronger sway over individual drinking decisions than family influences, driven by shared environments and misperceptions of others' consumption levels.",
                       color: "indigo",
                     },
                     {
@@ -267,8 +259,7 @@ export default function AlcoholConsumptionCaseStudy() {
                       <div>
                         <h4 className="font-semibold mb-2">Primary Objective</h4>
                         <p className="text-muted-foreground">
-                          Understand the interplay of perceived social norms and stress motivations on drinking
-                          behaviors among adults aged 18–35 who either abstain or wish to reduce consumption.
+                          Understand the interplay of perceived social norms and stress motivations on drinking behaviors among adults aged 18–35 who either abstain or wish to reduce consumption.
                         </p>
                       </div>
                       <div>
@@ -279,8 +270,7 @@ export default function AlcoholConsumptionCaseStudy() {
                             Individuals overestimate peer alcohol consumption.
                           </li>
                           <li>
-                            <span className="font-medium text-foreground">2. Stress as a Driver:</span> Higher stress
-                            levels correlate with increased alcohol consumption.
+                            <span className="font-medium text-foreground">2. Stress as a Driver:</span> Higher stress levels correlate with increased alcohol consumption.
                           </li>
                         </ol>
                       </div>
@@ -337,8 +327,7 @@ export default function AlcoholConsumptionCaseStudy() {
           >
             <div className="grid gap-12">
               <p className="text-lg leading-relaxed">
-                We conducted in-depth appraisals of each interview transcript, distilling participants' goals,
-                motivations, mental models, and coping strategies. Below is an exemplar summary.
+                We conducted in-depth appraisals of each interview transcript, distilling participants' goals, motivations, mental models, and coping strategies. Below is an exemplar summary.
               </p>
 
               <Card className="bg-muted/30 p-8">
@@ -444,9 +433,7 @@ export default function AlcoholConsumptionCaseStudy() {
           >
             <div className="grid gap-12">
               <p className="text-lg leading-relaxed">
-                To translate our research into actionable insights, we built two complementary frameworks: a Behavioral
-                Archetype capturing users' core strategies, and a Journey Map showing the path toward adopting
-                alcohol-free "third places."
+                To translate our research into actionable insights, we built two complementary frameworks: a Behavioral Archetype capturing users' core strategies, and a Journey Map showing the path toward adopting alcohol-free "third places."
               </p>
 
               <Card className="p-8 border-t-4 border-t-purple-500">
@@ -661,9 +648,7 @@ export default function AlcoholConsumptionCaseStudy() {
           >
             <div className="grid gap-12">
               <p className="text-lg leading-relaxed">
-                By revealing true social norms and surfacing vibrant alcohol-free "third places," our solution redefines
-                how young adults discover and embrace mindful socializing. Early prototypes indicate a significant
-                uptick in trial of non-alcoholic venues and a drop in self-reported weekly drinks among pilot users.
+                By revealing true social norms and surfacing vibrant alcohol-free "third places," our solution redefines how young adults discover and embrace mindful socializing. Early prototypes indicate a significant uptick in trial of non-alcoholic venues and a drop in self-reported weekly drinks among pilot users.
               </p>
 
               <div className="border-t border-border pt-12">
@@ -678,7 +663,7 @@ export default function AlcoholConsumptionCaseStudy() {
                     {
                       icon: Heart,
                       title: "Emotional Journey",
-                      text: "Felt a mix of excitement and nervousness. Seeing hypotheses crystallize into a cohesive strategy was immensely satisfying and boosted my confidence.",
+                      text: "Felt excitement and nervousness. Seeing hypotheses crystallize into a cohesive strategy was immensely satisfying and boosted my confidence.",
                     },
                     {
                       icon: Brain,
@@ -729,8 +714,7 @@ export default function AlcoholConsumptionCaseStudy() {
                     Like my work? <FlowingText text="Explore" className="inline" /> more!
                   </h2>
                   <p className="text-lg text-muted-foreground">
-                    Discover more UX design projects that showcase my approach to solving complex problems through
-                    research-driven design.
+                    Discover more UX design projects that showcase my approach to solving complex problems through research-driven design.
                   </p>
 
                   <div className="flex flex-wrap justify-center gap-4 pt-8">

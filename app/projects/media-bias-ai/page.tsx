@@ -40,8 +40,8 @@ export default function MediaBiasAICaseStudy() {
       {
         phase: "Problem Definition",
         title: "Information Bubbles & Polarization",
-        story: "In today's media landscape, Gen Z users (18-28) are increasingly trapped in information bubbles shaped by algorithms and polarized content. This project tackles the challenge of developing an AI system that not only detects bias but explains it and encourages media literacy.",
-        insight: "Media bias isn't just about left vs. right—it's about subtle framing choices, selective facts, and linguistic patterns that shape how we perceive information.",
+        story: "Gen Z users (18-28) are trapped in algorithmic information bubbles. We developed an AI system that detects bias, explains it, and encourages media literacy.",
+        insight: "Media bias involves subtle framing, selective facts, and linguistic patterns—not just left vs. right perspectives.",
         visual: "/placeholder.svg?height=400&width=600", // Replace with actual visual
         metrics: [
           { label: "Target Audience", value: "Gen Z (18-28)" },
@@ -62,8 +62,8 @@ export default function MediaBiasAICaseStudy() {
       {
         phase: "User Research",
         title: "Understanding News Consumption",
-        story: "Our research revealed widespread skepticism toward both mainstream and AI-generated news among Gen Z users. Through surveys and interviews, we uncovered a strong desire for diverse perspectives and clear bias identification that doesn't oversimplify complex media narratives.",
-        insight: "Users want transparency in how bias is detected, not just the final judgment. They're eager to learn, not just be told what to think.",
+        story: "Research revealed widespread skepticism toward both mainstream and AI-generated news among Gen Z. Users want diverse perspectives and clear bias identification without oversimplification.",
+        insight: "Users want transparency in how bias is detected, not just the final judgment—they're eager to learn, not be told what to think.",
         visual: "/placeholder.svg?height=400&width=600", // Replace with actual visual
         metrics: [
           { label: "User Interviews", value: "24" },
@@ -88,8 +88,8 @@ export default function MediaBiasAICaseStudy() {
       {
         phase: "Design & Development",
         title: "Building Ana",
-        story: "Ana was designed around three core principles: transparency, education, and empowerment. The system features onboarding tutorials, AI bias analysis reports that explain methodology, a bias slider to explore ideological variation, and interactive educational modules that build media literacy over time.",
-        insight: "By making bias detection interactive and educational rather than prescriptive, we can build trust with users skeptical of both traditional media and AI systems.",
+        story: "Ana was designed around transparency, education, and empowerment. Features include onboarding tutorials, AI bias analysis with methodology explanations, bias sliders for exploring perspectives, and interactive media literacy modules.",
+        insight: "By making bias detection interactive and educational rather than prescriptive, we build trust with users skeptical of both traditional media and AI.",
         visual: "/placeholder.svg?height=400&width=600", // Replace with actual visual
         metrics: [
           { label: "Design Principles", value: "3" },
@@ -110,8 +110,8 @@ export default function MediaBiasAICaseStudy() {
       {
         phase: "Validation & Impact",
         title: "Measuring Success",
-        story: "We measured Ana's success through engagement metrics, trust indicators, and media literacy assessments. Users demonstrated improved ability to identify bias across multiple news sources, increased engagement with diverse perspectives, and greater confidence in their media literacy skills.",
-        insight: "Technology alone can't solve media polarization, but thoughtfully designed AI tools can empower users to become more critical and informed news consumers.",
+        story: "We measured success through engagement metrics, trust indicators, and media literacy assessments. Users showed improved bias identification, increased diverse source engagement, and greater confidence in media literacy skills.",
+        insight: "Technology alone can't solve media polarization, but thoughtfully designed AI tools can empower users to become more critical news consumers.",
         visual: "/placeholder.svg?height=400&width=600", // Replace with actual visual
         metrics: [
           { label: "Media Literacy Improvement", value: "+27%" },
@@ -145,7 +145,7 @@ export default function MediaBiasAICaseStudy() {
         id="overview"
         chapter="Chapter 01"
         storyTitle="Overview"
-        narrativeHook="In a media environment increasingly shaped by disinformation and polarized narratives, Ana redefines how users engage with news through explainable AI and media literacy."
+        narrativeHook="In a media environment shaped by disinformation and polarization, Ana redefines news engagement through explainable AI and media literacy."
         className="bg-gradient-to-br from-primary/5 to-background"
       >
         <div className="space-y-8">
@@ -153,7 +153,7 @@ export default function MediaBiasAICaseStudy() {
           <div className="my-12">
             <h3 className="text-2xl font-bold mb-6">Final Solution</h3>
             <p className="text-lg text-muted-foreground mb-8">
-              Ana: An AI-powered news aggregator designed to detect bias, educate users, and break information bubbles through transparent analysis and interactive exploration.
+              Ana: An AI-powered news aggregator that detects bias, educates users, and breaks information bubbles through transparent analysis and interactive exploration.
             </p>
             
             {/* User Flow Walkthrough */}
@@ -314,10 +314,7 @@ export default function MediaBiasAICaseStudy() {
           <div className="my-8">
             <h3 className="text-2xl font-bold mb-4">Introduction</h3>
             <p className="text-lg leading-relaxed">
-              In a media environment increasingly shaped by disinformation and polarized narratives, our team developed Ana, an AI-powered news aggregator designed to detect and flag bias in news articles. The core motivation for this project stemmed from the recognition that biased news sources often dominate the information landscape due to speed and reach, leaving users to manually discern bias; a cognitively demanding and often ineffective task, especially among younger audiences.
-            </p>
-            <p className="text-lg leading-relaxed mt-4">
-              Ana addresses this by offering automated, explainable bias detection, educational tools, and interactive features that empower users to access factual, balanced information and break out of information bubbles.
+              Our team developed Ana, an AI-powered news aggregator that detects and flags bias in news articles. Biased sources often dominate the information landscape due to speed and reach, leaving users to manually discern bias—a cognitively demanding task, especially for younger audiences. Ana addresses this through automated, explainable bias detection, educational tools, and interactive features that empower users to access balanced information and break out of information bubbles.
             </p>
           </div>
 
@@ -326,7 +323,7 @@ export default function MediaBiasAICaseStudy() {
             <h3 className="text-2xl font-bold mb-4">The Problem</h3>
             <div className="bg-gradient-to-br from-orange-500/5 to-red-500/5 border border-orange-500/20 p-6 rounded-lg">
               <p className="text-lg leading-relaxed">
-                Gen Z users (18-28) are increasingly trapped in information bubbles shaped by algorithms and polarized content. Biased news sources dominate due to speed and reach, while users struggle with the cognitively demanding task of manually discerning bias—particularly subtle framing choices, selective facts, and linguistic patterns that shape information perception.
+                Gen Z users (18-28) are trapped in algorithmic information bubbles. Biased news dominates due to speed and reach, while users struggle with manually discerning subtle framing, selective facts, and linguistic patterns that shape information perception.
               </p>
             </div>
           </div>
@@ -339,10 +336,7 @@ export default function MediaBiasAICaseStudy() {
             <div className="mb-6">
               <h4 className="text-xl font-semibold mb-3">Competitive Analysis</h4>
               <p className="mb-4">
-                Our project began with a competitive analysis of existing platforms such as Ground News, AllSides, and TIMINO. While these competitors provide news from varied perspectives, we identified key opportunities for differentiation. Ana integrates micro-lessons in media literacy, user-reporting mechanisms for misinformation, and a bias slider for exploring articles across the ideological spectrum.
-              </p>
-              <p>
-                These features are embedded within a clean, accessible UI tailored for Gen Z users and optimized for mobile platforms.
+                We analyzed Ground News, AllSides, and TIMINO. While competitors provide varied perspectives, Ana differentiates through micro-lessons in media literacy, user-reporting mechanisms, and a bias slider for exploring the ideological spectrum—embedded in a Gen Z-optimized mobile interface.
               </p>
             </div>
 
@@ -350,13 +344,10 @@ export default function MediaBiasAICaseStudy() {
             <div className="mb-6">
               <h4 className="text-xl font-semibold mb-3">Literature Review</h4>
               <p className="mb-4">
-                Our literature review significantly shaped both the technical and conceptual foundations of Ana. Key findings from synthesizing 63 studies and 18 datasets revealed that media bias is often subtle and context-dependent, with multilingual, multi-domain datasets lacking in current AI systems.
-              </p>
-              <p className="mb-4">
-                Research emphasized that current AI-driven detection systems are still in early development stages, identifying 17 distinct forms of media bias ranging from spin and ideology bias to statement and gatekeeping bias. This review helped us determine Ana's bias taxonomy, training examples, and the need for multi-perspective article presentation.
+                Synthesizing 63 studies revealed that media bias is often subtle and context-dependent, with current AI systems still in early development. We identified 17 distinct bias forms—from spin and ideology to gatekeeping bias—which shaped Ana's bias taxonomy and training examples.
               </p>
               <p>
-                Additional psychological frameworks for building trustworthy AI highlighted that transparency, context-awareness, and accountability are essential to user trust, influencing Ana's emphasis on visual explanations, bias-source links, and user-controlled feedback loops.
+                Psychological frameworks for trustworthy AI emphasize transparency, context-awareness, and accountability, influencing Ana's visual explanations, bias-source links, and user-controlled feedback loops.
               </p>
             </div>
 
@@ -364,10 +355,7 @@ export default function MediaBiasAICaseStudy() {
             <div className="mb-6">
               <h4 className="text-xl font-semibold mb-3">Design Principles</h4>
               <p className="mb-4">
-                Guided by these findings, our team established three core design principles for Ana: <strong>transparency</strong>, <strong>education</strong>, and <strong>empowerment</strong>. These principles are reflected across the platform from onboarding tutorials that clarify how bias detection works, to a bias slider that invites exploration of contrasting narratives.
-              </p>
-              <p>
-                Ana is not just a news filter—it is a literacy tool and trust-building system designed to meet the cognitive, emotional, and social needs of its users.
+                Three core principles—<strong>transparency</strong>, <strong>education</strong>, and <strong>empowerment</strong>—guide Ana from onboarding tutorials explaining bias detection to bias sliders inviting exploration of contrasting narratives. Ana is both a news filter and literacy tool designed to meet users' cognitive, emotional, and social needs.
               </p>
               
               <div className="grid md:grid-cols-3 gap-6 mt-6">
@@ -400,45 +388,26 @@ export default function MediaBiasAICaseStudy() {
           <div className="my-8">
             <h3 className="text-2xl font-bold mb-4">Goals</h3>
             <p className="mb-6">
-              Our research validated user concerns about mainstream and AI-generated news, revealing deep skepticism and fears of misinformation. Based on these insights and our literature review, we established goals that were iterated as new findings came to light. The following are our final, refined goals:
+              Research validated user concerns about mainstream and AI-generated news, revealing deep skepticism and misinformation fears. Our refined goals focused on:
             </p>
             
-            <div className="grid md:grid-cols-1 gap-4">
-              {[
-                {
-                  goal: "Goal 1 (Reader Habits)",
-                  description: "This goal remained unchanged but was executed with more emphasis on qualitative insights due to limitations in eye-tracking resources. Instead of tracking cursor or eye movements, we focused on interview narratives and time-on-task observations during prototype testing."
-                },
-                {
-                  goal: "Goal 2 (Topic Preferences)", 
-                  description: "Unchanged. Surveys and interviews successfully gathered user preferences, reaffirming interest in political, social, and environmental news, as well as a strong demand for regional customization."
-                },
-                {
-                  goal: "Goal 3 (AI Prompt Trials)",
-                  description: "This goal required refinement. We initially planned extensive prompt testing across multiple models but narrowed our scope to iterating on a focused set of prompts for one model (ChatGPT), informed by research which cautioned against uncontrolled outputs from less constrained models."
-                },
-                {
-                  goal: "Goal 4 (User vs. AI Bias Perception)",
-                  description: "Unchanged, and successfully carried out through the bias comparison sprint activity. Results revealed that users and AI often differed in bias interpretation—particularly with subtle framing or omissions—which informed our emphasis on explainable bias visualizations."
-                },
-                {
-                  goal: "Goal 5 (Impactful Bias Types)",
-                  description: "This goal remained but was expanded. Based on user feedback, we placed additional emphasis on statement bias and spin bias, which users found most misleading. These were prioritized in our bias indicator designs."
-                },
-                {
-                  goal: "Goal 6 (Engagement and Trust)",
-                  description: "Adjusted slightly. While we originally intended to measure trust quantitatively, we instead collected qualitative indicators through interviews and usability feedback, focusing on trust in AI assessments and clarity of bias explanations."
-                },
-                {
-                  goal: "Goal 7 (Media Literacy)",
-                  description: "Unchanged in scope but expanded in delivery. Due to strong user demand for contextual learning, we added additional micro-lessons and an onboarding tutorial to enhance literacy without overwhelming users."
-                }
-              ].map((item, index) => (
-                <div key={index} className="bg-muted/20 p-4 rounded-lg border border-muted/30">
-                  <h5 className="font-semibold text-primary mb-2">{item.goal}</h5>
-                  <p className="text-sm text-muted-foreground">{item.description}</p>
-                </div>
-              ))}
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="bg-muted/20 p-4 rounded-lg border border-muted/30">
+                <h5 className="font-semibold text-primary mb-2">Reading Habits & Preferences</h5>
+                <p className="text-sm text-muted-foreground">Understand user news consumption patterns and topic preferences, confirming interest in political, social, and environmental news.</p>
+              </div>
+              <div className="bg-muted/20 p-4 rounded-lg border border-muted/30">
+                <h5 className="font-semibold text-primary mb-2">AI Prompt Development</h5>
+                <p className="text-sm text-muted-foreground">Refined scope to iterate on focused prompts for one model (ChatGPT) based on research cautioning against uncontrolled outputs.</p>
+              </div>
+              <div className="bg-muted/20 p-4 rounded-lg border border-muted/30">
+                <h5 className="font-semibold text-primary mb-2">User vs. AI Bias Perception</h5>
+                <p className="text-sm text-muted-foreground">Revealed users and AI often differ in bias interpretation, particularly with subtle framing, informing explainable bias visualizations.</p>
+              </div>
+              <div className="bg-muted/20 p-4 rounded-lg border border-muted/30">
+                <h5 className="font-semibold text-primary mb-2">Media Literacy Enhancement</h5>
+                <p className="text-sm text-muted-foreground">Added micro-lessons and onboarding tutorials to enhance literacy without overwhelming users due to strong demand for contextual learning.</p>
+              </div>
             </div>
           </div>
 
@@ -461,14 +430,14 @@ export default function MediaBiasAICaseStudy() {
       >
         <div className="space-y-8">
           <p className="lead text-xl">
-            Our approach to designing Ana was rooted in a multi-stage, mixed-methods research and design process. We began with broad, qualitative exploration to understand the human problem, then used quantitative methods to validate our insights, followed by systematic AI development subjected to iterative evaluation and user-centered testing.
+            Our multi-stage, mixed-methods approach combined qualitative exploration with quantitative validation, followed by systematic AI development and iterative user testing.
           </p>
           
           {/* Competitive Analysis */}
           <div className="my-12">
             <h3 className="text-2xl font-bold mb-6">Competitive Analysis</h3>
             <p className="mb-6">
-              Our competitive analysis identified three key players in the news bias space, revealing opportunities for differentiation through AI integration and educational features:
+              Analysis of Ground News, AllSides, and TIMINO revealed opportunities for differentiation through AI integration and educational features:
             </p>
             
             <div className="grid md:grid-cols-1 gap-6 my-8">
@@ -560,10 +529,10 @@ export default function MediaBiasAICaseStudy() {
               <h4 className="text-xl font-semibold mb-4">Media Bias Complexity</h4>
               <div className="bg-muted/20 p-6 rounded-lg border border-muted/30">
                 <p className="mb-4">
-                  We learned that the <strong>17 types of media bias</strong>—such as spin, ideology, omission, placement, labeling, and source selection—can be identified by experts but remain largely undetectable by current AI systems, which are still in early stages of development.
+                  We identified <strong>17 types of media bias</strong>—spin, ideology, omission, placement, labeling, source selection—detectable by experts but largely undetectable by current AI systems in early development stages.
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  This gap led us to explore prompt engineering and ways to build trust between humans and AI content.
+                  This gap led us to explore prompt engineering and trust-building between humans and AI content.
                 </p>
               </div>
             </div>
@@ -572,7 +541,7 @@ export default function MediaBiasAICaseStudy() {
             <div className="mb-8">
               <h4 className="text-xl font-semibold mb-4">Building Trustworthy AI</h4>
               <p className="mb-4">
-                Based on research on "Developing trustworthy artificial intelligence," we identified three critical components for AI trust:
+                Research on trustworthy AI identified three critical components for building user trust:
               </p>
               <div className="grid md:grid-cols-3 gap-6">
                 <Card className="bg-gradient-to-br from-green-500/5 to-emerald-500/5 border border-green-500/20">
@@ -630,10 +599,7 @@ export default function MediaBiasAICaseStudy() {
               <div className="mb-6">
                 <h5 className="text-lg font-medium mb-3">User Interviews with Card Sorting</h5>
                 <p className="mb-4">
-                  We conducted nine semi-structured interviews with participants sourced from the DePaul CDM Participant Pool and personal networks, screening for individuals over 18 who were interested in news. The interviews explored political views, perceptions of bias, and news consumption habits, conducted remotely via Zoom with participant consent for recording.
-                </p>
-                <p className="mb-4">
-                  During these sessions, participants completed a card sorting exercise to understand their mental models for organizing news-related concepts like "source credibility," "political bias," and "balance check," which directly informed Ana's information architecture. The card sorting aimed at gathering data for the order of Ana's output, with results analyzed quantitatively to find average placement of each topic. The 9 topics were split into 3 groups: <strong>Core Evaluation</strong>, <strong>Contextual Analysis</strong>, and <strong>Explore More</strong>.
+                  Nine semi-structured interviews explored political views, bias perceptions, and news habits. Participants completed card sorting for concepts like "source credibility" and "political bias," informing Ana's information architecture. Results organized topics into: <strong>Core Evaluation</strong>, <strong>Contextual Analysis</strong>, and <strong>Explore More</strong>.
                 </p>
               </div>
 
@@ -641,7 +607,7 @@ export default function MediaBiasAICaseStudy() {
               <div className="mb-6">
                 <h5 className="text-lg font-medium mb-3">Qualtrics Survey (n=43)</h5>
                 <p className="mb-4">
-                  Simultaneously, we deployed a comprehensive survey on Qualtrics and analyzed results using R. Key insights from our participant pool:
+                  Comprehensive survey analyzed using R revealed key insights from US residents aged 20-34:
                 </p>
                 
                 <div className="grid md:grid-cols-2 gap-6 my-6">
@@ -758,13 +724,10 @@ export default function MediaBiasAICaseStudy() {
               <h4 className="text-xl font-semibold mb-4">The User's Dilemma</h4>
               <div className="bg-gradient-to-br from-orange-500/5 to-red-500/5 border border-orange-500/20 p-6 rounded-lg">
                 <p className="mb-4">
-                  Our interviews revealed engaged yet weary news consumers facing a foundational problem Ana solves. Participants expressed profound frustration with the modern media environment, describing misinformation as a "dangerous virus." Users felt so overwhelmed by "misinformation and exaggeration" that they needed mental health breaks from the news.
-                </p>
-                <p className="mb-4">
-                  This skepticism targets both content and platforms. Users distrust mainstream outlets due to corporate ownership and perform laborious verification rituals: cross-referencing multiple sources, checking comment sections for dissent, and seeking sources with journalistic distance.
+                  Interviews revealed engaged yet weary news consumers describing misinformation as a "dangerous virus." Users felt overwhelmed by "misinformation and exaggeration" requiring mental health breaks from news.
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  AI enters this environment viewed both as a boon and curse—a potential "Socratic method machine" for exploring perspectives, yet shadowed by deep skepticism and fears of adding another opaque layer of bias.
+                  This skepticism extends to both content and platforms. Users perform laborious verification rituals: cross-referencing sources, checking comments for dissent, seeking journalistic distance. AI enters as both potential "Socratic method machine" and feared source of additional bias.
                 </p>
               </div>
             </div>
@@ -811,7 +774,7 @@ export default function MediaBiasAICaseStudy() {
           <div className="my-12">
             <h3 className="text-2xl font-bold mb-6">Creating Custom Research-Based GPT for Ana</h3>
             <p className="mb-6">
-              We developed a rule-based analytical framework to ensure Ana's analysis is transparent and defensible—not the output of an arbitrary "black box." This approach grounds Ana's assessments in information science and media analysis.
+              We developed a rule-based analytical framework ensuring Ana's analysis is transparent and defensible, grounded in information science and media analysis rather than arbitrary "black box" outputs.
             </p>
             
             <div className="grid md:grid-cols-2 gap-6 my-8">
@@ -851,14 +814,14 @@ export default function MediaBiasAICaseStudy() {
           <div className="my-12">
             <h3 className="text-2xl font-bold mb-6">Bias Check Validation & User-AI Perception Gap</h3>
             <p className="mb-6">
-              To validate that Ana was correctly identifying bias without introducing its own bias, we conducted focused testing to examine the user-AI perception gap.
+              To validate Ana's bias detection accuracy without introducing system bias, we examined the user-AI perception gap through focused testing.
             </p>
             
             <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20">
               <CardContent className="p-6">
                 <h5 className="font-semibold mb-4">Media Bias Detection Sprint</h5>
                 <p className="mb-4">
-                  We conducted an in-class "Media Bias Detection Sprint" following a structured protocol. Classmates manually analyzed headlines for specific bias types (e.g., spin, statement bias) and compared their findings to Ana's AI output.
+                  In-class "Media Bias Detection Sprint" had classmates manually analyze headlines for bias types (spin, statement bias) and compare findings to Ana's AI output.
                 </p>
                 
                 <div className="grid md:grid-cols-2 gap-6 mt-6">
@@ -898,14 +861,14 @@ export default function MediaBiasAICaseStudy() {
       >
         <div className="space-y-8">
           <p className="lead text-xl">
-            Our design process moved from low-fidelity concepts to a refined mid-fidelity prototype through a structured, iterative cycle of feedback and testing. This chapter explores how we transformed research insights into a functional, user-centered design.
+            Our design process moved from low-fidelity concepts to refined mid-fidelity prototype through structured, iterative feedback and testing cycles.
           </p>
           
           {/* User Flow Chart */}
           <div className="my-12">
             <h3 className="text-2xl font-bold mb-6">Early Stages & User Flow Mapping</h3>
             <p className="mb-6">
-              To define what we wanted in the MVP of Ana, we created a user flow chart of various tasks and functionality of potential pages. The created flowchart grounded us in our decision making, allowing us to identify the most important aspects to design and test.
+              We created a user flow chart of various tasks and functionality to define Ana's MVP, grounding our decision-making and identifying the most important aspects to design and test.
             </p>
             
             <div className="bg-muted/20 p-8 rounded-lg border border-muted/30 my-8">
@@ -945,11 +908,7 @@ export default function MediaBiasAICaseStudy() {
           <div className="my-12">
             <h3 className="text-2xl font-bold mb-6">Lo-Fi Prototyping</h3>
             <p className="mb-6">
-              Ana's primary function is to provide information regarding articles and their political bias (based on their country of origin). As a team, we kicked off the design with sketches on what various screens would look like. Everyone contributed in the early design stages, allowing us to explore how Ana would function.
-            </p>
-            
-            <p className="mb-8">
-              Teammates proficient in Figma then created wireframes of the sketches, initiating the early design phase of Ana. We began with lo-fi wireframes to map out the basic user flow and information architecture.
+              Ana's primary function is providing article political bias information. We kicked off design with collaborative sketches exploring screen concepts. Figma-proficient teammates then created wireframes, mapping basic user flow and information architecture.
             </p>
             
             {/* Lo-Fi Mockups */}
@@ -1007,7 +966,7 @@ export default function MediaBiasAICaseStudy() {
           <div className="my-12">
             <h3 className="text-2xl font-bold mb-6">Peer Evaluation: RFP Exchange with "Her Team"</h3>
             <p className="mb-6">
-              As a crucial intermediate step, we engaged in a Request for Proposal (RFP) exchange with "Her Team" for an expert cognitive walkthrough of our lo-fi prototype. Their evaluation provided invaluable external validation and critique that informed our design changes.
+              We conducted an RFP exchange with "Her Team" for expert cognitive walkthrough of our lo-fi prototype. Their evaluation provided external validation and critique that informed design changes.
             </p>
             
             <div className="grid md:grid-cols-2 gap-6 my-8">
@@ -1077,11 +1036,7 @@ export default function MediaBiasAICaseStudy() {
           <div className="my-12">
             <h3 className="text-2xl font-bold mb-6">Design Pivot to Mid-Fi</h3>
             <p className="mb-6">
-              One of the biggest hurdles of designing Ana was embracing a design pivot. The team found themselves debating over micro design decisions that could easily be solved using a component library. We selected the iOS component library because of its popularity amongst mobile users.
-            </p>
-            
-            <p className="mb-8">
-              Informed by the peer evaluation done by Her Team, we developed a mid-fidelity prototype in Figma. This version incorporated a standardized iOS component library to resolve the inconsistencies identified in the lo-fi design, creating a more professional and intuitive user interface.
+              A major hurdle was debating micro design decisions easily solved with a component library. We selected iOS components for their mobile popularity, developing a mid-fidelity Figma prototype that resolved lo-fi inconsistencies.
             </p>
             
             {/* Mid-Fi Mockups */}
@@ -1221,7 +1176,7 @@ export default function MediaBiasAICaseStudy() {
             <div className="my-8">
               <h4 className="text-xl font-semibold mb-4">Early Branding</h4>
               <p className="mb-4">
-                While branding for the project had always been listed as low priority, we found an opportunity to use color within the mid-fi prototype to help with hierarchy as well as prototype what the final design could look like.
+                Though low priority, we used color in the mid-fi prototype for hierarchy and to prototype the final design aesthetic.
               </p>
               
               <div className="bg-muted/20 p-6 rounded-lg border border-muted/30">
@@ -1252,15 +1207,124 @@ export default function MediaBiasAICaseStudy() {
             </div>
           </div>
 
+          {/* Bias Slider Scale Evolution */}
+          <div className="my-12">
+            <h3 className="text-2xl font-bold mb-6">Bias Slider Scale: From Research to Design</h3>
+            <p className="mb-6">
+              The bias slider scale emerged from our literature review of Media Bias Fact Check methodology, where political bias was represented on a linear scale. Through iterative design exploration, we evolved from conceptual sketches to a refined interactive component.
+            </p>
+            
+            <p className="mb-8">
+              The design process involved exploring various metaphors—from audio tuners and compass designs to speedometer interfaces—before settling on a clean slider that users could intuitively understand and interact with.
+            </p>
+            
+            {/* Design Evolution Grid */}
+            <div className="space-y-6">
+              <h4 className="text-xl font-semibold mb-4">Design Evolution</h4>
+              
+              {/* First Row - 4 Images in a Row */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                
+                {/* Figma Inspiration */}
+                <div className="space-y-4">
+                  <div className="relative overflow-hidden h-[280px] flex items-center justify-center" style={{ borderRadius: '12px' }}>
+                    <img 
+                      src="/images/ANA/figma-inspiration.png" 
+                      alt="Figma Inspiration for Slider"
+                      className="max-w-full max-h-full object-contain"
+                      style={{ borderRadius: '12px' }}
+                    />
+                  </div>
+                  <div className="text-center">
+                    <p className="text-sm font-medium">Figma Inspiration</p>
+                    <p className="text-xs text-muted-foreground mt-1">Visual representation idea source</p>
+                  </div>
+                </div>
+                
+                {/* Original Bias Scale - Research Foundation */}
+                <div className="space-y-4">
+                  <div className="relative overflow-hidden h-[280px] flex items-center justify-center dark:bg-white" style={{ borderRadius: '12px' }}>
+                    <img 
+                      src="/images/ANA/original-bias-scale.webp" 
+                      alt="Original Bias Scale from Literature"
+                      className="max-w-full max-h-full object-contain"
+                      style={{ borderRadius: '12px' }}
+                    />
+                  </div>
+                  <div className="text-center">
+                    <p className="text-sm font-medium">Literature Foundation</p>
+                    <p className="text-xs text-muted-foreground mt-1">Media Bias Fact Check methodology scale</p>
+                  </div>
+                </div>
+                
+                {/* X-Y Axis Sketch - Exploration */}
+                <div className="space-y-4">
+                  <div className="relative overflow-hidden h-[280px] flex items-center justify-center" style={{ borderRadius: '12px' }}>
+                    <img 
+                      src="/images/ANA/bias-scale-sketch.jpg" 
+                      alt="X-Y Axis Slider Sketch"
+                      className="max-w-full max-h-full object-contain"
+                      style={{ borderRadius: '12px' }}
+                    />
+                  </div>
+                  <div className="text-center">
+                    <p className="text-sm font-medium">X-Y Axis Exploration</p>
+                    <p className="text-xs text-muted-foreground mt-1">Two-dimensional bias mapping concept</p>
+                  </div>
+                </div>
+                
+                {/* Speedometer Sketch - Alternative Concept */}
+                <div className="space-y-4">
+                  <div className="relative overflow-hidden h-[280px] flex items-center justify-center" style={{ borderRadius: '12px', transform: 'rotate(-90deg)' }}>
+                    <img 
+                      src="/images/ANA/speedometer-sketch.jpg" 
+                      alt="Speedometer Design Sketch"
+                      className="max-w-full max-h-full object-contain"
+                      style={{ borderRadius: '12px' }}
+                    />
+                  </div>
+                  <div className="text-center">
+                    <p className="text-sm font-medium">Speedometer Concept</p>
+                    <p className="text-xs text-muted-foreground mt-1">Circular bias indicator exploration</p>
+                  </div>
+                </div>
+                
+              </div>
+              
+              {/* Second Row - Final Design Full Width */}
+              <div className="space-y-4">
+                <div className="relative overflow-hidden" style={{ borderRadius: '12px' }}>
+                  <img 
+                    src="/images/ANA/bias-slider-final.jpg" 
+                    alt="Final Bias Slider Component"
+                    className="w-full h-full object-contain"
+                    style={{ borderRadius: '12px' }}
+                  />
+                </div>
+                <div className="text-center">
+                  <p className="text-lg font-semibold">Final Slider Component</p>
+                  <p className="text-base text-muted-foreground mt-1">Clean, intuitive bias scale interface - primary design solution</p>
+                </div>
+              </div>
+              
+            </div>
+            
+            <div className="bg-blue-500/5 border border-blue-500/20 p-6 rounded-lg mt-8">
+              <p className="text-sm font-medium text-blue-700 dark:text-blue-300">
+                <strong>Design Insight:</strong> The evolution from complex metaphors to a simple slider demonstrated that users preferred familiar interface patterns over novel visualizations when dealing with sensitive political content. The final design prioritized clarity and trustworthiness over visual novelty.
+              </p>
+            </div>
+          </div>
+
           {/* RITE Method */}
           <div className="my-12">
             <h3 className="text-2xl font-bold mb-6">RITE Method: Rapid Iterative Testing & Evaluation</h3>
             <p className="mb-6">
-              We tested the mid-fidelity prototype using the RITE (Rapid Iterative Testing and Evaluation) method. This involved two rounds of usability testing where we made targeted design changes based on participant feedback after each session.
+              We tested the mid-fidelity prototype using RITE (Rapid Iterative Testing and Evaluation) method—two usability testing rounds with targeted design changes after each session.
             </p>
             
             <p className="mb-8">
-              This agile approach allowed us to quickly identify and fix usability issues, ensuring the final prototype was directly responsive to user needs. Working under pressure produced great design decisions and gave us valuable insights.
+              This agile approach quickly identified and fixed usability issues, ensuring the final prototype directly responded to user needs while working under pressure.
             </p>
             
             <div className="grid md:grid-cols-2 gap-8 my-8">
@@ -1369,7 +1433,7 @@ export default function MediaBiasAICaseStudy() {
       >
         <div className="space-y-8">
           <p className="lead text-xl">
-            Ana represents a promising step toward a new generation of news tools built on trust and media literacy. By combining AI's analytical power with a deep commitment to user-centered design, this project provides a framework for empowering users to not just consume news, but to understand it critically.
+            Ana represents a promising step toward news tools built on trust and media literacy, combining AI's analytical power with user-centered design to empower critical news understanding.
           </p>
           
           {/* Project Reflection */}
@@ -1493,7 +1557,7 @@ export default function MediaBiasAICaseStudy() {
           <div className="my-12">
             <h3 className="text-2xl font-bold mb-6">Next Steps</h3>
             <p className="mb-6">
-              Looking forward, the next steps for Ana involve expanding its capabilities and validating its effectiveness with a broader audience. Future work should focus on three key areas:
+              Looking forward, Ana's next steps involve expanding capabilities and validating effectiveness with broader audiences. Future work should focus on three key areas:
             </p>
             
             <div className="space-y-6">
@@ -1506,7 +1570,7 @@ export default function MediaBiasAICaseStudy() {
                     <div className="flex-grow">
                       <h4 className="text-xl font-semibold mb-3">Enhancing AI Explainability</h4>
                       <p className="text-muted-foreground mb-4">
-                        Develop the AI to provide more nuanced explanations for its bias ratings, particularly for complex cases like the subject/perspective confusion we observed. This includes:
+                        Develop AI to provide more nuanced explanations for bias ratings, particularly for complex cases like subject/perspective confusion. This includes:
                       </p>
                       <ul className="space-y-2 text-sm">
                         <li className="flex items-center gap-2">
@@ -1536,7 +1600,7 @@ export default function MediaBiasAICaseStudy() {
                     <div className="flex-grow">
                       <h4 className="text-xl font-semibold mb-3">Broader Demographic Testing</h4>
                       <p className="text-muted-foreground mb-4">
-                        Conduct studies with a more politically and demographically diverse user base to ensure Ana is effective for all users. This expansion should include:
+                        Conduct studies with more politically and demographically diverse users to ensure Ana's effectiveness for all users. This expansion should include:
                       </p>
                       <ul className="space-y-2 text-sm">
                         <li className="flex items-center gap-2">
@@ -1593,10 +1657,10 @@ export default function MediaBiasAICaseStudy() {
           <div className="bg-gradient-to-br from-primary/10 to-secondary/5 p-8 rounded-lg border border-primary/20 my-8">
             <h3 className="text-2xl font-bold mb-4">Final Reflection</h3>
             <p className="text-lg leading-relaxed mb-4">
-              Ana is more than just a tool for detecting bias—it's an educational platform that helps users develop a critical lens for all media consumption. In today's fragmented information landscape, we need technologies that don't just tell us what to think, but help us think better for ourselves.
+              Ana is more than a bias detection tool—it's an educational platform helping users develop critical thinking for all media consumption. In today's fragmented information landscape, we need technologies that help us think better, not just tell us what to think.
             </p>
             <p className="text-lg leading-relaxed">
-              This project demonstrates that combining rigorous user research with thoughtful AI development can create solutions that address real user needs while building the media literacy skills our society desperately needs. The future of news consumption isn't about perfect AI—it's about empowering humans to be better critical thinkers.
+              This project demonstrates that combining rigorous user research with thoughtful AI development can create solutions addressing real user needs while building essential media literacy skills.
             </p>
             <p className="mt-4 text-right text-muted-foreground font-medium">— The Fantastic Four Team</p>
           </div>

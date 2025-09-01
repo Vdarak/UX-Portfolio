@@ -604,7 +604,7 @@ export default function BackmarketIARedesign() {
       <ProjectPageWrapper sections={sections}>
         <ProjectHero
           title="BackMarket IA Redesign"
-          subtitle="A deep dive into restructuring the information architecture of a leading refurbished electronics marketplace to enhance usability and content clarity."
+          subtitle="Restructuring navigation for a leading refurbished electronics marketplace to enhance usability and content clarity."
           storyHook="How can we untangle a complex navigation system to help users find what they need, faster?"
           heroImage="/images/backmarket-dark.png?height=600&width=1200"
           role="UX Researcher & IA Specialist"
@@ -615,7 +615,7 @@ export default function BackmarketIARedesign() {
           id="overview"
           chapter="01"
           storyTitle="The Challenge: A Tangled Web"
-          narrativeHook="BackMarket's mission to promote tech reuse was being hindered by a confusing user experience. The goal was clear: redesign the site's navigation to be intuitive and clear."
+          narrativeHook="BackMarket's mission to promote tech reuse was hindered by confusing navigation. Goal: redesign for intuitive, clear user experience."
         >
           <div className="grid md:grid-cols-1 gap-8 items-center">
             <div>
@@ -639,25 +639,25 @@ export default function BackmarketIARedesign() {
           id="research"
           chapter="02"
           storyTitle="Understanding the User Journey"
-          narrativeHook="To fix the navigation, we first had to understand how users were getting lost. This involved a deep dive into the existing content and a series of usability tests."
+          narrativeHook="To fix the navigation, we needed to understand how users were getting lost. Deep dive into content and usability testing revealed key insights."
         >
           <div className="space-y-12">
             <div>
               <h3 className="font-bold text-2xl mb-4">Content Inventory & Audit</h3>
               <p className="mb-4">
-                The process began with a thorough content inventory. We started with 60 subheaders and, by eliminating redundancy and grouping similar topics, reduced them to 45. A navigation audit of all three navbars revealed significant overlap and inconsistency.
+                Started with thorough content inventory. Reduced 60 subheaders to 45 by eliminating redundancy and grouping similar topics. Navigation audit revealed significant overlap and inconsistency across three navbars.
               </p>
               <div className="grid md:grid-cols-2 gap-8">
                   <InsightCard 
                       type="discovery"
                       title="Initial Findings"
-                      story="The audit revealed redundant or misclassified headers and confusing pathways between similar pages (e.g., 'Laptops' appearing in multiple places)."
+                      story="Audit revealed redundant headers and confusing pathways (e.g., 'Laptops' appearing in multiple places)."
                       icon={<FileText />}
                   />
                   <InsightCard
                       type="challenge"
                       title="The Core Problem"
-                      story="The hybrid navigation lacked a consistent logic, making it difficult for users to form a mental model of the site's structure."
+                      story="Hybrid navigation lacked consistent logic, making it difficult for users to form a mental model of site structure."
                       icon={<Lightbulb />}
                   />
               </div>
@@ -666,13 +666,13 @@ export default function BackmarketIARedesign() {
             <div>
               <h3 className="font-bold text-2xl mb-4">Usability Testing</h3>
               <p className="mb-4">
-                A multi-faceted approach to testing was used to identify pain points and validate our design decisions. This included card sorting, treejack testing, and first-click testing.
+                Multi-faceted testing approach identified pain points and validated design decisions. Included card sorting, treejack testing, and first-click testing.
               </p>
               <div className="grid md:grid-cols-3 gap-8">
                   <InsightCard 
                       type="solution"
                       title="Card Sorting"
-                      story="An open card sort with 27 items helped us understand users' mental models for grouping content. 18/27 cards were sorted as expected."
+                      story="Open card sort with 27 items revealed users' mental models for content grouping. 18/27 cards sorted as expected."
                       icon={<Users />}
                   />
                   <InsightCard
@@ -696,12 +696,12 @@ export default function BackmarketIARedesign() {
           id="design"
           chapter="03"
           storyTitle="Crafting a Coherent Structure"
-          narrativeHook="Armed with research insights, we designed a new, streamlined information architecture and created wireframes to bring it to life."
+          narrativeHook="Research insights informed a new, streamlined information architecture with wireframes to bring it to life."
         >
             <div className="space-y-8">
               <div>
                   <h3 className="font-bold text-2xl mb-4">The New Sitemap</h3>
-                  <p className="mb-4">The new sitemap uses a hybrid organization strategy: topical for main categories, alphabetical for brands, and chronological for product versions. The 'More' category was eliminated, and its content was redistributed. This reduced the header count from 9 to 9, but subheaders from 60 to 45.</p>
+                  <p className="mb-4">New sitemap uses hybrid organization: topical for main categories, alphabetical for brands, chronological for product versions. Eliminated 'More' category and redistributed content. Reduced subheaders from 60 to 45.</p>
                   <div className="grid md:grid-cols-2 gap-8 items-start">
                     <div>
                       <h4 className="text-xl font-semibold text-center mb-4">Before</h4>
@@ -716,7 +716,7 @@ export default function BackmarketIARedesign() {
               <div className="my-12">
                   <h3 className="text-2xl font-bold mb-6">Mid-Fi Wireframes</h3>
                   <p className="mb-6">
-                    We developed comprehensive mid-fidelity wireframes to model two key user journeys: purchasing a refurbished device and trading in a device for payment. These wireframes served as the foundation for our redesigned information architecture and user experience improvements.
+                    Mid-fidelity wireframes model two key user journeys: purchasing refurbished devices and trading in devices for payment. Foundation for redesigned IA and UX improvements.
                   </p>
                   
                   {/* Refurbished Device Purchase Flow */}
@@ -724,7 +724,7 @@ export default function BackmarketIARedesign() {
                     <div className="mb-8">
                       <h4 className="text-xl font-semibold mb-4">Refurbished Device Purchase Flow</h4>
                       <p className="text-muted-foreground mb-6">
-                        Complete journey from browsing to order completion for purchasing a refurbished device.
+                        Browsing to order completion for purchasing refurbished devices.
                       </p>
                     </div>
                     
@@ -864,7 +864,7 @@ export default function BackmarketIARedesign() {
                     <div className="mb-8">
                       <h4 className="text-xl font-semibold mb-4">Trade-in Flow</h4>
                       <p className="text-muted-foreground mb-6">
-                        Complete journey for users trading in their devices to receive payment.
+                        Trading in devices to receive payment.
                       </p>
                     </div>
                     
@@ -1022,7 +1022,7 @@ export default function BackmarketIARedesign() {
           id="reflection"
           chapter="04"
           storyTitle="Reflection & Next Steps"
-          narrativeHook="The project was a success, but there's always room for improvement. Here are the key takeaways and future considerations."
+          narrativeHook="Project success with room for improvement. Key takeaways and future considerations."
         >
           <div className="grid md:grid-cols-2 gap-8">
               <div>
@@ -1046,7 +1046,7 @@ export default function BackmarketIARedesign() {
           {/* Add extra spacing between Next Steps and the quote */}
           <div className="h-8 md:h-12" />
           <UserQuote 
-              quote="This project was a powerful reminder that even the most well-intentioned features can fail if they aren't built on a solid foundation of clear information architecture."
+              quote="Well-intentioned features fail without solid information architecture foundations."
               author="Vedant Darak"
               role="Project Lead"
           />
@@ -1059,7 +1059,7 @@ export default function BackmarketIARedesign() {
                     Like my work? <FlowingText text={"Explore"} className="inline" /> more!
                   </h2>
                   <p className="text-lg text-muted-foreground">
-                    Discover more UX design projects that showcase my approach to solving complex problems through research-driven design.
+                    More UX projects showcasing research-driven design approaches to complex problems.
                   </p>
                   <div className="flex flex-wrap justify-center gap-4 pt-8">
                     <Link href="/projects/understanding-creative-block">

@@ -33,8 +33,8 @@ export default function CreativeBlockCaseStudy() {
       {
         phase: "Problem Definition",
         title: "The Invisible Struggle",
-        story: "Creative block affects millions of designers, artists, and writers daily, yet there's no dedicated technology solution addressing this universal challenge. Our team set out to understand not just what creative block looks like, but what it really means for the people experiencing it.",
-        insight: "Creative block isn't just about running out of ideas—it's about confidence, environment, process, and the complex relationship between creativity and mental well-being.",
+        story: "Creative block affects millions daily, yet no dedicated technology solution addresses this universal challenge. We set out to understand what creative block really means for those experiencing it.",
+        insight: "Creative block isn't just about lacking ideas—it's about confidence, environment, process, and the complex relationship between creativity and mental well-being.",
         visual: "/placeholder.svg?height=400&width=600",
         metrics: [
           { label: "Research Problem", value: "Defined" },
@@ -55,8 +55,8 @@ export default function CreativeBlockCaseStudy() {
       {
         phase: "Mixed Methods Research",
         title: "Observing Real Creative Struggles",
-        story: "We conducted 8 scenario-based observational studies over Zoom, watching how creative individuals naturally respond when they hit a wall. What we saw challenged our assumptions about 'creative process' and revealed the deeply personal strategies people develop to navigate their blocks.",
-        insight: "People don't just sit and wait for inspiration—they have sophisticated, personal systems for managing creative challenges. The key is understanding these individual approaches.",
+        story: "We conducted 8 scenario-based observational studies over Zoom, watching creative individuals naturally respond when hitting blocks. This challenged our assumptions about 'creative process' and revealed deeply personal coping strategies.",
+        insight: "People don't wait for inspiration—they have sophisticated, personal systems for managing creative challenges. Understanding these individual approaches is key.",
         visual: "/placeholder.svg?height=400&width=600",
         metrics: [
           { label: "Observational Studies", value: "8" },
@@ -81,8 +81,8 @@ export default function CreativeBlockCaseStudy() {
       {
         phase: "Data Analysis",
         title: "Patterns in the Chaos",
-        story: "Through affinity diagramming and sequential task analysis, five key themes emerged. The most surprising discovery? Digital vs. physical tool preferences weren't just about convenience—they reflected fundamentally different relationships with creativity itself.",
-        insight: "The tools that work for one creative person can be completely ineffective for another. Any solution needs to embrace this diversity rather than impose a one-size-fits-all approach.",
+        story: "Through affinity diagramming and sequential task analysis, five key themes emerged. Most surprising? Digital vs. physical tool preferences reflected fundamentally different relationships with creativity itself.",
+        insight: "Tools that work for one creative person can be completely ineffective for another. Solutions must embrace this diversity rather than impose one-size-fits-all approaches.",
         visual: "/placeholder.svg?height=400&width=600",
         metrics: [
           { label: "Key Insights", value: "5" },
@@ -107,7 +107,7 @@ export default function CreativeBlockCaseStudy() {
       {
         phase: "Synthesis & Design Implications",
         title: "From Research to Solutions",
-        story: "Our priority matrix revealed that inspiration during ideation had high impact but medium feasibility, while routine development offered high feasibility with medium impact. This guided our recommendations for a technology solution that could realistically help creators.",
+        story: "Our priority matrix revealed inspiration during ideation had high impact but medium feasibility, while routine development offered high feasibility with medium impact. This guided recommendations for realistic technology solutions.",
         insight: "The most effective creative block solutions aren't about generating ideas—they're about creating the right conditions for creativity to flourish naturally.",
         visual: "/placeholder.svg?height=400&width=600",
         metrics: [
@@ -154,9 +154,7 @@ export default function CreativeBlockCaseStudy() {
           <div className="space-y-6">
             <h3 className="text-2xl font-bold">The Problem</h3>
             <p className="text-lg leading-relaxed">
-              Creative block, as defined by the Interaction Design Foundation, is a period of limited creativity and productivity. 
-              Creative specialists and hobbyists need additional skills to navigate various thoughts and ideas throughout their 
-              creative block. Even some of the most famous artists encounter lulls of inspiration.
+              Creative block, as defined by the Interaction Design Foundation, is a period of limited creativity and productivity. Creative specialists and hobbyists need additional skills to navigate various thoughts and ideas throughout their creative block. Even famous artists encounter lulls of inspiration.
             </p>
             
             <div className="bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-950/20 dark:to-blue-950/20 rounded-xl p-8 border border-purple-200 dark:border-purple-800">
@@ -168,10 +166,7 @@ export default function CreativeBlockCaseStudy() {
             </div>
             
             <p className="text-lg leading-relaxed">
-              Although a failure to produce content may be seen as a block to success, it can be necessary in creative projects. 
-              Most designers and artists naturally experience highs and lows throughout their careers and life. However, little 
-              research exists on effective solutions to overcoming creative blocks. In a world inundated with content, creatives 
-              may benefit from reliable technology tools to support their creativity and ingenuity.
+              Although creative blocks may seem like barriers to success, they can be necessary in creative projects. Most designers and artists naturally experience highs and lows throughout their careers. However, little research exists on effective solutions. In a content-saturated world, creatives may benefit from reliable technology tools to support their creativity and ingenuity.
             </p>
           </div>
 
@@ -179,8 +174,7 @@ export default function CreativeBlockCaseStudy() {
           <div className="space-y-6">
             <h3 className="text-2xl font-bold">Existing Solutions</h3>
             <p className="text-lg leading-relaxed">
-              In the current market, few technological tools exist to help artists and designers curb creative block. 
-              Furthermore, existing tools are not exclusively designed for creative blocks.
+              In the current market, few technological tools exist to help artists and designers curb creative block. Furthermore, existing tools are not exclusively designed for creative blocks.
             </p>
             
             <StaggerContainer className="grid gap-6 md:grid-cols-2 mt-8 items-stretch">
@@ -207,15 +201,11 @@ export default function CreativeBlockCaseStudy() {
           <div className="space-y-6">
             <h3 className="text-2xl font-bold">Our Approach</h3>
             <p className="text-lg leading-relaxed">
-              Our study investigates the current pathways of artists and designers during their creative block to understand 
-              their motivations and mental models. We aim to explore user needs in a technology-based solution that helps 
-              artists, designers, and hobbyists address creative blocks.
+              Our study investigates current pathways of artists and designers during creative block to understand their motivations and mental models. We explore user needs in a technology-based solution that helps artists, designers, and hobbyists address creative blocks.
             </p>
       
             <p className="text-lg leading-relaxed">
-              Our team began with a scenario-based observation of creative block and then conducted interviews for further 
-              investigation of user needs. In this report, we discuss our methods, findings, and design implications for 
-              a technology-based solution.
+              We began with scenario-based observation of creative block, then conducted interviews for further investigation. This report discusses our methods, findings, and design implications for a technology-based solution.
             </p>
           </div>
         </div>
@@ -245,8 +235,7 @@ export default function CreativeBlockCaseStudy() {
                   <h4 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 break-words">Participants</h4>
                   <div className="bg-blue-50 dark:bg-blue-950/20 rounded-lg p-3 sm:p-4 overflow-hidden">
                     <p className="text-sm leading-relaxed break-words overflow-wrap-anywhere">
-                      Our team recruited 8 participants between the ages of 22 to 57. We used the CDM participant pool, 
-                      friends, and family to recruit individuals with previous experiences with creative block.
+                      We recruited 8 participants (ages 22-57) using the CDM participant pool, friends, and family—individuals with previous creative block experiences.
                     </p>
                   </div>
                 </div>
@@ -267,25 +256,20 @@ export default function CreativeBlockCaseStudy() {
 
             <div className="bg-background rounded-xl p-4 sm:p-6 lg:p-8 border overflow-hidden">
               <h4 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 break-words">What We Actually Did</h4>
-              <div className="space-y-3 sm:space-y-4 text-sm leading-relaxed overflow-hidden">
+              <div className="space-y-3 sm:space-y-4 text-md leading-relaxed overflow-hidden">
                 <p className="break-words overflow-wrap-anywhere">
-                  After we received verbal consent, we asked participants to share their individual experiences with being creative. 
-                  Then, our team presented a general project scenario with a period of creative block. We tasked participants with 
-                  showing us their process to overcome this creative block via the Zoom screen-sharing feature.
+                  After receiving verbal consent, we asked participants to share their creative experiences. We then presented a general project scenario with creative block and tasked participants with showing their process to overcome this block via Zoom screen-sharing.
                 </p>
                 <p className="break-words overflow-wrap-anywhere">
-                  Toward the second half of the session, our team asked participants follow-up questions about their experience 
-                  with the scenario and in-depth questions about their feelings, previous experiences, and other strategies with 
-                  creative block. We concluded the session with demographic questions. The observation study lasted approximately 30 minutes.
+                  In the second half, we asked follow-up questions about their experience with the scenario and in-depth questions about feelings, previous experiences, and other creative block strategies. We concluded with demographic questions. Sessions lasted approximately 30 minutes.
                 </p>
               </div>
             </div>
 
             <div className="space-y-3 sm:space-y-4 overflow-hidden">
               <h4 className="text-lg sm:text-xl font-bold break-words">Data Analysis Method</h4>
-              <p className="text-sm leading-relaxed mb-4 sm:mb-6 break-words overflow-wrap-anywhere">
-                Our team organized our findings through affinity diagramming and created a sequential task analysis 
-                for visualizing themes and relationships amongst identified variables.
+              <p className="text-md leading-relaxed mb-4 sm:mb-6 break-words overflow-wrap-anywhere">
+                We organized findings through affinity diagramming and created sequential task analysis for visualizing themes and relationships among identified variables.
               </p>
               
               {/* Affinity Diagram Placeholder */}
@@ -311,8 +295,7 @@ export default function CreativeBlockCaseStudy() {
                   <h4 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 break-words">Participants</h4>
                   <div className="bg-green-50 dark:bg-green-950/20 rounded-lg p-3 sm:p-4 overflow-hidden">
                     <p className="text-sm leading-relaxed break-words overflow-wrap-anywhere">
-                      Our team recruited 8 participants between the ages of 24 to 32. We used the CDM participant pool 
-                      and friends to recruit individuals with previous creative block experiences.
+                      We recruited 8 participants (ages 24-32) using the CDM participant pool and friends—individuals with previous creative block experiences.
                     </p>
                   </div>
                 </div>
@@ -333,29 +316,20 @@ export default function CreativeBlockCaseStudy() {
 
             <div className="bg-background rounded-xl p-4 sm:p-6 lg:p-8 border">
               <h4 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">What We Actually Did</h4>
-              <div className="space-y-3 sm:space-y-4 text-sm leading-relaxed">
+              <div className="space-y-3 sm:space-y-4 text-md leading-relaxed">
                 <p>
-                  First, we received verbal consent. Our team asked participants questions about their creative experience 
-                  with a recent project, activities for work and hobbies, and sources of inspiration. We then asked participants 
-                  about their preparation before a creative task, the digital or physical tools used, methods of relaxation, 
-                  and their personal creative block experience.
+                  First, we received verbal consent. We asked participants about their creative experience with recent projects, work and hobby activities, and inspiration sources. We then explored their preparation before creative tasks, digital or physical tools used, relaxation methods, and personal creative block experiences.
                 </p>
                 <p>
-                  We concluded the interviews by asking participants to describe potential features of a technology-based 
-                  solution for overcoming creative block. Our team collected demographic information at the end of the session, 
-                  which included the following: gender identity, age, occupation, highest level of education and field of study, 
-                  and years of creative experience. Each interview lasted approximately 45 minutes.
+                  We concluded by asking participants to describe potential features of a technology-based solution for overcoming creative block. Demographic information was collected at the end: gender identity, age, occupation, education level and field, and years of creative experience. Each interview lasted approximately 45 minutes.
                 </p>
               </div>
             </div>
 
             <div className="space-y-4 sm:space-y-6">
               <h4 className="text-lg sm:text-xl font-bold">Data Analysis Method</h4>
-              <p className="text-sm leading-relaxed mb-4 sm:mb-6">
-                Each team member applied descriptive codes to their individual interview scripts using Atlas.ti. Together, 
-                our team met to combine the findings into an affinity diagram. We created a codebook to apply unified codes 
-                for our interview data. Our team created a persona spectrum, personas, scenarios, experience map, and priority 
-                matrix from these findings.
+              <p className="text-md leading-relaxed mb-4 sm:mb-6">
+                Each team member applied descriptive codes to interview scripts using Atlas.ti. We combined findings into an affinity diagram and created a codebook for unified coding. From these findings, we created a persona spectrum, personas, scenarios, experience map, and priority matrix.
               </p>
               
               {/* Interview Affinity Diagram */}
@@ -418,9 +392,7 @@ export default function CreativeBlockCaseStudy() {
       >
         <div className="grid gap-8">
           <p className="text-lg leading-relaxed">
-            Through affinity diagramming and thematic analysis, five key insights emerged that would shape our 
-            design recommendations. Each insight revealed not just what people do when blocked, but why their 
-            current strategies work or fail.
+            Through affinity diagramming and thematic analysis, five key insights emerged that would shape our design recommendations. Each insight revealed not just what people do when blocked, but why their current strategies work or fail.
           </p>
 
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6" staggerDelay={0.1}>
@@ -447,8 +419,7 @@ export default function CreativeBlockCaseStudy() {
                     {/* Description */}
                     <div className="flex-grow mb-2 sm:mb-3">
                       <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                        Participants actively prepared their environment and created routines to mitigate creative blocks. 
-                        Physical space decluttering and organizing essential tools were critical initial steps.
+                        Participants actively prepared their environment and created routines to mitigate creative blocks. Physical space decluttering and organizing essential tools were critical initial steps.
                       </p>
                     </div>
                     
@@ -487,8 +458,7 @@ export default function CreativeBlockCaseStudy() {
                     {/* Description */}
                     <div className="flex-grow mb-2 sm:mb-3">
                       <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                        Digital creators emphasized reliability and convenience of digital platforms, while physical artists 
-                        preferred tangible, organic experiences. Tool effectiveness varied by personal preferences and project type.
+                        Digital creators emphasized reliability and convenience of digital platforms, while physical artists preferred tangible, organic experiences. Tool effectiveness varied by personal preferences and project type.
                       </p>
                     </div>
                     
@@ -527,8 +497,7 @@ export default function CreativeBlockCaseStudy() {
                     {/* Description */}
                     <div className="flex-grow mb-2 sm:mb-3">
                       <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                        Breaks and relaxation techniques (meditation, walking, nature) were crucial for mental resets. 
-                        However, participants struggled with guilt and shame during blocks.
+                        Breaks and relaxation techniques (meditation, walking, nature) were crucial for mental resets. However, participants struggled with guilt and shame during blocks.
                       </p>
                     </div>
                     
@@ -567,8 +536,7 @@ export default function CreativeBlockCaseStudy() {
                     {/* Description */}
                     <div className="flex-grow mb-2 sm:mb-3">
                       <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                        Participants desired solutions that offer new perspectives, alleviate personal biases, and encourage 
-                        alternative thinking patterns. Confidence often dropped significantly during blocks.
+                        Participants desired solutions that offer new perspectives, alleviate personal biases, and encourage alternative thinking patterns. Confidence often dropped significantly during blocks.
                       </p>
                     </div>
                     
@@ -607,8 +575,7 @@ export default function CreativeBlockCaseStudy() {
                     {/* Description */}
                     <div className="flex-grow mb-2 sm:mb-3">
                       <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                        Inspiration sources ranged widely—friends, digital tools, nature, AI, spirituality. 
-                        The key was that inspiration needed to be personally meaningful and trusted.
+                        Inspiration sources ranged widely—friends, digital tools, nature, AI, spirituality. The key was that inspiration needed to be personally meaningful and trusted.
                       </p>
                     </div>
                     
@@ -637,9 +604,7 @@ export default function CreativeBlockCaseStudy() {
       >
         <div className="grid gap-8">
           <p className="text-lg leading-relaxed">
-            Rather than trying to eliminate creative block (which may be impossible and even counterproductive), 
-            our research suggests designing tools that support creators through the natural ebb and flow of 
-            creative work. Here's what that looks like.
+            Rather than trying to eliminate creative block (which may be impossible and counterproductive), our research suggests designing tools that support creators through the natural ebb and flow of creative work. Here's what that looks like.
           </p>
                     <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 items-stretch">
             <InsightCard
@@ -674,9 +639,7 @@ export default function CreativeBlockCaseStudy() {
       >
         <div className="grid gap-8">
           <p className="text-lg leading-relaxed">
-            Our study provided a foundation for understanding creative block, but it also revealed the need for 
-            broader research and prototype testing. The implications extend beyond individual tools to how we 
-            design technology that supports human creativity.
+            Our study provided a foundation for understanding creative block, but also revealed the need for broader research and prototype testing. The implications extend beyond individual tools to how we design technology that supports human creativity.
           </p>
 
           <div className="grid gap-6 md:grid-cols-2 items-stretch">
