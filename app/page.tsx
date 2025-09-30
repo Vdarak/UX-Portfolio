@@ -9,6 +9,7 @@ import { Download, ArrowRight, Briefcase, Mail } from "lucide-react"
 import { FadeIn, StaggerContainer, StaggerItem, Parallax } from "@/components/scroll-animations"
 import RefinedProjectCard from "@/components/refined-project-card"
 import Image from "next/image"
+import Link from "next/link"
 import { useMousePosition } from "@/hooks/use-mouse-position"
 import { useRef } from "react"
 import { motion } from "framer-motion"
@@ -37,7 +38,7 @@ export default function Home() {
               </FadeIn>
               <FadeIn direction="right" delay={0.4}>
                 <h2 className="heading-lg text-4xl tracking-tight md:text-6xl">
-                <FlowingText text="Design" className="inline" /> Engineer 
+                <FlowingText text="Design" className="inline" /> Engineer
                 </h2>
               </FadeIn>
               <FadeIn direction="right" delay={0.4}>
@@ -216,29 +217,25 @@ export default function Home() {
               <div className="space-y-6 px-2">
                 <h2 className="text-3xl font-medium tracking-tight md:text-4xl">About Me</h2>
                 <p className="text-xl text-neutral-600 dark:text-neutral-300">
-                  I'm a UX designer and researcher with expertise in Human-Computer Interaction, specializing in 
-                  AI-driven design solutions and data-informed user experiences.
+                  UX engineer with an HCI background bridging design systems and front-end engineering. I translate Figma signatures into resilient React/TypeScript systems while keeping accessibility and performance guardrails in place.
+                </p>
+                <p className="text-xl text-neutral-600 dark:text-neutral-300">
+                  Currently, I'm shaping adaptive workflows as a Design Engineering Intern at Cognijin—building AI-first knowledge tools, pairing closely with researchers, AI engineers, and shipping reusable components that scale from prototypes to production.
                 </p>
                 <StaggerContainer className="space-y-4" staggerDelay={0.1}>
                   <StaggerItem>
                     <p className="text-neutral-600 dark:text-neutral-400">
-                      <strong>Research & Analysis:</strong> I excel in user research methodologies including A/B testing, 
-                      usability testing, journey mapping, and persona development. My work spans quantitative analysis 
-                      using R and Qualtrics, and qualitative insights through user interviews and affinity mapping.
+                      <strong>Design Engineering Craft:</strong> I architect component systems, translate design tokens into React and Next.js, and prototype interactions with TypeScript, Tailwind, and Framer Motion to validate intent before we commit to scale.
                     </p>
                   </StaggerItem>
                   <StaggerItem>
                     <p className="text-neutral-600 dark:text-neutral-400">
-                      <strong>AI & Technology Integration:</strong> I bridge design and technology through Agentic AI 
-                      implementations, front-end development with React and Next.js, and creating interactive prototypes 
-                      that solve complex problems like media bias detection and job search optimization.
+                      <strong>Evidence-Led Systems:</strong> I run mixed-method studies, instrument prototypes, and synthesize telemetry with qualitative insight to steer roadmaps and keep releases accountable to user value.
                     </p>
                   </StaggerItem>
                   <StaggerItem>
                     <p className="text-neutral-600 dark:text-neutral-400">
-                      <strong>Design Systems & Strategy:</strong> From wireframing in Figma to implementing design systems, 
-                      I create cohesive experiences that improve task completion rates by up to 35% and user satisfaction 
-                      by 40% through strategic information architecture and rapid prototyping.
+                      <strong>AI-Enabled Experiences:</strong> I collaborate with ML teams to choreograph agentic workflows, craft explainable UI patterns, and deliver resilient design ops that keep human judgment in the loop.
                     </p>
                   </StaggerItem>
                 </StaggerContainer>
@@ -246,20 +243,12 @@ export default function Home() {
                   <div className="flex gap-3">
                     <RefinedButton intensity={0.2} size="md" asChild>
                       <a 
-                        href="/Vedant.docx" 
+                        href="/Resume_Vedant.docx" 
                         download="Vedant-Resume"
                         className="flex items-center group"
                       >
                         <Download className="w-4 h-4 mr-2 transition-transform duration-300 ease-out group-hover:scale-110" />
                         Download Resume
-                      </a>
-                    </RefinedButton>
-                    <RefinedButton variant="outline" intensity={0.2} size="md" asChild>
-                      <a
-                        href="/poetry"
-                        className="flex items-center group"
-                      >
-                        View Poetry
                       </a>
                     </RefinedButton>
                   </div>
@@ -268,7 +257,7 @@ export default function Home() {
                   <div className="mt-8 pt-6 border-t border-neutral-200 dark:border-neutral-700">
                     <p className="text-neutral-600 dark:text-neutral-400">
                       <strong>Beyond Design:</strong> When I'm not crafting user experiences, you'll find me playing badminton, 
-                      exploring nature's adventures, writing poetry, or analyzing the stock market. These hobbies keep me grounded 
+                      exploring nature's adventures, writing <Link href="/poetry" className="underline underline-offset-4 decoration-neutral-400 hover:decoration-primary">poetry</Link>, or analyzing the stock market. These hobbies keep me grounded 
                       and often inspire fresh perspectives in my design work.
                     </p>
                   </div>
