@@ -37,7 +37,7 @@ export default function Home() {
               </FadeIn>
               <FadeIn direction="right" delay={0.4}>
                 <h2 className="heading-lg text-4xl tracking-tight md:text-6xl">
-                <FlowingText text="Thoughtful" className="inline" /> UX Designer
+                <FlowingText text="Design" className="inline" /> Engineer 
                 </h2>
               </FadeIn>
               <FadeIn direction="right" delay={0.4}>
