@@ -78,7 +78,7 @@ export function PortfolioChat() {
                 <div className="w-3 h-3 bg-green-500 rounded-full" />
                 <div>
                   <h3 className="font-semibold text-sm">LLME - Vedant's AI</h3>
-                  <p className="text-xs text-muted-foreground">Always here to help</p>
+                  <p className="text-xs text-muted-foreground">Ask me anything</p>
                 </div>
               </div>
               <div className="flex gap-2">
