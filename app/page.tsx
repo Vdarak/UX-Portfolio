@@ -243,7 +243,7 @@ export default function Home() {
                   <div className="flex gap-3">
                     <RefinedButton intensity={0.2} size="md" asChild>
                       <a 
-                        href="/Resume_Vedant.pdf" 
+                        href="/Resume_Vedant.docx" 
                         download="Vedant-Resume"
                         className="flex items-center group"
                       >

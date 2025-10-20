@@ -5,6 +5,7 @@ import "./globals.css"
 import CustomCursor from "@/components/custom-cursor"
 import { SiteHeader } from "@/components/site-header"
 import { ThemeProvider } from "@/components/theme-provider"
+import { PortfolioChat } from "@/components/portfolio-chat"
 import { Analytics } from '@vercel/analytics/react'
 
 // Configure Proxima Nova alternative fonts
@@ -53,6 +54,7 @@ export default function RootLayout({
           <div className="relative min-h-screen bg-background">
             <SiteHeader />
             <main className="flex-1">{children}</main>
+            <PortfolioChat />
           </div>
           <CustomCursor />
           <Analytics />
