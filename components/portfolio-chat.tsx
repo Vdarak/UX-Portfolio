@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useRef, useEffect } from "react"
+import { useTheme } from "next-themes"
 import { useChat } from "@/hooks/use-chat"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -12,6 +13,7 @@ export function PortfolioChat() {
   const [isOpen, setIsOpen] = useState(false)
   const [isMinimized, setIsMinimized] = useState(false)
   const messagesEndRef = useRef<HTMLDivElement>(null)
+  const { theme } = useTheme()
 
   const { messages, input, handleInputChange, handleSubmit, isLoading } = useChat({
     api: "/api/chat",
@@ -149,21 +151,24 @@ export function PortfolioChat() {
                       animate={{ opacity: 1 }}
                       className="flex gap-2"
                     >
-                      <div className="bg-secondary rounded-2xl px-4 py-2">
-                        <div className="flex gap-1">
-                          {[0, 1, 2].map((i) => (
-                            <motion.div
-                              key={i}
-                              animate={{ y: [0, -8, 0] }}
-                              transition={{
-                                duration: 0.6,
-                                delay: i * 0.1,
-                                repeat: Infinity,
-                              }}
-                              className="w-2 h-2 bg-muted-foreground rounded-full"
-                            />
-                          ))}
-                        </div>
+                      <div className="bg-secondary rounded-2xl px-4 py-2 flex items-center justify-center">
+                        <motion.div
+                          animate={{
+                            rotate: 360,
+                            opacity: [0.5, 1, 0.5],
+                          }}
+                          transition={{
+                            duration: 2,
+                            repeat: Infinity,
+                            ease: "linear",
+                          }}
+                        >
+                          <img
+                            src={theme === "dark" ? "/compass.svg" : "/compass-dark.svg"}
+                            alt="Loading..."
+                            className="w-8 h-8"
+                          />
+                        </motion.div>
                       </div>
                     </motion.div>
                   )}
