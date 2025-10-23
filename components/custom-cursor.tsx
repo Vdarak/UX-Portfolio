@@ -126,7 +126,7 @@ export default function CustomCursor() {
             animate={{
               scale: 1,
               opacity: 1,
-              x: -16, // Center the cursor (adjusted for new size)
+              x: -32, // Center the cursor (adjusted for wider element with text)
               y: -16,
             }}
             exit={{ scale: 0, opacity: 0 }}
@@ -137,13 +137,14 @@ export default function CustomCursor() {
             }}
           >
             <div className="relative">
-              {/* Single primary element with subtle border */}
+              {/* Cohesive eye and text cursor */}
               <motion.div
-                className="w-8 h-8 bg-background/80 backdrop-blur-sm rounded-full flex items-center justify-center border border-primary/40"
-                animate={{ scale: isHoveringProject ? 1.1 : 1 }}
+                className="bg-background/90 backdrop-blur-sm rounded-full flex items-center justify-center gap-2 px-3 py-1 border border-primary/40 shadow-lg"
+                animate={{ scale: isHoveringProject ? 1.05 : 1 }}
                 transition={{ type: "spring", stiffness: 400, damping: 25 }}
               >
                 <Eye className="w-4 h-4 text-primary" strokeWidth={2} />
+                <span className="text-sm font-medium text-primary">View</span>
               </motion.div>
             </div>
           </motion.div>

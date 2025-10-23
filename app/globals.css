@@ -21,7 +21,7 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 96%;
-    --input: 0 0% 85%;  /* Changed from 90% to 85% for a darker gray */
+    --input: 0 0% 70%;  /* Dark grey input background */
     --ring: 0 0% 70%;
     --radius: 0.5rem;
   }
@@ -44,7 +44,7 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 30%;
-    --input: 0 0% 18%;
+    --input: 0 0% 30%;
     --ring: 0 0% 25%;
   }
 }
@@ -59,10 +59,6 @@
 }
 
 @layer components {
-  /* Fix border color inheritance issues */
-  .border {
-    border-color: hsl(var(--border)) !important;
-  }
   
   /* Fix table border inheritance in dark mode */
   table .border-t,

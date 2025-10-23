@@ -44,7 +44,6 @@ I've worked on several impactful projects:
 2. **Understanding Creative Block** - HCI research on creative professionals
 3. **BackMarket IA Redesign** - Information architecture restructuring
 4. **Reducing Alcohol Consumption** - Behavioral UX for health interventions
-5. **Finance Dashboard** - Data visualization for financial management
 
 *For detailed information about specific projects, ask me about them directly and I'll provide comprehensive insights.*
 

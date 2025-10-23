@@ -9,6 +9,20 @@ import { Send, X, MessageCircle } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { cn } from "@/lib/utils"
 
+// Function to parse markdown-style formatting
+const parseMessageContent = (content: string) => {
+  const parts = content.split(/(\*\*.*?\*\*)/g)
+  
+  return parts.map((part, index) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      // Remove the asterisks and render as bold
+      const boldText = part.slice(2, -2)
+      return <strong key={index} className="font-semibold">{boldText}</strong>
+    }
+    return part
+  })
+}
+
 export function PortfolioChat() {
   const [isOpen, setIsOpen] = useState(false)
   const [isMinimized, setIsMinimized] = useState(false)
@@ -111,10 +125,41 @@ export function PortfolioChat() {
                     >
                       <MessageCircle className="w-12 h-12 text-primary/30 mb-3" />
                       <p className="font-semibold text-sm mb-1">Hi! I'm LLME</p>
-                      <p className="text-xs text-muted-foreground max-w-xs">
+                      <p className="text-xs text-muted-foreground max-w-xs mb-4">
                         Ask me about Vedant's work, projects, experience, or anything
                         about his portfolio. I'm here to help! 🎨
                       </p>
+                      
+                      {/* Suggestion chips */}
+                      <div className="flex flex-col gap-2 w-full max-w-sm">
+                        {[
+                          "Tell me about your UX design process",
+                          "What's your most challenging project?",
+                          "Show me your recent work",
+                          "Do you really write Poetry?"
+                        ].map((suggestion, index) => (
+                          <motion.button
+                            key={suggestion}
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.3 + index * 0.1 }}
+                            onClick={() => {
+                              handleInputChange({ target: { value: suggestion } } as any)
+                              // Auto submit the suggestion
+                              setTimeout(() => {
+                                const form = document.querySelector('form') as HTMLFormElement
+                                if (form) {
+                                  const submitEvent = new Event('submit', { bubbles: true, cancelable: true })
+                                  form.dispatchEvent(submitEvent)
+                                }
+                              }, 100)
+                            }}
+                            className="px-3 py-2 text-xs bg-secondary/50 hover:bg-secondary border border-border/50 rounded-full transition-all hover:scale-105 text-left"
+                          >
+                            {suggestion}
+                          </motion.button>
+                        ))}
+                      </div>
                     </motion.div>
                   ) : (
                     messages.map((message: any, index: number) => (
@@ -137,7 +182,7 @@ export function PortfolioChat() {
                           )}
                         >
                           <p className="whitespace-pre-wrap break-words">
-                            {message.content}
+                            {parseMessageContent(message.content)}
                           </p>
                         </div>
                       </motion.div>
@@ -166,7 +211,7 @@ export function PortfolioChat() {
                           <img
                             src={theme === "dark" ? "/compass.svg" : "/compass-dark.svg"}
                             alt="Loading..."
-                            className="w-8 h-8"
+                            className="w-6 h-6"
                           />
                         </motion.div>
                       </div>
