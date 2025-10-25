@@ -87,7 +87,7 @@ export function PortfolioChat() {
             )}
           >
             {/* Header */}
-            <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-4 rounded-t-2xl border-b border-border flex items-center justify-between">
+            <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-4 rounded-2xl border-border flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="w-3 h-3 bg-green-500 rounded-full" />
                 <div>
