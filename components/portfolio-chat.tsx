@@ -222,7 +222,7 @@ export function PortfolioChat() {
                 </div>
 
                 {/* Input Area */}
-                <div className="border-t border-border p-4 bg-secondary/30">
+                <div className="border-t rounded-b-2xl border-border p-4 bg-secondary/30">
                   <form onSubmit={onSubmit} className="flex gap-2">
                     <Input
                       value={input}
