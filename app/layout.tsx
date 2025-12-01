@@ -1,6 +1,5 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter, DM_Sans } from "next/font/google"
 import "./globals.css"
 import CustomCursor from "@/components/custom-cursor"
 import { SiteHeader } from "@/components/site-header"
@@ -8,20 +7,8 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { PortfolioChat } from "@/components/portfolio-chat"
 import { Analytics } from '@vercel/analytics/react'
 
-// Configure Proxima Nova alternative fonts
-const proximaNova = DM_Sans({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
-  variable: "--font-proxima-nova",
-  display: "swap",
-})
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-inter",
-  display: "swap",
-})
+// Fonts are now loaded via CSS in globals.css for the Industrial Fintech design system
+// Typography Stack: Inter (UI), Manrope (Display/Headings), JetBrains Mono (Data/Technical), Instrument Serif (Design accents)
 
 export const metadata: Metadata = {
   metadataBase: new URL("http://localhost:3000"), // Add this line
@@ -48,10 +35,20 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`${proximaNova.variable} ${inter.variable} font-proxima`}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          <div className="relative min-h-screen bg-background">
+    <html lang="en" className="dark">
+      <body className="font-inter antialiased">
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+          {/* Background Effects Layer */}
+          <div className="fixed inset-0 pointer-events-none z-0">
+            {/* Grid Pattern */}
+            <div className="cyber-grid" />
+            {/* CRT Scanlines */}
+            <div className="scanlines" />
+            {/* Film Grain Noise */}
+            <div className="film-grain" />
+          </div>
+          
+          <div className="relative min-h-screen bg-background z-10">
             <SiteHeader />
             <main className="flex-1">{children}</main>
             <PortfolioChat />
