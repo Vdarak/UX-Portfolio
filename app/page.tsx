@@ -5,7 +5,10 @@ import Footer from "@/components/footer"
 import { RefinedButton } from "@/components/refined-button"
 import { RefinedMagneticEffect } from "@/components/refined-magnetic-effect"
 import { TiltEffect } from "@/components/tilt-effect"
-import { Download, ArrowRight, Briefcase, Mail } from "lucide-react"
+import { TechBorder, AccentLine, DataLabel, DataValue } from "@/components/tech-border"
+import { TextScramble } from "@/components/text-scramble"
+import { MarqueeTicker, TickerItem } from "@/components/marquee-ticker"
+import { Download, ArrowRight, Briefcase, Mail, Terminal, Code2, Cpu, Zap } from "lucide-react"
 import { FadeIn, StaggerContainer, StaggerItem, Parallax } from "@/components/scroll-animations"
 import RefinedProjectCard from "@/components/refined-project-card"
 import Image from "next/image"
@@ -21,51 +24,74 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background pt-16">
       
+      {/* Status Ticker */}
+      <div className="fixed top-16 left-0 right-0 z-40 border-b border-border bg-background/80 backdrop-blur-sm">
+        <MarqueeTicker speed="slow" pauseOnHover>
+          <TickerItem>DESIGN_SYSTEM.V2</TickerItem>
+          <TickerItem accent>INDUSTRIAL_FINTECH</TickerItem>
+          <TickerItem>STATUS: ONLINE</TickerItem>
+          <TickerItem accent>CYBERPUNK_AESTHETIC</TickerItem>
+          <TickerItem>UX_ENGINEERING</TickerItem>
+          <TickerItem accent>REACT + NEXT.JS</TickerItem>
+        </MarqueeTicker>
+      </div>
+      
       {/* Hero Section */}
       <section 
         ref={heroSectionRef}
-        className="container relative flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] mt-16 px-4 mx-auto space-y-8 md:space-y-12 md:px-6 overflow-hidden pb-8 md:pb-8"
+        className="container relative flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] mt-24 px-4 mx-auto space-y-8 md:space-y-12 md:px-6 overflow-hidden pb-8 md:pb-8"
       >
 
         {/* Main content grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 justify-between items-center w-full">
           {/* Text content */}
-          <div className="lg:col-span-8 max-w-4xl space-y-4 text-left lg:text-left">
+          <div className="lg:col-span-8 max-w-4xl space-y-6 text-left lg:text-left">
               <FadeIn direction="right" delay={0.4}>
-                <h1 className="title-primary text-3xl tracking-tight md:text-4xl inline">
-                  Namaste 🙏 {'->'} I'm Vedant Darak
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-2 h-2 bg-cyber-yellow animate-pulse" />
+                  <DataLabel>SYS.INIT</DataLabel>
+                  <span className="font-mono text-xs text-muted-foreground">//</span>
+                  <DataValue accent>VEDANT.DARAK</DataValue>
+                </div>
+                <h1 className="heading-xl text-foreground tracking-tight">
+                  Namaste 🙏 → I'm <span className="text-cyber-yellow">Vedant</span>
                 </h1>
               </FadeIn>
-              <FadeIn direction="right" delay={0.4}>
-                <h2 className="heading-lg text-4xl tracking-tight md:text-6xl">
-                <FlowingText text="Design" className="inline" /> Engineer
+              <FadeIn direction="right" delay={0.5}>
+                <h2 className="heading-lg tracking-tight text-foreground">
+                  <span className="font-serif-accent text-cyber-yellow">Design</span> Engineer
                 </h2>
               </FadeIn>
-              <FadeIn direction="right" delay={0.4}>
-                <p className="text-display text-xl text-neutral-600 dark:text-neutral-300 relative overflow-hidden">
-                  Create with intention, preserve with devotion, transform with courage —> ensures your product stays innovative without accruing chaos.
-                </p>
+              <FadeIn direction="right" delay={0.6}>
+                <TechBorder variant="notched" className="p-4 bg-card/50">
+                  <p className="body-lg text-muted-foreground">
+                    Create with intention, preserve with devotion, transform with courage → ensures your product stays innovative without accruing chaos.
+                  </p>
+                </TechBorder>
               </FadeIn>
           </div>
 
           {/* Creative Coding Exhibit */}
-          <div className="lg:col-span-4 flex justify-center lg:justify-end">
+          <div className="lg:col-span-4 flex justify-center lg:justify-end mt-8 lg:mt-0">
             <FadeIn direction="left" delay={0.4}>
               <RefinedMagneticEffect intensity={0.08} range={100}>
-                <PixelGridExhibit 
-                  width={375}
-                  height={375}
-                />
+                <TechBorder variant="glow" className="p-1">
+                  <PixelGridExhibit 
+                    width={340}
+                    height={340}
+                  />
+                </TechBorder>
               </RefinedMagneticEffect>
             </FadeIn>
           </div>
         </div>
 
         {/* Enhanced CTA buttons - Using FadeIn component */}
-        <FadeIn delay={0.4} direction="up">
+        <FadeIn delay={0.7} direction="up">
           <div className="flex flex-col items-center gap-4 sm:flex-row z-10 mb-16 md:mb-32">
         
           <RefinedButton 
+            variant="cyber-filled"
             size="lg" 
             intensity={0.2}
             className="interactive group"
@@ -76,53 +102,73 @@ export default function Home() {
               })
             }}  
           >
-            <span className="flex items-center">
-              View my work
-              <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 ease-out group-hover:translate-x-2" />
+            <span className="flex items-center gap-2">
+              <Terminal className="w-4 h-4" />
+              View Projects
+              <ArrowRight className="w-4 h-4 transition-transform duration-300 ease-out group-hover:translate-x-1" />
             </span>
           </RefinedButton>
 
           <RefinedButton 
-            variant="outline" 
+            variant="cyber" 
             size="lg" 
             intensity={0.2}
             className="interactive"
             onClick={() => {
-              // Open default mail client to send email
               window.location.href = 'mailto:vdarak.infinity@gmail.com'
             }}
           >
-            <span>Get in touch</span>
+            <span className="flex items-center gap-2">
+              <Zap className="w-4 h-4" />
+              Get in Touch
+            </span>
           </RefinedButton>
           </div>
         </FadeIn>
 
-        {/* Floating navigation - replacing profile image */}
-        <div className="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 hidden lg:block">
-          {/* Intentionally left empty as requested */}
-        </div>
-      </section>
-
-      {/* Projects Hero Section - Simplified */}
-      
-        <section id="projects" className="w-full pt-16 lg:-mb-32 md:-mb-32 sm:mb-0 bg-secondary">
-          <FadeIn delay={0.4}>
-            <div className="container px-4 mx-auto md:px-6 text-center">
-              <div className="flex flex-col items-center justify-center">
-                <span className="flex items-center gap-2 text-muted-foreground text-base font-medium mb-2">
-                  <Briefcase className="w-6 h-6" />
-                  Projects
-              </span>
-              <h1 className="heading-lg text-3xl md:text-5xl font-bold tracking-tight mb-4 leading-[1.15] overflow-visible pb-1">
-                Selected <FlowingText text="Projects" className="inline align-baseline leading-[1.15]" />
-              </h1>
-              <p className="text-display text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-                A collection of UX projects that showcase my approach to solving problems through research-driven design and user-centered thinking.
-              </p>
+        {/* Tech specs display */}
+        <FadeIn delay={0.8} direction="up">
+          <div className="flex items-center gap-8 text-muted-foreground font-mono text-xs tracking-widest">
+            <div className="flex items-center gap-2">
+              <Code2 className="w-3 h-3 text-cyber-yellow" />
+              <span>REACT_19</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Cpu className="w-3 h-3 text-cyber-yellow" />
+              <span>NEXT_15</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Terminal className="w-3 h-3 text-cyber-yellow" />
+              <span>TS_5</span>
             </div>
           </div>
-         </FadeIn>
-        </section>
+        </FadeIn>
+      </section>
+
+      {/* Projects Hero Section */}
+      <section id="projects" className="w-full pt-24 lg:-mb-32 md:-mb-32 sm:mb-0 bg-secondary border-y border-border">
+        {/* Top accent line */}
+        <AccentLine className="mb-12" />
+        
+        <FadeIn delay={0.4}>
+          <div className="container px-4 mx-auto md:px-6 text-center">
+            <div className="flex flex-col items-center justify-center">
+              <div className="flex items-center gap-3 mb-4">
+                <Briefcase className="w-4 h-4 text-cyber-yellow" />
+                <DataLabel>PORTFOLIO.PROJECTS</DataLabel>
+              </div>
+              <h1 className="heading-lg font-bold tracking-tight mb-4 leading-[1.15] overflow-visible pb-1">
+                Selected <span className="text-cyber-yellow font-serif-accent">Projects</span>
+              </h1>
+              <TechBorder variant="default" accentColor="none" className="max-w-2xl mx-auto p-4 bg-card/30">
+                <p className="body-lg text-muted-foreground">
+                  A collection of UX projects that showcase my approach to solving problems through research-driven design and user-centered thinking.
+                </p>
+              </TechBorder>
+            </div>
+          </div>
+        </FadeIn>
+      </section>
       
       {/* Projects Grid */}
       <section id="projects-grid" className="bg-secondary">
@@ -135,7 +181,7 @@ export default function Home() {
                     title="Ana: AI-Powered News Aggregator"
                     description="An AI system that detects media bias and enhances media literacy for Gen Z users through explainable AI and educational tools."
                     image="/images/ana.png"
-                    hoverImage="/images/ANA/ana-hero.png" // Added hover image
+                    hoverImage="/images/ANA/ana-hero.png"
                   tags={["AI Ethics", "Media Bias Detection", "UX Research", "UX Design", "Testing"]}
                   href="/projects/media-bias-ai"
                 />
@@ -147,7 +193,7 @@ export default function Home() {
                     title="Understanding Creative Block"
                     description="Research study exploring how creative professionals experience and manage creative blocks, with design implications for supporting technology."
                     image="/images/creativeblock-dark.png"
-                    hoverImage="/images/creative-block.png" // Added hover image
+                    hoverImage="/images/creative-block.png"
                     tags={["HCI Research", "Mixed Methods", "User Interviews", "Persona Development", "Design Implications"]}
                     href="/projects/understanding-creative-block"
                   />
@@ -159,7 +205,7 @@ export default function Home() {
                     title="BackMarket IA Redesign"
                     description="A deep dive into restructuring the information architecture of a leading refurbished electronics marketplace to enhance usability and content clarity."
                     image="/images/backmarket-dark.png"
-                    hoverImage="/images/backmarket/backmarket-hero.png" // Added hover image
+                    hoverImage="/images/backmarket/backmarket-hero.png"
                     tags={["Information Architecture", "Content Strategy", "UX Research", "Usability Testing", "Sitemap"]}
                     href="/projects/backmarket-ia-redesign"
                   />
@@ -171,237 +217,144 @@ export default function Home() {
                       title="Reducing Alcohol Consumption"
                       description="Supporting healthier relationships with alcohol through research-driven design to make mindful social choices more visible and accessible."
                       image="/images/alcohol.png"
-                      hoverImage="/images/alcohol-hero.png" // Added hover image
+                      hoverImage="/images/alcohol-hero.png"
                       tags={["UX Research", "Mixed Methods", "Behavioral UX"]}
                       href="/projects/reducing-alcohol"
                     />
                 </FadeIn>
               </StaggerItem>
-              {/* Finance Dashboard - Commented out for later 
-              <StaggerItem>
-                <FadeIn delay={0.3}>
-                  <RefinedProjectCard
-                    title="Finance Dashboard"
-                    description="A comprehensive financial management dashboard for personal and small business users."
-                    image="/images/gamma.png"
-                    hoverImage="/images/logo.png" // Added hover image
-                    tags={["Data Visualization", "User Testing", "Interaction Design"]}
-                    href="/projects/finance-dashboard"
-                  />
-                </FadeIn>
-              </StaggerItem>
-              */}
             </StaggerContainer>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 bg-white dark:bg-black">
+      <section id="about" className="py-24 bg-background border-t border-border">
+        <AccentLine className="mb-16" />
+        
         <div className="container px-5 mx-auto md:px-12">
           <div className="grid gap-12 md:grid-cols-2 md:items-center">
             <FadeIn delay={0.5} direction="left">
               <TiltEffect maxAngle={15} intensity={0.8} className="interactive">
-                <div className="relative overflow-hidden rounded-xl aspect-[2/3] scale-[0.72] origin-center">
-                  <Image
-                    src="/images/vedant-portrait.JPG"
-                    alt="Portrait of Vedant Darak"
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                </div>
+                <TechBorder variant="clipped" className="overflow-hidden">
+                  <div className="relative aspect-[2/3] scale-[0.9] origin-center">
+                    <Image
+                      src="/images/vedant-portrait.JPG"
+                      alt="Portrait of Vedant Darak"
+                      fill
+                      className="object-cover"
+                      priority
+                    />
+                    {/* Scanline overlay on image */}
+                    <div className="absolute inset-0 pointer-events-none scanlines opacity-30" />
+                  </div>
+                </TechBorder>
               </TiltEffect>
             </FadeIn>
             <FadeIn delay={0.5} direction="right">
               <div className="space-y-6 px-2">
-                <h2 className="text-3xl font-medium tracking-tight md:text-4xl">About Me</h2>
-                <p className="text-xl text-neutral-600 dark:text-neutral-300">
-                  UX engineer with an HCI background bridging design systems and front-end engineering. I translate Figma signatures into resilient React/TypeScript systems while keeping accessibility and performance guardrails in place.
-                </p>
-                <p className="text-xl text-neutral-600 dark:text-neutral-300">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-2 h-2 bg-cyber-yellow animate-pulse" />
+                  <DataLabel>ABOUT.ME</DataLabel>
+                </div>
+                <h2 className="heading-lg tracking-tight">About <span className="text-cyber-yellow">Me</span></h2>
+                <TechBorder variant="notched" className="p-4 bg-card/30">
+                  <p className="body-lg text-muted-foreground">
+                    UX engineer with an HCI background bridging design systems and front-end engineering. I translate Figma signatures into resilient React/TypeScript systems while keeping accessibility and performance guardrails in place.
+                  </p>
+                </TechBorder>
+                <p className="body-md text-muted-foreground">
                   Currently, I'm shaping adaptive workflows as a Design Engineering Intern at Cognijin—building AI-first knowledge tools, pairing closely with researchers, AI engineers, and shipping reusable components that scale from prototypes to production.
                 </p>
                 <StaggerContainer className="space-y-4" staggerDelay={0.1}>
                   <StaggerItem>
-                    <p className="text-neutral-600 dark:text-neutral-400">
-                      <strong>Design Engineering Craft:</strong> I architect component systems, translate design tokens into React and Next.js, and prototype interactions with TypeScript, Tailwind, and Framer Motion to validate intent before we commit to scale.
-                    </p>
+                    <div className="flex items-start gap-3">
+                      <Code2 className="w-4 h-4 text-cyber-yellow mt-1 flex-shrink-0" />
+                      <p className="body-sm text-muted-foreground">
+                        <strong className="text-foreground">Design Engineering Craft:</strong> I architect component systems, translate design tokens into React and Next.js, and prototype interactions with TypeScript, Tailwind, and Framer Motion.
+                      </p>
+                    </div>
                   </StaggerItem>
                   <StaggerItem>
-                    <p className="text-neutral-600 dark:text-neutral-400">
-                      <strong>Evidence-Led Systems:</strong> I run mixed-method studies, instrument prototypes, and synthesize telemetry with qualitative insight to steer roadmaps and keep releases accountable to user value.
-                    </p>
+                    <div className="flex items-start gap-3">
+                      <Terminal className="w-4 h-4 text-cyber-yellow mt-1 flex-shrink-0" />
+                      <p className="body-sm text-muted-foreground">
+                        <strong className="text-foreground">Evidence-Led Systems:</strong> I run mixed-method studies, instrument prototypes, and synthesize telemetry with qualitative insight to steer roadmaps.
+                      </p>
+                    </div>
                   </StaggerItem>
                   <StaggerItem>
-                    <p className="text-neutral-600 dark:text-neutral-400">
-                      <strong>AI-Enabled Experiences:</strong> I collaborate with ML teams to choreograph agentic workflows, craft explainable UI patterns, and deliver resilient design ops that keep human judgment in the loop.
-                    </p>
+                    <div className="flex items-start gap-3">
+                      <Cpu className="w-4 h-4 text-cyber-yellow mt-1 flex-shrink-0" />
+                      <p className="body-sm text-muted-foreground">
+                        <strong className="text-foreground">AI-Enabled Experiences:</strong> I collaborate with ML teams to choreograph agentic workflows, craft explainable UI patterns, and deliver resilient design ops.
+                      </p>
+                    </div>
                   </StaggerItem>
                 </StaggerContainer>
                 <FadeIn delay={0.4}>
                   <div className="flex gap-3">
-                    <RefinedButton intensity={0.2} size="md" asChild>
+                    <RefinedButton variant="cyber-filled" intensity={0.2} size="md" asChild>
                       <a 
                         href="/Resume_Vedant.pdf" 
                         download="Vedant-Resume"
-                        className="flex items-center group"
+                        className="flex items-center gap-2 group"
                       >
-                        <Download className="w-4 h-4 mr-2 transition-transform duration-300 ease-out group-hover:scale-110" />
+                        <Download className="w-4 h-4 transition-transform duration-300 ease-out group-hover:scale-110" />
                         Download Resume
                       </a>
                     </RefinedButton>
                   </div>
                 </FadeIn>
                 <FadeIn delay={0.6}>
-                  <div className="mt-8 pt-6 border-t border-neutral-200 dark:border-neutral-700">
-                    <p className="text-neutral-600 dark:text-neutral-400">
-                      <strong>Beyond Design:</strong> When I'm not crafting user experiences, you'll find me playing badminton, 
-                      exploring nature's adventures, writing <Link href="/poetry" className="underline underline-offset-4 decoration-neutral-400 hover:decoration-primary">poetry</Link>, or analyzing the stock market. These hobbies keep me grounded 
-                      and often inspire fresh perspectives in my design work.
+                  <TechBorder variant="default" className="mt-8 p-4 bg-card/30">
+                    <p className="body-sm text-muted-foreground">
+                      <strong className="text-cyber-yellow">Beyond Design:</strong> When I'm not crafting user experiences, you'll find me playing badminton, 
+                      exploring nature's adventures, writing <Link href="/poetry" className="text-cyber-yellow hover:underline underline-offset-4">poetry</Link>, or analyzing the stock market.
                     </p>
-                  </div>
+                  </TechBorder>
                 </FadeIn>
-                {/* Skills & Expertise 
-                <FadeIn delay={0.6}>
-                  <div className="mt-10 space-y-8">
-                    <div className="flex items-center justify-between">
-                      <h3 className="text-2xl font-medium">Skills &amp; Confidence Levels</h3>
-                      <div className="flex items-center">
-                        <span className="text-xs text-muted-foreground">Low</span>
-                        <div className="w-24 h-1 mx-2 bg-gradient-to-r from-muted/30 to-primary rounded-full"></div>
-                        <span className="text-xs text-muted-foreground">High Confidence</span>
-                      </div>
-                    </div>
-                    
-                    {/* T-shaped visualization - Research strong, breadth across other areas */}
-                    {/* <div>
-                      <div className="grid gap-8">
-                        <div className="space-y-4">
-                          <h4 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">Core Strengths</h4>
-                          {[
-                            { label: 'User Research', pct: '95%', description: 'My primary expertise' },
-                            { label: 'Agentic AI', pct: '98%', description: 'Advanced integration skills' },
-                          ].map(({ label, pct, description }) => (
-                            <div key={label} className="group">
-                              <div className="flex justify-between text-xs mb-2 items-baseline">
-                                <span className="font-medium">{label}</span>
-                                <span className="text-xs text-muted-foreground">{description}</span>
-                              </div>
-                              <div className="w-full bg-neutral-200 dark:bg-neutral-700 h-2 rounded-full overflow-hidden">
-                                <motion.div
-                                  initial={{ width: 0 }}
-                                  animate={{ width: pct }}
-                                  transition={{ duration: 1, ease: 'easeOut' }}
-                                  className="h-full rounded-full animate-subtle-gradient"
-                                  style={{
-                                    backgroundImage: 'linear-gradient(to right, #8b5cf6, #c084fc, #4079ff, #c084fc, #8b5cf6)',
-                                    backgroundSize: '200% 100%',
-                                    animationDuration: '8s',
-                                    WebkitMaskImage: 'linear-gradient(to right, black 0%, black 90%, transparent 100%)',
-                                    maskImage: 'linear-gradient(to right, black 0%, black 90%, transparent 100%)',
-                                  }}
-                                />
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                        
-                        <div className="space-y-4">
-                          <h4 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">Design & Testing</h4>
-                          <div className="grid grid-cols-2 gap-x-6 gap-y-4">
-                            {[
-                              { label: 'Wireframing', pct: '80%' },
-                              { label: 'Prototyping', pct: '80%' },
-                              { label: 'Usability Testing', pct: '80%' },
-                              { label: 'Quantitative Analysis', pct: '80%' },
-                            ].map(({ label, pct }) => (
-                              <div key={label} className="group">
-                                <div className="flex justify-between text-xs mb-2">
-                                  <span className="font-medium">{label}</span>
-                                </div>
-                                <div className="w-full bg-neutral-200 dark:bg-neutral-700 h-1.5 rounded-full overflow-hidden">
-                                  <motion.div
-                                    initial={{ width: 0 }}
-                                    animate={{ width: pct }}
-                                    transition={{ duration: 0.8, ease: 'easeOut' }}
-                                    className="h-full rounded-full animate-subtle-gradient"
-                                    style={{
-                                      backgroundImage: 'linear-gradient(to right, #8b5cf6, #c084fc, #4079ff, #c084fc, #8b5cf6)',
-                                      backgroundSize: '200% 100%',
-                                      animationDuration: '8s',
-                                      WebkitMaskImage: 'linear-gradient(to right, black 0%, black 90%, transparent 100%)',
-                                      maskImage: 'linear-gradient(to right, black 0%, black 90%, transparent 100%)',
-                                    }}
-                                  />
-                                </div>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                        
-                        <div className="space-y-4">
-                          <h4 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">Supporting Skills</h4>
-                          <div className="grid grid-cols-2 gap-x-6 gap-y-4">
-                            {[
-                              { label: 'Agile UX', pct: '60%' },
-                              { label: 'Front-End Development', pct: '60%' },
-                            ].map(({ label, pct }) => (
-                              <div key={label} className="group">
-                                <div className="flex justify-between text-xs mb-2">
-                                  <span className="font-medium">{label}</span>
-                                </div>
-                                <div className="w-full bg-neutral-200 dark:bg-neutral-700 h-1.5 rounded-full overflow-hidden">
-                                  <motion.div
-                                    initial={{ width: 0 }}
-                                    animate={{ width: pct }}
-                                    transition={{ duration: 0.6, ease: 'easeOut' }}
-                                    className="h-full rounded-full animate-subtle-gradient"
-                                    style={{
-                                      backgroundImage: 'linear-gradient(to right, #8b5cf6, #c084fc, #4079ff, #c084fc, #8b5cf6)',
-                                      backgroundSize: '200% 100%',
-                                      animationDuration: '8s',
-                                      WebkitMaskImage: 'linear-gradient(to right, black 0%, black 90%, transparent 100%)',
-                                      maskImage: 'linear-gradient(to right, black 0%, black 90%, transparent 100%)',
-                                    }}
-                                  />
-                                </div>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </FadeIn>
-                */}
               </div>
             </FadeIn>
           </div>
         </div>
         {/* Centered philosophical quote below image and skills */}
         <FadeIn delay={0.5}>
-          <blockquote className="mx-auto max-w-2xl text-2xl md:text-3xl italic text-center relative mt-12">
-            <div className="absolute -left-6 -top-4 text-4xl md:text-6xl text-primary/10 font-serif">"</div>
-            <div className="absolute -right-6 -bottom-4 text-4xl md:text-6xl text-primary/10 font-serif rotate-180">"</div>
-            <p className="relative z-10 px-6">Consistency over Perfection</p>
-          </blockquote>
+          <div className="mt-16 px-4">
+            <TechBorder variant="clipped" className="mx-auto max-w-2xl p-8 bg-card/30">
+              <blockquote className="text-center relative">
+                <DataLabel className="block mb-4">PHILOSOPHY</DataLabel>
+                <p className="heading-md font-serif-accent text-cyber-yellow">
+                  "Consistency over Perfection"
+                </p>
+              </blockquote>
+            </TechBorder>
+          </div>
         </FadeIn>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24">
+      <section id="contact" className="py-24 border-t border-border">
+        <AccentLine className="mb-16" />
+        
         <div className="container px-4 mx-auto md:px-6">
           <FadeIn delay={0.3}>
-            <div className="max-w-3xl mx-auto space-y-6 text-center">
-              <h2 className="text-3xl font-medium tracking-tight md:text-4xl">Get in Touch</h2>
-              <p className="text-xl text-neutral-600 dark:text-neutral-300">
-                Interested in working together? I'd love to hear about your project.
-              </p>
+            <div className="max-w-3xl mx-auto text-center">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <Mail className="w-4 h-4 text-cyber-yellow" />
+                <DataLabel>CONTACT.INIT</DataLabel>
+              </div>
+              <h2 className="heading-lg tracking-tight mb-6">Get in <span className="text-cyber-yellow">Touch</span></h2>
+              <TechBorder variant="notched" className="p-6 mb-8 bg-card/30">
+                <p className="body-lg text-muted-foreground">
+                  Interested in working together? I'd love to hear about your project.
+                </p>
+              </TechBorder>
               <div className="flex justify-center">
-                <RefinedButton size="lg" intensity={0.2}>
-                  <a href="mailto:hello@vedantdarak.design" className="flex items-center">
-                    <Mail className="w-4 h-4 mr-2" /> vdarak.infinity@gmail.com
+                <RefinedButton variant="cyber-filled" size="lg" intensity={0.2}>
+                  <a href="mailto:vdarak.infinity@gmail.com" className="flex items-center gap-2">
+                    <Mail className="w-4 h-4" />
+                    vdarak.infinity@gmail.com
                   </a>
                 </RefinedButton>
               </div>

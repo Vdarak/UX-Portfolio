@@ -175,8 +175,10 @@ export function SiteHeader() {
   return (
     <motion.header
       className={cn(
-        "fixed top-0 z-50 w-full transition-all duration-300",
-        isScrolled ? "bg-background/80 backdrop-blur-xl" : "bg-background/80 backdrop-blur-xl",
+        "fixed top-0 z-50 w-full transition-all duration-300 border-b",
+        isScrolled 
+          ? "bg-background/90 backdrop-blur-xl border-border" 
+          : "bg-background/80 backdrop-blur-xl border-transparent",
       )}
       initial={{ y: -100, opacity: 0 }}
       animate={{
@@ -189,6 +191,9 @@ export function SiteHeader() {
         delay: hasAnimatedIn ? 0 : 0,
       }}
     >
+      {/* Accent line at bottom of header */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyber-yellow/30 to-transparent" />
+      
       <div className="container flex items-center justify-between h-16 px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -198,18 +203,18 @@ export function SiteHeader() {
           <RefinedMagneticEffect intensity={0.2} range={80}>
             <Link
               href="/"
-              className="interactive title-primary font-medium transition-colors hover:text-foreground/80 px-2 py-1 rounded-md"
+              className="interactive title-primary font-medium transition-colors hover:text-cyber-yellow px-2 py-1"
               onClick={() => setIsMenuOpen(false)}
             >
               <span className="sr-only">Vedant Darak Logo</span>
-              <VedantLogo className="w-16 h-10 text-black dark:text-white transition-colors" />
+              <VedantLogo className="w-16 h-10 text-foreground transition-colors" />
             </Link>
           </RefinedMagneticEffect>
         </motion.div>
 
         <div className="hidden md:flex md:items-center md:gap-6">
           <motion.nav 
-            className="flex items-center gap-6"
+            className="flex items-center gap-1"
             initial="hidden"
             animate={hasAnimatedIn ? "visible" : "hidden"}
             variants={{
@@ -226,7 +231,7 @@ export function SiteHeader() {
               { href: "/#projects", label: "Projects" },
               { href: "/#about", label: "About" },
               { href: "/playground", label: "Playground" },
-            ].map((item, index) => (
+            ].map((item) => (
               <motion.div
                 key={item.href}
                 variants={{
@@ -244,11 +249,12 @@ export function SiteHeader() {
                 <RefinedMagneticEffect intensity={0.15} range={70}>
                   <Link
                     href={item.href}
-                    className={`interactive subtitle text-sm hover:text-foreground/80 transition-all duration-300 px-3 py-2 rounded-md ${
+                    className={cn(
+                      "interactive font-mono text-xs tracking-widest uppercase px-4 py-2 border transition-all duration-300",
                       isActiveLink(item.href) 
-                        ? "font-bold text-foreground" 
-                        : "text-muted-foreground hover:text-foreground"
-                    }`}
+                        ? "text-cyber-yellow border-cyber-yellow/50 bg-cyber-yellow/5" 
+                        : "text-muted-foreground border-transparent hover:text-foreground hover:border-border"
+                    )}
                   >
                     {item.label}
                   </Link>
@@ -322,7 +328,7 @@ export function SiteHeader() {
         style={{ overflow: "hidden" }}
       >
         <motion.nav
-          className="container flex flex-col gap-6 p-6 bg-background border-b"
+          className="container flex flex-col gap-2 p-6 bg-background border-b border-border"
           initial={false}
           animate={isMenuOpen ? "open" : "closed"}
           variants={{
@@ -350,11 +356,12 @@ export function SiteHeader() {
               <RefinedMagneticEffect intensity={0.15} range={70}>
                 <Link
                   href={item.href}
-                  className={`interactive subtitle text-lg font-medium transition-all duration-300 px-3 py-2 rounded-md w-fit block ${
+                  className={cn(
+                    "interactive font-mono text-sm tracking-widest uppercase px-4 py-3 border w-full block transition-all duration-300",
                     isActiveLink(item.href) 
-                      ? "font-bold text-foreground" 
-                      : "text-muted-foreground hover:text-foreground"
-                  }`}
+                      ? "text-cyber-yellow border-cyber-yellow/50 bg-cyber-yellow/5" 
+                      : "text-muted-foreground border-border hover:text-foreground hover:border-foreground"
+                  )}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
@@ -368,7 +375,7 @@ export function SiteHeader() {
       {/* Mobile menu backdrop */}
       {isMenuOpen && (
         <motion.div
-          className="fixed inset-0 bg-background/80 backdrop-blur-sm md:hidden"
+          className="fixed inset-0 bg-background/90 backdrop-blur-md md:hidden"
           style={{ top: "100%" }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
