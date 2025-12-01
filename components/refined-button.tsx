@@ -25,8 +25,6 @@ export function RefinedButton({
   onClick,
   ...props
 }: RefinedButtonProps) {
-  const Comp = asChild ? Slot : motion.button
-
   const sizeClasses = {
     sm: "px-4 py-2 text-xs",
     md: "px-6 py-3 text-sm",
@@ -53,34 +51,47 @@ export function RefinedButton({
     ? "polygon(0 4px, 4px 0, calc(100% - 4px) 0, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 0 calc(100% - 4px))"
     : undefined
 
-  const buttonContent = (
-    <Comp
-      className={cn(
-        "interactive btn-text relative inline-flex items-center justify-center font-semibold tracking-wider uppercase transition-all duration-300",
-        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2",
-        "disabled:pointer-events-none disabled:opacity-50",
-        sizeClasses[size],
-        variantClasses[variant],
-        className,
-      )}
-      onClick={onClick}
-      style={{ clipPath }}
-      {...(!asChild && {
-        whileHover: { scale: 1.02 },
-        whileTap: { scale: 0.98 },
-        transition: { type: "spring", stiffness: 400, damping: 20 },
-      })}
-      {...props}
-    >
-      <span className="relative z-10">
-        {children}
-      </span>
-    </Comp>
+  const baseClassName = cn(
+    "interactive btn-text relative inline-flex items-center justify-center font-semibold tracking-wider uppercase transition-all duration-300",
+    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2",
+    "disabled:pointer-events-none disabled:opacity-50",
+    sizeClasses[size],
+    variantClasses[variant],
+    className,
   )
+
+  // When asChild is true, use Slot for composition (e.g., wrapping <a> tags)
+  // When asChild is false, use motion.button for animated buttons
+  if (asChild) {
+    return (
+      <RefinedMagneticEffect intensity={intensity} range={100}>
+        <Slot
+          className={baseClassName}
+          onClick={onClick}
+          style={{ clipPath }}
+          {...props}
+        >
+          {children}
+        </Slot>
+      </RefinedMagneticEffect>
+    )
+  }
 
   return (
     <RefinedMagneticEffect intensity={intensity} range={100}>
-      {buttonContent}
+      <motion.button
+        className={baseClassName}
+        onClick={onClick}
+        style={{ clipPath }}
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.98 }}
+        transition={{ type: "spring", stiffness: 400, damping: 20 }}
+        {...props}
+      >
+        <span className="relative z-10">
+          {children}
+        </span>
+      </motion.button>
     </RefinedMagneticEffect>
   )
 }

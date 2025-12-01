@@ -8,11 +8,16 @@
    ═══════════════════════════════════════════════════════════════════════════ */
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   TYPOGRAPHY - Font Face Declarations (System fonts with web-safe fallbacks)
+   TYPOGRAPHY - Font Face Declarations
    Stack: Inter (UI), Manrope (Display), JetBrains Mono (Data), Instrument Serif
+   
+   Note: Using local() sources first for optimal performance. The fonts will
+   fall back to system fonts defined in tailwind.config.ts if not available
+   locally. For production, consider adding Google Fonts via next/font or
+   hosting fonts locally in the /public directory.
    ───────────────────────────────────────────────────────────────────────────── */
    
-/* Inter - UI Font */
+/* Inter - UI Font (falls back to system sans-serif) */
 @font-face {
   font-family: 'Inter';
   font-style: normal;
@@ -21,7 +26,7 @@
   src: local('Inter'), local('Inter-Regular');
 }
 
-/* Manrope - Display/Headings Font */
+/* Manrope - Display/Headings Font (falls back to Inter, then system sans-serif) */
 @font-face {
   font-family: 'Manrope';
   font-style: normal;
@@ -30,7 +35,7 @@
   src: local('Manrope'), local('Manrope-Regular');
 }
 
-/* JetBrains Mono - Technical/Data Font */
+/* JetBrains Mono - Technical/Data Font (falls back to system monospace) */
 @font-face {
   font-family: 'JetBrains Mono';
   font-style: normal;
@@ -39,7 +44,7 @@
   src: local('JetBrains Mono'), local('JetBrainsMono-Regular');
 }
 
-/* Instrument Serif - Design Accents (used sparingly) */
+/* Instrument Serif - Design Accents (falls back to Georgia, then system serif) */
 @font-face {
   font-family: 'Instrument Serif';
   font-style: normal;

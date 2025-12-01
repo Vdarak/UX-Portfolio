@@ -132,10 +132,6 @@ const config = {
         '18': '4.5rem',
         '22': '5.5rem',
       },
-      // Tech border widths
-      borderWidth: {
-        '1': '1px',
-      },
     },
   },
   plugins: [require("tailwindcss-animate")],

@@ -89,7 +89,8 @@ export function TextScramble({
         cancelAnimationFrame(frameRef.current)
       }
     }
-  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+    // Only run on mount - scramble is intentionally not in deps to prevent re-scrambling on state changes
+  }, [scrambleOnMount])
 
   const handleMouseEnter = () => {
     if (scrambleOnHover) {
