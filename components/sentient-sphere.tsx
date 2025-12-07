@@ -37,7 +37,7 @@ export const defaultSphereSettings: SphereSettings = {
     code: "#b4f3fd", // updated to user's color
   },
   colorTransitionSpeed: 0.3, // updated to 0.3
-  rotationSpeed: 0.01,
+  rotationSpeed: 0.015,
   rotationDirection: -1,
   rotationAxis: "xy",
   colorMode: "gradient",
