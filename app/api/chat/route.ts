@@ -46,22 +46,22 @@ function retrieveContext(query: string): string {
   const kb = loadKnowledgeBase()
   const lowerQuery = query.toLowerCase()
   
-  // Check if user is asking about a specific project
-  const projectMatches = Object.entries(kb.projects).find(([key, _]) => {
-    const projectQueries = [
-      { key: "ana", queries: ["ana", "news", "media bias", "aggregator"] },
-      { key: "creative-block", queries: ["creative block", "research", "hci"] },
-      { key: "backmarket", queries: ["backmarket", "information architecture", "ia"] },
-      { key: "alcohol", queries: ["alcohol", "reducing", "consumption", "behavioral"] },
-    ]
-    
-    return projectQueries.some(
-      (p) => p.key === key && p.queries.some((q) => lowerQuery.includes(q))
-    )
-  })
+  // Project keyword mappings for all current projects
+  const projectQueries = [
+    { key: "media-bias", queries: ["ana", "news", "media bias", "aggregator", "bias", "spotting", "information bubble"] },
+    { key: "canvas-chat", queries: ["canvas chat", "canvas", "brainstorm", "infinite", "gemini", "multiple chat", "branching"] },
+    { key: "creative-block", queries: ["creative block", "creative", "research", "hci", "creativity", "artists", "stuck"] },
+    { key: "hope", queries: ["hope", "memory care", "elderly", "seniors", "care home", "recreational"] },
+    { key: "bookkeeping", queries: ["bookkeeping", "accounting", "accountant", "fintech", "automation", "financial"] },
+  ]
 
-  if (projectMatches) {
-    return `${kb.index}\n\n---\n\nPROJECT DETAILS:\n${projectMatches[1]}`
+  // Check if user is asking about a specific project
+  const matchedProject = projectQueries.find((p) =>
+    p.queries.some((q) => lowerQuery.includes(q))
+  )
+
+  if (matchedProject && kb.projects[matchedProject.key]) {
+    return `${kb.index}\n\n---\n\nPROJECT DETAILS:\n${kb.projects[matchedProject.key]}`
   }
 
   // Default to general knowledge base

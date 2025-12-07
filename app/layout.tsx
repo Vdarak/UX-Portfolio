@@ -1,45 +1,36 @@
 import type React from "react"
-import type { Metadata } from "next"
-import { Inter, DM_Sans } from "next/font/google"
+import type { Metadata, Viewport } from "next"
+import { Instrument_Serif, Geist_Mono } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
+import { AnimatedFavicon } from "@/components/animated-favicon"
+import { AIChat } from "@/components/ai-chat"
+import { AIChatProvider } from "@/components/ai-chat-provider"
+import { AppLayout } from "@/components/app-layout"
 import "./globals.css"
-import CustomCursor from "@/components/custom-cursor"
-import { SiteHeader } from "@/components/site-header"
-import { ThemeProvider } from "@/components/theme-provider"
-import { PortfolioChat } from "@/components/portfolio-chat"
-import { Analytics } from '@vercel/analytics/react'
 
-// Configure Proxima Nova alternative fonts
-const proximaNova = DM_Sans({
+const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
-  variable: "--font-proxima-nova",
-  display: "swap",
+  weight: "400",
+  variable: "--font-instrument",
 })
 
-const inter = Inter({
+const geistMono = Geist_Mono({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-inter",
-  display: "swap",
+  variable: "--font-geist-mono",
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3000"), // Add this line
   title: "Vedant's Portfolio",
-  description: "Check out my portfolio showcasing my work in UX design, creative coding, and more.",
-  generator: "v0",
+  description: "Designing intelligent interfaces that bridge human intuition and machine intelligence",
   icons: {
-    icon: [
-      {
-        url: "/favicon-light.svg",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/favicon-dark.svg", 
-        media: "(prefers-color-scheme: dark)",
-      },
-    ],
+    icon: [{ url: "/logo-favicon.svg", type: "image/svg+xml" }],
+    apple: "/logo-favicon.svg",
   },
+    generator: 'v0.app'
+}
+
+export const viewport: Viewport = {
+  themeColor: "#050505",
 }
 
 export default function RootLayout({
@@ -48,17 +39,17 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`${proximaNova.variable} ${inter.variable} font-proxima`}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          <div className="relative min-h-screen bg-background">
-            <SiteHeader />
-            <main className="flex-1">{children}</main>
-            <PortfolioChat />
-          </div>
-          <CustomCursor />
+    <html lang="en" className={`${instrumentSerif.variable} ${geistMono.variable}`}>
+      <body className="font-sans antialiased overflow-x-hidden">
+        <AIChatProvider>
+          <div className="noise-overlay" />
+          <AnimatedFavicon />
+          <AppLayout>
+            {children}
+          </AppLayout>
+          <AIChat />
           <Analytics />
-        </ThemeProvider>
+        </AIChatProvider>
       </body>
     </html>
   )
