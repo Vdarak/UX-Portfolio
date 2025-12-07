@@ -39,15 +39,16 @@ export function AIChat() {
     }
   }, [isOpen])
 
-  const handleSubmit = async (e?: FormEvent) => {
+  const handleSubmit = async (e?: FormEvent, directMessage?: string) => {
     e?.preventDefault()
 
-    if (!input.trim() || isLoading) return
+    const messageContent = directMessage || input.trim()
+    if (!messageContent || isLoading) return
 
     const userMessage: Message = {
       id: Date.now().toString(),
       role: "user",
-      content: input.trim(),
+      content: messageContent,
     }
 
     setMessages((prev) => [...prev, userMessage])
@@ -121,10 +122,8 @@ export function AIChat() {
   }
 
   const handlePresetClick = (question: string) => {
-    setInput(question)
-    // Auto-submit the preset question
-    const syntheticEvent = { preventDefault: () => {} } as FormEvent
-    handleSubmit(syntheticEvent)
+    // Submit the preset question directly without populating input
+    handleSubmit(undefined, question)
   }
 
   return (
