@@ -15,14 +15,17 @@ const techItems = [
 ]
 
 const concepts = [
-  "ARCHITECTURE",
-  "CONTENT",
-  "DESIGN",
-  "INTERFACES",
-  "PROTOTYPE",
+  "ACCESSIBILITY",
+  "CONTENT STRATEGY",
+  "DESIGN SYSTEMS",
+  "INFORMATION ARCHITECTURE",
+  "ITERATIONS",
+  "JOURNEY MAPS",
+  "PERSONAS",
+  "PROTOTYPING",
   "RESEARCH",
-  "SYSTEMS",
   "TESTING",
+  "USER EXPERIENCE",
 ]
 
 function MarqueeRow({ items, direction = "left" }: { items: string[]; direction?: "left" | "right" }) {
