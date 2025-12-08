@@ -21,84 +21,54 @@ interface Polaroid {
 const initialPolaroids: Polaroid[] = [
   {
     id: "1",
-    title: "Pixel Art Generator",
-    image: "/pixel-art-colorful.jpg",
-    link: "https://example.com/pixel-art",
-    x: 200,
-    y: 250,
+    title: "BlackJack 21",
+    image: "/fun/bj.png",
+    link: "https://bjgame.vercel.app",
+    x: 800,
+    y: 400,
     rotation: -5,
     zIndex: 1,
   },
   {
     id: "2",
-    title: "Weather Mood App",
-    image: "/weather-app-sunny.jpg",
-    link: "https://example.com/weather",
+    title: "Tribe App Redesign",
+    image: "/fun/tribe.png",
+    link: "https://tribe-redesign.vercel.app",
     x: 450,
-    y: 180,
+    y: 100,
     rotation: 3,
     zIndex: 2,
   },
   {
     id: "3",
-    title: "Tetris Clone",
-    image: "/tetris-game-blocks.jpg",
-    link: "https://example.com/tetris",
-    x: 320,
-    y: 480,
+    title: "Fresh Look Refinishing",
+    image: "/fun/fresh-look.png",
+    link: "https://freshlookrefinishing.vercel.app",
+    x: 1000,
+    y: 500,
     rotation: -2,
     zIndex: 3,
   },
   {
     id: "4",
-    title: "AI Poem Writer",
-    image: "/poetry-writing-ai.jpg",
-    link: "https://example.com/poems",
+    title: "Colorado Carpet Care",
+    image: "/fun/colorado-carpet-care.png",
+    link: "https://coloradocarpetcareco.vercel.app",
     x: 680,
-    y: 320,
+    y: 600,
     rotation: 6,
     zIndex: 4,
   },
   {
     id: "5",
-    title: "Music Visualizer",
-    image: "/music-visualizer-neon.jpg",
-    link: "https://example.com/visualizer",
-    x: 120,
-    y: 520,
+    title: "Paper Shaders",
+    image: "/fun/shader.png",
+    link: "https://shader-pg.vercel.app",
+    x: 1200,
+    y: 150,
     rotation: -4,
     zIndex: 5,
-  },
-  {
-    id: "6",
-    title: "Space Shooter",
-    image: "/space-shooter.png",
-    link: "https://example.com/space-shooter",
-    x: 550,
-    y: 520,
-    rotation: 2,
-    zIndex: 6,
-  },
-  {
-    id: "7",
-    title: "Gradient Generator",
-    image: "/gradient-colors-abstract.jpg",
-    link: "https://example.com/gradients",
-    x: 820,
-    y: 200,
-    rotation: -3,
-    zIndex: 7,
-  },
-  {
-    id: "8",
-    title: "Snake Game",
-    image: "/snake-game-retro.jpg",
-    link: "https://example.com/snake",
-    x: 900,
-    y: 450,
-    rotation: 4,
-    zIndex: 8,
-  },
+  }
 ]
 
 export default function FunPage() {
@@ -232,7 +202,7 @@ export default function FunPage() {
             >
               <div className="bg-white p-1.5 pb-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 {/* Image */}
-                <div className="relative overflow-hidden">
+                <div className="bg-black relative overflow-hidden">
                   <img
                     src={polaroid.image || "/placeholder.svg"}
                     alt={polaroid.title}

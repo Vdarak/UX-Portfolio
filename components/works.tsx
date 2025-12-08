@@ -50,12 +50,12 @@ const projects = [
   },
   {
     id: "creative-block",
-    title: "Understanding Creative Block",
+    title: "Navigating Creative Block",
     role: "UX Researcher",
     outcome: "",
     tags: ["Feature Discovery", "UX Research", "Creativity"],
     image: "/home-page.png",
-    heroImage: "/ana/ana-hero.png",
+    heroImage: "/creative/creative-hero.png",
     year: "Jan 2024",
     comingSoon: true,
     details: {
@@ -76,7 +76,7 @@ const projects = [
     outcome: "",
     tags: ["Memory Care", "Elderly Care", "Recreation"],
     image: "/home-page.png",
-    heroImage: "/ana/ana-hero.png",
+    heroImage: "/hope-hero.png",
     year: "2025",
     comingSoon: true,
     details: {
@@ -97,7 +97,7 @@ const projects = [
     outcome: "",
     tags: ["AI", "Fintech", "Automation"],
     image: "/home-page.png",
-    heroImage: "/ana/ana-hero.png",
+    heroImage: "/book-hero.png",
     year: "2025",
     comingSoon: true,
     details: {
