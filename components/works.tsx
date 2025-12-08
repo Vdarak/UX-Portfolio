@@ -252,7 +252,7 @@ export function Works() {
                         {/* Results / Impact */}
                         <div>
                           <p className="font-mono text-base 3xl:text-lg tracking-widest text-accent mb-6 font-semibold">
-                            RESULTS & IMPACT
+                            FINDINGS
                           </p>
                           <div className="flex flex-wrap gap-8">
                             {project.details.results.map((result, i) => (
