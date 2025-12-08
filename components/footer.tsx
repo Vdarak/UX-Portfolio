@@ -3,11 +3,11 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { ArrowUpRight } from "lucide-react"
-import Link from "next/link"
 
 export function Footer() {
   const [time, setTime] = useState("")
   const [month, setMonth] = useState("")
+  const [location, setLocation] = useState("")
   const [isHovered, setIsHovered] = useState(false)
 
   useEffect(() => {
@@ -20,6 +20,12 @@ export function Footer() {
       setTime(`${hours}:${minutes}:${seconds}.${milliseconds}`)
       setMonth(now.toLocaleString("en-US", { month: "short" }))
     }
+
+    // Get location from timezone
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone
+    const locationParts = timezone.split("/")
+    const city = locationParts[locationParts.length - 1].replace(/_/g, " ")
+    setLocation(city)
 
     updateTime()
     const interval = setInterval(updateTime, 10)
@@ -83,31 +89,10 @@ export function Footer() {
       {/* Footer Info */}
       <div className="px-8 md:px-12 py-8 border-t border-white/10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          {/* Local Time */}
+          {/* Location and Time */}
           <div className="font-mono text-xs tracking-widest text-white/60">
-            <span className="mr-2 text-slate-300">LOCAL TIME</span>
+            <span className="mr-2 text-slate-300">{location.toUpperCase()}</span>
             <span className="text-white tabular-nums">{time}</span>
-          </div>
-
-          {/* Links - Resume now links to /resume page */}
-          <div className="flex gap-8">
-            <Link
-              href="/resume"
-              data-cursor-hover
-              className="font-mono text-xs tracking-widest hover:text-white transition-colors duration-300 text-white"
-            >
-              Resume
-            </Link>
-            {["LinkedIn", "GitHub", "Twitter"].map((link) => (
-              <a
-                key={link}
-                href="#"
-                data-cursor-hover
-                className="font-mono text-xs tracking-widest hover:text-white transition-colors duration-300 text-foreground"
-              >
-                {link}
-              </a>
-            ))}
           </div>
 
           {/* Copyright */}

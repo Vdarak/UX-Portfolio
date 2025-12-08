@@ -4,31 +4,23 @@ import { motion } from "framer-motion"
 
 const techItems = [
   "AI",
-  "EMPATHY",
   "FIGMA",
   "HTML",
-  "INTUITION",
   "NEXT.JS",
-  "PRECISION",
   "REACT",
   "TAILWIND",
   "THREE.JS",
   "TYPESCRIPT",
   "V0",
-  "WEBGL",
 ]
 
 const concepts = [
-  "ALGORITHMS",
   "ARCHITECTURE",
-  "COGNITION",
   "CONTENT",
   "DESIGN",
-  "EMERGENCE",
   "INTERFACES",
   "PROTOTYPE",
   "RESEARCH",
-  "SYNTHESIS",
   "SYSTEMS",
   "TESTING",
 ]
