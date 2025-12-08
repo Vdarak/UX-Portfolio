@@ -85,7 +85,7 @@ export default function ResumePage() {
           </div>
 
           <a
-            href="/resume.pdf"
+            href="/Vedant.pdf"
             download
             className="group inline-flex items-center gap-2 font-mono text-sm 3xl:text-base tracking-wider text-accent hover:text-white transition-colors px-4 py-2"
             onMouseEnter={() => setIsDownloadHovered(true)}
