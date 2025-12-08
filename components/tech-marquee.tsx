@@ -23,9 +23,9 @@ const concepts = [
   "JOURNEY MAPS",
   "PERSONAS",
   "PROTOTYPING",
-  "RESEARCH",
-  "TESTING",
+  "USABILITY TESTING",
   "USER EXPERIENCE",
+  "USER RESEARCH",
 ]
 
 function MarqueeRow({ items, direction = "left" }: { items: string[]; direction?: "left" | "right" }) {
