@@ -7,8 +7,22 @@ export function CustomCursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 })
   const [isHovering, setIsHovering] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+
+  // Check if device is mobile/touch
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.matchMedia('(hover: none) and (pointer: coarse)').matches || window.innerWidth < 768)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   useEffect(() => {
+    // Don't attach listeners on mobile
+    if (isMobile) return
+
     const handleMouseMove = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY })
       setIsVisible(true)
@@ -44,7 +58,10 @@ export function CustomCursor() {
       document.removeEventListener("mouseover", handleHoverStart)
       document.removeEventListener("mouseout", handleHoverEnd)
     }
-  }, [])
+  }, [isMobile])
+
+  // Don't render on mobile
+  if (isMobile) return null
 
   return (
     <>

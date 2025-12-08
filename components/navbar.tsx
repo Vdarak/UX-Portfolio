@@ -12,7 +12,6 @@ import { useAIChat } from "./ai-chat-provider"
 const navLinks = [
   { label: "About", href: "/about", type: "page" },
   { label: "Works", href: "#works", type: "scroll" },
-  { label: "Contact", href: "#contact", type: "scroll" },
   { label: "Fun", href: "/fun", type: "page", isFun: true },
   { label: "Resume", href: "/resume", type: "page" },
 ]
@@ -163,6 +162,31 @@ export function Navbar() {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-40 bg-background/95 backdrop-blur-lg md:hidden"
           >
+{/* Close button for mobile menu - animated X */}
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              className="absolute top-4 right-6 p-2 z-50 w-8 h-8 flex flex-col items-center justify-center gap-1.5"
+              aria-label="Close menu"
+            >
+              <motion.span
+                initial={{ rotate: 0, y: 0 }}
+                animate={{ rotate: 45, y: 5 }}
+                exit={{ rotate: 0, y: 0 }}
+                className="w-6 h-px bg-foreground origin-center"
+              />
+              <motion.span
+                initial={{ opacity: 1, x: 0 }}
+                animate={{ opacity: 0, x: -10 }}
+                exit={{ opacity: 1, x: 0 }}
+                className="w-6 h-px bg-foreground"
+              />
+              <motion.span
+                initial={{ rotate: 0, y: 0 }}
+                animate={{ rotate: -45, y: -5 }}
+                exit={{ rotate: 0, y: 0 }}
+                className="w-6 h-px bg-foreground origin-center"
+              />
+            </button>
             <nav className="flex flex-col items-center justify-center h-full gap-8">
               {navLinks.map((link, index) => (
                 <motion.div

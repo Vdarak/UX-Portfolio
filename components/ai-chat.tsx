@@ -23,7 +23,7 @@ export function AIChat() {
 
   const presetQuestions = [
     "What's your design process?",
-    "What are your hobbies?",
+    "What are you passionate about?",
     "How can I contact you?",
   ]
 
