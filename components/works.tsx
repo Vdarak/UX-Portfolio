@@ -28,6 +28,27 @@ const projects = [
     },
   },
   {
+    id: "ax-design-system",
+    title: "AX Design System",
+    role: "Design Systems Lead",
+    outcome: "65% faster time-to-ship, 94% adoption",
+    tags: ["Design Systems", "Agentic UX", "AI"],
+    image: "/home-page.png",
+    heroImage: "/ax/ax-hero.png",
+    year: "2025",
+    comingSoon: false,
+    details: {
+      responsibilities: ["System Architecture", "Component Library", "Governance", "Documentation"],
+      duration: "9 months",
+      description:
+        "A scalable design system for Agentic Experience (AX) that serves both human users and AI agents. Built dual-layer architecture with UI components and machine-legible contracts to enable safe, consistent, and trustworthy agent interactions across products.",
+      results: [
+        { stat: "65%", label: "faster time-to-ship" },
+        { stat: "94%", label: "component adoption" },
+      ],
+    },
+  },
+  {
     id: "canvas-chat",
     title: "Canvas Chat",
     role: "Personal Project",

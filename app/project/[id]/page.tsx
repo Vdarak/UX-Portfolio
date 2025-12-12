@@ -4,6 +4,7 @@ import { SmoothScroll } from "@/components/smooth-scroll"
 import { ProjectDetail } from "@/components/project-detail"
 import { MediaBiasProject } from "@/components/media-bias-project"
 import { CanvasChatProject } from "@/components/canvas-chat-project"
+import { AXDesignSystemProject } from "@/components/ax-design-system-project"
 
 // Project data matching the works component
 const projects: Record<
@@ -17,7 +18,7 @@ const projects: Record<
     image: string
     year: string
     isCustom?: boolean
-    customComponent?: "media-bias" | "canvas-chat"
+    customComponent?: "media-bias" | "canvas-chat" | "ax-design-system"
     details: {
       responsibilities: string[]
       duration: string
@@ -44,6 +45,56 @@ const projects: Record<
     }
   }
 > = {
+  "ax-design-system": {
+    id: "ax-design-system",
+    title: "AX Design System",
+    role: "Design Systems Lead",
+    outcome: "65% faster time-to-ship, 94% adoption",
+    tags: ["Design Systems", "Agentic UX", "AI"],
+    image: "/ax/ax-hero.png",
+    year: "2025",
+    isCustom: true,
+    customComponent: "ax-design-system",
+    details: {
+      responsibilities: ["System Architecture", "Component Library", "Governance", "Documentation"],
+      duration: "9 months",
+      challenge:
+        "Agent-powered products were accumulating UX debt and safety risks due to fragmented UI patterns, inconsistent trust cues, and duplicate engineering across teams.",
+      results: "65% faster time-to-ship, 94% component adoption, 40% reduction in trust-related support tickets.",
+    },
+    caseStudy: {
+      context:
+        "Building AI-powered products at scale required a unified design system that serves both human users and AI agents.",
+      users: "Designers, engineers, and product teams building agentic experiences, plus the AI agents themselves.",
+      problem:
+        "No shared language for agent states, inconsistent trust cues, duplicate engineering work, and ad-hoc safety implementations.",
+      research: {
+        method: "Audited 50+ surfaces, interviewed 40 team members, analyzed component usage patterns across products.",
+        insight:
+          "Teams needed both visual components AND machine-legible contracts to build safe, consistent agent experiences.",
+        pivot:
+          "Extended beyond traditional design systems to include agent-facing schemas, policies, and trace models.",
+      },
+      solution: {
+        innovation:
+          "Dual-layer architecture with Human UI components and Agent contracts working together.",
+        howItWorks:
+          "Token system feeds themed components. Trust tokens encode safety semantics. Agent contracts define machine-readable behavior.",
+        designChoices:
+          "Contract-first approach, federated governance, pattern library for complex behaviors.",
+      },
+      contribution:
+        "Led system architecture, defined AX principles, built component inventory, and established governance model.",
+      metrics: [
+        "65% faster time-to-ship",
+        "94% component adoption",
+        "40% fewer support tickets",
+        "0 critical safety incidents",
+      ],
+      learning:
+        "The hardest part of building for agents is accepting that your users might not be human—and designing systems that work for both.",
+    },
+  },
   "media-bias": {
     id: "media-bias",
     title: "Spotting the Bias in News",
@@ -341,6 +392,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
     }
     if (project.customComponent === "canvas-chat") {
       return <CanvasChatProject project={project} />
+    }
+    if (project.customComponent === "ax-design-system") {
+      return <AXDesignSystemProject project={project} />
     }
     return <ProjectDetail project={project} />
   }
