@@ -19,26 +19,6 @@ interface ProjectProps {
   }
 }
 
-function ProgressBar({ value, label, color = "accent" }: { value: number; label: string; color?: string }) {
-  return (
-    <div className="space-y-2">
-      <div className="flex justify-between items-center">
-        <span className="font-mono text-sm text-white/70">{label}</span>
-        <span className="font-mono text-sm text-accent">{value}%</span>
-      </div>
-      <div className="h-2 bg-white/10 rounded-full overflow-hidden">
-        <motion.div
-          className={`h-full ${color === "accent" ? "bg-accent" : color}`}
-          initial={{ width: 0 }}
-          whileInView={{ width: `${value}%` }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, ease: "easeOut" }}
-        />
-      </div>
-    </div>
-  )
-}
-
 function ComponentCard({ name, description, states, icon: Icon }: { name: string; description: string; states: string[]; icon: React.ElementType }) {
   return (
     <motion.div
@@ -107,7 +87,7 @@ export function AXDesignSystemProject({ project }: ProjectProps) {
             {project.role}
           </span>
           <span className="font-mono font-bold text-sm 3xl:text-base text-white/60">{project.year}</span>
-          <span className="font-mono font-bold text-sm 3xl:text-base text-white/60">9 months</span>
+          <span className="font-mono font-bold text-sm 3xl:text-base text-white/60">{project.details.duration}</span>
           <span className="font-mono font-bold text-sm 3xl:text-base text-white/60">
             Federated Team Model
           </span>

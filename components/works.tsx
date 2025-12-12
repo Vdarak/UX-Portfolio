@@ -31,7 +31,7 @@ const projects = [
     id: "ax-design-system",
     title: "AX Design System",
     role: "Design Systems Lead",
-    outcome: "",
+    outcome: "65% faster time-to-ship, 94% adoption",
     tags: ["Design Systems", "Agentic UX", "AI"],
     image: "/home-page.png",
     heroImage: "/ax/ax-hero.png",
