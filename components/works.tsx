@@ -14,7 +14,7 @@ const projects = [
     tags: ["AI", "UX Research", "Media Bias"],
     image: "/home-page.png",
     heroImage: "/ana-hero.png",
-    year: "Apr 2025",
+    year: "2025",
     comingSoon: false,
     details: {
       responsibilities: ["UX Research", "Survey Design", "Data Analysis", "Interaction Design"],
@@ -56,7 +56,7 @@ const projects = [
     tags: ["Feature Discovery", "UX Research", "Creativity"],
     image: "/home-page.png",
     heroImage: "/creative/creative-hero.png",
-    year: "Jan 2024",
+    year: "2024",
     comingSoon: true,
     details: {
       responsibilities: ["User Interviews", "Behavioral Analysis", "Feature Discovery", "Concept Testing"],
@@ -92,7 +92,7 @@ const projects = [
   },
   {
     id: "bookkeeping",
-    title: "Augmenting Bookkeeping",
+    title: "Augmenting Small CPA Firms",
     role: "UX Designer",
     outcome: "",
     tags: ["AI", "Fintech", "Automation"],
@@ -209,7 +209,7 @@ export function Works() {
                         exit={{ scale: 0, opacity: 0 }}
                         transition={{ duration: 0.2 }}
                       >
-                        <Minus className="w-6 h-6 3xl:w-8 3xl:h-8 text-accent" />
+                        <Minus className="w-8 h-8 3xl:w-8 3xl:h-8 text-accent" />
                       </motion.div>
                     ) : (
                       <motion.div
@@ -219,7 +219,7 @@ export function Works() {
                         exit={{ scale: 0, opacity: 0 }}
                         transition={{ duration: 0.2 }}
                       >
-                        <Plus className="w-6 h-6 3xl:w-8 3xl:h-8 text-foreground" />
+                        <Plus className="w-8 h-8 3xl:w-8 3xl:h-8 text-foreground" />
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -280,7 +280,7 @@ export function Works() {
                             onMouseEnter={() => setHoveredCTAIndex(index)}
                             onMouseLeave={() => setHoveredCTAIndex(null)}
                           >
-                            VIEW FULL CASE STUDY
+                            VIEW PROJECT
                             <motion.span
                               animate={
                                 hoveredCTAIndex === index

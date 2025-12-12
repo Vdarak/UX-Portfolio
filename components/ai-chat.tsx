@@ -175,7 +175,7 @@ export function AIChat() {
             <div className="space-y-4">
               {/* Welcome message */}
               <div className="px-4 py-3 rounded-2xl rounded-bl-md border border-white/20 font-mono text-sm leading-relaxed text-white/90">
-                Hey! I'm LLME, Vedant's AI assistant. Ask me about his projects, experience, or design philosophy. How can I help you today?
+                Hey! I'm LLME, Vedant's AI Persona. Ask me about his projects, experience, or design philosophy. How can I help you today?
               </div>
               
               {/* Preset questions */}
