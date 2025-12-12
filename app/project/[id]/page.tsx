@@ -4,6 +4,7 @@ import { SmoothScroll } from "@/components/smooth-scroll"
 import { ProjectDetail } from "@/components/project-detail"
 import { MediaBiasProject } from "@/components/media-bias-project"
 import { CanvasChatProject } from "@/components/canvas-chat-project"
+import { AxDesignSystemProject } from "@/components/ax-design-system-project"
 
 // Project data matching the works component
 const projects: Record<
@@ -17,7 +18,7 @@ const projects: Record<
     image: string
     year: string
     isCustom?: boolean
-    customComponent?: "media-bias" | "canvas-chat"
+    customComponent?: "media-bias" | "canvas-chat" | "ax-design-system" | "ax-design-system"
     details: {
       responsibilities: string[]
       duration: string
@@ -282,6 +283,41 @@ const projects: Record<
       learning: "Voice UI isn't about making screens talk—it's about designing for how humans actually communicate.",
     },
   },
+  "ax-design-system": {
+    id: "ax-design-system",
+    title: "AX Design System",
+    role: "Lead Product Designer",
+    outcome: "Standardized Agent Experience",
+    tags: ["Design System", "AI Agents", "React"],
+    image: "/ax-hero.png",
+    year: "2025",
+    isCustom: true,
+    customComponent: "ax-design-system",
+    details: {
+      responsibilities: ["System Architecture", "Component Design", "Governance"],
+      duration: "Ongoing",
+      challenge: "Building a design system for non-human users.",
+      results: "100% Safety Rate",
+    },
+    caseStudy: {
+      context: "AI agents need structured interfaces.",
+      users: "Developers and AI Agents.",
+      problem: "Inconsistent agent behavior and lack of safety controls.",
+      research: {
+        method: "Analysis of agent failures and security risks.",
+        insight: "Agents need explicit contracts and trust indicators.",
+        pivot: "From UI-only to Bi-Modal system.",
+      },
+      solution: {
+        innovation: "Bi-Modal Design System.",
+        howItWorks: "Shared components for humans and agents.",
+        designChoices: "Atomic principles extended with Trust and Contract atoms.",
+      },
+      contribution: "System architecture and component implementation.",
+      metrics: ["100% Safety Rate", "15 Teams Adopting"],
+      learning: "Designing for agents requires a shift in thinking from pixels to patterns.",
+    },
+  },
   "canvas-chat": {
     id: "canvas-chat",
     title: "Canvas Chat",
@@ -341,6 +377,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
     }
     if (project.customComponent === "canvas-chat") {
       return <CanvasChatProject project={project} />
+    }
+    if (project.customComponent === "ax-design-system") {
+      return <AxDesignSystemProject />
     }
     return <ProjectDetail project={project} />
   }

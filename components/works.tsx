@@ -49,6 +49,27 @@ const projects = [
     },
   },
   {
+    id: "ax-design-system",
+    title: "AX Design System",
+    role: "Lead Product Designer",
+    outcome: "",
+    tags: ["Design System", "AI Agents", "React"],
+    image: "/home-page.png",
+    heroImage: "/ax-hero.png",
+    year: "2025",
+    comingSoon: true,
+    details: {
+      responsibilities: ["System Architecture", "Component Design", "Governance"],
+      duration: "Ongoing",
+      description:
+        "A case study on building a design system that treats UI as one surface, while making agent-facing contracts (schemas, policies, context, and audit trails) equally “designed.”",
+      results: [
+        { stat: "31+", label: "Components" },
+        { stat: "2", label: "Modes of Interaction" },
+      ],
+    },
+  },
+  {
     id: "creative-block",
     title: "Navigating Creative Block",
     role: "UX Researcher",
@@ -66,27 +87,6 @@ const projects = [
       results: [
         { stat: "10", label: "potential features discovered" },
         { stat: "16", label: "participants interviewed" },
-      ],
-    },
-  },
-  {
-    id: "hope",
-    title: "Hope",
-    role: "UX Designer",
-    outcome: "",
-    tags: ["Memory Care", "Elderly Care", "Recreation"],
-    image: "/home-page.png",
-    heroImage: "/hope-hero.png",
-    year: "2025",
-    comingSoon: true,
-    details: {
-      responsibilities: ["User Research", "Service Design", "Prototyping", "Accessibility"],
-      duration: "In Progress",
-      description:
-        "A memory care assistant designed for elderly residents in care homes. Hope serves as a recreational companion, helping seniors engage with activities, memories, and social connections to improve their quality of life and cognitive engagement.",
-      results: [
-        { stat: "—", label: "coming soon" },
-        { stat: "—", label: "coming soon" },
       ],
     },
   },

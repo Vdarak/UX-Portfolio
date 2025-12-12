@@ -95,13 +95,7 @@ Creative block is everywhere, yet nowhere in technology. While artists struggle 
 - 16 participants interviewed
 - Deep behavioral analysis conducted
 
-### 4. Hope - Memory Care Assistant (2025)
-**Role**: UX Designer | **Tags**: Memory Care, Elderly Care, Recreation
-**Status**: Coming Soon (In Progress)
-
-A memory care assistant designed for elderly residents in care homes. Hope serves as a recreational companion, helping seniors engage with activities, memories, and social connections to improve their quality of life and cognitive engagement.
-
-### 5. Augmenting Bookkeeping (2025)
+### 4. Augmenting Bookkeeping (2025)
 **Role**: UX Designer | **Tags**: AI, Fintech, Automation
 **Status**: Coming Soon (In Progress)
 
