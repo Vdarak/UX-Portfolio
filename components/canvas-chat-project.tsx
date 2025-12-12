@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import { motion } from "framer-motion"
 import { ArrowLeft, ArrowUpRight } from "lucide-react"
 import Link from "next/link"
@@ -17,6 +18,7 @@ interface CanvasChatProjectProps {
 }
 
 export function CanvasChatProject({ project }: CanvasChatProjectProps) {
+  const [hoveredLaunch, setHoveredLaunch] = useState(false)
   return (
     <article className="min-h-screen pt-32 pb-24 px-8 md:px-12 lg:px-24">
       {/* Back Button */}
@@ -213,10 +215,35 @@ export function CanvasChatProject({ project }: CanvasChatProjectProps) {
           href="https://canvaschat.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 px-8 py-4 border border-accent text-accent hover:bg-accent hover:text-background transition-colors rounded-lg font-mono text-base 3xl:text-lg"
+          className="group inline-flex items-center gap-2 font-mono text-base 3xl:text-lg tracking-wider text-accent hover:text-white transition-colors duration-300"
+          onMouseEnter={() => setHoveredLaunch(true)}
+          onMouseLeave={() => setHoveredLaunch(false)}
         >
           <span>LAUNCH CANVAS CHAT</span>
-          <ArrowUpRight className="w-5 h-5" />
+          <motion.span
+            animate={
+              hoveredLaunch
+                ? {
+                    x: [0, 4, 0],
+                    y: [0, -4, 0],
+                  }
+                : { x: 0, y: 0 }
+            }
+            transition={
+              hoveredLaunch
+                ? {
+                    duration: 1,
+                    ease: "easeInOut",
+                    repeat: Number.POSITIVE_INFINITY,
+                  }
+                : {
+                    duration: 0.3,
+                    ease: "easeOut",
+                  }
+            }
+          >
+            <ArrowUpRight className="w-5 h-5 3xl:w-6 3xl:h-6" />
+          </motion.span>
         </a>
       </motion.section>
 

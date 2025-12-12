@@ -178,7 +178,7 @@ export function MediaBiasProject({ project }: ProjectProps) {
               </li>
             </ul>
 
-            <div className="bg-white/5 border-l-4 border-accent rounded-r-xl p-8 mt-8">
+            <div className="border-l-4 border-accent rounded-r-xl p-8 mt-8">
               <p className="text-2xl md:text-3xl 3xl:text-4xl text-white/90 leading-relaxed mb-4 font-sans">
                 "Fake news is like a dangerous virus — it spreads fast and hurts people"
               </p>
@@ -259,17 +259,18 @@ export function MediaBiasProject({ project }: ProjectProps) {
         </div>
 
         {/* Big Takeaway */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="border border-accent/30 rounded-2xl p-12 text-center bg-background"
-        >
-          <p className="font-sans text-2xl md:text-3xl 3xl:text-4xl font-light text-white">
+      </motion.section>    <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="mb-32"
+      >
+        <div className="border-l-4 border-accent pl-8 md:pl-12">
+          <p className="text-xl md:text-2xl lg:text-3xl 3xl:text-4xl font-sans text-white/80 leading-relaxed">
             People need help spotting the bias they don't realize they're missing.
           </p>
-        </motion.div>
+        </div>
       </motion.section>
 
       {/* Section 3: Research Process */}
@@ -533,7 +534,7 @@ export function MediaBiasProject({ project }: ProjectProps) {
               </li>
             </ul>
           </div>
-          <div className="border border-white/10 rounded-xl p-6 bg-background border-none">
+          <div className="border border-white/10 rounded-xl py-6 pr-6 bg-background border-none">
             <p className="font-mono 3xl:text-sm tracking-widest text-red-500 mb-4 text-lg">WHAT NEEDED FIXING</p>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
@@ -572,10 +573,6 @@ export function MediaBiasProject({ project }: ProjectProps) {
           </div>
         </div>
       </motion.section>
-
-      {/* Section 7: Mid-Fidelity Prototype */}
-
-      {/* Section 8: Bias Slider Evolution */}
 
       {/* Section 9: Testing & Fixing */}
       <motion.section
@@ -711,7 +708,7 @@ export function MediaBiasProject({ project }: ProjectProps) {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="border border-accent/30 rounded-2xl p-12 text-center bg-background"
+          className="border-l-4 border-accent rounded-r-xl p-8 mt-8"
         >
           <p className="font-sans text-2xl md:text-3xl 3xl:text-4xl font-light text-white">
             We need both! People plus AI working together is better than either one alone.
