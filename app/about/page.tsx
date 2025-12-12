@@ -79,22 +79,46 @@ export default function AboutPage() {
             </div>
 
             <div>
-              <p className="font-mono text-md 3xl:text-base tracking-widest text-accent mb-4 text-lg">WHAT I DO</p>
-              <p className="font-mono text-sm 3xl:text-base leading-relaxed text-white/80">
-                I design and build AI-powered interfaces that feel intuitive, accessible, and genuinely useful. From
-                conversational AI assistants to enterprise dashboards, I focus on making complex technology feel simple
-                and human through end-to-end UX design, UI implementation, and front-end development.
-              </p>
-            </div>
-
-            <div>
-              <p className="font-mono text-md 3xl:text-base tracking-widest text-accent mb-4 text-lg">HOW I WORK</p>
-              <p className="font-mono text-sm 3xl:text-base leading-relaxed text-white/80">
-                I approach every project with curiosity and rigor. I start with deep research—stakeholder interviews,
-                usability tests, surveys—to understand users and context, translate insights into thoughtful design
-                decisions, and bring ideas to life through clean, performant code in CI/CD pipelines. I value
-                collaboration, iteration, and shipping work that makes a real impact.
-              </p>
+              <p className="font-mono text-md 3xl:text-base tracking-widest text-accent mb-4 text-lg">BEYOND WORK</p>
+              <div className="space-y-4">
+                <p className="font-mono text-sm 3xl:text-base leading-relaxed text-white/80">
+                  I play badminton (I played on my college team). I’m a stock market enthusiast — options and stock trader
+                  as hobbies.
+                </p>
+                <p className="font-mono text-sm 3xl:text-base leading-relaxed text-white/80">
+                  I read a lot. Currently reading <span className="italic">Technological Republic</span> by Alex Karp.
+                </p>
+                <p className="font-mono text-sm 3xl:text-base leading-relaxed text-white/80">
+                  I like to read books to get to know the point of view of other people — it’s like stepping into their
+                  world. Even if you don’t accept that world as your reality, it still shows you many interesting things
+                  you can learn.
+                </p>
+                <p className="font-mono text-sm 3xl:text-base leading-relaxed text-white/80">
+                  I exercise and do yoga everyday in the morning.
+                </p>
+                <p className="font-mono text-sm 3xl:text-base leading-relaxed text-white/80">
+                  I’m deeply interested in how LLMs work. 3Blue1Brown was one of my favs to understand how LLMs are
+                  actually probabilistic and not deterministic.
+                </p>
+                <p className="font-mono text-sm 3xl:text-base leading-relaxed text-white/80">
+                  I’m into podcasts like Andrew Huberman and Chris Williamson to learn more about bio maxing and self
+                  improvement. I can talk to you about AI even if you wake me up at 3 AM.
+                </p>
+                <p className="font-mono text-sm 3xl:text-base leading-relaxed text-white/80">
+                  I like to tinker with the new AI tools — I vibecode with them and create interesting (sometimes absurd,
+                  irrelevant) projects because there’s learning and fun in the process of it. The journey is more
+                  important than destination.
+                </p>
+                <p className="font-mono text-sm 3xl:text-base leading-relaxed text-white/80">
+                  You’ll often see me drop quotes like this (PS: I also have a list of banger quotes in my notes, along
+                  with a few poems, my story ideas, my knowledge about myself, truth about the world, my worst fears,
+                  tattoo ideas, book recommendations, story writing principles from movies and TV shows, random thoughts,
+                  ideas, dream journal, trade journal, and there’s a big rabbit hole on mentalism as well in my notes).
+                </p>
+                <p className="font-mono text-sm 3xl:text-base leading-relaxed text-white/80">
+                  Topics of interest — AI, Universe, Stocks, Banned Books, Radical Ideas.
+                </p>
+              </div>
             </div>
           </motion.div>
 

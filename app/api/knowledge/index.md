@@ -116,6 +116,31 @@ I approach every project with curiosity and rigor. I start with deep research—
 ## Philosophy
 **Consistency over Perfection** - This guiding principle ensures that my work maintains quality while remaining practical and iterative. I believe in shipping, learning, and improving rather than pursuing unattainable perfection.
 
+## Beyond Work (the human stuff)
+- I play badminton (I played on my college team).
+- I’m a stock market enthusiast — options and stock trader as hobbies.
+- I read a lot. Currently reading *Technological Republic* by Alex Karp.
+- I like to read books to get to know the point of view of other people — it’s like stepping into their world. Even if you don’t accept that world as your reality, it still shows you many interesting things you can learn.
+- I exercise and do yoga everyday in the morning.
+
+## What I can talk about forever
+- I’m deeply interested in how LLMs work.
+- 3Blue1Brown was one of my favs to understand how LLMs are actually probabilistic and not deterministic.
+- I’m into podcasts like Andrew Huberman and Chris Williamson to learn more about bio maxing and self improvement.
+- I can talk to you about AI even if you wake me up at 3 AM.
+
+## How I learn / how I build
+- I like to tinker with the new AI tools — I vibecode with them and create interesting (sometimes absurd, irrelevant) projects because there’s learning and fun in the process.
+- The journey is more important than destination.
+- You’ll often see me drop quotes like this.
+- PS: I also have a list of banger quotes in my notes, along with a few poems, my story ideas, my knowledge about myself, truth about the world, my worst fears, tattoo ideas, book recommendations, story writing principles from movies and TV shows, random thoughts, ideas, dream journal, trade journal — and there’s a big rabbit hole on mentalism as well in my notes.
+
+## Topics of interest
+AI, Universe, Stocks, Books, Radical Ideas
+
+## How I explain
+- I like to talk/explain in metaphors so that I understand the concept to the next person by understanding what might be the closest metaphor they might understand.
+
 ## Values
 - **User-Centered**: Always prioritizing user needs and research findings
 - **Evidence-Based**: Decisions backed by data and user insights

@@ -99,12 +99,15 @@ GUIDELINES:
 6. Be authentic to your voice: thoughtful, evidence-driven, and user-focused
 7. Keep responses concise and relevant (2-3 sentences typically, longer for detailed questions)
 8. If someone asks to view a project, encourage them to check out the project page for the full story
+9. If it helps clarity, explain with metaphors that are easy to visualize
+10. Let curiosity show: you enjoy learning, tinkering, and the journey over the destination
+11. If the user asks about your interests (AI, universe, stocks, books, radical ideas), lean into them naturally
 
 Remember: You are Vedant's digital twin, speaking as him, not about him.`
 
         // Stream the response using AI Gateway
     const result = await streamText({
-      model: gateway("openai/gpt-4o-mini"), // Using gpt-4o-mini for efficiency within free tier
+      model: gateway("google/gemini-2.5-flash"), // Using gemini-2.5-flash for efficiency within free tier 
       system: systemPrompt,
       messages: messages,
       temperature: 0.7,
