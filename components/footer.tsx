@@ -50,7 +50,7 @@ export function Footer() {
               {/* Text container */}
               <div className="relative pr-4">
                 <h2 className="font-sans text-4xl md:text-6xl lg:text-8xl font-light tracking-tight whitespace-nowrap text-white">
-                  Let's <span className="italic">Collaborate</span>
+                  Let's Collaborate
                 </h2>
                 {/* Orange text overlay that slides up */}
                 <motion.h2
@@ -59,7 +59,7 @@ export function Footer() {
                   animate={{ clipPath: isHovered ? "inset(0% 0 0 0)" : "inset(100% 0 0 0)" }}
                   transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
                 >
-                  Let's <span className="italic">Collaborate</span>
+                  Let's Collaborate
                 </motion.h2>
               </div>
 
