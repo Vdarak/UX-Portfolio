@@ -23,10 +23,11 @@ export const metadata: Metadata = {
   title: "Vedant's Portfolio",
   description: "Designing intelligent interfaces that bridge human intuition and machine intelligence",
   icons: {
-    icon: [{ url: "/logo-favicon.svg", type: "image/svg+xml" }],
-    apple: "/logo-favicon.svg",
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
   },
-    generator: 'v0.app'
+    generator: 'Vedant Darak'
 }
 
 export const viewport: Viewport = {

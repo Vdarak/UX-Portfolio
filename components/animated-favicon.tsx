@@ -17,7 +17,7 @@ export function AnimatedFavicon() {
     // Load the favicon image
     const img = new Image()
     img.crossOrigin = "anonymous"
-    img.src = "/logo-favicon.svg"
+    img.src = "/icon.svg"
     imageRef.current = img
 
     img.onload = () => {
