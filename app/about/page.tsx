@@ -73,8 +73,7 @@ export default function AboutPage() {
             <div>
               <p className="font-mono text-md 3xl:text-base tracking-widest text-accent mb-4 text-lg">WHO I AM</p>
               <p className="font-mono text-sm 3xl:text-base leading-relaxed text-white/80">
-                I'm an AI-first UX Design Engineer operating at the intersection of Research, Design, and Engineering. Based in
-                Chicago, IL, I believe the best digital experiences emerge when human insight meets technical precision.
+                I'm a UX Design Engineer augmented with AI tools. I believe the best digital experiences emerge when human insight meets technical precision.
               </p>
             </div>
 
@@ -89,12 +88,11 @@ export default function AboutPage() {
                   I read a lot. Currently reading <span className="italic">Technological Republic</span> by Alex Karp.
                 </p>
                 <p className="font-mono text-sm 3xl:text-base leading-relaxed text-white/80">
-                  I like to read books to get to know the point of view of other people — it’s like stepping into their
-                  world. Even if you don’t accept that world as your reality, it still shows you many interesting things
+                  I like to read books to understand the perspective of others — it’s like stepping into their awareness of the world. Even if you don’t accept that world as your reality, it still shows you many interesting things
                   you can learn.
                 </p>
                 <p className="font-mono text-sm 3xl:text-base leading-relaxed text-white/80">
-                  I exercise and do yoga everyday in the morning.
+                  I exercise and do yoga everyday in the morning. Occasional hiker and sea waves enjoyer.
                 </p>
                 <p className="font-mono text-sm 3xl:text-base leading-relaxed text-white/80">
                   I’m deeply interested in how LLMs work. 3Blue1Brown was one of my favs to understand how LLMs are
@@ -113,7 +111,7 @@ export default function AboutPage() {
                   You’ll often see me drop quotes like this (PS: I also have a list of banger quotes in my notes, along
                   with a few poems, my story ideas, my knowledge about myself, truth about the world, my worst fears,
                   tattoo ideas, book recommendations, story writing principles from movies and TV shows, random thoughts,
-                  ideas, dream journal, trade journal, and there’s a big rabbit hole on mentalism as well in my notes).
+                  ideas, dream journal, trade journal, and there’s a big rabbit hole on mentalism).
                 </p>
                 <p className="font-mono text-sm 3xl:text-base leading-relaxed text-white/80">
                   Topics of interest — AI, Universe, Stocks, Banned Books, Radical Ideas.
@@ -132,14 +130,16 @@ export default function AboutPage() {
             <div>
               <p className="font-mono text-md 3xl:text-base tracking-widest text-accent mb-4 text-lg">CURRENTLY</p>
               <p className="font-mono text-sm 3xl:text-base leading-relaxed text-white/80">
-                Design Engineer at Cognijin Inc., building custom AI solutions including Pepper—an AI job search
-                assistant—with a focus on accessibility, AI interactions, and polished user experiences.
+                AI Trainer at Mercor.com, helping train AI models to produce high-quality, functional designs.
               </p>
             </div>
 
             <div>
               <p className="font-mono text-md 3xl:text-base tracking-widest text-accent mb-4 text-lg">PREVIOUSLY</p>
               <ul className="space-y-2">
+                <li className="font-mono text-sm 3xl:text-base text-white/80">
+                  Design Engineer at Cognijin Inc.
+                </li>
                 <li className="font-mono text-sm 3xl:text-base text-white/80">
                   Software Designer at Infinichains (Credibl) Inc.
                 </li>

@@ -12,7 +12,7 @@ import { useAIChat } from "./ai-chat-provider"
 const navLinks = [
   { label: "About", href: "/about", type: "page" },
   { label: "Works", href: "#works", type: "scroll" },
-  { label: "Fun", href: "/fun", type: "page", isFun: true },
+  { label: "Fun", href: "/fun", type: "page" },
   { label: "Resume", href: "/resume", type: "page" },
 ]
 
@@ -68,17 +68,16 @@ export function Navbar() {
     <>
       <motion.header
         initial={{ y: -100 }}
-        animate={{ 
+        animate={{
           y: 0,
           paddingRight: isChatOpen && isLargeScreen ? 440 : 0,
         }}
-        transition={{ 
+        transition={{
           y: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
           paddingRight: { type: "spring", damping: 30, stiffness: 300 }
         }}
-        className={`fixed top-0 left-0 right-0 z-40 transition-colors duration-500 ${
-          isScrolled ? "bg-background/80 backdrop-blur-md border-b border-border" : ""
-        }`}
+        className={`fixed top-0 left-0 right-0 z-40 transition-colors duration-500 ${isScrolled ? "bg-background/80 backdrop-blur-md border-b border-border" : ""
+          }`}
       >
         <nav className="flex items-center justify-between px-6 py-4 my-0 md:px-12 md:py-5">
           {/* Logo */}
@@ -162,7 +161,7 @@ export function Navbar() {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-40 bg-background/95 backdrop-blur-lg md:hidden"
           >
-{/* Close button for mobile menu - animated X */}
+            {/* Close button for mobile menu - animated X */}
             <button
               onClick={() => setIsMenuOpen(false)}
               className="absolute top-4 right-6 p-2 z-50 w-8 h-8 flex flex-col items-center justify-center gap-1.5"
@@ -200,7 +199,7 @@ export function Navbar() {
                     <Link
                       href={link.href}
                       onClick={() => setIsMenuOpen(false)}
-                      className={`group text-4xl font-sans tracking-tight ${link.isFun ? "text-cyan-400" : "text-foreground"}`}
+                      className={`group text-4xl font-sans tracking-tight text-foreground`}
                     >
                       {link.label}
                     </Link>

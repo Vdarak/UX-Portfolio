@@ -28,23 +28,19 @@ export function Hero() {
           className="max-w-5xl text-center"
         >
           <h1 className="font-sans text-4xl md:text-5xl lg:text-6xl xl:text-7xl 3xl:text-8xl font-normal leading-[1.3] md:leading-[1.35] tracking-tight text-balance text-foreground">
-            Hello! I'm Vedant Darak —{" "}
+            I'm Vedant Darak, I blend
+            <br />
+            <span className="relative inline-block">
+              <span className="relative z-10 font-sans text-foreground">Design</span>
+              <span className="absolute left-0 right-0 top-1/2 h-[0.35em] -translate-y-1/2 bg-rose-500/40 -skew-x-2" />
+            </span>
+            {" + "}
+            <span className="relative inline-block">
+              <span className="relative z-10 font-sans text-foreground">Engineering</span>
+              <span className="absolute left-0 right-0 top-1/2 h-[0.35em] -translate-y-1/2 bg-cyan-400/40 -skew-x-2" />
+            </span>
+            <br />
             <span className="text-white/80">
-              I blend{" "}
-              <span className="relative inline-block">
-                <span className="relative z-10 font-sans text-foreground">Research</span>
-                <span className="absolute left-0 right-0 top-1/2 h-[0.35em] -translate-y-1/2 bg-amber-500/40 -skew-x-2" />
-              </span>
-              {" + "}
-              <span className="relative inline-block">
-                <span className="relative z-10 font-sans text-foreground">Design</span>
-                <span className="absolute left-0 right-0 top-1/2 h-[0.35em] -translate-y-1/2 bg-rose-500/40 -skew-x-2" />
-              </span>
-              {" + "}
-              <span className="relative inline-block">
-                <span className="relative z-10 font-sans text-foreground">Engineering</span>
-                <span className="absolute left-0 right-0 top-1/2 h-[0.35em] -translate-y-1/2 bg-cyan-400/40 -skew-x-2" />
-              </span>{" "}
               to craft intentional user experiences.
             </span>
           </h1>
@@ -52,15 +48,15 @@ export function Hero() {
           <p className="mt-6 text-base md:text-lg lg:text-xl 3xl:text-2xl font-mono tracking-wide text-foreground">
             Currently at{" "}
             <a
-              href="https://cognijin.com/"
+              href="https://mercor.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 text-foreground underline-offset-4 hover:text-white/80 transition-colors italic underline"
             >
-              Cognijin Inc
+              Mercor.com
               <ArrowUpRight className="w-4 h-4 md:w-5 md:h-5 3xl:w-6 3xl:h-6" />
             </a>
-            , building the face of custom AI solutions across healthcare, law & entertainment.
+            , helping train AI models to produce high-quality, functional designs.
           </p>
         </motion.div>
       </motion.div>

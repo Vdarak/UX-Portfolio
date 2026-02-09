@@ -285,22 +285,22 @@ export function Works() {
                               animate={
                                 hoveredCTAIndex === index
                                   ? {
-                                      x: [0, 4, 0],
-                                      y: [0, -4, 0],
-                                    }
+                                    x: [0, 4, 0],
+                                    y: [0, -4, 0],
+                                  }
                                   : { x: 0, y: 0 }
                               }
                               transition={
                                 hoveredCTAIndex === index
                                   ? {
-                                      duration: 1,
-                                      ease: "easeInOut",
-                                      repeat: Number.POSITIVE_INFINITY,
-                                    }
+                                    duration: 1,
+                                    ease: "easeInOut",
+                                    repeat: Number.POSITIVE_INFINITY,
+                                  }
                                   : {
-                                      duration: 0.3,
-                                      ease: "easeOut",
-                                    }
+                                    duration: 0.3,
+                                    ease: "easeOut",
+                                  }
                               }
                             >
                               <ArrowUpRight className="w-5 h-5 3xl:w-6 3xl:h-6" />

@@ -10,11 +10,25 @@ import Link from "next/link"
 
 const experiences = [
   {
+    id: "mercor",
+    company: "Mercor.com",
+    role: "AI Trainer",
+    type: "Contract",
+    duration: "Jan 2025 - Present",
+    location: "Remote",
+    responsibilities: [
+      "Training AI models to produce high-quality, functional designs through expert feedback and evaluation.",
+      "Evaluating AI-generated design outputs for quality, usability, and adherence to design principles.",
+      "Providing detailed annotations and corrections to improve model performance on design tasks.",
+      "Collaborating with ML engineers to refine training data and improve model accuracy.",
+    ],
+  },
+  {
     id: "cognijin",
     company: "Cognijin Inc.",
     role: "Design Engineer",
     type: "Full-time",
-    duration: "Sep 2025 - Present",
+    duration: "Sep 2024 - Dec 2024",
     location: "Remote",
     responsibilities: [
       "Built reusable Next.js + React + TypeScript components for Pepper – AI job search assistant with design tokens and responsive patterns, focusing on accessibility, AI interactions and polished user experience.",
@@ -96,21 +110,21 @@ export default function ResumePage() {
               animate={
                 isDownloadHovered
                   ? {
-                      y: [0, 4, 0],
-                    }
+                    y: [0, 4, 0],
+                  }
                   : { y: 0 }
               }
               transition={
                 isDownloadHovered
                   ? {
-                      duration: 0.6,
-                      ease: "easeInOut",
-                      repeat: Number.POSITIVE_INFINITY,
-                    }
+                    duration: 0.6,
+                    ease: "easeInOut",
+                    repeat: Number.POSITIVE_INFINITY,
+                  }
                   : {
-                      duration: 0.3,
-                      ease: "easeOut",
-                    }
+                    duration: 0.3,
+                    ease: "easeOut",
+                  }
               }
             >
               <Download className="w-4 h-4 3xl:w-5 3xl:h-5" />

@@ -56,6 +56,10 @@ export function AIChat() {
     setMessages((prev) => [...prev, userMessage])
     setInput("")
     setIsLoading(true)
+    // Reset textarea height
+    if (inputRef.current) {
+      inputRef.current.style.height = '40px'
+    }
 
     try {
       const response = await fetch("/api/chat", {
@@ -120,6 +124,13 @@ export function AIChat() {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault()
       handleSubmit()
+    }
+  }
+
+  const handleBlur = () => {
+    // Reset height if empty
+    if (!input.trim() && inputRef.current) {
+      inputRef.current.style.height = '40px'
     }
   }
 
@@ -269,12 +280,18 @@ export function AIChat() {
               <textarea
                 ref={inputRef}
                 value={input}
-                onChange={(e) => setInput(e.target.value)}
+                onChange={(e) => {
+                  setInput(e.target.value)
+                  // Auto-resize textarea
+                  e.target.style.height = 'auto'
+                  e.target.style.height = Math.min(e.target.scrollHeight, 120) + 'px'
+                }}
                 onKeyDown={handleKeyDown}
+                onBlur={handleBlur}
                 placeholder="Ask about projects, experience..."
                 rows={1}
-                className="w-full bg-transparent border-none px-0 py-2 font-mono text-sm text-white placeholder:text-white/40 focus:outline-none resize-none max-h-32 scrollbar-thin scrollbar-thumb-white/10"
-                style={{ minHeight: "40px" }}
+                className="w-full bg-transparent border-none px-0 py-2 font-mono text-sm text-white placeholder:text-white/40 focus:outline-none resize-none scrollbar-visible"
+                style={{ minHeight: "40px", maxHeight: "120px" }}
               />
               {/* Underline - similar to navbar hover effect */}
               <span className="absolute bottom-0 left-0 w-full h-px bg-white/20" />

@@ -1,5 +1,4 @@
 import { Navbar } from "@/components/navbar"
-import { CustomCursor } from "@/components/custom-cursor"
 import { SmoothScroll } from "@/components/smooth-scroll"
 import { ProjectDetail } from "@/components/project-detail"
 import { MediaBiasProject } from "@/components/media-bias-project"
@@ -362,7 +361,6 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
   if (!project) {
     return (
       <SmoothScroll>
-        <CustomCursor />
         <Navbar />
         <main className="min-h-screen flex items-center justify-center">
           <p className="font-mono text-muted-foreground">Project not found</p>
@@ -386,7 +384,6 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
 
   return (
     <SmoothScroll>
-      <CustomCursor />
       <Navbar />
       <main>{renderProject()}</main>
     </SmoothScroll>
