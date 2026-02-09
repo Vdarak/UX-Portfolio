@@ -149,9 +149,8 @@ export function AIChat() {
           x: isOpen ? 0 : "100%",
         }}
         transition={{ type: "spring", damping: 30, stiffness: 300 }}
-        className={`fixed top-0 right-0 bottom-0 z-50 w-full lg:w-[440px] bg-background/40 backdrop-blur-xl border-l border-white/10 flex flex-col ${
-          isOpen ? "pointer-events-auto" : "pointer-events-none"
-        }`}
+        className={`fixed top-0 right-0 bottom-0 z-50 w-full lg:w-[440px] bg-background/40 backdrop-blur-xl border-l border-white/10 flex flex-col ${isOpen ? "pointer-events-auto" : "pointer-events-none"
+          }`}
       >
         {/* Header - matches navbar styling */}
         <div className="flex items-center justify-between px-6 py-4 md:px-8 md:py-5 border-b border-white/10">
@@ -169,7 +168,7 @@ export function AIChat() {
         </div>
 
         {/* Messages */}
-        <div className="flex-1 overflow-y-auto p-6 space-y-4 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent">
+        <div className="flex-1 overflow-y-auto overscroll-contain p-6 space-y-4 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent">
           {/* Welcome and preset questions - show only when no messages */}
           {messages.length === 0 && (
             <div className="space-y-4">
@@ -177,7 +176,7 @@ export function AIChat() {
               <div className="px-4 py-3 rounded-2xl rounded-bl-md border border-white/20 font-mono text-sm leading-relaxed text-white/90">
                 Hey! I'm LLME, Vedant's AI Persona. Ask me about his projects, experience, or design philosophy. How can I help you today?
               </div>
-              
+
               {/* Preset questions */}
               <p className="font-mono text-xs text-white/40 mt-4">Try asking:</p>
               <div className="space-y-2">
@@ -205,11 +204,10 @@ export function AIChat() {
               className={`flex ${message.role === "user" ? "justify-end" : "justify-start"}`}
             >
               <div
-                className={`max-w-[85%] px-4 py-3 rounded-2xl font-mono text-sm leading-relaxed border ${
-                  message.role === "user"
+                className={`max-w-[85%] px-4 py-3 rounded-2xl font-mono text-sm leading-relaxed border ${message.role === "user"
                     ? "border-accent/50 text-white rounded-br-md"
                     : "border-white/20 text-white/90 rounded-bl-md"
-                }`}
+                  }`}
               >
                 {message.role === "assistant" ? (
                   <ReactMarkdown
@@ -297,9 +295,8 @@ export function AIChatTrigger() {
   return (
     <button
       onClick={toggle}
-      className={`group relative font-mono text-xs tracking-wider transition-colors duration-300 ${
-        isOpen ? "text-accent" : "text-foreground hover:text-accent"
-      }`}
+      className={`group relative font-mono text-xs tracking-wider transition-colors duration-300 ${isOpen ? "text-accent" : "text-foreground hover:text-accent"
+        }`}
       aria-label="Toggle AI chat"
     >
       <span>ASK LLME</span>
