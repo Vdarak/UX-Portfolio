@@ -4,6 +4,7 @@ import { useState, useRef, useEffect, type FormEvent, type KeyboardEvent } from 
 import { motion, AnimatePresence } from "framer-motion"
 import { X, Send, Loader2 } from "lucide-react"
 import { useAIChat } from "./ai-chat-provider"
+import { useLenis } from "lenis/react"
 import Image from "next/image"
 import ReactMarkdown from "react-markdown"
 
@@ -20,6 +21,7 @@ export function AIChat() {
   const [isLoading, setIsLoading] = useState(false)
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLTextAreaElement>(null)
+  const lenis = useLenis()
 
   const presetQuestions = [
     "What's your design process?",
@@ -151,6 +153,8 @@ export function AIChat() {
         transition={{ type: "spring", damping: 30, stiffness: 300 }}
         className={`fixed top-0 right-0 bottom-0 z-50 w-full lg:w-[440px] bg-background/40 backdrop-blur-xl border-l border-white/10 flex flex-col ${isOpen ? "pointer-events-auto" : "pointer-events-none"
           }`}
+        onMouseEnter={() => lenis?.stop()}
+        onMouseLeave={() => lenis?.start()}
       >
         {/* Header - matches navbar styling */}
         <div className="flex items-center justify-between px-6 py-4 md:px-8 md:py-5 border-b border-white/10">
@@ -168,7 +172,10 @@ export function AIChat() {
         </div>
 
         {/* Messages */}
-        <div className="flex-1 overflow-y-auto overscroll-contain p-6 space-y-4 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent">
+        <div
+          data-lenis-prevent
+          className="flex-1 min-h-0 overflow-y-scroll overscroll-contain touch-auto p-6 space-y-4 scrollbar-visible"
+        >
           {/* Welcome and preset questions - show only when no messages */}
           {messages.length === 0 && (
             <div className="space-y-4">
@@ -205,8 +212,8 @@ export function AIChat() {
             >
               <div
                 className={`max-w-[85%] px-4 py-3 rounded-2xl font-mono text-sm leading-relaxed border ${message.role === "user"
-                    ? "border-accent/50 text-white rounded-br-md"
-                    : "border-white/20 text-white/90 rounded-bl-md"
+                  ? "border-accent/50 text-white rounded-br-md"
+                  : "border-white/20 text-white/90 rounded-bl-md"
                   }`}
               >
                 {message.role === "assistant" ? (

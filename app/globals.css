@@ -163,22 +163,41 @@
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
+/* Custom scrollbar - hidden on main page */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0;
+  display: none;
 }
 
-::-webkit-scrollbar-track {
+html,
+body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Visible scrollbar for chat and specific elements */
+.scrollbar-visible::-webkit-scrollbar {
+  width: 6px;
+  display: block;
+}
+
+.scrollbar-visible::-webkit-scrollbar-track {
   background: transparent;
 }
 
-::-webkit-scrollbar-thumb {
+.scrollbar-visible::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.3);
   border-radius: 4px;
 }
 
-::-webkit-scrollbar-thumb:hover {
+.scrollbar-visible::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.5);
+}
+
+.scrollbar-visible {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
 }
 
 /* Selection styles */

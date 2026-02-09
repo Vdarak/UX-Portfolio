@@ -1,12 +1,11 @@
-import { streamText } from "ai"
-import { createGateway } from "@ai-sdk/gateway"
+import { GoogleGenAI } from "@google/genai"
 import { NextRequest } from "next/server"
 import fs from "fs"
 import path from "path"
 
-// Initialize Vercel AI Gateway
-const gateway = createGateway({
-  apiKey: process.env.AI_GATEWAY_API_KEY,
+// Initialize Google GenAI client
+const ai = new GoogleGenAI({
+  apiKey: process.env.GOOGLE_GENERATIVE_AI_API_KEY!,
 })
 
 // Knowledge base loader - reads markdown files on startup
@@ -21,12 +20,12 @@ function loadKnowledgeBase(): KnowledgeBase {
   if (knowledgeBase) return knowledgeBase
 
   const knowledgePath = path.join(process.cwd(), "app/api/knowledge")
-  
+
   const index = fs.readFileSync(path.join(knowledgePath, "index.md"), "utf-8")
-  
+
   const projects: Record<string, string> = {}
   const files = fs.readdirSync(knowledgePath)
-  
+
   files.forEach((file) => {
     if (file.startsWith("project-") && file.endsWith(".md")) {
       const projectKey = file.replace("project-", "").replace(".md", "")
@@ -45,7 +44,7 @@ function loadKnowledgeBase(): KnowledgeBase {
 function retrieveContext(query: string): string {
   const kb = loadKnowledgeBase()
   const lowerQuery = query.toLowerCase()
-  
+
   // Project keyword mappings for all current projects
   const projectQueries = [
     { key: "media-bias", queries: ["ana", "news", "media bias", "aggregator", "bias", "spotting", "information bubble"] },
@@ -104,15 +103,52 @@ GUIDELINES:
 
 Remember: You are Vedant's digital twin, speaking as him, not about him.`
 
-        // Stream the response using AI Gateway
-    const result = await streamText({
-      model: gateway("google/gemini-2.5-flash"), // Using gemini-2.5-flash for efficiency within free tier 
-      system: systemPrompt,
-      messages: messages,
-      temperature: 0.7,
+    // Convert messages to Gemini format (with history)
+    const geminiHistory = messages.slice(0, -1).map((m: any) => ({
+      role: m.role === "user" ? "user" : "model",
+      parts: [{ text: m.content }],
+    }))
+
+    // Get the latest message
+    const latestMessage = messages[messages.length - 1]?.content || ""
+
+    // Create a streaming response using Gemini 3 Flash
+    const response = await ai.models.generateContentStream({
+      model: "gemini-2.5-flash",
+      contents: [
+        ...geminiHistory,
+        { role: "user", parts: [{ text: latestMessage }] },
+      ],
+      config: {
+        systemInstruction: systemPrompt,
+        temperature: 0.7,
+      },
     })
 
-    return result.toTextStreamResponse()
+    // Create a readable stream for the response
+    const encoder = new TextEncoder()
+    const stream = new ReadableStream({
+      async start(controller) {
+        try {
+          for await (const chunk of response) {
+            const text = chunk.text
+            if (text) {
+              controller.enqueue(encoder.encode(text))
+            }
+          }
+          controller.close()
+        } catch (error) {
+          controller.error(error)
+        }
+      },
+    })
+
+    return new Response(stream, {
+      headers: {
+        "Content-Type": "text/plain; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+      },
+    })
   } catch (error) {
     console.error("Chat API error:", error)
     return new Response("Internal server error", { status: 500 })
