@@ -114,7 +114,7 @@ export function Navbar() {
                 ) : (
                   <button
                     onClick={() => handleNavClick(link)}
-                    className="group relative font-mono text-xs tracking-wider hover:text-foreground transition-colors duration-300 text-foreground"
+                    className="group relative font-mono text-xs tracking-wider hover:text-foreground transition-colors duration-300 text-foreground cursor-pointer"
                   >
                     {link.label.toUpperCase()}
                     <span className="absolute -bottom-1 left-0 w-0 h-px bg-foreground group-hover:w-full transition-all duration-300" />

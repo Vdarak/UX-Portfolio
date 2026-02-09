@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect, type FormEvent, type KeyboardEvent } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { X, Send, Loader2 } from "lucide-react"
+import { X, Send, Loader2, Info } from "lucide-react"
 import { useAIChat } from "./ai-chat-provider"
 import { useLenis } from "lenis/react"
 import Image from "next/image"
@@ -168,18 +168,38 @@ export function AIChat() {
         onMouseLeave={() => lenis?.start()}
       >
         {/* Header - matches navbar styling */}
-        <div className="flex items-center justify-between px-6 py-4 md:px-8 md:py-5 border-b border-white/10">
-          <div className="flex items-center gap-2">
-            <Image src="/logo-favicon.svg" alt="LLME" width={32} height={32} className="w-8 h-8" />
-            <span className="font-mono text-xs tracking-wider text-foreground">LLME</span>
+        <div className="relative">
+          <div className="flex items-center justify-between px-6 py-4 md:px-8 md:py-5 border-b border-white/10">
+            <div className="flex items-center gap-2">
+              <Image src="/logo-favicon.svg" alt="LLME" width={32} height={32} className="w-8 h-8" />
+              <span className="font-mono text-xs tracking-wider text-foreground">LLME</span>
+              <div className="relative group">
+                <Info className="w-5 h-5 text-white/40 cursor-help" />
+                {/* Tooltip - positioned to fill chat width */}
+                <div className="fixed left-0 lg:left-auto lg:right-0 w-full lg:w-[440px] px-6 md:px-8 mt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[60]" style={{ top: '60px' }}>
+                  <div className="w-full p-3 bg-background/95 backdrop-blur-md border border-white/10 rounded-lg">
+                    <p className="font-mono text-xs text-white/70 leading-relaxed text-left">
+                      LLME is an AI chatbot. May contain hallucinations. Responses are logged for research and development purposes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              onClick={() => setIsOpen(false)}
+              className="w-8 h-8 flex flex-col items-center justify-center gap-1.5 hover:opacity-70 transition-opacity"
+              aria-label="Close chat"
+            >
+              <motion.span
+                className="w-5 h-px bg-foreground origin-center"
+                style={{ transform: 'rotate(45deg) translateY(4px)' }}
+              />
+              <motion.span
+                className="w-5 h-px bg-foreground origin-center"
+                style={{ transform: 'rotate(-45deg) translateY(-4px)' }}
+              />
+            </button>
           </div>
-          <button
-            onClick={() => setIsOpen(false)}
-            className="p-2 rounded-full hover:bg-white/10 transition-colors"
-            aria-label="Close chat"
-          >
-            <X className="w-4 h-4 text-white/60" />
-          </button>
         </div>
 
         {/* Messages */}
