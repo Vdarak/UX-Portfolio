@@ -40,7 +40,7 @@ export function Hero() {
               <span className="absolute left-0 right-0 top-1/2 h-[0.35em] -translate-y-1/2 bg-cyan-400/40 -skew-x-2" />
             </span>
             <br />
-            <span className="text-white/80">
+            <span className="text-foreground">
               to craft intentional user experiences.
             </span>
           </h1>
