@@ -40,7 +40,7 @@ export function Hero() {
               <span className="absolute left-0 right-0 top-1/2 h-[0.35em] -translate-y-1/2 bg-cyan-400/40 -skew-x-2" />
             </span>
             <br />
-            <span className="text-foreground">
+            <span className="text-white/80">
               to craft intentional user experiences.
             </span>
           </h1>
@@ -53,7 +53,7 @@ export function Hero() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 text-foreground underline-offset-4 hover:text-white/80 transition-colors italic underline"
             >
-              Mercor.com
+              Mercor
               <ArrowUpRight className="w-4 h-4 md:w-5 md:h-5 3xl:w-6 3xl:h-6" />
             </a>
             , helping train AI models to produce high-quality, functional designs.

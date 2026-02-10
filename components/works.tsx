@@ -90,27 +90,6 @@ const projects = [
       ],
     },
   },
-  {
-    id: "bookkeeping",
-    title: "Augmenting Small CPA Firms",
-    role: "UX Designer",
-    outcome: "",
-    tags: ["AI", "Fintech", "Automation"],
-    image: "/home-page.png",
-    heroImage: "/book-hero.png",
-    year: "2025",
-    comingSoon: true,
-    details: {
-      responsibilities: ["User Research", "Workflow Analysis", "AI Integration", "Interface Design"],
-      duration: "In Progress",
-      description:
-        "Designing AI-augmented tools for accountants to streamline bookkeeping workflows. The goal is to reduce manual data entry, catch errors proactively, and free up accountants to focus on higher-value advisory work.",
-      results: [
-        { stat: "—", label: "coming soon" },
-        { stat: "—", label: "coming soon" },
-      ],
-    },
-  },
 ]
 
 export function Works() {
@@ -133,7 +112,7 @@ export function Works() {
         transition={{ duration: 0.8 }}
         className="mb-24"
       >
-        <p className="font-mono text-lg 3xl:text-xl tracking-[0.3em] mb-4 text-foreground">WORKS</p>
+        <p className="font-mono text-4xl font-medium 3xl:text-6xl tracking-[0.3em] mb-4 text-foreground">WORKS</p>
       </motion.div>
 
       {/* Projects List */}

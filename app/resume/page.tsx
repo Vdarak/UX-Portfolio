@@ -11,8 +11,8 @@ import Link from "next/link"
 const experiences = [
   {
     id: "mercor",
-    company: "Mercor.com",
-    role: "AI Trainer",
+    company: "Mercor",
+    role: "Visual Designer",
     type: "Contract",
     duration: "Jan 2025 - Present",
     location: "Remote",
@@ -92,10 +92,9 @@ export default function ResumePage() {
           className="mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-6"
         >
           <div>
-            <p className="font-mono text-sm 3xl:text-base tracking-[0.3em] mb-4 text-white/60">RESUME</p>
-            <h1 className="font-sans text-5xl md:text-7xl lg:text-8xl 3xl:text-9xl font-light tracking-tight">
-              Experience
-            </h1>
+            <p className="font-mono text-4xl font-medium 3xl:text-6xl tracking-[0.3em] mb-4 text-foreground">
+              EXPERIENCE
+            </p>
           </div>
 
           <a
@@ -263,7 +262,7 @@ export default function ResumePage() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mt-24"
         >
-          <p className="font-mono 3xl:text-base tracking-[0.3em] mb-8 text-lg text-foreground">EDUCATION</p>
+          <p className="font-mono text-4xl font-medium 3xl:text-6xl tracking-[0.3em] mb-8 text-foreground">EDUCATION</p>
 
           <div className="border-t border-white/10 py-8">
             <div className="flex flex-col md:flex-row md:items-center gap-4">

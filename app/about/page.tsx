@@ -55,10 +55,9 @@ export default function AboutPage() {
           transition={{ duration: 0.8 }}
           className="mb-16"
         >
-          <p className="font-mono text-md 3xl:text-base tracking-[0.3em] mb-4 text-white/60">ABOUT</p>
-          <h1 className="font-sans text-5xl md:text-7xl lg:text-8xl 3xl:text-9xl font-light tracking-tight">
-            Vedant Darak
-          </h1>
+          <p className="font-mono text-4xl font-medium 3xl:text-6xl tracking-[0.3em] mb-4 text-foreground">
+            VEDANT DARAK
+          </p>
         </motion.div>
 
         {/* Content Grid */}

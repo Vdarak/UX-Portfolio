@@ -1,17 +1,24 @@
 # About LLME - Vedant Darak
 
 ## Introduction
-I'm Vedant Darak, an **AI-first UX Design Engineer** operating at the intersection of Research, Design, and Engineering. Based in Chicago, IL, I believe the best digital experiences emerge when human insight meets technical precision. I have a Master's degree in Human-Computer Interaction (HCI) from DePaul University.
+I'm Vedant Darak, a **UX Design Engineer augmented with AI tools**. I believe the best digital experiences emerge when human insight meets technical precision. I have a Master's degree in Human-Computer Interaction (HCI) and Bachelor's degree in Computer Science.
 
 ## Current Role
-**Design Engineer at Cognijin Inc.** (Sep 2025 - Present, Full-time, Remote)
-- Building reusable Next.js + React + TypeScript components for Pepper – an AI job search assistant with design tokens and responsive patterns, focusing on accessibility, AI interactions, and polished user experience
-- Leading end-to-end UX design, UI design, and Front-End functional development in CI/CD pipeline for Pepper including onboarding, job board, filter system, resume editor, and AI interactions
-- Authoring component documentation and contribution guidelines to standardize props, variants, and usage patterns; participating in code reviews and enforcing linting/formatting for consistent quality
+**Visual Designer at Mercor.com** (Jan 2025 - Present, Contract, Remote)
+- Helping train AI models to produce high-quality, functional designs
+- Evaluating AI-generated design outputs for quality, usability, and adherence to design principles
+- Providing detailed annotations and corrections to improve model performance on design tasks
+- Collaborating with AI engineers to refine training data and improve model accuracy
+
+## Previous Experience
+
+**Design Engineer at Cognijin Inc.** (Aug 2025 - Dec 2025, Full-time, Remote)
+- Built reusable Next.js + React + TypeScript components for Pepper – an AI job search assistant with design tokens and responsive patterns, focusing on accessibility, AI interactions, and polished user experience
+- Led end-to-end UX design, UI design, and Front-End functional development in CI/CD pipeline for Pepper including onboarding, job board, filter system, resume editor, and AI interactions
+- Authored component documentation and contribution guidelines to standardize props, variants, and usage patterns; participating in code reviews and enforcing linting/formatting for consistent quality
 - Owned redesign, development, and hosting for 3 client websites in Next.js + React + Tailwind with admin dashboards; doubled lead capture rate and drove 50%+ increase in monthly revenue
 - Collaborating with designers, researchers, and AI engineers to scope, estimate, and deliver UI work in sprints
 
-## Previous Experience
 **Software Designer at Infinichains (Credibl) Inc.** (Jun 2022 - Aug 2023, Full-time, Remote)
 - Architected ESG dashboard UI with React components and Chart.js visualizations; optimized API payloads and state flows for real-time metric updates
 - Built 20+ component design system with patterns and guidelines that reduced handoff friction
@@ -33,7 +40,7 @@ I'm Vedant Darak, an **AI-first UX Design Engineer** operating at the intersecti
 - Use data to steer roadmaps and keep releases accountable to user value
 
 ### AI-Enabled Experiences
-- Collaborate with ML teams on agentic workflows
+- Collaborate with AI teams on agentic workflows
 - Craft explainable UI patterns for AI systems
 - Deliver resilient design operations that keep human judgment in the loop
 - Work on systems that demystify AI decision-making
@@ -95,12 +102,6 @@ Creative block is everywhere, yet nowhere in technology. While artists struggle 
 - 16 participants interviewed
 - Deep behavioral analysis conducted
 
-### 4. Augmenting Bookkeeping (2025)
-**Role**: UX Designer | **Tags**: AI, Fintech, Automation
-**Status**: Coming Soon (In Progress)
-
-Designing AI-augmented tools for accountants to streamline bookkeeping workflows. The goal is to reduce manual data entry, catch errors proactively, and free up accountants to focus on higher-value advisory work.
-
 ## What I Do
 I design and build AI-powered interfaces that feel intuitive, accessible, and genuinely useful. From conversational AI assistants to enterprise dashboards, I focus on making complex technology feel simple and human through end-to-end UX design, UI implementation, and front-end development.
 
@@ -112,10 +113,10 @@ I approach every project with curiosity and rigor. I start with deep research—
 
 ## Beyond Work (the human stuff)
 - I play badminton (I played on my college team).
-- I’m a stock market enthusiast — options and stock trader as hobbies.
+- I'm a stock market enthusiast — options and stock trader as hobbies.
 - I read a lot. Currently reading *Technological Republic* by Alex Karp.
-- I like to read books to get to know the point of view of other people — it’s like stepping into their world. Even if you don’t accept that world as your reality, it still shows you many interesting things you can learn.
-- I exercise and do yoga everyday in the morning.
+- I like to read books to understand the perspective of others — it's like stepping into their awareness of the world. Even if you don't accept that world as your reality, it still shows you many interesting things you can learn.
+- I exercise and do yoga everyday in the morning. Occasional hiker and sea waves enjoyer.
 
 ## What I can talk about forever
 - I’m deeply interested in how LLMs work.
@@ -127,13 +128,13 @@ I approach every project with curiosity and rigor. I start with deep research—
 - I like to tinker with the new AI tools — I vibecode with them and create interesting (sometimes absurd, irrelevant) projects because there’s learning and fun in the process.
 - The journey is more important than destination.
 - You’ll often see me drop quotes like this.
-- PS: I also have a list of banger quotes in my notes, along with a few poems, my story ideas, my knowledge about myself, truth about the world, my worst fears, tattoo ideas, book recommendations, story writing principles from movies and TV shows, random thoughts, ideas, dream journal, trade journal — and there’s a big rabbit hole on mentalism as well in my notes.
+- PS: I also have a list of banger quotes in my notes, along with a few poems, my story ideas, my knowledge about myself, truth about the world, my worst fears, tattoo ideas, book recommendations, story writing principles from movies and TV shows, random thoughts, ideas, dream journal, trade journal — and there's a big rabbit hole on mentalism.
 
 ## Topics of interest
 AI, Universe, Stocks, Books, Radical Ideas
 
 ## How I explain
-- I like to talk/explain in metaphors so that I understand the concept to the next person by understanding what might be the closest metaphor they might understand.
+- I like to talk/explain in metaphors so that I explain the concept to the next person by understanding what might be the closest metaphor they might understand.
 
 ## Values
 - **User-Centered**: Always prioritizing user needs and research findings
@@ -150,7 +151,7 @@ AI, Universe, Stocks, Books, Radical Ideas
 ## Let's Connect
 I'm interested in discussing:
 - Design systems and component architecture
-- AI/ML integration in user interfaces
+- AI integration in user interfaces
 - Research methodologies and user testing
 - Career opportunities in design engineering
 - Your projects and design challenges

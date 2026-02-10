@@ -50,7 +50,6 @@ function retrieveContext(query: string): string {
     { key: "media-bias", queries: ["ana", "news", "media bias", "aggregator", "bias", "spotting", "information bubble"] },
     { key: "canvas-chat", queries: ["canvas chat", "canvas", "brainstorm", "infinite", "gemini", "multiple chat", "branching"] },
     { key: "creative-block", queries: ["creative block", "creative", "research", "hci", "creativity", "artists", "stuck"] },
-    { key: "bookkeeping", queries: ["bookkeeping", "accounting", "accountant", "fintech", "automation", "financial"] },
   ]
 
   // Check if user is asking about a specific project
