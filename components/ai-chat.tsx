@@ -33,7 +33,7 @@ export function AIChat() {
   }, [])
 
   const presetQuestions = [
-    "What's your design process?",
+    "What do you think about vibecoding?",
     "What are you passionate about?",
     "How can I contact you?",
     "Tell me about yourself"

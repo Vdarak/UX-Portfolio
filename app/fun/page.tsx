@@ -1,236 +1,276 @@
 "use client"
 
-import type React from "react"
-
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef } from "react"
 import { motion } from "framer-motion"
 import { Navbar } from "@/components/navbar"
-import { ArrowUpRight, Move } from "lucide-react"
+import { Footer } from "@/components/footer"
+import Image from "next/image"
 
-interface Polaroid {
+type ResultType = "Good Result" | "AI Slop" | "OK" | "In Progress"
+
+interface Project {
   id: string
   title: string
-  image: string
-  link: string
-  x: number
-  y: number
-  rotation: number
-  zIndex: number
+  image?: string
+  link?: string
+  year: string
+  result: ResultType
+  story: string
 }
 
-const initialPolaroids: Polaroid[] = [
+const projects: Project[] = [
   {
-    id: "1",
+    id: "mentalist",
+    title: "Mentalist AI",
+    year: "2025",
+    result: "In Progress",
+    story: "An agentic system based on a book about cold reading. Building an AI that can read people the way mentalists do. Coming soon.",
+  },
+  {
+    id: "shaders",
+    title: "Shader Playground",
+    image: "/fun/shader-playground.png",
+    link: "https://shader-pg.vercel.app",
+    year: "2025",
+    result: "Good Result",
+    story: "A playground for testing React paper shaders — exploring what works for backgrounds, cards, elements, and animations.",
+  },
+  {
+    id: "gex",
+    title: "Gamma Exposure Dashboard",
+    image: "/fun/gex.png",
+    link: "https://gamma-exposure-dashboard.vercel.app",
+    year: "2024",
+    result: "Good Result",
+    story: "Built a GEX dashboard for options dealer positioning analysis. Tools like this cost $100s — why pay when you can build?",
+  },
+  {
+    id: "blackjack",
     title: "BlackJack 21",
     image: "/fun/bj.png",
     link: "https://bjgame.vercel.app",
-    x: 800,
-    y: 400,
-    rotation: -5,
-    zIndex: 1,
+    year: "2024",
+    result: "Good Result",
+    story: "Card counting phase. Running count toggle + basic strategy suggestions. Strategic blackjack mirrors options trading — position sizing, betting, knowing when to sit out.",
   },
   {
-    id: "2",
-    title: "Tribe App Redesign",
-    image: "/fun/tribe.png",
+    id: "tribe",
+    title: "Tribe Redesign",
+    image: "/fun/tribe-redesign.png",
     link: "https://tribe-redesign.vercel.app",
-    x: 450,
-    y: 100,
-    rotation: 3,
-    zIndex: 2,
+    year: "2025",
+    result: "Good Result",
+    story: "Redesigned the Tribe app interface from scratch using AI — generating assets unique to the brand's story.",
   },
   {
-    id: "3",
+    id: "freshlook",
     title: "Fresh Look Refinishing",
     image: "/fun/fresh-look.png",
     link: "https://freshlookrefinishing.vercel.app",
-    x: 1000,
-    y: 500,
-    rotation: -2,
-    zIndex: 3,
+    year: "2024",
+    result: "Good Result",
+    story: "Client website built at Cognijin using AI tools and deployed on Vercel.",
   },
   {
-    id: "4",
+    id: "colorado",
     title: "Colorado Carpet Care",
-    image: "/fun/colorado-carpet-care.png",
+    image: "/fun/colorado-carpet.png",
     link: "https://coloradocarpetcareco.vercel.app",
-    x: 680,
-    y: 600,
-    rotation: 6,
-    zIndex: 4,
+    year: "2024",
+    result: "Good Result",
+    story: "Client website built at Cognijin using AI tools and deployed on Vercel.",
   },
   {
-    id: "5",
-    title: "Paper Shaders",
-    image: "/fun/shader.png",
-    link: "https://shader-pg.vercel.app",
-    x: 1200,
-    y: 150,
-    rotation: -4,
-    zIndex: 5,
-  }
+    id: "diagnostician",
+    title: "Diagnostician",
+    image: "/fun/diagnostician.png",
+    link: "https://diagnostician.vercel.app",
+    year: "2024",
+    result: "Good Result",
+    story: "A mechanic website built at Cognijin using AI tools and deployed on Vercel.",
+  },
+  {
+    id: "particle",
+    title: "Particle Animator",
+    image: "/fun/particle-animator.png",
+    link: "https://v0-particle-animation-creator.vercel.app",
+    year: "2025",
+    result: "Good Result",
+    story: "Particle animation generator for hero sections, UI components, and landing pages. Playing with unique motion for the web.",
+  },
+  {
+    id: "pixel",
+    title: "Pixel Grid Animations",
+    image: "/fun/pixel-animator.png",
+    link: "https://v0-pixel-grid-gui.vercel.app",
+    year: "2025",
+    result: "Good Result",
+    story: "Pixel grid animation creator for unique visual effects — exploring what works for backgrounds and interactive elements.",
+  },
+  {
+    id: "workout",
+    title: "Workout Tracker",
+    image: "/fun/workout-tracker.png",
+    link: "https://v0-workout-tracker-app-topaz.vercel.app",
+    year: "2025",
+    result: "Good Result",
+    story: "Calendar-based workout split tracker with periodisation phases. Shows the day's workout and cycles through training phases.",
+  },
+  {
+    id: "critique",
+    title: "AI Critique Tool",
+    image: "/fun/critique.png",
+    link: "https://critique-opal.vercel.app",
+    year: "2025",
+    result: "Good Result",
+    story: "The existing Mercor rating tool kept breaking and losing submissions. Built a better version to manage ratings and feedback in one place.",
+  },
 ]
 
+function resultColor(result: ResultType) {
+  switch (result) {
+    case "Good Result": return "text-emerald-400 bg-emerald-400/10 border-emerald-400/20"
+    case "AI Slop": return "text-red-400 bg-red-400/10 border-red-400/20"
+    case "OK": return "text-amber-400 bg-amber-400/10 border-amber-400/20"
+    case "In Progress": return "text-cyan-400 bg-cyan-400/10 border-cyan-400/20"
+  }
+}
+
 export default function FunPage() {
-  const [polaroids, setPolaroids] = useState<Polaroid[]>(initialPolaroids)
-  const [highestZ, setHighestZ] = useState(initialPolaroids.length)
-  const [canvasOffset, setCanvasOffset] = useState({ x: 0, y: 0 })
-  const [isDraggingCanvas, setIsDraggingCanvas] = useState(false)
-  const [dragStart, setDragStart] = useState({ x: 0, y: 0 })
-  const [zoom, setZoom] = useState(1)
-  const [parallaxOffset, setParallaxOffset] = useState({ x: 0, y: 0 })
+  const [hoveredId, setHoveredId] = useState<string | null>(null)
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
   const containerRef = useRef<HTMLDivElement>(null)
 
-  const bringToFront = (id: string) => {
-    const newZ = highestZ + 1
-    setHighestZ(newZ)
-    setPolaroids((prev) => prev.map((p) => (p.id === id ? { ...p, zIndex: newZ } : p)))
+  const hoveredProject = projects.find((p) => p.id === hoveredId)
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    setMousePos({ x: e.clientX, y: e.clientY })
   }
-
-  const handlePolaroidDragEnd = (id: string, x: number, y: number) => {
-    setPolaroids((prev) => prev.map((p) => (p.id === id ? { ...p, x, y } : p)))
-  }
-
-  const handleCanvasMouseDown = (e: React.MouseEvent) => {
-    if ((e.target as HTMLElement).closest(".polaroid")) return
-    setIsDraggingCanvas(true)
-    setDragStart({ x: e.clientX - canvasOffset.x, y: e.clientY - canvasOffset.y })
-  }
-
-  const handleCanvasMouseMove = (e: React.MouseEvent) => {
-    if (containerRef.current) {
-      const rect = containerRef.current.getBoundingClientRect()
-      const centerX = rect.width / 2
-      const centerY = rect.height / 2
-      const mouseX = e.clientX - rect.left
-      const mouseY = e.clientY - rect.top
-
-      // Move opposite direction with subtle intensity
-      const parallaxX = (centerX - mouseX) * 0.02
-      const parallaxY = (centerY - mouseY) * 0.02
-      setParallaxOffset({ x: parallaxX, y: parallaxY })
-    }
-
-    if (!isDraggingCanvas) return
-    setCanvasOffset({
-      x: e.clientX - dragStart.x,
-      y: e.clientY - dragStart.y,
-    })
-  }
-
-  const handleCanvasMouseUp = () => {
-    setIsDraggingCanvas(false)
-  }
-
-  const handleWheel = (e: React.WheelEvent) => {
-    e.preventDefault()
-    const delta = e.deltaY > 0 ? -0.1 : 0.1
-    setZoom((prev) => Math.min(Math.max(prev + delta, 0.8), 1.4))
-  }
-
-  useEffect(() => {
-    const handleMouseUp = () => setIsDraggingCanvas(false)
-    window.addEventListener("mouseup", handleMouseUp)
-    return () => window.removeEventListener("mouseup", handleMouseUp)
-  }, [])
 
   return (
-    <div className="min-h-screen bg-background overflow-hidden">
+    <main className="min-h-screen bg-background text-foreground">
       <Navbar />
 
-      {/* Header */}
-      <div className="fixed top-24 left-6 md:left-12 z-30 mix-blend-difference">
-        <h1 className="font-sans text-4xl md:text-5xl text-white mb-2">Fun Projects</h1>
-        <p className="font-mono text-xs text-white/70 max-w-xs">
-          Drag polaroids around. Scroll to zoom. Pan by dragging empty space.
-        </p>
-      </div>
-
-      {/* Pan hint */}
-      <div className="fixed bottom-6 left-6 md:left-12 z-30 flex items-center gap-2 text-white mix-blend-difference">
-        <Move className="w-4 h-4" />
-        <span className="font-mono text-xs">Drag to pan</span>
-      </div>
-
-      {/* Infinite Canvas */}
-      <div
-        ref={containerRef}
-        className="w-full h-screen cursor-grab active:cursor-grabbing"
-        onMouseDown={handleCanvasMouseDown}
-        onMouseMove={handleCanvasMouseMove}
-        onMouseUp={handleCanvasMouseUp}
-        onWheel={handleWheel}
-        style={{
-          backgroundImage: `
-            linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px)
-          `,
-          backgroundSize: `${40 * zoom}px ${40 * zoom}px`,
-          backgroundPosition: `${canvasOffset.x + parallaxOffset.x}px ${canvasOffset.y + parallaxOffset.y}px`,
-        }}
-      >
-        {/* Canvas transform layer with zoom and parallax */}
-        <div
-          className="relative w-full h-full transition-transform duration-100 ease-out"
-          style={{
-            transform: `translate(${canvasOffset.x + parallaxOffset.x}px, ${canvasOffset.y + parallaxOffset.y}px) scale(${zoom})`,
-            transformOrigin: "center center",
-          }}
+      <div className="pt-32 pb-24 px-8 md:px-12">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mb-16"
         >
-          {polaroids.map((polaroid) => (
-            <motion.div
-              key={polaroid.id}
-              className="polaroid absolute cursor-grab active:cursor-grabbing select-none"
-              initial={{ x: polaroid.x, y: polaroid.y }}
-              style={{
-                zIndex: polaroid.zIndex,
-                rotate: `${polaroid.rotation}deg`,
-              }}
-              drag
-              dragMomentum={false}
-              dragElastic={0}
-              onDragStart={() => bringToFront(polaroid.id)}
-              onDrag={(_, info) => {}}
-              onDragEnd={(_, info) => {
-                const newX = polaroid.x + info.offset.x / zoom
-                const newY = polaroid.y + info.offset.y / zoom
-                handlePolaroidDragEnd(polaroid.id, newX, newY)
-              }}
-              whileDrag={{ scale: 1.05, boxShadow: "0 25px 50px -12px rgba(0,0,0,0.4)" }}
-              whileHover={{ scale: 1.02 }}
-              transition={{ type: "tween", duration: 0 }}
-            >
-              <div className="bg-white p-1.5 pb-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                {/* Image */}
-                <div className="bg-black relative overflow-hidden">
-                  <img
-                    src={polaroid.image || "/placeholder.svg"}
-                    alt={polaroid.title}
-                    className="w-auto h-auto max-w-[160px] max-h-[180px] object-cover pointer-events-none select-none"
-                    draggable={false}
+          <p className="font-mono text-4xl font-medium 3xl:text-6xl tracking-[0.3em] mb-4 text-foreground">
+            VIBE CODING PLAYGROUND
+          </p>
+        </motion.div>
+
+        {/* Project List */}
+        <div className="relative" ref={containerRef} onMouseMove={handleMouseMove}>
+          {/* Project titles */}
+          <div className="relative z-10">
+            {projects.map((project, index) => {
+              const textContent = (
+                <>
+                  <h2
+                    className="font-sans text-[clamp(2.5rem,8vw,9rem)] font-light leading-[0.95] tracking-tight transition-colors duration-300"
+                    style={{
+                      color: hoveredId === project.id
+                        ? "rgba(255,255,255,1)"
+                        : "rgba(255,255,255,0.55)",
+                    }}
+                  >
+                    {project.title}
+                  </h2>
+                  <sup
+                    className="font-mono text-[0.6rem] md:text-xs tracking-wider ml-1 mt-1 transition-colors duration-300"
+                    style={{
+                      color: hoveredId === project.id
+                        ? "rgba(255,255,255,0.5)"
+                        : "rgba(255,255,255,0.2)",
+                    }}
+                  >
+                    {project.year}
+                  </sup>
+                </>
+              )
+
+              return (
+                <motion.div
+                  key={project.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.05 }}
+                  className="py-2 md:py-3"
+                >
+                  {project.link ? (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-start cursor-pointer"
+                      onMouseEnter={() => setHoveredId(project.id)}
+                      onMouseLeave={() => setHoveredId(null)}
+                    >
+                      {textContent}
+                    </a>
+                  ) : (
+                    <div
+                      className="inline-flex items-start"
+                      onMouseEnter={() => setHoveredId(project.id)}
+                      onMouseLeave={() => setHoveredId(null)}
+                    >
+                      {textContent}
+                    </div>
+                  )}
+                </motion.div>
+              )
+            })}
+          </div>
+
+          {/* Hover Image — sticky within the project list container */}
+          <div className="hidden lg:block absolute inset-y-0 right-0 w-[700px] xl:w-[780px] z-20 pointer-events-none">
+            <div className="sticky top-[50vh] -translate-y-1/2">
+              {hoveredProject?.image && (
+                <div className="w-full aspect-[1895/850] rounded-lg overflow-hidden shadow-2xl">
+                  <Image
+                    src={hoveredProject.image}
+                    alt={hoveredProject.title}
+                    width={1895}
+                    height={850}
+                    className="w-full h-full object-cover"
                   />
                 </div>
-
-                {/* Title & Link */}
-                <div className="absolute bottom-1.5 left-1.5 right-1.5 flex items-center justify-between">
-                  <span className="font-mono text-[10px] text-neutral-700 truncate max-w-[120px]">
-                    {polaroid.title}
-                  </span>
-                  <a
-                    href={polaroid.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-0.5 hover:bg-neutral-100 rounded transition-colors"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <ArrowUpRight className="w-3 h-3 text-neutral-500" />
-                  </a>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              )}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+
+      {/* Mouse-following tooltip */}
+      {hoveredProject && (
+        <div
+          className="fixed z-[100] pointer-events-none hidden md:block"
+          style={{
+            left: mousePos.x + 20,
+            top: mousePos.y + 16,
+          }}
+        >
+          <div className="w-72 p-3 bg-background/95 backdrop-blur-md border border-white/10 rounded-lg shadow-2xl">
+            <p className="font-mono text-xs text-white/70 leading-relaxed">
+              {hoveredProject.story}
+            </p>
+            {hoveredProject.result === "In Progress" && (
+              <div className="mt-2">
+                <span className={`font-mono text-[10px] tracking-wider px-2 py-0.5 rounded-full border ${resultColor(hoveredProject.result)}`}>
+                  {hoveredProject.result.toUpperCase()}
+                </span>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      <Footer />
+    </main>
   )
 }

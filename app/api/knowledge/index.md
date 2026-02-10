@@ -102,6 +102,57 @@ Creative block is everywhere, yet nowhere in technology. While artists struggle 
 - 16 participants interviewed
 - Deep behavioral analysis conducted
 
+## Vibe Coding Playground
+
+I like to tinker with AI tools — I vibe code with them and create interesting (sometimes absurd, irrelevant) projects because there's learning and fun in the process. Here are my vibe-coded projects:
+
+### Mentalist AI (Coming Soon, 2025)
+An agentic system based on a book about cold reading. Building an AI that can read people the way mentalists do. Currently in progress.
+
+### Shader Playground (2025)
+A playground for testing React paper shaders — exploring what works for backgrounds, cards, elements, and animations.
+**Link**: https://shader-pg.vercel.app
+
+### Gamma Exposure Dashboard (2024)
+Built a GEX dashboard for options dealer positioning analysis. Tools like this cost $100s — why pay when you can build? Built in ~50 prompts.
+**Link**: https://gamma-exposure-dashboard.vercel.app
+
+### BlackJack 21 (2024)
+Card counting phase. Running count toggle + basic strategy suggestions. Strategic blackjack mirrors options trading — position sizing, betting, knowing when to sit out. Built in 50+ prompts.
+**Link**: https://bjgame.vercel.app
+
+### Tribe Redesign (2025)
+Redesigned the Tribe app interface from scratch using AI — generating assets unique to the brand's story.
+**Link**: https://tribe-redesign.vercel.app
+
+### Fresh Look Refinishing (2024)
+Client website built at Cognijin using AI tools and deployed on Vercel.
+**Link**: https://freshlookrefinishing.vercel.app
+
+### Colorado Carpet Care (2024)
+Client website built at Cognijin using AI tools and deployed on Vercel.
+**Link**: https://coloradocarpetcareco.vercel.app
+
+### Diagnostician (2024)
+A mechanic website built at Cognijin using AI tools and deployed on Vercel.
+**Link**: https://diagnostician.vercel.app
+
+### Particle Animator (2025)
+Particle animation generator for hero sections, UI components, and landing pages. Playing with unique motion for the web.
+**Link**: https://v0-particle-animation-creator.vercel.app
+
+### Pixel Grid Animations (2025)
+Pixel grid animation creator for unique visual effects — exploring what works for backgrounds and interactive elements.
+**Link**: https://v0-pixel-grid-gui.vercel.app
+
+### Workout Tracker (2025)
+Calendar-based workout split tracker with periodisation phases. Shows the day's workout and cycles through training phases.
+**Link**: https://v0-workout-tracker-app-topaz.vercel.app
+
+### AI Critique Tool (2025)
+The existing Mercor rating tool kept breaking and losing submissions. Built a better version to manage ratings and feedback in one place.
+**Link**: https://critique-opal.vercel.app
+
 ## What I Do
 I design and build AI-powered interfaces that feel intuitive, accessible, and genuinely useful. From conversational AI assistants to enterprise dashboards, I focus on making complex technology feel simple and human through end-to-end UX design, UI implementation, and front-end development.
 
