@@ -130,6 +130,79 @@ I approach every project with curiosity and rigor. I start with deep research—
 - You’ll often see me drop quotes like this.
 - PS: I also have a list of banger quotes in my notes, along with a few poems, my story ideas, my knowledge about myself, truth about the world, my worst fears, tattoo ideas, book recommendations, story writing principles from movies and TV shows, random thoughts, ideas, dream journal, trade journal — and there's a big rabbit hole on mentalism.
 
+## List of my favorite quotes
+1. Science advances one funeral at a time.
+2. People who have touched death are the ones who are most alive. 
+3. A gun you’re used to is best. 
+4. What you say should always be reflected in what you do.
+5. Repetitive actions is the backbone of creative process
+6. UX is the democracy of technology. 
+7. If the intent in your mind is strong enough then some if not all will affect your body as well.
+8. We are born with assumptions about the world. 
+9. Ignorant is a bliss was not said by ignorants. 
+10. Unprecedented events happen all the time.
+11. Logic = love but Love =! logic. 
+12. Two things that don’t make sense yet are together, that is the way of yin Yang. 
+13. If u kill a killer then the no. Of killers in the world remains the same.
+14. Good things come to those who wait.
+15. When you strike at a king, you better make sure the strike is lethal.
+16. It's better to be a warrior in a garden than a gardener in war.
+17. He who is good to the bad is bad himself.
+18. All Success comes at a price.
+19. Take care of everything that take care of you. 
+20. Become a man who has gone through a lot. 
+21. Jealousy has perfect eyesight.
+22. Struggle is the jewel of life.
+23. To be the strongest person at my father’s funeral.
+
+## Know Thyself - Knowledge about myself
+1. It all makes sense now, i crave and embody honesty, that’s why all my hobbies are also a type that involves the other people in it to be honest as well, for eg- badminton, you can’t lie about how good you play, you just have to show it or rather be honest about it. Same goes for handwriting, it never lies, journaling, gym ? 
+
+2. My eyes watch like how a movie cameras sees. 
+
+3. I think the people who have a lot to hide use social media more often, showing other people what they want to show, hiding behind the pretense of good things and marinating with the bad things. For me, honestly, i have nothing to add, it’s just that you have to ask and you shall know everything about me. There’s just something about asking, it tells you the answer even when they are asking a question. 
+
+4. Sometimes I think the thing affecting me is not having someone or do I want it to affect me, like the idea of me suffering.
+
+5. If I could choose to fall in love with you all over again, I probably would but I won’t 
+
+6. Just a guy who chooses his own regrets 
+
+7. A strong self sufficient freak who is the Invoker of emotions 
+
+8. I want to give myself, a routine, a lifestyle that is productive, healthy and fulfilling. By my birthday I’m going to plan out an extensive routine to be ready for life. I don’t have much time left, I need to start working on myself, these bad habits are literally killing me. I will curb these bad habits and inculcate new habits that are good for me, mentally, physically and spiritually
+9. I think the reason i like getting high is because it makes me happy instantly and i get good ideas in general when I’m high. So the key here is to manipulate myself into doing hard things which will in then cause a similar level of happy. Good mood. good mindset. Good ideas
+
+## Good Writing Observations 
+1. If you a show a gun on the wall in the first act, then the gun must be fired in the 4th act.
+
+2. If your main character commits a crime and gets away with it in the first act then he must go face the consequences in the 4th act. 
+
+3. Don’t tell it directly, show it. 
+
+4. Leave some open threads in the story line, then connect them at the most unexpected moments 
+
+5. Setting up moments in real life like we set up things in stories, for example convince a girl that you have to stay away from each other only then you could say ,” I couldn’t stay away from you “ 
+
+6. Story should be moving on multiple timelines for example, a character’s development arc was all part of the big plan or the bigger picture and this whole thing is another part of a bigger picture. If it can’t be as part of a timeline then atleast should be there in character perspective style.
+7. Good writing is always mathematically and logically sound, like the video we saw about tit for tat strategy, and being retaliatory i better than being nasty, let them strike first so you can retaliate next time. 
+8. All the characters in the show, how they look, that is also mentioned or potrayed/symbolised in the way the story is written for eg- for a weird middle aged bald character’s backstory, in the backstory he used to wear a wig or something that we unsecure about for eg in the same bald guy, a girl close to him tells him he looks better without the wig and from then on he never wears a wig!!!
+
+Another instance can be of a regular van that a character dislikes, like everything about. In his back story it can be shown that he hated that van even then.
+
+Ironically, it can be shown in delta =!0 for creative characters and kept the same delta =0 for stubborn or rigid characters
+
+So does that mean if you write good characters beforehand you can basically sculpt scenes or settings with an arbitrary combination of characters. 
+
+9. You also don’t change all the turns, all twists in the story have to intentional, relevant and connects the story on a more deeper level. So maybe you can do reverse of this, like if you want to make a scene more convoluted from a straight line. 
+
+10. As you reveal all the secret elements in your story it connects the story on a deeper level and reveals it is more intricate than it was 
+
+11. When writing dialogues between main character and antagonist, the smart mc gets smashed with a line from the antagonist and then as the scene develops the mc uses the same line to heavily smash the antagonist. Beating the expert at his own game. 
+
+12. Explain an idea or concept in detail and double it or increase it exponentially like multiply the idea. 
+13. One character maybe antagonist or protagonist metaphorically, relives anither antagonists or protagonists life. Like oppehiener reliving the same fate of Albert einstien
+
 ## Topics of interest
 AI, Universe, Stocks, Books, Radical Ideas
 

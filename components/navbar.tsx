@@ -6,7 +6,7 @@ import { useLenis } from "lenis/react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import Image from "next/image"
-import { AIChatTrigger, MobileAIChatTrigger } from "./ai-chat"
+import { AIChatTrigger } from "./ai-chat"
 import { useAIChat } from "./ai-chat-provider"
 
 const navLinks = [
@@ -213,15 +213,6 @@ export function Navbar() {
                   )}
                 </motion.div>
               ))}
-              {/* Mobile AI Chat Trigger */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 20 }}
-                transition={{ delay: navLinks.length * 0.1 }}
-              >
-                <MobileAIChatTrigger onClose={() => setIsMenuOpen(false)} />
-              </motion.div>
             </nav>
           </motion.div>
         )}

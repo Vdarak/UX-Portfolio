@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from "next"
 import { Instrument_Serif, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { AnimatedFavicon } from "@/components/animated-favicon"
-import { AIChat } from "@/components/ai-chat"
+import { AIChat, FloatingChatButton } from "@/components/ai-chat"
 import { AIChatProvider } from "@/components/ai-chat-provider"
 import { AppLayout } from "@/components/app-layout"
 import "./globals.css"
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     shortcut: "/icon.svg",
     apple: "/icon.svg",
   },
-    generator: 'Vedant Darak'
+  generator: 'Vedant Darak'
 }
 
 export const viewport: Viewport = {
@@ -49,6 +49,7 @@ export default function RootLayout({
             {children}
           </AppLayout>
           <AIChat />
+          <FloatingChatButton />
           <Analytics />
         </AIChatProvider>
       </body>

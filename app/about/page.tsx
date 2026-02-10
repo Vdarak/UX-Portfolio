@@ -129,7 +129,7 @@ export default function AboutPage() {
             <div>
               <p className="font-mono text-md 3xl:text-base tracking-widest text-accent mb-4 text-lg">CURRENTLY</p>
               <p className="font-mono text-sm 3xl:text-base leading-relaxed text-white/80">
-                Visual Designer at Mercor.com, helping train AI models to produce high-quality, functional designs.
+                Visual Designer at Mercor, helping train AI models to produce high-quality, functional designs.
               </p>
             </div>
 

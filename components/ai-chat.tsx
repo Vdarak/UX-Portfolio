@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect, type FormEvent, type KeyboardEvent } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { X, Send, Loader2, Info } from "lucide-react"
+import { Send, Info, MessageCircleQuestion } from "lucide-react"
 import { useAIChat } from "./ai-chat-provider"
 import { useLenis } from "lenis/react"
 import Image from "next/image"
@@ -19,14 +19,24 @@ export function AIChat() {
   const [messages, setMessages] = useState<Message[]>([])
   const [input, setInput] = useState("")
   const [isLoading, setIsLoading] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLTextAreaElement>(null)
   const lenis = useLenis()
+
+  // Detect mobile viewport
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768)
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+    return () => window.removeEventListener("resize", checkMobile)
+  }, [])
 
   const presetQuestions = [
     "What's your design process?",
     "What are you passionate about?",
     "How can I contact you?",
+    "Tell me about yourself"
   ]
 
   // Auto-scroll to bottom when new messages arrive
@@ -141,28 +151,23 @@ export function AIChat() {
 
   return (
     <>
-      {/* Mobile overlay backdrop - only on mobile */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-background/40 backdrop-blur-lg z-40 md:hidden"
-            onClick={() => setIsOpen(false)}
-          />
-        )}
-      </AnimatePresence>
-
-      {/* Chat Panel - fixed position that content adjusts around */}
+      {/* Chat Panel */}
       <motion.aside
         initial={false}
-        animate={{
-          x: isOpen ? 0 : "100%",
-        }}
-        transition={{ type: "spring", damping: 30, stiffness: 300 }}
-        className={`fixed top-0 right-0 bottom-0 z-50 w-full lg:w-[440px] bg-background/40 backdrop-blur-xl border-l border-white/10 flex flex-col ${isOpen ? "pointer-events-auto" : "pointer-events-none"
+        animate={
+          isMobile
+            ? isOpen
+              ? { scale: 1, opacity: 1, x: 0 }
+              : { scale: 0, opacity: 0, x: 0 }
+            : { x: isOpen ? 0 : "100%", scale: 1, opacity: 1 }
+        }
+        style={isMobile ? { transformOrigin: "bottom left" } : undefined}
+        transition={
+          isMobile
+            ? { type: "spring", damping: 25, stiffness: 300 }
+            : { type: "spring", damping: 30, stiffness: 300 }
+        }
+        className={`fixed top-0 right-0 bottom-0 z-50 w-full lg:w-[440px] bg-background/95 md:bg-background/40 backdrop-blur-xl border-l border-white/10 flex flex-col ${isOpen ? "pointer-events-auto" : "pointer-events-none"
           }`}
         onMouseEnter={() => lenis?.stop()}
         onMouseLeave={() => lenis?.start()}
@@ -349,22 +354,40 @@ export function AIChatTrigger() {
   )
 }
 
-// Mobile trigger button for mobile menu
-export function MobileAIChatTrigger({ onClose }: { onClose: () => void }) {
-  const { toggle } = useAIChat()
-
-  const handleClick = () => {
-    onClose()
-    setTimeout(() => toggle(), 100)
-  }
+// Floating chat button for mobile - styled like scroll-to-top with orange border
+export function FloatingChatButton() {
+  const { toggle, isOpen } = useAIChat()
 
   return (
-    <button
-      onClick={handleClick}
-      className="group text-4xl font-sans tracking-tight text-accent"
-      aria-label="Open AI chat"
-    >
-      <span>Ask LLME</span>
-    </button>
+    <AnimatePresence>
+      {!isOpen && (
+        <motion.button
+          onClick={toggle}
+          className="fixed bottom-8 left-8 z-50 w-12 h-12 flex items-center justify-center bg-background/80 backdrop-blur-sm rounded-full cursor-pointer md:hidden"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.8 }}
+          transition={{ duration: 0.3 }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          aria-label="Open AI chat"
+        >
+          {/* Orange border ring - matches scroll-to-top styling */}
+          <svg className="absolute w-full h-full transform -rotate-90" viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r={18} fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="2" />
+            <circle
+              cx="24"
+              cy="24"
+              r={18}
+              fill="none"
+              stroke="rgb(251, 146, 60)"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+          </svg>
+          <MessageCircleQuestion className="w-5 h-5 text-white/80" />
+        </motion.button>
+      )}
+    </AnimatePresence>
   )
 }
