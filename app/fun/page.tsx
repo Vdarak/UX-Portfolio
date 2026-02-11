@@ -175,8 +175,8 @@ export default function FunPage() {
                     className="font-sans text-[clamp(2.5rem,8vw,9rem)] font-light leading-[0.95] tracking-tight transition-colors duration-300"
                     style={{
                       color: hoveredId === project.id
-                        ? "rgba(255,255,255,1)"
-                        : "rgba(255,255,255,0.55)",
+                        ? "rgba(255,255,255,0.7)"
+                        : "rgba(255,255,255,0.9)",
                     }}
                   >
                     {project.title}
@@ -185,8 +185,8 @@ export default function FunPage() {
                     className="font-mono text-[0.6rem] md:text-xs tracking-wider ml-1 mt-1 transition-colors duration-300"
                     style={{
                       color: hoveredId === project.id
-                        ? "rgba(255,255,255,0.5)"
-                        : "rgba(255,255,255,0.2)",
+                        ? "rgba(255,255,255,0.7)"
+                        : "rgba(255,255,255,0.9)",
                     }}
                   >
                     {project.year}
