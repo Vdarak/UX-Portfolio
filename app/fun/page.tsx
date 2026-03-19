@@ -116,15 +116,6 @@ const projects: Project[] = [
     result: "Good Result",
     story: "Calendar-based workout split tracker with periodisation phases. Shows the day's workout and cycles through training phases.",
   },
-  {
-    id: "critique",
-    title: "AI Critique Tool",
-    image: "/fun/critique.png",
-    link: "https://critique-opal.vercel.app",
-    year: "2025",
-    result: "Good Result",
-    story: "The existing Mercor rating tool kept breaking and losing submissions. Built a better version to manage ratings and feedback in one place.",
-  },
 ]
 
 function resultColor(result: ResultType) {
