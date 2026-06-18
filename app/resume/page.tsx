@@ -104,43 +104,11 @@ export default function ResumePage() {
 
           <div className="flex items-center gap-4">
             <a
-              href="/Vedant_Resume.pdf"
-              download
-              className="group inline-flex items-center gap-2 font-mono text-sm 3xl:text-base tracking-wider text-cyan-400 hover:text-white transition-colors px-4 py-2 border border-cyan-400/30 hover:border-white/30 rounded"
-              onMouseEnter={() => setIsDownloadHovered(true)}
-              onMouseLeave={() => setIsDownloadHovered(false)}
-            >
-              DATA ENG PDF
-              <motion.span
-                animate={
-                  isDownloadHovered
-                    ? {
-                      y: [0, 4, 0],
-                    }
-                    : { y: 0 }
-                }
-                transition={
-                  isDownloadHovered
-                    ? {
-                      duration: 0.6,
-                      ease: "easeInOut",
-                      repeat: Number.POSITIVE_INFINITY,
-                    }
-                    : {
-                      duration: 0.3,
-                      ease: "easeOut",
-                    }
-                }
-              >
-                <Download className="w-4 h-4 3xl:w-5 3xl:h-5" />
-              </motion.span>
-            </a>
-            <a
               href="/Vedant.pdf"
               download
               className="group inline-flex items-center gap-2 font-mono text-sm 3xl:text-base tracking-wider text-accent hover:text-white transition-colors px-4 py-2 border border-accent/30 hover:border-white/30 rounded"
             >
-              DESIGN PDF
+              RESUME
               <Download className="w-4 h-4 3xl:w-5 3xl:h-5" />
             </a>
           </div>
