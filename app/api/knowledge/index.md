@@ -1,61 +1,63 @@
 # About LLME - Vedant Darak
 
 ## Introduction
-I'm Vedant Darak, a **UX Design Engineer augmented with AI tools**. I believe the best digital experiences emerge when human insight meets technical precision. I have a Master's degree in Human-Computer Interaction (HCI) and Bachelor's degree in Computer Science.
+I'm a Frontend Design Engineer and Data Analyst who bridges human-centered UX research with governed data architecture. I build design systems that scale and data models that power decisions — often at the same company, for the same product. I have a Master's degree in Human-Computer Interaction (HCI) from DePaul University and a Bachelor's degree in Computer Science from VESIT.
 
 ## Current Role
-**Visual Designer at Mercor.com** (Jan 2025 - Present, Contract, Remote)
-- Helping train AI models to produce high-quality, functional designs
-- Evaluating AI-generated design outputs for quality, usability, and adherence to design principles
-- Providing detailed annotations and corrections to improve model performance on design tasks
-- Collaborating with AI engineers to refine training data and improve model accuracy
+**AI Data Analytics Expert & Frontend Design Expert at Mercor** (Jan 2026 - Present, Contract, Remote)
+- Validated 4,000+ lines of AI-generated SQL against legacy relational databases, correcting 45+ semantic join errors to ensure pinpoint accuracy for MRR reporting.
+- Engineered a 50-table Snowflake semantic layer in Python to convert raw transaction feeds into governed, AI-ready financial metrics.
+- Authored a 200-term enterprise business glossary standardizing KPI calculation logic, reducing metric discrepancies between expert human data and HQ by 30%.
+- Accelerated enterprise reporting cycles by 14 days by migrating 120+ undocumented legacy views into a centralized mapped data warehouse.
+- Evaluated generative AI design quality across 14+ domains (UI, branding, 3D, editorial, motion, interactive), designing 200+ targeted evaluation prompts that improved model output quality scores by 18% across 3 design mediums.
+- Prototyped and stress-tested interactive visual concepts in HTML/CSS, Three.js, and Processing to validate AI model outputs, accelerating stakeholder feedback cycles by 2 weeks per review.
+- Established evaluation rubrics and scoring documentation for 14 design and data mediums, reducing inter-rater variance by 30% and cutting per-session review time from 90 to under 45 minutes.
 
 ## Previous Experience
 
-**Design Engineer at Cognijin Inc.** (Aug 2025 - Dec 2025, Full-time, Remote)
-- Built reusable Next.js + React + TypeScript components for Pepper – an AI job search assistant with design tokens and responsive patterns, focusing on accessibility, AI interactions, and polished user experience
-- Led end-to-end UX design, UI design, and Front-End functional development in CI/CD pipeline for Pepper including onboarding, job board, filter system, resume editor, and AI interactions
-- Authored component documentation and contribution guidelines to standardize props, variants, and usage patterns; participating in code reviews and enforcing linting/formatting for consistent quality
-- Owned redesign, development, and hosting for 3 client websites in Next.js + React + Tailwind with admin dashboards; doubled lead capture rate and drove 50%+ increase in monthly revenue
-- Collaborating with designers, researchers, and AI engineers to scope, estimate, and deliver UI work in sprints
+**Frontend Design Engineer & Data Analyst at Cognijin Inc.** (Aug 2025 - Dec 2025, Full-time, Remote)
+- Redesigned and shipped 3 client websites with Next.js admin dashboards, driving a combined 114% increase in organic traffic, $50K+ in monthly revenue, and doubling lead capture rate across all engagements.
+- Built a 30+ component design system in Next.js, React, and TypeScript with Figma-to-code token alignment and WCAG 2.1 AA compliance, adopted as the production component library for an agentic AI job search product.
+- Mapped data lineage for 35+ AWS RDS source systems to address physical-to-logical transformations and regulatory compliance gaps; architected governed SQL data models to integrate AI chatbots with backend client analytics.
+- Decreased manual data validation by 16 hours weekly by deploying automated SQL quality checks, null-value alerts, and Python validation pipelines to audit AI outputs against raw source data.
+- Led end-to-end UX in Figma and frontend engineering within a CI/CD pipeline, reducing prototype-to-production cycle from 6 weeks to under 2; conducted WAVE and Lighthouse audits achieving an average Lighthouse accessibility score of 94/100.
+- Conducted 20+ stakeholder interviews to translate executive performance requests into strict technical reporting requirements and standard business glossaries.
 
-**Software Designer at Infinichains (Credibl) Inc.** (Jun 2022 - Aug 2023, Full-time, Remote)
-- Architected ESG dashboard UI with React components and Chart.js visualizations; optimized API payloads and state flows for real-time metric updates
-- Built 20+ component design system with patterns and guidelines that reduced handoff friction
-- Led mixed-methods research (stakeholder interviews, usability tests, surveys) to identify navigation bottlenecks; validated a 25% task completion improvement via streamlined IA
-- Drove design system governance with usage guidance and pattern libraries
+**Software Designer & Data Analyst at Infinichains (Credibl) Inc.** (Jun 2022 - Aug 2023, Full-time, Remote)
+- Architected an ESG analytics dashboard for 3 enterprise clients serving 500+ users in React and Chart.js, designing component architecture and optimizing API state flows for real-time accuracy contributing to a 10% increase in client retention.
+- Optimized 60+ slow-running SQL queries using CTEs and indexing, reducing ESG dashboard refresh times for 1.2M+ row datasets by 25%; audited BI report outputs against raw PostgreSQL databases to resolve a critical aggregation flaw in user retention logic.
+- Built a 20+ component design system with Figma documentation covering variants, usage constraints, and interaction patterns, reducing design-to-dev handoff friction by 30% and enabling consistent UX across all client deployments.
+- Led mixed-methods research (stakeholder interviews, usability tests, surveys) to identify navigation bottlenecks, validating a 25% task completion improvement and a 10% uptick in user satisfaction scores via restructured information architecture.
+- Published comprehensive SLA documentation and data dictionaries for 3 enterprise clients, cutting onboarding time from 3 weeks to 4 days.
 
 ## My Expertise
 
-### Design Engineering Craft
-- Architect component systems and design tokens
-- Translate design specifications into React and Next.js implementations
-- Prototype interactions with TypeScript, Tailwind CSS, and Framer Motion
-- Validate interaction intent before committing to scale
+### Design Engineering & Data Architecture
+- Architect component systems, design tokens, and WCAG-compliant responsive interfaces.
+- Engineer semantic modeling layers (e.g. Snowflake) and map complex data lineage.
+- Deploy automated data validation pipelines to ensure AI-ready metrics.
+- Translate design specifications into React, Next.js, and Framer Motion implementations.
 
-### Evidence-Led Systems
-- Conduct mixed-method research studies
-- Instrument prototypes for data collection
-- Synthesize telemetry with qualitative insights
-- Use data to steer roadmaps and keep releases accountable to user value
+### Evidence-Led & Governing Systems
+- Conduct mixed-method research (user interviews, usability testing, survey design) to optimize IA.
+- Publish enterprise business glossaries to standardize KPI logic across departments.
+- Optimize slow-running SQL queries using CTEs and indexing for real-time BI dashboards.
 
-### AI-Enabled Experiences
-- Collaborate with AI teams on agentic workflows
-- Craft explainable UI patterns for AI systems
-- Deliver resilient design operations that keep human judgment in the loop
-- Work on systems that demystify AI decision-making
+### AI-Enabled Systems
+- Collaborate on agentic workflows and prompt engineering to evaluate generative AI outputs.
+- Prototyped visual interfaces using Three.js, Canvas UI, and React Flow to simplify complex AI processes.
+- Design transparent UI patterns (like hover citations) that build trust in AI agents.
 
 ## Technical Skills
 
-**Programming**: CSS3, HTML5, JavaScript, Python, TypeScript
-**Frameworks**: Next.js, React, Tailwind CSS
-**Design Tools**: Figma, Miro, v0, Copilot
-**Development**: GitHub, Jira, API Integration, Agile UX
-**Design Skills**: Design Systems, Information Architecture, Mobile Design, Responsive Design, Rapid Prototyping, Storytelling, Typography, UI Implementation, UX Design, Wireframing, Web Development
-**Soft Skills**: Adaptability, Communication, Decision Making, Problem-Solving, Teamwork
-**Research**: Mixed-methods, User Interviews, Quantitative Analysis, Usability Testing
-**Performance**: Web performance optimization, Accessibility (WCAG)
-**Emerging**: AI Integration, Agentic Workflows, LLM Integration
+- **Programming**: CSS3, HTML5, JavaScript, Python, TypeScript, SQL, R, Pine Script
+- **Frameworks & Libs**: Next.js, React, Tailwind CSS, Three.js
+- **Design Tools**: Figma, Miro, v0
+- **Development & Infrastructure**: GitHub, Jira, AWS, Snowflake, Lighthouse, WAVE
+- **Data Engineering**: Data Warehousing, Semantic Modeling, Data Lineage, Data Governance, Dimensional Modeling, Query Optimization, Business Glossaries, AI Report Validation
+- **Design & Research**: Design Systems, Front-end Development, Information Architecture, Mobile Design, Responsive Design, Rapid Prototyping, WCAG 2.1, Accessibility Audits, UX Design, Wireframing, User Research, Qualitative & Quantitative Analysis
+- **Soft Skills**: Adaptability, Communication, Decision Making, Problem-Solving, Teamwork
+- **Emerging Tech**: AI Integration, Agentic Workflows, LLM Evaluation
 
 ## Education
 - **Master of Science in Human-Computer Interaction** - DePaul University, Chicago, IL (Jun 2025, GPA 3.6/4.00)
@@ -63,44 +65,44 @@ I'm Vedant Darak, a **UX Design Engineer augmented with AI tools**. I believe th
 
 ## Projects Portfolio
 
-### 1. ANA: Spotting the Bias in News (Apr 2025)
-**Role**: UX Researcher & Designer | **Duration**: 12 weeks (6 months) | **Team**: 2 UX Designers, 2 UX Researchers
+### 1. Trevi (2025)
+**Role**: Lead Designer & Frontend Engineer | **Duration**: 2 weeks | **Team**: 3-person team
+**Tags**: AI Research, React Flow, Spatial UX
+**Link**: https://trevi.fyi
+
+A neurosurgeon came to us with a specific frustration: using AI tools to research complex medical concepts using a linear chat window was flat, scroll-heavy, and lacked trust. Trevi reimagines AI research as a spatial, explorable knowledge graph with citation transparency at the source level.
+
+- **Spatial UX**: Built a zoomable/draggable topic tree canvas using React Flow that replaces linear chat.
+- **Citation Transparency**: Hovering citation bubbles displays the exact source snippet; clicking goes to the document.
+- **Feedback Infrastructure**: Woven ratings and tag nudges to collect user data during alpha sessions.
+- **Progressive Disclosure**: Information is disclosed progressively (Glance node titles &rarr; Hover Gist tooltip &rarr; Click detail modal).
+
+### 2. ANA: Spotting the Bias in News (2025)
+**Role**: UX Researcher & Designer | **Duration**: 12 weeks | **Team**: 2 UX Designers, 2 UX Researchers
 **Tags**: AI, UX Research, Media Bias
 
 Young people (18-28) are stuck in "information bubbles" seeing news from one side. ANA is an AI-powered news aggregator designed to help readers identify hidden bias in news articles.
+- **Key Findings**: 66% of users couldn't distinguish topic from bias; 82% had never used an AI news aggregator.
+- **Solution**: Built a tool that doesn't just deliver news, but explains it with transparent bias detection and explainable AI features.
 
-**Key Research Findings**:
-- 66% of users couldn't distinguish topic from bias
-- 82% had never used an AI news aggregator
-- Users feel confused or tricked because they can't easily tell if a story leans too far left or right
-
-**Solution**: Built a tool that doesn't just deliver news, but explains it with transparent bias detection and explainable AI features.
-
-### 2. Canvas Chat (2025)
+### 3. Canvas Chat (2025)
 **Role**: Personal Project | **Tags**: Gemini, Brainstorming, Canvas UI
 
 A canvas-style AI chat interface where you can spawn multiple conversations in the same infinite canvas. This enables both micro-level deep dives into specific topics and macro-level understanding of how ideas connect—perfect for brainstorming and complex problem-solving.
+- **Key Features**: Infinite canvas, branching threads, orchestrating multiple agents simultaneously.
 
-**Key Features**:
-- Infinite canvas for AI conversations
-- Spawn chats anywhere, branch from any message
-- Orchestrate multiple agents simultaneously
-- Inspired by Figma's infinite canvas design philosophy
+### 4. AX Design System (2025)
+**Role**: Lead Product Designer | **Tags**: Design System, AI Agents, React
+**Status**: Case Study Coming Soon
 
-**Problem Addressed**: Traditional chat interfaces are linear and limiting. You scroll endlessly through a single thread, losing context of where ideas branched or how concepts connect.
+A case study on building a design system that treats UI as one surface, while making agent-facing contracts (schemas, policies, context, and audit trails) equally "designed" with 31+ components and 2 modes of interaction.
 
-### 3. Understanding Creative Block (Jan 2024)
+### 5. Understanding Creative Block (2024)
 **Role**: UX Researcher | **Duration**: 4 months | **Tags**: Feature Discovery, UX Research, Creativity
 **Status**: Coming Soon
 
-Creative block is everywhere, yet nowhere in technology. While artists struggle with a loss of confidence and productivity, current tools like Pinterest or Headspace only offer organization or general stress relief—not a cure for the block itself.
-
-**Research Goal**: Uncover the invisible mental patterns of "feeling stuck" and design a dedicated digital assistant that helps creatives regain their momentum.
-
-**Key Results**:
-- 10 potential features discovered
-- 16 participants interviewed
-- Deep behavioral analysis conducted
+Uncovering the invisible mental patterns of "feeling stuck" and designing a dedicated digital assistant that helps creatives regain their momentum.
+- **Key Results**: 10 potential features discovered, 16 participants interviewed, deep behavioral analysis conducted.
 
 ## Vibe Coding Playground
 
