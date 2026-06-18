@@ -4,6 +4,7 @@ import { ProjectDetail } from "@/components/project-detail"
 import { MediaBiasProject } from "@/components/media-bias-project"
 import { CanvasChatProject } from "@/components/canvas-chat-project"
 import { AxDesignSystemProject } from "@/components/ax-design-system-project"
+import { TreviProject } from "@/components/trevi-project"
 
 // Project data matching the works component
 const projects: Record<
@@ -17,7 +18,7 @@ const projects: Record<
     image: string
     year: string
     isCustom?: boolean
-    customComponent?: "media-bias" | "canvas-chat" | "ax-design-system" | "ax-design-system"
+    customComponent?: "media-bias" | "canvas-chat" | "ax-design-system" | "trevi"
     details: {
       responsibilities: string[]
       duration: string
@@ -317,6 +318,64 @@ const projects: Record<
       learning: "Designing for agents requires a shift in thinking from pixels to patterns.",
     },
   },
+  "trevi": {
+    id: "trevi",
+    title: "Trevi",
+    role: "Lead Designer & Frontend Engineer",
+    outcome: "Spatial AI research tool with citation transparency",
+    tags: ["AI Research", "React Flow", "Spatial UX"],
+    image: "/trevi-hero.png",
+    year: "2025",
+    isCustom: true,
+    customComponent: "trevi",
+    details: {
+      responsibilities: [
+        "UI/UX Design",
+        "Frontend Engineering",
+        "Prototyping",
+        "Design System",
+      ],
+      duration: "2 weeks",
+      challenge:
+        "A neurosurgeon needed a better way to research complex medical concepts using AI. Traditional chat interfaces were linear and lacked spatial navigation and citation transparency.",
+      results:
+        "Shipped a spatial, explorable knowledge graph MVP with citation transparency in 2 weeks. 30+ documented improvements post-V2 audit.",
+    },
+    caseStudy: {
+      context:
+        "AI research tools force users into linear chat interfaces that lose context and provide no transparency into sources.",
+      users:
+        "Medical professionals and researchers who need to explore complex topics spatially and verify AI-generated information.",
+      problem:
+        "Two things were fundamentally broken: navigation (no way to see relationships between concepts spatially) and trust (no transparency into where information came from).",
+      research: {
+        method:
+          "Reverse-engineered animation behavior from NotebookLM's mind map. Built a v0 prototype with React Flow to stress-test with 100+ nodes.",
+        insight:
+          "A fast, disposable prototype is worth more than a perfect brief. The v0 prototype shaped the entire product direction.",
+        pivot:
+          "Shifted from building a traditional chat enhancement to creating a fully spatial, canvas-based research experience.",
+      },
+      solution: {
+        innovation:
+          "A spatial, explorable topic tree that replaces linear chat, with citation transparency showing the exact snippet used to generate each response.",
+        howItWorks:
+          "React Flow canvas with custom layout algorithms (spacious dendrogram and compact Reingold-Tilford), auto-camera navigation, and three-tier progressive disclosure (glance, hover, click).",
+        designChoices:
+          "V2 was driven by three principles: Visibility (if it matters, make it unmissable), Progressive Disclosure (right info at right moment), and Subtraction (knowing what to remove).",
+      },
+      contribution:
+        "Led all design and frontend engineering. Built the entire UI from scratch including the React Flow canvas, custom layout algorithms, animation system, citation tooltips, and mobile responsive adaptation.",
+      metrics: [
+        "2-week MVP timeline",
+        "30+ improvements documented post-V2",
+        "Full mobile responsiveness added mid-sprint",
+        "Custom layout algorithms for 100+ node graphs",
+      ],
+      learning:
+        "Subtraction is a form of respect for the user. Every button you remove is a decision they don't have to make.",
+    },
+  },
   "canvas-chat": {
     id: "canvas-chat",
     title: "Canvas Chat",
@@ -378,6 +437,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
     }
     if (project.customComponent === "ax-design-system") {
       return <AxDesignSystemProject />
+    }
+    if (project.customComponent === "trevi") {
+      return <TreviProject />
     }
     return <ProjectDetail project={project} />
   }

@@ -28,6 +28,27 @@ const projects = [
     },
   },
   {
+    id: "trevi",
+    title: "Trevi",
+    role: "Lead Designer & Frontend Engineer",
+    outcome: "",
+    tags: ["AI Research", "React Flow", "Spatial UX"],
+    image: "/home-page.png",
+    heroImage: "/trevi/hero.png",
+    year: "2025",
+    comingSoon: false,
+    details: {
+      responsibilities: ["UI/UX Design", "Frontend Engineering", "Prototyping", "Design System"],
+      duration: "2 weeks",
+      description:
+        "A neurosurgeon needed a better way to research complex medical concepts using AI. Every tool was the same: a linear chat window. We built Trevi — a spatial, explorable knowledge graph with citation transparency at the source level.",
+      results: [
+        { stat: "2", label: "week MVP timeline" },
+        { stat: "30+", label: "improvements documented post-V2" },
+      ],
+    },
+  },
+  {
     id: "canvas-chat",
     title: "Canvas Chat",
     role: "Personal Project",

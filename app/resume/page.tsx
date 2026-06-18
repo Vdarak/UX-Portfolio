@@ -12,44 +12,49 @@ const experiences = [
   {
     id: "mercor",
     company: "Mercor",
-    role: "Visual Designer",
+    role: "AI Data Analytics Expert & Frontend Design Expert",
     type: "Contract",
-    duration: "Jan 2025 - Present",
+    duration: "Jan 2026 - Present",
     location: "Remote",
     responsibilities: [
-      "Training AI models to produce high-quality, functional designs through expert feedback and evaluation.",
-      "Evaluating AI-generated design outputs for quality, usability, and adherence to design principles.",
-      "Providing detailed annotations and corrections to improve model performance on design tasks.",
-      "Collaborating with ML engineers to refine training data and improve model accuracy.",
+      "Validated 4,000+ lines of AI-generated SQL against legacy relational databases, correcting 45+ semantic join errors to ensure pinpoint accuracy for MRR reporting.",
+      "Engineered a 50-table Snowflake semantic layer in Python to convert raw transaction feeds into governed, AI-ready financial metrics.",
+      "Authored a 200-term enterprise business glossary standardizing KPI calculation logic, reducing metric discrepancies between expert human data and HQ by 30%.",
+      "Accelerated enterprise reporting cycles by 14 days by migrating 120+ undocumented legacy views into a centralized mapped data warehouse.",
+      "Evaluated generative AI design quality across 14+ domains (UI, branding, 3D, editorial, motion, interactive), designing 200+ targeted evaluation prompts that improved model output quality scores by 18% across 3 design mediums.",
+      "Prototyped and stress-tested interactive visual concepts in HTML/CSS, Three.js, and Processing to validate AI model outputs, accelerating stakeholder feedback cycles by 2 weeks per review.",
+      "Established evaluation rubrics and scoring documentation for 14 design and data mediums, reducing inter-rater variance by 30% and cutting per-session review time from 90 to under 45 minutes.",
     ],
   },
   {
     id: "cognijin",
     company: "Cognijin Inc.",
-    role: "Design Engineer",
+    role: "Frontend Design Engineer & Data Analyst",
     type: "Full-time",
-    duration: "Sep 2024 - Dec 2024",
+    duration: "Aug 2025 - Dec 2025",
     location: "Remote",
     responsibilities: [
-      "Built reusable Next.js + React + TypeScript components for Pepper – AI job search assistant with design tokens and responsive patterns, focusing on accessibility, AI interactions and polished user experience.",
-      "Led end-to-end UX design, UI design, Front-End functional development in CI/CD pipeline for Pepper - AI job search assistant including onboarding, job board, filter system, resume editor and AI interactions within the web application.",
-      "Authored component documentation and contribution guidelines to standardize props, variants, and usage patterns; participated in code reviews and enforced linting/formatting for consistent quality.",
-      "Owned redesign, development and hosting for 3 client websites in Next.js + React + Tailwind with an admin dashboard to review form submissions, AI chatbot transcripts, and auto-generated summaries; doubled lead capture rate and drove 50%+ increase in monthly revenue.",
-      "Collaborated with designers, researchers, and AI engineers to scope, estimate, and deliver UI work in sprints; triaged accessibility and usability issues discovered in testing and production.",
+      "Redesigned and shipped 3 client websites with Next.js admin dashboards, driving a combined 114% increase in organic traffic, $50K+ in monthly revenue, and doubling lead capture rate across all engagements.",
+      "Built a 30+ component design system in Next.js, React, and TypeScript with Figma-to-code token alignment and WCAG 2.1 AA compliance, adopted as the production component library for an agentic AI job search product.",
+      "Mapped data lineage for 35+ AWS RDS source systems to address physical-to-logical transformations and regulatory compliance gaps; architected governed SQL data models to integrate AI chatbots with backend client analytics.",
+      "Decreased manual data validation by 16 hours weekly by deploying automated SQL quality checks, null-value alerts, and Python validation pipelines to audit AI outputs against raw source data.",
+      "Led end-to-end UX in Figma and frontend engineering within a CI/CD pipeline, reducing prototype-to-production cycle from 6 weeks to under 2; conducted WAVE and Lighthouse audits achieving an average Lighthouse accessibility score of 94/100.",
+      "Conducted 20+ stakeholder interviews to translate executive performance requests into strict technical reporting requirements and standard business glossaries.",
     ],
   },
   {
     id: "infinichains",
     company: "Infinichains (Credibl) Inc.",
-    role: "Software Designer",
+    role: "Software Designer & Data Analyst",
     type: "Full-time",
     duration: "Jun 2022 - Aug 2023",
     location: "Remote",
     responsibilities: [
-      "Architected ESG dashboard UI with React components and Chart.js visualizations; optimized API payloads and state flows for real-time metric updates and accurate data representation across enterprise clients.",
-      "Built 20+ component design system with patterns and guidelines that reduced handoff friction; documented variants, usage, and constraints to maintain consistency across implementations.",
-      "Led mixed-methods research (stakeholder interviews, usability tests, surveys) to identify navigation bottlenecks and visualization issues; validated a 25% task completion improvement via streamlined IA.",
-      "Drove design system governance with usage guidance and pattern libraries, enabling scalable dashboard delivery and consistent UX across client deployments.",
+      "Architected an ESG analytics dashboard for 3 enterprise clients serving 500+ users in React and Chart.js, designing component architecture and optimizing API state flows for real-time accuracy contributing to a 10% increase in client retention.",
+      "Optimized 60+ slow-running SQL queries using CTEs and indexing, reducing ESG dashboard refresh times for 1.2M+ row datasets by 25%; audited BI report outputs against raw PostgreSQL databases to resolve a critical aggregation flaw in user retention logic.",
+      "Built a 20+ component design system with Figma documentation covering variants, usage constraints, and interaction patterns, reducing design-to-dev handoff friction by 30% and enabling consistent UX across all client deployments.",
+      "Led mixed-methods research (stakeholder interviews, usability tests, surveys) to identify navigation bottlenecks, validating a 25% task completion improvement and a 10% uptick in user satisfaction scores via restructured information architecture.",
+      "Published comprehensive SLA documentation and data dictionaries for 3 enterprise clients, cutting onboarding time from 3 weeks to 4 days.",
     ],
   },
 ]
@@ -97,38 +102,48 @@ export default function ResumePage() {
             </p>
           </div>
 
-          <a
-            href="/Vedant.pdf"
-            download
-            className="group inline-flex items-center gap-2 font-mono text-sm 3xl:text-base tracking-wider text-accent hover:text-white transition-colors px-4 py-2"
-            onMouseEnter={() => setIsDownloadHovered(true)}
-            onMouseLeave={() => setIsDownloadHovered(false)}
-          >
-            DOWNLOAD PDF
-            <motion.span
-              animate={
-                isDownloadHovered
-                  ? {
-                    y: [0, 4, 0],
-                  }
-                  : { y: 0 }
-              }
-              transition={
-                isDownloadHovered
-                  ? {
-                    duration: 0.6,
-                    ease: "easeInOut",
-                    repeat: Number.POSITIVE_INFINITY,
-                  }
-                  : {
-                    duration: 0.3,
-                    ease: "easeOut",
-                  }
-              }
+          <div className="flex items-center gap-4">
+            <a
+              href="/Vedant_Resume.pdf"
+              download
+              className="group inline-flex items-center gap-2 font-mono text-sm 3xl:text-base tracking-wider text-cyan-400 hover:text-white transition-colors px-4 py-2 border border-cyan-400/30 hover:border-white/30 rounded"
+              onMouseEnter={() => setIsDownloadHovered(true)}
+              onMouseLeave={() => setIsDownloadHovered(false)}
             >
+              DATA ENG PDF
+              <motion.span
+                animate={
+                  isDownloadHovered
+                    ? {
+                      y: [0, 4, 0],
+                    }
+                    : { y: 0 }
+                }
+                transition={
+                  isDownloadHovered
+                    ? {
+                      duration: 0.6,
+                      ease: "easeInOut",
+                      repeat: Number.POSITIVE_INFINITY,
+                    }
+                    : {
+                      duration: 0.3,
+                      ease: "easeOut",
+                    }
+                }
+              >
+                <Download className="w-4 h-4 3xl:w-5 3xl:h-5" />
+              </motion.span>
+            </a>
+            <a
+              href="/Vedant.pdf"
+              download
+              className="group inline-flex items-center gap-2 font-mono text-sm 3xl:text-base tracking-wider text-accent hover:text-white transition-colors px-4 py-2 border border-accent/30 hover:border-white/30 rounded"
+            >
+              DESIGN PDF
               <Download className="w-4 h-4 3xl:w-5 3xl:h-5" />
-            </motion.span>
-          </a>
+            </a>
+          </div>
         </motion.div>
 
         {/* Experience List */}

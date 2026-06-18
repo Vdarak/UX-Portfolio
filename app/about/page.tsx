@@ -8,34 +8,52 @@ import Link from "next/link"
 
 export default function AboutPage() {
   const skills = [
+    // Languages & Frameworks
     "CSS3",
     "HTML5",
     "JavaScript",
     "Python",
+    "SQL",
+    "R",
+    "Pine Script",
     "Next.js",
     "React",
     "Tailwind CSS",
     "TypeScript",
+    // Tools
     "Figma",
     "GitHub",
     "Jira",
     "Miro",
+    "Snowflake",
+    "AWS",
+    "Lighthouse",
+    "WAVE",
+    "Qualtrics",
+    "R Studio",
     "v0",
-    "Copilot",
-    "API Integration",
-    "Agile UX",
+    // Data Engineering
+    "Data Warehousing",
+    "Semantic Modeling",
+    "Data Lineage",
+    "Data Governance",
+    "Dimensional Modeling",
+    "Query Optimization",
+    "Business Glossaries",
+    "AI Report Validation",
+    // Design & UX
     "Design Systems",
     "Front-end Development",
     "Information Architecture",
     "Mobile Design",
     "Responsive Design",
     "Rapid Prototyping",
-    "Storytelling",
-    "Typography",
-    "UI Implementation",
+    "WCAG 2.1",
+    "Accessibility Audits",
     "UX Design",
     "Wireframing",
-    "Web Development",
+    "User Research",
+    // Soft Skills
     "Adaptability",
     "Communication",
     "Decision Making",
@@ -72,7 +90,7 @@ export default function AboutPage() {
             <div>
               <p className="font-mono text-md 3xl:text-base tracking-widest text-accent mb-4 text-lg">WHO I AM</p>
               <p className="font-mono text-sm 3xl:text-base leading-relaxed text-white/80">
-                I'm a UX Design Engineer augmented with AI tools. I believe the best digital experiences emerge when human insight meets technical precision.
+                I'm a Frontend Design Engineer and Data Analyst who bridges human-centered UX research with governed data architecture. I build design systems that scale and data models that power decisions — often at the same company, for the same product.
               </p>
             </div>
 
@@ -129,7 +147,7 @@ export default function AboutPage() {
             <div>
               <p className="font-mono text-md 3xl:text-base tracking-widest text-accent mb-4 text-lg">CURRENTLY</p>
               <p className="font-mono text-sm 3xl:text-base leading-relaxed text-white/80">
-                Visual Designer at Mercor, helping train AI models to produce high-quality, functional designs.
+                AI Data Analytics Expert & Frontend Design Expert at Mercor — evaluating frontier AI models across 14+ design and data domains, engineering a 50-table Snowflake semantic layer, and authoring enterprise business glossaries that standardize KPI logic at scale.
               </p>
             </div>
 
@@ -137,10 +155,10 @@ export default function AboutPage() {
               <p className="font-mono text-md 3xl:text-base tracking-widest text-accent mb-4 text-lg">PREVIOUSLY</p>
               <ul className="space-y-2">
                 <li className="font-mono text-sm 3xl:text-base text-white/80">
-                  Design Engineer at Cognijin Inc.
+                  Frontend Design Engineer & Data Analyst at Cognijin Inc.
                 </li>
                 <li className="font-mono text-sm 3xl:text-base text-white/80">
-                  Software Designer at Infinichains (Credibl) Inc.
+                  Software Designer & Data Analyst at Infinichains (Credibl) Inc.
                 </li>
               </ul>
             </div>
