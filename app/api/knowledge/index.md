@@ -1,47 +1,38 @@
 # About LLME - Vedant Darak
 
 ## Introduction
-I'm a Frontend Design Engineer and Data Analyst who bridges human-centered UX research with governed data architecture. I build design systems that scale and data models that power decisions — often at the same company, for the same product. I have a Master's degree in Human-Computer Interaction (HCI) from DePaul University and a Bachelor's degree in Computer Science from VESIT.
+I'm a Frontend Design Engineer skilled in blending UI/UX design, front-end engineering, and human-centered research to deliver effective digital solutions. My background spans creative AI systems, enterprise SaaS infrastructure, reusable design systems, interactive prototyping, and cross-functional collaboration. I have a Master's degree in Human-Computer Interaction (HCI) from DePaul University and a Bachelor's degree in Computer Science from VESIT.
 
 ## Current Role
-**AI Data Analytics Expert & Frontend Design Expert at Mercor** (Jan 2026 - Present, Contract, Remote)
-- Validated 4,000+ lines of AI-generated SQL against legacy relational databases, correcting 45+ semantic join errors to ensure pinpoint accuracy for MRR reporting.
-- Engineered a 50-table Snowflake semantic layer in Python to convert raw transaction feeds into governed, AI-ready financial metrics.
-- Authored a 200-term enterprise business glossary standardizing KPI calculation logic, reducing metric discrepancies between expert human data and HQ by 30%.
-- Accelerated enterprise reporting cycles by 14 days by migrating 120+ undocumented legacy views into a centralized mapped data warehouse.
-- Evaluated generative AI design quality across 14+ domains (UI, branding, 3D, editorial, motion, interactive), designing 200+ targeted evaluation prompts that improved model output quality scores by 18% across 3 design mediums.
-- Prototyped and stress-tested interactive visual concepts in HTML/CSS, Three.js, and Processing to validate AI model outputs, accelerating stakeholder feedback cycles by 2 weeks per review.
-- Established evaluation rubrics and scoring documentation for 14 design and data mediums, reducing inter-rater variance by 30% and cutting per-session review time from 90 to under 45 minutes.
+**Frontend Design Expert at Mercor** (Jan 2026 - Present, Contract, Chicago, IL)
+- Evaluated generative AI design quality across 14+ domains (UI, branding, 3D, editorial, motion and interactive) for state-of-the-art models from frontier AI labs, designing 200+ targeted evaluation prompts covering aesthetic, functional, and creative edge cases directly improving model output quality scores by 18% across 3 design mediums.
+- Prototyped and stress-tested interactive visual concepts for various design mediums in HTML/CSS, three.js, and Processing to validate AI model outputs that accelerated stakeholder feedback cycles by 2 weeks per review.
+- Established evaluation rubrics and scoring documentation for 14 design mediums, reducing inter-rater variance by 30%, reducing per-session review time from 90 to under 45 minutes and enabling consistent cross-evaluator assessment at scale.
 
 ## Previous Experience
 
-**Frontend Design Engineer & Data Analyst at Cognijin Inc.** (Aug 2025 - Dec 2025, Full-time, Remote)
-- Redesigned and shipped 3 client websites with Next.js admin dashboards, driving a combined 114% increase in organic traffic, $50K+ in monthly revenue, and doubling lead capture rate across all engagements.
-- Built a 30+ component design system in Next.js, React, and TypeScript with Figma-to-code token alignment and WCAG 2.1 AA compliance, adopted as the production component library for an agentic AI job search product.
-- Mapped data lineage for 35+ AWS RDS source systems to address physical-to-logical transformations and regulatory compliance gaps; architected governed SQL data models to integrate AI chatbots with backend client analytics.
-- Decreased manual data validation by 16 hours weekly by deploying automated SQL quality checks, null-value alerts, and Python validation pipelines to audit AI outputs against raw source data.
-- Led end-to-end UX in Figma and frontend engineering within a CI/CD pipeline, reducing prototype-to-production cycle from 6 weeks to under 2; conducted WAVE and Lighthouse audits achieving an average Lighthouse accessibility score of 94/100.
-- Conducted 20+ stakeholder interviews to translate executive performance requests into strict technical reporting requirements and standard business glossaries.
+**Frontend Design Engineer at Cognijin Co.** (Aug 2025 - Dec 2025, Full-time, Chicago, IL)
+- Redesigned and shipped 3 client websites with Next.js admin dashboards, driving a combined 114% increase in organic traffic, generating a combined $50K+ in monthly revenue and doubling lead capture rate across all engagements.
+- Built a 30+ component design system in Next.js, React, and TypeScript with Figma-to-code token alignment and WCAG 2.1 AA compliance adopted as the production component library for an agentic AI job search product.
+- Led end-to-end UX in Figma and frontend engineering within a CI/CD pipeline, partnering with PMs and engineers to ship onboarding, filter system, resume editor, and AI interaction surfaces reducing prototype-to-production cycle from 6 weeks to under 2.
+- Conducted WAVE and Lighthouse accessibility audits across all shipped surfaces, resolving 100% of critical WCAG violations pre-launch and achieving an average Lighthouse accessibility score of 94/100.
 
-**Software Designer & Data Analyst at Infinichains (Credibl) Inc.** (Jun 2022 - Aug 2023, Full-time, Remote)
-- Architected an ESG analytics dashboard for 3 enterprise clients serving 500+ users in React and Chart.js, designing component architecture and optimizing API state flows for real-time accuracy contributing to a 10% increase in client retention.
-- Optimized 60+ slow-running SQL queries using CTEs and indexing, reducing ESG dashboard refresh times for 1.2M+ row datasets by 25%; audited BI report outputs against raw PostgreSQL databases to resolve a critical aggregation flaw in user retention logic.
-- Built a 20+ component design system with Figma documentation covering variants, usage constraints, and interaction patterns, reducing design-to-dev handoff friction by 30% and enabling consistent UX across all client deployments.
-- Led mixed-methods research (stakeholder interviews, usability tests, surveys) to identify navigation bottlenecks, validating a 25% task completion improvement and a 10% uptick in user satisfaction scores via restructured information architecture.
-- Published comprehensive SLA documentation and data dictionaries for 3 enterprise clients, cutting onboarding time from 3 weeks to 4 days.
+**Software Designer at Infinichains (Credibl) Inc.** (Jun 2022 - Aug 2023, Full-time, Remote)
+- Architected an ESG analytics dashboard for 3 enterprise clients serving 500+ users in React and Chart.js, designing component architecture and optimizing API state flows for real-time accuracy across concurrent data streams contributing to a 10% increase in client retention.
+- Built a 20+ component design system with Figma documentation covering variants, usage constraints, and interaction patterns reducing design-to-dev handoff friction by 30% and enabling consistent UX across all deployments.
+- Led mixed-methods research (stakeholder interviews, usability tests, surveys) to identify navigation bottlenecks and visualization issues which validated a 25% task completion improvement and a measurable uptick of 10% in user satisfaction scores via restructured IA.
+- Conducted NVDA and VoiceOver screen reader testing throughout the dashboard, ensuring WCAG 2.0 compliance across all data visualization and navigation surfaces for enterprise users.
 
 ## My Expertise
 
-### Design Engineering & Data Architecture
+### Design Engineering & UX
 - Architect component systems, design tokens, and WCAG-compliant responsive interfaces.
-- Engineer semantic modeling layers (e.g. Snowflake) and map complex data lineage.
-- Deploy automated data validation pipelines to ensure AI-ready metrics.
 - Translate design specifications into React, Next.js, and Framer Motion implementations.
+- Develop reusable design systems with Figma documentation and code token alignment.
 
-### Evidence-Led & Governing Systems
+### Evidence-Led Research
 - Conduct mixed-method research (user interviews, usability testing, survey design) to optimize IA.
-- Publish enterprise business glossaries to standardize KPI logic across departments.
-- Optimize slow-running SQL queries using CTEs and indexing for real-time BI dashboards.
+- Synthesize qualitative and quantitative data into actionable design decisions.
 
 ### AI-Enabled Systems
 - Collaborate on agentic workflows and prompt engineering to evaluate generative AI outputs.
@@ -50,14 +41,10 @@ I'm a Frontend Design Engineer and Data Analyst who bridges human-centered UX re
 
 ## Technical Skills
 
-- **Programming**: CSS3, HTML5, JavaScript, Python, TypeScript, SQL, R, Pine Script
-- **Frameworks & Libs**: Next.js, React, Tailwind CSS, Three.js
-- **Design Tools**: Figma, Miro, v0
-- **Development & Infrastructure**: GitHub, Jira, AWS, Snowflake, Lighthouse, WAVE
-- **Data Engineering**: Data Warehousing, Semantic Modeling, Data Lineage, Data Governance, Dimensional Modeling, Query Optimization, Business Glossaries, AI Report Validation
-- **Design & Research**: Design Systems, Front-end Development, Information Architecture, Mobile Design, Responsive Design, Rapid Prototyping, WCAG 2.1, Accessibility Audits, UX Design, Wireframing, User Research, Qualitative & Quantitative Analysis
-- **Soft Skills**: Adaptability, Communication, Decision Making, Problem-Solving, Teamwork
-- **Emerging Tech**: AI Integration, Agentic Workflows, LLM Evaluation
+- **Languages**: HTML, JavaScript, Python, Next.js, React, Tailwind CSS, TypeScript
+- **Tools**: Figma, GitHub, Jira, Lighthouse, Miro, NVDA, Qualtrics, R Studio, Visual Studio Code, VoiceOver, v0, WAVE
+- **Hard Skills**: A/B Testing, ARIA Implementation, Accessibility Audits, Design Systems, Front-end Development, Information Architecture, Journey Mapping, Rapid Prototyping, Storytelling, Typography, UX Design, User Research, WCAG 2.1, Wireframing
+- **Soft Skills**: Adaptability, Communication Skills, Decision Making, Problem-Solving, Teamwork and Collaboration
 
 ## Education
 - **Master of Science in Human-Computer Interaction** - DePaul University, Chicago, IL (Jun 2025, GPA 3.6/4.00)
@@ -156,7 +143,7 @@ The existing Mercor rating tool kept breaking and losing submissions. Built a be
 **Link**: https://critique-opal.vercel.app
 
 ## What I Do
-I design and build AI-powered interfaces that feel intuitive, accessible, and genuinely useful. From conversational AI assistants to enterprise dashboards, I focus on making complex technology feel simple and human through end-to-end UX design, UI implementation, and front-end development.
+I design and build AI-powered interfaces that feel intuitive, accessible, and genuinely useful. I blend UI/UX design, front-end engineering, and human-centered research to deliver effective digital experiences — from design systems to interactive prototypes.
 
 ## How I Work
 I approach every project with curiosity and rigor. I start with deep research—stakeholder interviews, usability tests, surveys—to understand users and context, translate insights into thoughtful design decisions, and bring ideas to life through clean, performant code in CI/CD pipelines. I value collaboration, iteration, and shipping work that makes a real impact.

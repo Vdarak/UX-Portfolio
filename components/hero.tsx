@@ -36,12 +36,12 @@ export function Hero() {
             </span>
             {" + "}
             <span className="relative inline-block">
-              <span className="relative z-10 font-sans text-foreground">Data</span>
+              <span className="relative z-10 font-sans text-foreground">Engineering</span>
               <span className="absolute left-0 right-0 top-1/2 h-[0.35em] -translate-y-1/2 bg-cyan-400/40 -skew-x-2" />
             </span>
             <br />
             <span className="text-white/80">
-              to engineer systems that drive decisions.
+              to build intuitive digital experiences.
             </span>
           </h1>
 
@@ -56,7 +56,7 @@ export function Hero() {
               Mercor
               <ArrowUpRight className="w-4 h-4 md:w-5 md:h-5 3xl:w-6 3xl:h-6" />
             </a>
-            , evaluating AI models across design and data analytics domains.
+            , evaluating AI models across design domains.
           </p>
         </motion.div>
       </motion.div>

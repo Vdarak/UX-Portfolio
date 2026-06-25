@@ -13,9 +13,6 @@ export default function AboutPage() {
     "HTML5",
     "JavaScript",
     "Python",
-    "SQL",
-    "R",
-    "Pine Script",
     "Next.js",
     "React",
     "Tailwind CSS",
@@ -25,34 +22,29 @@ export default function AboutPage() {
     "GitHub",
     "Jira",
     "Miro",
-    "Snowflake",
-    "AWS",
     "Lighthouse",
     "WAVE",
     "Qualtrics",
     "R Studio",
+    "NVDA",
     "v0",
-    // Data Engineering
-    "Data Warehousing",
-    "Semantic Modeling",
-    "Data Lineage",
-    "Data Governance",
-    "Dimensional Modeling",
-    "Query Optimization",
-    "Business Glossaries",
-    "AI Report Validation",
     // Design & UX
+    "A/B Testing",
+    "ARIA Implementation",
+    "Accessibility Audits",
     "Design Systems",
     "Front-end Development",
     "Information Architecture",
+    "Journey Mapping",
     "Mobile Design",
-    "Responsive Design",
     "Rapid Prototyping",
-    "WCAG 2.1",
-    "Accessibility Audits",
+    "Responsive Design",
+    "Storytelling",
+    "Typography",
     "UX Design",
-    "Wireframing",
     "User Research",
+    "WCAG 2.1",
+    "Wireframing",
     // Soft Skills
     "Adaptability",
     "Communication",
@@ -90,7 +82,7 @@ export default function AboutPage() {
             <div>
               <p className="font-mono text-md 3xl:text-base tracking-widest text-accent mb-4 text-lg">WHO I AM</p>
               <p className="font-mono text-sm 3xl:text-base leading-relaxed text-white/80">
-                I'm a Frontend Design Engineer and Data Analyst who bridges human-centered UX research with governed data architecture. I build design systems that scale and data models that power decisions — often at the same company, for the same product.
+                I'm a Frontend Design Engineer skilled in blending UI/UX design, front-end engineering, and human-centered research to deliver effective digital solutions. My background spans creative AI systems, enterprise SaaS infrastructure, reusable design systems, interactive prototyping, and cross-functional collaboration.
               </p>
             </div>
 
@@ -147,7 +139,7 @@ export default function AboutPage() {
             <div>
               <p className="font-mono text-md 3xl:text-base tracking-widest text-accent mb-4 text-lg">CURRENTLY</p>
               <p className="font-mono text-sm 3xl:text-base leading-relaxed text-white/80">
-                AI Data Analytics Expert & Frontend Design Expert at Mercor — evaluating frontier AI models across 14+ design and data domains, engineering a 50-table Snowflake semantic layer, and authoring enterprise business glossaries that standardize KPI logic at scale.
+                Frontend Design Expert at Mercor — evaluating generative AI design quality across 14+ domains (UI, branding, 3D, editorial, motion, and interactive), designing evaluation prompts, and prototyping interactive visual concepts to validate AI model outputs.
               </p>
             </div>
 
@@ -155,10 +147,10 @@ export default function AboutPage() {
               <p className="font-mono text-md 3xl:text-base tracking-widest text-accent mb-4 text-lg">PREVIOUSLY</p>
               <ul className="space-y-2">
                 <li className="font-mono text-sm 3xl:text-base text-white/80">
-                  Frontend Design Engineer & Data Analyst at Cognijin Inc.
+                  Frontend Design Engineer at Cognijin Inc.
                 </li>
                 <li className="font-mono text-sm 3xl:text-base text-white/80">
-                  Software Designer & Data Analyst at Infinichains (Credibl) Inc.
+                  Software Designer at Infinichains (Credibl) Inc.
                 </li>
               </ul>
             </div>
